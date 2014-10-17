@@ -1,0 +1,6 @@
+---
+layout: post
+title: Shark
+date: 2007-09-03 04:18:00.000000000 -07:00
+---
+This was a quick rough model I did to have something to test a caustics simulation.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_zdYMSK7YuAA/SarffqSZ6zI/AAAAAAAAFFg/yJZq9g5dHDY/s1600-h/shark_render_web_full.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 225px;" src="http://4.bp.blogspot.com/_zdYMSK7YuAA/SarffqSZ6zI/AAAAAAAAFFg/yJZq9g5dHDY/s400/shark_render_web_full.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308300845829974834" /></a>

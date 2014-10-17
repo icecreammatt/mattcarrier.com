@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2014-10-14T23:07:40-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/test/</loc>
+    <lastmod>2014-10-14T23:07:40-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2004-12-23-dm_lightsabers/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2004-05-20-fy_glassworld/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2005-10-22-pumpkin/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2005-05-28-windsor-high-school-tour/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2006-11-12-glasses/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2006-11-12-table/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-01-04-custom-computer-chassis-concept/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2005-05-27-windsor-high-school-screens/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-01-07-virtual-high-school-install-guide/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-01-07-virtual-high-school/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-01-14-lighsaber/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-01-20-space-skidster/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-02-24-sink/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-04-12-self-portrait/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-02-25-mushroom-cloud/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-09-03-shark/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-10-22-face-model/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-22-earth-shader-test/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-20-saw/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-14-atst-matchmove/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-29-head-of-constantine/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-12-02-various-rocks/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-20-shovel/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-05-24-1940-ford-wip/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-05-18-lg-kg300-cell-phone/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-06-05-colt-45/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-08-15-shotgun/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2009-09-07-sonoma-state-map-preview/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2009-01-19-it-helpdesk-map-screens/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-08-05-my-resume/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2009-12-05-monster-for-my-maze-project/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2009-12-08-linear-algebra-applied-to-3d-graphics/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2010-01-30-darwin-lobby-update/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2009-12-17-3d-maze/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2010-01-20-ssu-map-progress/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2012-02-05-gravitybox/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2012-02-05-soundwall-kinect/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2013-01-27-osx-utilities/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2013-04-30-tools-and-plugins-for-osx/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2013-02-06-xcode-shortcuts/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2013-03-04-flask-dreamhost-setup/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2014-07-11-linux-web-services-part-i/</loc>
+    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>
