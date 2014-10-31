@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tools and Plugins for OSX
-date: 2013-04-30 11:55:14.000000000 -07:00
+date: 2013-04-30
 ---
 <p>Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed… <br />These are most of the main tools and plugins I use for development.</p>
 

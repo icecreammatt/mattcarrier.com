@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Xcode shortcuts & settings
-date: 2013-02-06 15:37:27.000000000 -08:00
+date: 2013-02-06
 ---
 Here are some hot keys and preferences that make life in Xcode much better.
 <h2>Open quickly</h2>

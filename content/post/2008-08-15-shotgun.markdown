@@ -1,6 +1,6 @@
 ---
 layout: post
 title: Shotgun
-date: 2008-08-15 04:07:00.000000000 -07:00
+date: 2008-08-15
 ---
 This is a weapon for the mod I am making.<br />Polys: 850 | Verts: 902 <br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zdYMSK7YuAA/SardKBVU13I/AAAAAAAAFEY/r5g3e5NfDU4/s1600-h/shotgun_web_medium.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 250px;" src="http://1.bp.blogspot.com/_zdYMSK7YuAA/SardKBVU13I/AAAAAAAAFEY/r5g3e5NfDU4/s400/shotgun_web_medium.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308298275035862898" /></a>

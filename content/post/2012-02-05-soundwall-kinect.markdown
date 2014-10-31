@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SoundWall Kinect
-date: 2012-02-05 04:22:53.000000000 -08:00
+date: 2012-02-05
 ---
 During my summer internship at <a title="Vertigo" href="http://vertigo.com/" target="_blank">Vertigo</a> I got the opportunity to program using the new Kinect for Windows SDK. I worked on the project with <a title="Leslie Prince" href="http://leslieprince.com/" target="_blank">Leslie Prince</a> under the direction of Mike Moser, and Mike Hanley.
 

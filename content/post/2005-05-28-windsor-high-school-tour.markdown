@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windsor High School Tour
-date: 2005-05-28 17:06:00.000000000 -07:00
+date: 2005-05-28
 ---
 <iframe src="http://www.youtube.com/embed/rAEMJ6H2kKA" height="315" width="560" frameborder="0"></iframe>
 

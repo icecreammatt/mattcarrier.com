@@ -1,6 +1,6 @@
 ---
 layout: post
 title: Pumpkin
-date: 2005-10-22 04:25:00.000000000 -07:00
+date: 2005-10-22
 ---
 Happy Halloween!<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_zdYMSK7YuAA/SarhIUVl93I/AAAAAAAAFGY/r6bk8IPPnEU/s1600-h/pumpkin_web_medium.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 300px;" src="http://3.bp.blogspot.com/_zdYMSK7YuAA/SarhIUVl93I/AAAAAAAAFGY/r6bk8IPPnEU/s400/pumpkin_web_medium.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308302643824031602" /></a>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linear Algebra applied to 3D Graphics
-date: 2009-12-08 10:06:00.000000000 -08:00
+date: 2009-12-08
 ---
 <iframe width="560" height="315" src="http://www.youtube.com/embed/SMAnlPTmAwE" frameborder="0" allowfullscreen></iframe>
 

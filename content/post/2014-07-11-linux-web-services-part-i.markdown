@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux web services Part I
-date: 2014-07-11 00:33:50.000000000 -07:00
+date: 2014-07-11
 ---
 This is an introduction to a series of talks about setting up Linux servers. I'm going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using [cygwin](http://cygwin.com) on Windows.
 

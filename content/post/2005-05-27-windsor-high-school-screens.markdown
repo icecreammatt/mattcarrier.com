@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windsor High School - Screens
-date: 2005-05-27 17:07:00.000000000 -07:00
+date: 2005-05-27
 ---
 I did this as my senior project in high school. <a href="http://www.virtualhighschool.net/">
 </a>

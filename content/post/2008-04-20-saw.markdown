@@ -1,6 +1,6 @@
 ---
 layout: post
 title: Saw
-date: 2008-04-20 04:11:00.000000000 -07:00
+date: 2008-04-20
 ---
 This is a prop for the mod I am making.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_zdYMSK7YuAA/Sard3qtVUCI/AAAAAAAAFEg/GeHvsfPMgdk/s1600-h/saw_web_full.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 225px;" src="http://4.bp.blogspot.com/_zdYMSK7YuAA/Sard3qtVUCI/AAAAAAAAFEg/GeHvsfPMgdk/s400/saw_web_full.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308299059236524066" /></a>
