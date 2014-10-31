@@ -2,6 +2,8 @@
 layout: post
 title: Setting up and deploying Python Flask to Dreamhost
 date: 2013-03-04
+aliases: 
+    - /flask-dreamhost-setup/
 ---
 I have a few applications I have written that run on <a title="Flask" href="http://flask.pocoo.org" target="_blank">Flask</a>. Every time I would go to deploy a new application I would always seem to forget one of the minor details and end up with the ugly <code>An error occurred importing your passenger_wsgi.py</code>
 
