@@ -19,5 +19,6 @@
 * Ansible
 * DevEnv Linux/Mac
 * DevEnv Cygwin
+* Drone.io
 * GDB Setup with IntelliJ
 
