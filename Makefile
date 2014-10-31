@@ -1,3 +1,3 @@
 default:
-#	open http://localhost:1313/
-	hugo server --theme=icecreambar --buildDrafts --watch --log=true
+	open http://localhost:1313/
+	hugo server --theme=vanilla --buildDrafts --watch --log=true
