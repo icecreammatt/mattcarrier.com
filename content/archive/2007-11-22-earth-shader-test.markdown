@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Earth Shader Test
 date: 2007-11-22
 ---

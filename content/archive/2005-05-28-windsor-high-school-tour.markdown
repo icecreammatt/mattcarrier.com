@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Windsor High School Tour
 date: 2005-05-28
 ---

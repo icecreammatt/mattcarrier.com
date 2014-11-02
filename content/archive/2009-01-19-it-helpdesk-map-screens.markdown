@@ -1,5 +1,4 @@
 ---
-layout: post
 title: IT Helpdesk map screens
 date: 2009-01-19
 ---

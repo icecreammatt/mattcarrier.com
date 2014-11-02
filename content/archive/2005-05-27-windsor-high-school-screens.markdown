@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Windsor High School - Screens
 date: 2005-05-27
 ---

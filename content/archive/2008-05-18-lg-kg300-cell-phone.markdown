@@ -1,5 +1,4 @@
 ---
-layout: post
 title: LG KG300 Cell Phone
 date: 2008-05-18
 ---

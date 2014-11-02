@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Face Model
 date: 2007-10-22
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 3D Maze
 date: 2009-12-17
 ---

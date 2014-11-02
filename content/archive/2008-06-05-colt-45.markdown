@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Colt 45
 date: 2008-06-05
 ---

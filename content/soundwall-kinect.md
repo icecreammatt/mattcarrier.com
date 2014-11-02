@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SoundWall Kinect
 date: 2012-02-05
 ---

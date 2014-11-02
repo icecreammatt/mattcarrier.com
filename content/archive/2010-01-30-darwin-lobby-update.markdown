@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Darwin lobby update
 date: 2010-01-30
 ---

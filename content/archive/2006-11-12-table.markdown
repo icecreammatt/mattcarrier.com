@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Table
 date: 2006-11-12
 ---

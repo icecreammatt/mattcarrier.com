@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Mushroom Cloud
 date: 2007-02-25
 ---

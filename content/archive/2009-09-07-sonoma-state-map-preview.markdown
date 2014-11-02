@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Sonoma State Map Preview
 date: 2009-09-07
 ---

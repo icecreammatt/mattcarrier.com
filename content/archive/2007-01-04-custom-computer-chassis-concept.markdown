@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Custom computer chassis concept
 date: 2007-01-04
 ---

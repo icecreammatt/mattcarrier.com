@@ -1,5 +1,4 @@
 ---
-layout: post
 title: dm_lightsabers
 date: 2004-12-23
 ---

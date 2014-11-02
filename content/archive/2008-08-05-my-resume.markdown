@@ -1,5 +1,4 @@
 ---
-layout: post
 title: My Resume
 date: 2008-08-05
 ---

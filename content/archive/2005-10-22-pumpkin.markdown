@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pumpkin
 date: 2005-10-22
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Various Rocks
 date: 2007-12-02
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tools and Plugins for OSX
 date: 2013-04-30
 ---

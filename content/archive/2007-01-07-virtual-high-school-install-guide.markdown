@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Virtual High School Install Guide
 date: 2007-01-07
 ---

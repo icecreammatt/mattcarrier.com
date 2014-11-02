@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Linear Algebra applied to 3D Graphics
 date: 2009-12-08
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SSU Map Progress
 date: 2010-01-20
 ---

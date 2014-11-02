@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Setting up and deploying Python Flask to Dreamhost
 date: 2013-03-04
 aliases: 

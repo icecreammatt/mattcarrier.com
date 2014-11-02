@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Shovel
 date: 2008-04-20
 ---

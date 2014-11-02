@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Xcode shortcuts & settings
 date: 2013-02-06
 ---

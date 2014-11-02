@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Shotgun
 date: 2008-08-15
 ---

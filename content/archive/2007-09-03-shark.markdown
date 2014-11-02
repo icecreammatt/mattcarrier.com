@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Shark
 date: 2007-09-03
 ---

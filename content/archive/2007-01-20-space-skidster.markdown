@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Space Skidster
 date: 2007-01-20
 ---

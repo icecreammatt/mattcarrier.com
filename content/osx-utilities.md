@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Some useful utilities for OSX
 date: 2013-01-27
 ---

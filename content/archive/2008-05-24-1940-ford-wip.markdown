@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1940 Ford WIP
 date: 2008-05-24
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Lighsaber
 date: 2007-01-14
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Virtual High School
 date: 2007-01-07
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Monster for my Maze Project
 date: 2009-12-05
 ---

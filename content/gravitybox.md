@@ -1,5 +1,4 @@
 ---
-layout: post
 title: GravityBox
 date: 2012-02-05
 ---

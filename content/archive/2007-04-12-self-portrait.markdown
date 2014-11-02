@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Self Portrait
 date: 2007-04-12
 ---

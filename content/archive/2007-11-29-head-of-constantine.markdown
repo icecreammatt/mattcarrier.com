@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Head of Constantine
 date: 2007-11-29
 ---

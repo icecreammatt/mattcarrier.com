@@ -1,5 +1,4 @@
 ---
-layout: post
 title: fy_glassworld
 date: 2004-05-20
 ---

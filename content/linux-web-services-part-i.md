@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Linux web services Part I
 date: 2014-07-11
 ---

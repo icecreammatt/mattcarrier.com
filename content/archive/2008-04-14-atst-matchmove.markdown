@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ATST Matchmove
 date: 2008-04-14
 ---

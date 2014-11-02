@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Glasses
 date: 2006-11-12
 ---
