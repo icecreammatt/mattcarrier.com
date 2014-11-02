@@ -1,0 +1,16 @@
+---
+baseurl: "http://localhost"
+languageCode: "en-us"
+title: "Bits & Pixels"
+Taxonomies:
+    tag: "tags"
+params:
+    GoogleAnalyticsId: "UA-XYSYXYSY-X1111"
+    FullName: "Matt Carrier"
+    AvatarImage: ""
+    BannerImage: "http://placehold.it/500x300"
+    Github: ""
+    Twitter: ""
+    Stackoverflow: ""
+    Linkedin: ""
+---

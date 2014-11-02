@@ -1,9 +1,0 @@
-baseurl = "http://localhost"
-languageCode = "en-us"
-title = "Bits & Pixels"
-
-[params]
-GithubUser = "icecreammatt"
-BannerImage = "http://placehold.it/500x300"
-FullName = "Matt Carrier"
-GoogleAnalyticsId = "UA-XYSYXYSY-X1111"
