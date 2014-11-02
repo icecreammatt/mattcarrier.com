@@ -9,12 +9,13 @@
         <li>Stackoverflow</li>
     </ul>
     <p>
-    &copy; 2014 Matt Carrier.
+    &copy; 2014 {{ .Site.Params.FullName }}
     <img src="images/avatar.jpg" alt="avatar" width="150" height="150" />
     </p>
     <p>I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee.</p>
   </div>
 </footer>
 {{ partial "ga.html" . }}
+{{ partial "js.html" . }}
 </body>
 </html>
