@@ -1,6 +1,10 @@
 ---
 title: Xcode shortcuts & settings
 date: 2013-02-06
+tags: 
+    - "xcode"
+    - "ios"
+    - "osx"
 ---
 Here are some hot keys and preferences that make life in Xcode much better.
 <h2>Open quickly</h2>

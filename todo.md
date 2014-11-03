@@ -21,7 +21,8 @@
     * Test on Mobile
     * Vanilla <- Custom (Needs Styling)
 * Add Resume (check)
-* Fix post date formatting
+* Fix post date formatting (check)
+* Add Support for tags at bottom
 * Add syntax highlighter
 * Create Docker Container
 * Setup CI
