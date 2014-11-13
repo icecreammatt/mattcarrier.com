@@ -2,28 +2,57 @@
   <div class="container">
     <div class="row-fluid">
       <div class="col-lg-4 col-md-4">
-        <ul>
-          <li>Resume</li>
-          <li>Github</li>
-          <li>Twitter</li>
-          <li>Linkedin</li>
-          <li>Stackoverflow</li>
-        </ul>
+        <h4>{{ .Site.Params.FullName }}</h4>
+        <p>{{ .Site.Params.About }}</p>
       </div>
       <div class="col-lg-4 col-md-4">
         <p>
-          <img src="images/avatar.jpg" alt="avatar" width="150" height="150" />
+          <img src="{{ .Site.Params.AvatarImage }}" alt="avatar" width="150" height="150" />
         </p>
-        <p>I am a pixel connoisseur who enjoys the finer details of a Bresenham line.
-          When not staring at arrays of smoothly rendered pixels I enjoy playing
-          guitar and consuming coffee.</p>
       </div>
       <div class="col-lg-4 col-md-4">
-        {{ partial "related.html" }} {{ partial "recent.html" }}
+        <ul>
+          {{ if .Site.Params.Resume }}
+          <li>
+            <span class="fa fa-file-o"></span> <a href="{{ .Site.Params.Resume }}">Resume</a>
+          </li>
+          {{ end }}
+          {{ if .Site.Params.Github }}
+          <li>
+            <span class="fa fa-github"></span> <a href="{{ .Site.Params.Github }}">Github</a>
+          </li>
+          {{ end }}
+          {{ if .Site.Params.Twitter }}
+          <li>
+            <span class="fa fa-twitter"></span> <a href="{{ .Site.Params.Twitter }}">Twitter</a>
+          </li>
+          {{ end }}
+          {{ if .Site.Params.Linkedin }}
+          <li>
+            <span class="fa-linkedin"></span> <a href="{{ .Site.Params.Linkedin }}">Linkedin</a>
+          </li>
+          {{ end }}
+          {{ if .Site.Params.Stackoverflow }}
+          <li>
+            <span class="fa fa-stack-overflow"></span> <a href="{{ .Site.Params.Stackoverflow }}">Stackoverflow</a>
+          </li>
+          {{ end }}
+          {{ if .Site.Params.GooglePlus }}
+          <li>
+            <span class="fa fa-google-plus"></span> <a href="{{ .Site.Params.GooglePlus }}">Google+</a>
+          </li>
+          {{ end }}
+          {{ if .Site.Params.Facebook }}
+          <li>
+            <span class="fa fa-facebook"></span> <a href="{{ .Site.Params.Facebook }}">Facebook</a>
+          </li>
+          {{ end }}
+        </ul>
       </div>
     </div>
   </div>
-  <div class="row-fluid">&copy; 2014 {{ .Site.Params.FullName }}</div>
+  <hr />
+  <div class="row-fluid copyright">{{ .Site.Params.FullName }} &copy; 2014</div>
 </footer>
 
 {{ partial "ga.html" . }} {{ partial "js.html" . }}
