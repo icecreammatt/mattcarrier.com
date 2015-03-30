@@ -1,0 +1,29 @@
+
+{{ partial "header.html" . }}
+
+<h1>SOD</h1>
+<h1>{{ .Params.image_name }}</h1>
+<article>
+    <h1>{{ .Title }} - <i>{{ .Date.Format "Jan 2, 2006" }}</i></h1>
+    <p>{{ .Content }}</p>
+</article>
+
+
+{{ if .Next }}
+<h2>{{ .Next }}</h2>
+<a href={{ .Next.Permalink }}>
+{{ end }}
+  <img src="{{ .Params.image_name }}" />
+{{ if .Next }}
+</a>
+{{ end }}
+
+{{ if .Next }}
+<a href={{ .Next.Permalink }}>Next</a>
+{{ end }}
+
+{{ if .Prev }}
+<a href={{ .Prev.Permalink }}>Previous</a>
+{{ end }}
+
+{{ partial "footer.html" . }}

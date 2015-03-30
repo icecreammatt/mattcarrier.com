@@ -40,3 +40,6 @@
 * Drone.io
 * GDB Setup with IntelliJ
 
+## Ostrichzero
+* Add Hammerjs to allow for swipping between posts
+* Style horizontal to display 2 images while vertical displays single
