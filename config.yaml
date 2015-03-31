@@ -6,8 +6,8 @@ title: "Matt Carrier"
 Taxonomies:
     tag: "tags"
 params:
-    GoogleAnalyticsId: "UA-XYSYXYSY-X1111"
-    ga_api_key: "UA-XYSYXYSY-X1111"
+    GoogleAnalyticsId: "UA-25927979-1"
+    ga_api_key: "UA-25927979-1"
     FullName: "Matt Carrier"
     AvatarImage: "images/avatar.jpg"
     avatar: "/images/avatar.jpg"
