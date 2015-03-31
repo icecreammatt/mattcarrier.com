@@ -1,6 +1,8 @@
 ---
 title: Some useful utilities for OSX
 date: 2013-01-27
+tags: 
+    - "osx"
 ---
 Here is a list of some useful open source tray tools I use daily.
 <h3>Easy window management: <a href="https://github.com/eczarny/spectacle">Spectacle</a></h3>
