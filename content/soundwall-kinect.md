@@ -8,4 +8,4 @@ SoundWall is an open source digital drum machine which can be controlled using t
 
 More information about it can be found here <a href="http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/" target="_blank">http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/</a>
 
-[caption id="attachment_189" align="alignnone" width="620" caption="SoundWall"]<a title="SoundWall demo video" href="http://youtu.be/2JHhZq9gFsA" target="_blank"><img class="size-large wp-image-189" title="SoundWall" src="https://mattcarrier.com/wp-content/uploads/2012/02/SoundWallPreviewPlay-1024x576.png" alt="" width="620" height="348" /></a>[/caption]
+<a title="soundwall" href="https://soundwall.codeplex.com/" target="_blank"><img class="size-large wp-image-189" title="SoundWall" src="https://mattcarrier.com/wp-content/uploads/2012/02/SoundWallPreviewPlay-1024x576.png" alt="" width="620" height="348" /></a>
