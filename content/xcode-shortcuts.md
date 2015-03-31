@@ -7,6 +7,7 @@ tags:
     - "osx"
 ---
 Here are some hot keys and preferences that make life in Xcode much better.
+<!--more-->
 <h2>Open quickly</h2>
 <a href="https://mattcarrier.com/wp-content/uploads/2013/02/quick-open.jpg"><img class="wp-image-225 alignright" alt="quick-open" src="https://mattcarrier.com/wp-content/uploads/2013/02/quick-open.jpg" width="342" height="251" /></a> Search through files, classes, and method names.
 <kbd>Command</kbd> <kbd>Shift</kbd> <kbd>O</kbd>

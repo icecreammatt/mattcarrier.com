@@ -4,7 +4,8 @@ date: 2013-01-27
 tags: 
     - "osx"
 ---
-Here is a list of some useful open source tray tools I use daily.
+List of some useful open source tray tools I use daily.
+<!--more-->
 <h3>Easy window management: <a href="https://github.com/eczarny/spectacle">Spectacle</a></h3>
 The biggest issue I have with OSX is the way window management is handled. Simple tasks such as sizing an editor and browser so both are visible between the left and right side of the screen is cumbersome, especially with a touch pad. The simple task of maximizing a window never seems to work as expected.
 

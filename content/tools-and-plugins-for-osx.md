@@ -6,7 +6,9 @@ tags:
     - "ios"
     - "osx"
 ---
-<p>Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed… <br />These are most of the main tools and plugins I use for development.</p>
+<p>Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed… 
+<!--more-->
+<br />These are most of the main tools and plugins I use for development.</p>
 
 <h3>Programs</h3>
 

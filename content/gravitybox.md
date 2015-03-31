@@ -5,6 +5,7 @@ tags:
     - "javascript"
 ---
 This is a little something I worked on during my internship at <a title="Vertigo" href="http://vertigo.com/" target="_blank">Vertigo</a> last summer. This is all written in JavaScript. I used Box2Djs for the physics.
+<!--more-->
 
 <iframe style="border: 1px solid black;" src="http://labs.vertigo.com/GravityBox/GravityBox.htm?showInstruction=true" width="560" height="400"></iframe>
 
