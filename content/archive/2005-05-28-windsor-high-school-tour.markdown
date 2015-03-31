@@ -1,6 +1,8 @@
 ---
 title: Windsor High School Tour
 date: 2005-05-28
+tags: 
+    - "archive"
 ---
 <iframe src="http://www.youtube.com/embed/rAEMJ6H2kKA" height="315" width="560" frameborder="0"></iframe>
 

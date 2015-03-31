@@ -1,5 +1,7 @@
 ---
 title: Colt 45
 date: 2008-06-05
+tags: 
+    - "archive"
 ---
 I am modeling this for a Half-Life 2 mod I am making.<br />Polys: 1359 (The in game version, which is this one here with faces removed from the other side is 912 polys.) | The texture isn't done yet.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_zdYMSK7YuAA/SarboCnxXxI/AAAAAAAAFD4/zaAQZ2NX-uM/s1600-h/colt_45_web_full.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 400px; height: 225px;" src="http://2.bp.blogspot.com/_zdYMSK7YuAA/SarboCnxXxI/AAAAAAAAFD4/zaAQZ2NX-uM/s400/colt_45_web_full.jpg" alt="" id="BLOGGER_PHOTO_ID_5308296591754485522" border="0" /></a>

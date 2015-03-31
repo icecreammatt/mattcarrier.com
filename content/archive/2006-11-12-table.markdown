@@ -1,5 +1,7 @@
 ---
 title: Table
 date: 2006-11-12
+tags: 
+    - "archive"
 ---
 This was a simulation I did to test out HDR.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_zdYMSK7YuAA/SarguPludAI/AAAAAAAAFGI/06qru56lsmM/s1600-h/table_scene_updated_no_lightsaber_missing_dof.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 225px;" src="http://3.bp.blogspot.com/_zdYMSK7YuAA/SarguPludAI/AAAAAAAAFGI/06qru56lsmM/s400/table_scene_updated_no_lightsaber_missing_dof.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308302195872920578" /></a>
