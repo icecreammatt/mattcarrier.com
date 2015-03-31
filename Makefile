@@ -1,10 +1,19 @@
 watch:
-	open http://localhost:1313/
-	cd themes/vanilla && $(MAKE) watch &
-	hugo server --theme=vanilla --buildDrafts --watch --log=true
+	hugo server --theme=vienna --buildDrafts --watch --log=true
 
 clean:
 	rm -rf public/*
 
-kill:
-	killall goat
+build-container:
+	hugo --theme=vienna
+	docker build -t icecreammatt/mattcarrier.com .
+
+clean-container:
+	-docker kill mattcarrier.com
+	-docker rm mattcarrier.com
+
+push-container:
+	docker push icecreammatt/mattcarrier.com
+
+run-container:
+	docker run -d -p 3000:80 --name mattcarrier.com icecreammatt/mattcarrier.com
