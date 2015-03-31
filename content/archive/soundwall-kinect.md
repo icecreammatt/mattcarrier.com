@@ -1,6 +1,9 @@
 ---
 title: SoundWall Kinect
 date: 2012-02-05
+tags: 
+    - "archive"
+    - "vertigo"
 ---
 SoundWall is an open source digital drum machine which can be controlled using the Xbox Kinect SDK for Windows using hand motions and voice commands.
 <!--more-->
