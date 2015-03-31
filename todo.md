@@ -3,6 +3,7 @@
 * Resume
 * Archive
 * Photography
+* Tags List
 
 ## Tasks
 [x] Consider hiding social links from banner
