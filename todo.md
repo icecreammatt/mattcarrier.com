@@ -40,6 +40,14 @@
 * Drone.io
 * GDB Setup with IntelliJ
 
-## Ostrichzero
-* Add Hammerjs to allow for swipping between posts
-* Style horizontal to display 2 images while vertical displays single
+## Tasks
+[x] Consider hiding social links from banner
+[x] Play with Color Scheme
+[x] Switch blue to something else (Maybe green to match banner)
+[x] Hide older posts
+[x] Adjust footer Avatar placement 
+[x] Refine bio to something shorter
+[x] Fix Favicon
+[x] Setup Google Analytics
+[ ] Migrate images into git repo
+[ ] Prevent next from switching to resume
