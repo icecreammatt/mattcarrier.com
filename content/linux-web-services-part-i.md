@@ -93,7 +93,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ
 
 > DigitalOcean calls each server instance a "droplet"
 
-![xkcd.com/910](/content/images/2014/Jul/permanence.png)
+![xkcd.com/910](/images/2014-07-11/permanence.png)
 
 1. Click Create Droplet
 2. Enter a hostname for your server
@@ -289,7 +289,7 @@ service ssh restart
 
 ## Software Installation
 
-![](/content/images/2014/Jul/sandwich.png)
+![](/images/2014-07-11/sandwich.png)
 
 Basic utilities to install
 

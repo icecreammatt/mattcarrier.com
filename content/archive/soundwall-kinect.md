@@ -12,4 +12,4 @@ During my summer internship at <a title="Vertigo" href="http://vertigo.com/" tar
 
 More information about it can be found here <a href="http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/" target="_blank">http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/</a>
 
-<a title="soundwall" href="https://soundwall.codeplex.com/" target="_blank"><img class="size-large wp-image-189" title="SoundWall" src="https://mattcarrier.com/wp-content/uploads/2012/02/SoundWallPreviewPlay-1024x576.png" alt="" width="620" height="348" /></a>
+<a title="soundwall" href="https://soundwall.codeplex.com/" target="_blank"><img class="size-large wp-image-189" title="SoundWall" src="/images/2012-02-05/SoundWallPreviewPlay-1024x576.png" alt="" width="620" height="348" /></a>
