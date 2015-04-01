@@ -1,0 +1,8 @@
+.git/
+archetypes/
+content/
+data/
+layouts/
+static/
+themes.bk/
+themes/
