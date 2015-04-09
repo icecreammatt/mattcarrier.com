@@ -15,5 +15,9 @@ clean-container:
 push-container:
 	docker push icecreammatt/mattcarrier.com
 
+deploy:
+	ssh icecreamcart "docker pull icecreammatt/mattcarrier.com"
+	ssh icecreamcart "docker kill mattcarrier.com"
+
 run-container:
 	docker run -d -p 3000:80 --name mattcarrier.com icecreammatt/mattcarrier.com
