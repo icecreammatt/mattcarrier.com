@@ -1,10 +1,3 @@
-## Navigation
-* Home
-* Resume
-* Archive
-* Photography
-* Tags List
-
 ## Tasks
 [x] Consider hiding social links from banner
 [x] Play with Color Scheme
@@ -14,6 +7,7 @@
 [x] Refine bio to something shorter
 [x] Fix Favicon
 [x] Setup Google Analytics
-[ ] Migrate images into git repo
+[x] Migrate images into git repo
 [ ] Prevent next from switching to resume
 [ ] Fix link selected color
+[ ] Add glyphicon glyphicon-camera for photography section in future
