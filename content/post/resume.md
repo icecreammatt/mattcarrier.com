@@ -8,16 +8,17 @@ aliases = [ "/resume" ]
 ## Education
 **Sonoma State University:** Rohnert Park, CA  
 
-* Double Major:   B.S.  Computer Science  
-* B.A.   Art Studio  
+* Double Major: 
+    * B.S. Computer Science  
+    * B.A. Art Studio  
 * GPA: 3.37 on a 4.0 scale
 
 ## Work Experience
 **Vertigo Software:**  Software Engineer II  
 *June 2011 –  Present*  
 
-* Worked on team that built the GoPro apps for Xbox One & Windows 8.1
-* Worked on iOS & Android Applications: NBC SportsTalk, Golf Channel Mobile, Golf  Channel Academy
+* Worked on team that built the GoPro apps for Xbox One, Windows 8.1, LG Smart TV webOS
+* Worked on iOS & Android Applications: NBC SportsTalk, Golf Channel Mobile, Golf Channel Academy
 * Developed HTML5 PDF Webviewer using the PDFTron library on a large self publishing magazine site
 * Added social media badges and Facebook commenting support to a large self publishing magazine site
 * Implemented push notifications with the use of UrbanAirship for Golf Channel Mobile (iOS)
@@ -26,9 +27,9 @@ aliases = [ "/resume" ]
 * Practiced Agile / Scrum methodologies for software development
 
 **Sonoma State University:**  Adjunct Faculty (Unix Instructor)  
-*August 2013 – Present*  
+*August 2013 – May 2014*  
 
-* Taught a section of the Fall 2013 and Spring 2014 Introduction to Unix class (1 Unit Course)
+* Taught a section of the Fall 2013 and Spring 2014 Introduction to Unix class 
 * Instructed students on how to use command line basics and introduced a git based workflow using Github
 * Covered how to setup and lockdown a VPS using DigitalOcean and Amazon AWS
 
@@ -55,11 +56,12 @@ aliases = [ "/resume" ]
 
 ## Skills
 
-* Programming languages: JavaScript, Objective-C, Python, C++, C#, PHP, Shell, Java; MySQL, SQLAlchemy
-* Development Environments: Xcode, Visual Studio, VIM, Emacs, SublimeText, Eclipse, Docker, Dokku, Git
+* Programming languages: JavaScript, Objective-C, Python, Shell, Go, C++, C#, PHP, Java; MySQL, SQLAlchemy
+* Cloud Providers: Amazon AWS, DigitalOcean, CloudFlare
+* Development Tools: Xcode, Visual Studio, VIM, Emacs, SublimeText, Eclipse, Docker, Git
 * Frameworks: Cocoa Touch, Flask, AngularJS, WinJS, NodeJS Express, ASP.Net MVC3
+* Software Development on Mac, iOS, Linux (Ubuntu, CoreOS, CentOS), Windows, OpenGL
 * Software Packages: Adobe Photoshop, 3D Studio Max
-* Software Development for Mac, iOS, Linux, Windows, OpenGL
 * Visual: HTML5, CSS3, Interface Builder; 3D Modeling, Texturing, Rendering, Animation
 
 ## Selected Courses
