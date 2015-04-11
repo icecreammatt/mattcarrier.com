@@ -139,7 +139,7 @@ root@setup-demo:~#
 
 ## Lockdown
 
-We are now logged into the server, which right now is almost wide open to the internet. It is time to lock it down with the following steps:
+We are now logged into the server, which right now is almost wide open to the Internet. It is time to lock it down with the following steps:
 
 ### User account creation
 
@@ -355,9 +355,14 @@ $ git push web-hostname master
 
 * ctrl + z by accident?
     * fg to foreground the application
-* Need to use sudo user to launch node on port 80
-    * `sudo node app.js`
-    > NOTE: Running nodejs with sudo is not a very secure thing to do. NodeJS apps should really be setup with nginx through a reverse proxy
+
+## NodeJS with Nginx
+
+* Add a site config to `/etc/nginx/sites-available/site.conf`. 
+    <script src="https://gist.github.com/icecreammatt/b9252556400e08513c61.js"></script>
+* Soft link `ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/` to enable the site.
+* `sudo service nginx reload` to apply the changes.
+* Change the port number from `3000` to whatever your node app is running on.
 
 ## Next time
 * Automation
