@@ -1,5 +1,5 @@
 +++
-date = "2014-10-14T23:07:40-07:00"
+date = "2015-07-14T23:07:40-07:00"
 title = "Matt Carrier - Resume"
 aliases = [ "/resume" ]
 +++
@@ -14,63 +14,66 @@ aliases = [ "/resume" ]
 * GPA: 3.37 on a 4.0 scale
 
 ## Work Experience
-**Vertigo Software:**  Software Engineer II  
-*June 2011 –  Present*  
+**Vertigo Software:**  
+Software Engineer II  
+*August 2013 – Present*  
 
-* Worked on team that built the GoPro apps for Xbox One, Windows 8.1, LG Smart TV webOS
-* Worked on iOS & Android Applications: NBC SportsTalk, Golf Channel Mobile, Golf Channel Academy
-* Developed HTML5 PDF Webviewer using the PDFTron library on a large self publishing magazine site
-* Added social media badges and Facebook commenting support to a large self publishing magazine site
-* Implemented push notifications with the use of UrbanAirship for Golf Channel Mobile (iOS)
-* Helped ship several video on demand apps for a major TV network for the Windows 8.0 Store
-* Worked on projects with very sharp deadlines and delivered products on time
 * Practiced Agile / Scrum methodologies for software development
+* Worked on projects with very sharp deadlines and delivered products on time
+* Setup development & deployment process using Docker for a private web service
+* Worked with small team to develop NBC Sports LiveExtra for AppleTV
+* Helped evaluate and contribute to the cleanup & feature enhancement of inherited NBC Live Extra for iOS
+* Worked on team that built the GoPro apps for Xbox One, Windows 8.1, LG Smart TV webOS
+* DevOps - Screambox.com (Setup development & deployment processes utilizing Docker & Amazon AWS)
+* Helped develop several video on demand apps for a major TV network for the Windows 8.0 Store
 
-**Sonoma State University:**  Adjunct Faculty (Unix Instructor)  
+Software Engineer  
+*June 2012 – July 2013*  
+
+* Implemented push notifications with the use of UrbanAirship for Golf Channel Mobile (iOS)
+* Worked on iOS & Android Applications: NBC SportsTalk, Golf Channel Mobile, Golf Channel Academy
+* Added social media badges and Facebook commenting support to a large self publishing magazine site
+* Developed HTML5 PDF Webviewer using the PDFTron library on a large self publishing magazine site
+
+Intern Software Engineer  
+*June 2011 – May 2012*  
+
+* Worked on SoundWall (internal demo), implemented with the Kinect for Windows SDK
+* Created GravityBox, a HTML5 tech demo using Canvas & Box2DJS
+* Feature development for NBC SportsTalk for iPhone & iPad
+* Feature development for Golf Channel Mobile for iPhone & iPad
+
+**Sonoma State University:**  
+Adjunct Faculty (Unix Instructor)  
 *August 2013 – May 2014*  
 
 * Taught a section of the Fall 2013 and Spring 2014 Introduction to Unix class 
 * Instructed students on how to use command line basics and introduced a git based workflow using Github
 * Covered how to setup and lockdown a VPS using DigitalOcean and Amazon AWS
 
-**Sonoma State University:**  Tech Support  
+Tech Support  
 *August 2008 – August 2011*  
 
-*   Extensive experience in troubleshooting problems with desktop and notebook computers
-*   Communicating with customers via phone and email resolving software and hardware issues
-*   Writing scripts & documentation for application configuration and deployment 
-*   Responsible for the inventory for hundreds of computers in the I.T. department
-*   Responsible for updating system software for seven campus-wide computer labs and over 50 smart classrooms
+* Extensive experience in troubleshooting problems with desktop and notebook computers
+* Communicated with customers via phone and email resolve software and hardware issues
+* Wrote scripts & documentation for application configuration and deployment 
+* Managed hardware inventory for faculty computers
+* Responsible for updating system software for seven campus-wide computer labs
 
-**Santa Rosa Junior College:**  Computer Lab Assistant  
-*January 2008 – May 2008, 2006*  
-
-* Worked as a teacher’s assistant in the 3D Studio Max and AutoCAD classes
-* Helped students with questions they had about the software
-
-**Immecor Corporation:**    Computer Technician  
+**Immecor Corporation:**  
+Computer Technician  
 *August 2006 – January 2008*  
 
 * Assembled and configured enterprise class servers
 * Wrote documentation used by other employees to assemble numerous machines.
 
-## Skills
+## Language & Tools Experience
 
-* Programming languages: JavaScript, Objective-C, Python, Shell, Go, C++, C#, PHP, Java; MySQL, SQLAlchemy
+* Programming languages: JavaScript, Objective-C, Python, Shell, TypeScript, Go, C++, C#, PHP
+* Database: MySQL, Redis, SQLAlchemy, MSSQL
 * Cloud Providers: Amazon AWS, DigitalOcean, CloudFlare
-* Development Tools: Xcode, Visual Studio, VIM, Emacs, SublimeText, Eclipse, Docker, Git
-* Frameworks: Cocoa Touch, Flask, AngularJS, WinJS, NodeJS Express, ASP.Net MVC3
+* Development Tools: Vim, SublimeText, Xcode, Visual Studio, Docker, Git, Gulp
+* Frameworks: NodeJS Express, Cocoa Touch, AppleTV, Flask, AngularJS, WebOS, WinJS, ASP.Net MVC3
 * Software Development on Mac, iOS, Linux (Ubuntu, CoreOS, CentOS), Windows, OpenGL
 * Software Packages: Adobe Photoshop, 3D Studio Max
 * Visual: HTML5, CSS3, Interface Builder; 3D Modeling, Texturing, Rendering, Animation
-
-## Selected Courses
-
-* Data Structures
-* Computer Graphics
-* Web Development with PHP and Ajax
-* Database Management Systems
-* iPhone Application Development
-* Team Programming
-* Software Engineering
-* Game Programming
