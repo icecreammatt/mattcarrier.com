@@ -3,6 +3,7 @@ baseurl: "https://mattcarrier.com"
 copyright: "&copy; Copyright 2015"
 languageCode: "en-us"
 title: "Matt Carrier"
+Paginate: 10
 Taxonomies:
     tag: "tags"
 params:
