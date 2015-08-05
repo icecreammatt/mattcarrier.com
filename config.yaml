@@ -22,7 +22,7 @@ params:
     Facebook: ""
     github: "icecreammatt"
     twitter: "icecreammatt"
-    stackoverflow: "http://stackoverflow.com/users/873559/matt-carrier"
+    stackoverflow: "873559"
     linkedin: "carriermatt"
     Resume: "/resume"
     About: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playingguitar and consuming coffee."
