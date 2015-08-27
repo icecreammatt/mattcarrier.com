@@ -366,7 +366,7 @@ home              mnt               sys
 This [post](http://www.rootwink.com/viewtopic.php?t=67#p295) contains the rest of the steps to retain root access, enable ssh, and enable serial access without having to short the NAND chip. Be very sure to read every detail. For example, some people in that thread had issues because they forgot to run `mount -a`.
 
 * Part I - Hacking the Winkhub
-* [Part II - Troubleshooting Winkhub root issues (Coming Soon...)](#)
+* [Part II - Troubleshooting Winkhub root issues](/post/hacking-the-winkhub-part-2)
 * [Part III - Cross Compiling Go for Winkhub (Coming Soon...)](#)
 
 ## <a href="#" id="Resources">Resources</a>
