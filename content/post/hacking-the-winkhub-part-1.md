@@ -235,7 +235,7 @@ L���BO�� 4194304 bytes read: OK
 Wrong Image Format for bootm command
 ERROR: can't get kernel image!
 ```
-Success!
+Success! At this point you should stop touching pin 29 to the ground.
 
 ```
 => help
