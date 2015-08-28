@@ -65,7 +65,7 @@ GOOS=linux GOARCH=arm GOARM=5 go build .
 
 I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub's web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.
 
-## GopherWink setup instructions
+## [GopherWink](https://github.com/icecreammatt/gopherwink) setup instructions
 
 ### Building from source requirements
 
