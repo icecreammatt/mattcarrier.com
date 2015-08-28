@@ -65,7 +65,9 @@ GOOS=linux GOARCH=arm GOARM=5 go build .
 
 I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub's web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.
 
-## [GopherWink](https://github.com/icecreammatt/gopherwink) setup instructions
+## [GopherWink](https://github.com/icecreammatt/gopherwink) setup instructions 
+
+[screenshots here](#screenshots)
 
 ### Building from source requirements
 
@@ -133,3 +135,9 @@ This is the last part of a series of posts related to hacking the Winkhub
 * <a href="http://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5" content="nofollow" target="_blank">Cross compilation with Go 1.5</a>
 * <a href="https://github.com/golang/go/wiki/GoArm" content="nofollow" target="_blank">GoArm</a>
 * <a href="http://unix.stackexchange.com/questions/59018/create-and-control-start-up-scripts-in-busybox" content="nofollow" target="_blank">Create and control start up scripts in BusyBox</a>
+
+<div id="screenshots"></div>
+## Screenshots
+![Lights](/images/2015-08-28/Lights.PNG)
+![Lights](/images/2015-08-28/LED.PNG)
+
