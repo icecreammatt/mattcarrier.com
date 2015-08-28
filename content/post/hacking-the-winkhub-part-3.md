@@ -69,7 +69,7 @@ I came up with a simple web service that allowed me to turn the lights on/off an
 
 ### Building from source requirements
 
-* [Rooted Winkhub](http://localhost:1313/post/hacking-the-winkhub-part-1/) with SSH access
+* [Rooted Winkhub](/post/hacking-the-winkhub-part-1/) with SSH access
 * Go 1.5
 * NodeJS
 * ReactJS
