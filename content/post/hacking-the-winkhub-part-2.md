@@ -79,6 +79,7 @@ _There was much rejoicing at 3:30 in the morning. Luckily it was Saturday so I c
 
 Before I went to bed I still wanted to see if I could set this up to be able to turn the lights on and off with curl. I found the web folder in `/var/www`. I created a few simple scripts to test turning the lights on and off from the command line.
 
+<div id="php"></div>
 
 __on.php__
 ```
@@ -119,8 +120,8 @@ The brightness could be adjusted by running `curl http://192.168.1.11/brightness
 As you can see in my commented-out bits of `brightness.php`, I prefer not to write PHP code. Especially at 4:00 in the morning. It wasn't until the next day I noticed the hole I left in the code by skipping the check for digits. I was really hoping that I could run some Go binaries on this device at this point...
 
 * [Part I - Hacking the Winkhub](/post/hacking-the-winkhub-part-1)
-* Part II - Troubleshooting Wink root issues
-* [Part III - Cross Compiling Go for Winkhub (Coming Soon...)](#)
+* Part II - Troubleshooting Wink issues
+* [Part III - Cross compiling Go for Winkhub](/post/hacking-the-winkhub-part-3)
 
 ## <a href="#" id="Resources">Resources</a>
 * <a href="https://github.com/wink-hub-root/demystified/wiki/Connecting-to-wifi-manually" content="nofollow">Connecting to wifi manually</a>
