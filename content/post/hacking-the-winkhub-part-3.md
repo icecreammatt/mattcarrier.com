@@ -65,26 +65,28 @@ GOOS=linux GOARCH=arm GOARM=5 go build .
 
 I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub's web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.
 
-## GopherWink setup instructions:
+## GopherWink setup instructions
 
-> Note: This has only been tested so far with GE Link bulbs.
+### Building from source requirements
 
-### Building from source requirements:
-
+* [Rooted Winkhub](http://localhost:1313/post/hacking-the-winkhub-part-1/) with SSH access
 * Go 1.5
 * NodeJS
 * ReactJS
 
-### Install from source:
+### Install from source
 
+* `export WINK_IP_ADDRESS=X.X.X.X` (replace the x's with the Wink IP)
 * `git clone https://github.com/icecreammatt/gopherwink`
 * `git submodule init && git submodule update`
-* `export WINK_IP_ADDRESS=X.X.X.X` (replace the x's with the Wink IP)
+* `cd frontend && npm install`
+* `make deploy`
+* `cd ..`
 * `make build`
 * `make install`
 * Visit `http://WINK_IP_ADDRESS/index.html` to access the controls.
 
-### Install manually
+### Install release manually
 
 * Download the release from [here](https://github.com/icecreammatt/gopherwink/releases)
 * Extract the zip file
@@ -92,15 +94,17 @@ I came up with a simple web service that allowed me to turn the lights on/off an
 * `scp gopherwink root@$WINK_IP_ADDRESS:/root/gopherwink`
 * `scp S63gopherwink root@$WINK_IP_ADDRESS:/etc/init.d/S63gopherwink`
 * `scp index.html root@$WINK_IP_ADDRESS:/var/www`
-* `scp main.js root@$WINK_IP_ADDRESS:/var/www`
+* `ssh root@$WINK_IP_ADDRESS "mkdir /var/www/assets`
+* `scp main.js root@$WINK_IP_ADDRESS:/var/www/assets/`
 * `ssh root@$WINK_IP_ADDRESS "/etc/init.d/S63gopherwink start"`
 * Visit `http://WINK_IP_ADDRESS/index.html` to access the controls.
 
-For more details please see the [README](https://github.com/icecreammatt/gopherwink)
-
-## Usage
+## Usage notes
 * New devices for now need to be connected using `aprontest` or the WinkApp
 * Zigbee lights can be added by visiting `http://WINK_IP_ADDRESS:5000/light/search`
+
+## Todo
+* Add ability to remove existing lights
 
 ## Bugs
 * File bugs [here](https://github.com/icecreammatt/gopherwink/issues)
@@ -114,6 +118,10 @@ For more details please see the [README](https://github.com/icecreammatt/gopherw
 * Snooze timer to turn on light after x minutes
 * Automatic brightness based on the time of day
 * TLS Authentication for API
+
+## License
+
+GPLv3
 
 This is the last part of a series of posts related to hacking the Winkhub
 
