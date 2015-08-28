@@ -7,6 +7,9 @@ Paginate: 10
 Taxonomies:
     tag: "tags"
 params:
+    RecentPosts: true
+    RecentPostDisplayCount: 8
+    Tags: true
     GoogleAnalyticsId: "UA-25927979-1"
     ga_api_key: "UA-25927979-1"
     FullName: "Matt Carrier"
