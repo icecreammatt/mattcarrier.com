@@ -103,10 +103,6 @@ I came up with a simple web service that allowed me to turn the lights on/off an
 
 ## Usage notes
 * New devices for now need to be connected using `aprontest` or the WinkApp
-* Zigbee lights can be added by visiting `http://WINK_IP_ADDRESS:5000/light/search`
-
-## Todo
-* Add ability to remove existing lights
 
 ## Bugs
 * File bugs [here](https://github.com/icecreammatt/gopherwink/issues)
@@ -114,7 +110,6 @@ I came up with a simple web service that allowed me to turn the lights on/off an
 ## Future Plans
 * Improved UI to add and remove lights
 * Improved UI to rename devices
-* Refactor API to be RESTful
 * Add Proper support for GoControl Door Window Sensors
 * Sleep timer to keep light on for late nights
 * Snooze timer to turn on light after x minutes

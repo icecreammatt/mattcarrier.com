@@ -367,7 +367,7 @@ This [post](http://www.rootwink.com/viewtopic.php?t=67#p295) contains the rest o
 
 * Part I - Hacking the Winkhub
 * [Part II - Troubleshooting Winkhub issues](/post/hacking-the-winkhub-part-2)
-* [Part III - Cross compiling Go for Winkhub (Coming Soon...)](#)
+* [Part III - Cross compiling Go for Winkhub](/post/hacking-the-winkhub-part-3)
 
 ## <a href="#" id="Resources">Resources</a>
 * <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter" content="nofollow">How to Use a Multimeter</a>
