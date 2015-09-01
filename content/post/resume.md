@@ -1,5 +1,5 @@
 +++
-date = "2015-07-14T23:07:40-07:00"
+date = "2015-08-31T23:07:40-07:00"
 title = "Matt Carrier - Resume"
 aliases = [ "/resume" ]
 +++
@@ -11,54 +11,56 @@ aliases = [ "/resume" ]
 * Double Major: 
     * B.S. Computer Science  
     * B.A. Art Studio  
-* GPA: 3.37 on a 4.0 scale
 
 ## Work Experience
 **Vertigo Software:**  
 Software Engineer II  
-*August 2013 – Present*  
+*August 2013 – Present*
 
-* Practiced Agile / Scrum methodologies for software development
-* Worked on projects with very sharp deadlines and delivered products on time
-* Setup development & deployment process using Docker for a private web service
-* Worked with small team to develop NBC Sports LiveExtra for AppleTV
-* Helped evaluate and contribute to the cleanup & feature enhancement of inherited NBC Live Extra for iOS
-* Worked on team that built the GoPro apps for Xbox One, Windows 8.1, LG Smart TV webOS
+_Consulted with clients/product owners about feature design, implementation, bug fixes, certification, & deployment. Implemented development processes which allow for repeatable application deployment. Documented product features, issues, API’s, & configuration parameters._
+
 * DevOps - Screambox.com (Setup development & deployment processes utilizing Docker & Amazon AWS)
-* Helped develop several video on demand apps for a major TV network for the Windows 8.0 Store
+* Setup development processes where code that runs locally is identical to what runs in production
+* Designed, documented & mocked REST API endpoints for an IaaS, PaaS, & SaaS, for an online marketplace to be used by a web hosting/cloud services provider
+* Led project to document an undocumented web site project inherited from another company. This included recommendations to reduce page loading speeds by over 50% and listed steps to setup new development machines & developers to do work on the website.
+* Implemented pre-roll ads & analytics on NBC LiveExtra iOS for SuperBowl 2015
+* Developed build systems with gulp to make up for deficiencies in closed development platforms
 
-Software Engineer  
-*June 2012 – July 2013*  
+Software Engineer   
+*June 2012 – July 2013*
 
+* Developed HTML5 PDF Webviewer using the PDFTron library for a large self publishing magazine site
 * Implemented push notifications with the use of UrbanAirship for Golf Channel Mobile (iOS)
-* Worked on iOS & Android Applications: NBC SportsTalk, Golf Channel Mobile, Golf Channel Academy
-* Added social media badges and Facebook commenting support to a large self publishing magazine site
-* Developed HTML5 PDF Webviewer using the PDFTron library on a large self publishing magazine site
+* Implemented Google Analytics & Facebook OpenGraph integration (Likes & Commenting) for a large self publishing magazine site
 
-Intern Software Engineer  
-*June 2011 – May 2012*  
+Intern Software Engineer   
+*June 2011 – May 2012*
 
-* Worked on SoundWall (internal demo), implemented with the Kinect for Windows SDK
-* Created GravityBox, a HTML5 tech demo using Canvas & Box2DJS
-* Feature development for NBC SportsTalk for iPhone & iPad
-* Feature development for Golf Channel Mobile for iPhone & iPad
+_Interned while finishing up bachelor degrees at Sonoma State. Integrated Disqus comments for Golf Channel Mobile & Implemented real-time alerts for the Superbowl in NBC SportsTalk._
+
+* Learned JavaScript, Ajax, HTML5 Canvas, how to work with JSON & XML web services
+* GravityBox, a HTML5 physics tech demo utilizing JavaScript with Canvas & Box2DJS
 
 **Sonoma State University:**  
 Adjunct Faculty (Unix Instructor)  
 *August 2013 – May 2014*  
 
-* Taught a section of the Fall 2013 and Spring 2014 Introduction to Unix class 
-* Instructed students on how to use command line basics and introduced a git based workflow using Github
+_Instructed evening section of Fall 2013 & Spring 2014 Introduction to Unix class. These classes included a quiz followed by a short lecture with an accompanying lab assignment._
+
+* Command line basics & introduction to a git based workflow using Github
 * Covered how to setup and lockdown a VPS using DigitalOcean and Amazon AWS
+* Basic debugging of C++ using GDB and introduction to Makefiles
+* Taught basic usage of Vim & Emacs
+* Created weekly quizzes and the midterms
 
 Tech Support  
 *August 2008 – August 2011*  
 
-* Extensive experience in troubleshooting problems with desktop and notebook computers
-* Communicated with customers via phone and email resolve software and hardware issues
+_Experience communicating with faculty & students to troubleshoot and resolve software and hardware issues with PC’s and Laptops_
+
+* Responsible for imaging & updating system software for seven campus-wide Mac & PC labs
 * Wrote scripts & documentation for application configuration and deployment 
-* Managed hardware inventory for faculty computers
-* Responsible for updating system software for seven campus-wide computer labs
+* Managed inventory for faculty computers & rebuilt machines as needed to resolve issues
 
 **Immecor Corporation:**  
 Computer Technician  
@@ -69,11 +71,11 @@ Computer Technician
 
 ## Language & Tools Experience
 
-* Programming languages: JavaScript, Objective-C, Python, Shell, TypeScript, Go, C++, C#, PHP
-* Database: MySQL, Redis, SQLAlchemy, MSSQL
-* Cloud Providers: Amazon AWS, DigitalOcean, CloudFlare
-* Development Tools: Vim, SublimeText, Xcode, Visual Studio, Docker, Git, Gulp
-* Frameworks: NodeJS Express, Cocoa Touch, AppleTV, Flask, AngularJS, WebOS, WinJS, ASP.Net MVC3
-* Software Development on Mac, iOS, Linux (Ubuntu, CoreOS, CentOS), Windows, OpenGL
-* Software Packages: Adobe Photoshop, 3D Studio Max
-* Visual: HTML5, CSS3, Interface Builder; 3D Modeling, Texturing, Rendering, Animation
+* Programming languages: JavaScript, Objective-C, Bash, Python, Go
+* Tools: Git, gulp, Docker, Vagrant, Vim, Nginx, Node.js, Browserify, systemd
+* Visual: HTML5, CSS3, Xcode Interface Builder, Photoshop
+* Cloud Providers: Amazon AWS, DigitalOcean, CloudFlare, UrbanAirship
+* Frameworks: Express, Cocoa Touch, AngularJS, Flask, WinJS, ASP.Net MVC
+* Development Platforms: Linux (Ubuntu, CoreOS, CentOS), iOS AppleTV, Windows, Xbox-One, webOS
+* Database: MySQL, Redis, SQLAlchemy
+* Development Methodologies: Agile/Scrum
