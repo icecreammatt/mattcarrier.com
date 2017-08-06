@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /archive/2008-08-05-my-resume/

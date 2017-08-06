@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Matt Carrier</title>
+    <link>https://mattcarrier.com/tags/go/</link>
+    <description>Recent content in Go on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2015</copyright>
+    <lastBuildDate>Fri, 28 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mattcarrier.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cross compiling Go for Winkhub</title>
+      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
+      <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
+      <description>
+
+&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br /&gt;
+&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;After seeing that the Winkhub uses &lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2#php&#34;&gt;PHP&lt;/a&gt; for its server-side scripting, I decided to see if I could run Go on it instead. That way I could avoid writing new code in PHP and get a bit more practice at Go. I had noticed when the Winkhub first boots over the serial connection, one of the first items on the screen is the CPU information.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;CPU:   Freescale i.MX28 rev1.2 at 454 MHz&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I wasn&amp;rsquo;t sure what this CPU&amp;rsquo;s architecture was, but after a quick search I figured out that it uses an ARM Processor. That gave me some hope that it was possible to compile Go for this platform.&lt;/p&gt;
+
+&lt;p&gt;I tried compiling a simple &amp;ldquo;hello world&amp;rdquo; program with the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm go build .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then copied the binary to the Winkhub and tried running it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
+runtime: this CPU has no floating point hardware, so it cannot run
+this GOARM=6 binary. Recompile using GOARM=5.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So I tried again with this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;No luck again!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
+Illegal Instruction
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I did a bit of searching and came across this &lt;a href=&#34;https://github.com/golang/go/issues/9795&#34;&gt;issue&lt;/a&gt;. This post made me think I ran the correct compile steps. I attemped this a few more times and then I had a thought to try the Go 1.5RC. I upgraded to the RC build and then tried the previous build command again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
+Hello World
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Boom! I was in business. So in the end the instructions are pretty simple:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make sure to use Go 1.5.&lt;/li&gt;
+&lt;li&gt;Set the GOOS to linux&lt;/li&gt;
+&lt;li&gt;Architecture to arm&lt;/li&gt;
+&lt;li&gt;Use ARMv5 since the Winkhub does not have floating point support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub&amp;rsquo;s web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.&lt;/p&gt;
+
+&lt;h2 id=&#34;gopherwink-https-github-com-icecreammatt-gopherwink-setup-instructions:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;&lt;a href=&#34;https://github.com/icecreammatt/gopherwink&#34;&gt;GopherWink&lt;/a&gt; setup instructions&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;#screenshots&#34;&gt;screenshots here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;building-from-source-requirements:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Building from source requirements&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1/&#34;&gt;Rooted Winkhub&lt;/a&gt; with SSH access&lt;/li&gt;
+&lt;li&gt;Go 1.5&lt;/li&gt;
+&lt;li&gt;NodeJS&lt;/li&gt;
+&lt;li&gt;ReactJS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;install-from-source:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Install from source&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export WINK_IP_ADDRESS=X.X.X.X&lt;/code&gt; (replace the x&amp;rsquo;s with the Wink IP)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone https://github.com/icecreammatt/gopherwink&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git submodule init &amp;amp;&amp;amp; git submodule update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd frontend &amp;amp;&amp;amp; npm install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make deploy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Visit &lt;code&gt;http://WINK_IP_ADDRESS/index.html&lt;/code&gt; to access the controls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;install-release-manually:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Install release manually&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download the release from &lt;a href=&#34;https://github.com/icecreammatt/gopherwink/releases&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the zip file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export WINK_IP_ADDRESS=X.X.X.X&lt;/code&gt; (replace the x&amp;rsquo;s with the Wink IP)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp gopherwink root@$WINK_IP_ADDRESS:/root/gopherwink&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp S63gopherwink root@$WINK_IP_ADDRESS:/etc/init.d/S63gopherwink&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp index.html root@$WINK_IP_ADDRESS:/var/www&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh root@$WINK_IP_ADDRESS &amp;quot;mkdir /var/www/assets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp main.js root@$WINK_IP_ADDRESS:/var/www/assets/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh root@$WINK_IP_ADDRESS &amp;quot;/etc/init.d/S63gopherwink start&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Visit &lt;code&gt;http://WINK_IP_ADDRESS/index.html&lt;/code&gt; to access the controls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-notes:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Usage notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New devices for now need to be connected using &lt;code&gt;aprontest&lt;/code&gt; or the WinkApp&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;bugs:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Bugs&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;File bugs &lt;a href=&#34;https://github.com/icecreammatt/gopherwink/issues&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;future-plans:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Future Plans&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improved UI to add and remove lights&lt;/li&gt;
+&lt;li&gt;Improved UI to rename devices&lt;/li&gt;
+&lt;li&gt;Add Proper support for GoControl Door Window Sensors&lt;/li&gt;
+&lt;li&gt;Sleep timer to keep light on for late nights&lt;/li&gt;
+&lt;li&gt;Snooze timer to turn on light after x minutes&lt;/li&gt;
+&lt;li&gt;Automatic brightness based on the time of day&lt;/li&gt;
+&lt;li&gt;TLS Authentication for API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;GPLv3&lt;/p&gt;
+
+&lt;p&gt;This is the last part of a series of posts related to hacking the Winkhub&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;Part I - Hacking the Winkhub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2&#34;&gt;Part II - Troubleshooting Winkhub issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part III - Cross compiling Go for Winkhub&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-href-id-resources-resources-a:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Cross compilation with Go 1.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/GoArm&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;GoArm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://unix.stackexchange.com/questions/59018/create-and-control-start-up-scripts-in-busybox&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Create and control start up scripts in BusyBox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;div id=&#34;screenshots&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;screenshots:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Screenshots&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-28/Lights.PNG&#34; alt=&#34;Lights&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-28/LED.PNG&#34; alt=&#34;Lights&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Matt Carrier</title>
+    <link>https://mattcarrier.com/tags/python/</link>
+    <description>Recent content in Python on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2015</copyright>
+    <lastBuildDate>Mon, 04 Mar 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mattcarrier.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setting up and deploying Python Flask to Dreamhost</title>
+      <link>https://mattcarrier.com/flask-dreamhost-setup/</link>
+      <pubDate>Mon, 04 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/flask-dreamhost-setup/</guid>
+      <description>&lt;p&gt;I have a few applications I have written that run on &lt;a title=&#34;Flask&#34; href=&#34;http://flask.pocoo.org&#34; target=&#34;_blank&#34;&gt;Flask&lt;/a&gt;. Every time I would go to deploy a new application I would always seem to forget one of the minor details and end up with the ugly &lt;code&gt;An error occurred importing your passenger_wsgi.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The following are the steps I use to deploy Flask to Dreamhost using Passenger. I haven&amp;rsquo;t tested it, but this should be roughly the same steps if you want to deploy directly to your domain instead of using a subdomain.
+&lt;h2&gt;TL;DR; (Quick Setup)&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;add a new subdomain on the dreamhost web panel&lt;/li&gt;
+    &lt;li&gt;cd myappname.domain.com&lt;/li&gt;
+    &lt;li&gt;git clone &lt;a href=&#34;https://github.com/icecreammatt/flask-passenger.git&#34;&gt;https://github.com/icecreammatt/flask-passenger.git&lt;/a&gt; .&lt;/li&gt;
+    &lt;li&gt;virtualenv .&lt;/li&gt;
+    &lt;li&gt;. bin/activate&lt;/li&gt;
+    &lt;li&gt;easy_install flask&lt;/li&gt;
+    &lt;li&gt;git submodule init&lt;/li&gt;
+    &lt;li&gt;git submodule update&lt;/li&gt;
+    &lt;li&gt;Replace &lt;code&gt;myappname.domain.com&lt;/code&gt; in passenger_wsgi.py with your folder path.&lt;/li&gt;
+    &lt;li&gt;touch tmp/restart.txt&lt;/li&gt;
+    &lt;li&gt;DONE!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Part 1 - Setup Domain&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Go to &lt;em&gt;Manage Domains&lt;/em&gt; after logging into the Web Panel&lt;/li&gt;
+    &lt;li&gt;Add New Domain / Sub-Domain
+&lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;Domain to host:&lt;/strong&gt; I like to use subdomains a lot of testing and the different Flask apps I run, so I tend to use &lt;code&gt;myappname.domain.com&lt;/code&gt; Obviously swap out myappname.domain.com with your own names.&lt;/li&gt;
+    &lt;li&gt;(Optional) Check remove WWW&lt;/li&gt;
+    &lt;li&gt;If you have more than one user account make sure to pick the correct one.&lt;/li&gt;
+    &lt;li&gt;Web directory should fill out automatically for you&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Passenger (Ruby/Python apps only):&lt;/strong&gt; Check this box&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+    &lt;li&gt;Fully host this domain!&lt;/li&gt;
+    &lt;li&gt;SSH into your web server and wait a minute or two for the myappname.domain.com folder to appear&lt;/li&gt;
+    &lt;li&gt;cd into myappname.domain.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Part 2 - Install Flask with Passenger&lt;/h2&gt;
+&lt;h3&gt;1. Setup a virtualenv&lt;/h3&gt;
+First we need to setup the virtual environment
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ virtualenv .
+$ ls&lt;/pre&gt;
+You should now have a directory that looks something like this:
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;bin&lt;br /&gt;
+include&lt;br /&gt;
+lib
+public&lt;/pre&gt;
+Next activate the virtual environment by using
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ . bin/activate&lt;/pre&gt;
+The command line should now show up something like this:
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;(myappname.domain.com)myappname.domain.com $&lt;/pre&gt;
+&lt;h3&gt;2. Install Flask&lt;/h3&gt;
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ easy_install flask&lt;/pre&gt;
+&lt;h3&gt;3. Setup passenger&lt;/h3&gt;
+Create a file named passenger_wsgi.py with the following:
+&lt;h4&gt;NOTE: Make sure to hand type this, as pasting the tabbed lines from the browser can translate to spaces which will evaluate incorrectly.&lt;/h4&gt;
+&lt;pre name=&#34;code&#34; class=&#34;python&#34;&gt;import sys, os
+INTERP = os.path.join(os.environ[&amp;#039;HOME&amp;#039;], &amp;#039;myappname.domain.com&amp;#039;, &amp;#039;bin&amp;#039;, &amp;#039;python&amp;#039;)
+if sys.executable != INTERP:
+    os.execl(INTERP, INTERP, *sys.argv)
+sys.path.append(os.getcwd())&lt;/p&gt;
+
+&lt;p&gt;from flask import Flask
+application = Flask(&lt;strong&gt;name&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;@application.route(&amp;#039;/&amp;#039;)
+def index():
+    return &amp;#039;Hello Passenger&amp;#039;&lt;/pre&gt;
+&lt;strong&gt;NOTE:&lt;/strong&gt; Don&amp;rsquo;t forget to change myappname.domain.com to match the setup you are using.
+&lt;h3&gt;4. Start the server&lt;/h3&gt;
+Add a folder called &lt;code&gt;tmp&lt;/code&gt; with a file named &lt;code&gt;restart.txt&lt;/code&gt;
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ mkdir tmp
+$ touch tmp/restart.txt&lt;/pre&gt;
+To restart the Flask application after making changes you need to update the restart.txt file. This can easily achieved by doing a touch tmp/restart.
+&lt;em&gt;(For my projects I add a post-receive hook into my git repo to touch the file for me).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The directory should now look something like this:
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;bin&lt;br /&gt;
+include&lt;br /&gt;
+lib&lt;br /&gt;
+passenger_wsgi.py
+public&lt;br /&gt;
+tmp&lt;/pre&gt;
+&lt;h3&gt;5. Test&lt;/h3&gt;
+At this point you should be able to hit the server address &lt;code&gt;mynameapp.domain.com&lt;/code&gt; from the browser and see &amp;lsquo;Hello passenger&amp;rsquo;
+&lt;h2&gt;Part 3 - Deploying a real app&lt;/h2&gt;
+&lt;h3&gt;1. Clone sample project from github &lt;a href=&#34;https://github.com/icecreammatt/flask-empty.git&#34;&gt;https://github.com/icecreammatt/flask-empty.git&lt;/a&gt;&lt;/h3&gt;
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ pwd
+/home/username/myappname.domain.com
+$ git clone &lt;a href=&#34;https://github.com/icecreammatt/flask-empty.git&#34;&gt;https://github.com/icecreammatt/flask-empty.git&lt;/a&gt; myappname&lt;/pre&gt;
+&lt;h3&gt;1. Adjust passenger_wsgi.py&lt;/h3&gt;
+Now that the basic stuff is in place a real application can be setup.&lt;/p&gt;
+
+&lt;p&gt;Edit &lt;code&gt;passenger_wsgi.py&lt;/code&gt; so it now contains
+&lt;pre name=&#34;code&#34; class=&#34;python&#34;&gt;import sys, os
+INTERP = os.path.join(os.environ[&amp;#039;HOME&amp;#039;], &amp;#039;myappname.domain.com&amp;#039;, &amp;#039;bin&amp;#039;, &amp;#039;python&amp;#039;)
+if sys.executable != INTERP:
+    os.execl(INTERP, INTERP, *sys.argv)
+sys.path.append(os.getcwd())&lt;/p&gt;
+
+&lt;p&gt;sys.path.append(&amp;#039;myappname&amp;#039;)
+from myappname.app import app as application&lt;/pre&gt;
+&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; Make sure if you copy this to tab os.excl&amp;hellip; since it will copy as spaces and cause a runtime error.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Restart Flask
+&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ touch tmp/restart.txt&lt;/pre&gt;
+&lt;h2&gt;Other Resources:&lt;/h2&gt;
+I am by no means an expert at Python or Flask, I just like to code in it during my free time. Feel free to correct me on my style of code. Please post any questions or comments.
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;http://wiki.dreamhost.com/Flask&#34;&gt;http://wiki.dreamhost.com/Flask&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
