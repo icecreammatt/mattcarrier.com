@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Matt Carrier</title>
+    <link>https://mattcarrier.com/tags/linux/</link>
+    <description>Recent content in Linux on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2015</copyright>
+    <lastBuildDate>Fri, 28 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mattcarrier.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cross compiling Go for Winkhub</title>
+      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
+      <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
+      <description>
+
+&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br /&gt;
+&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;After seeing that the Winkhub uses &lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2#php&#34;&gt;PHP&lt;/a&gt; for its server-side scripting, I decided to see if I could run Go on it instead. That way I could avoid writing new code in PHP and get a bit more practice at Go. I had noticed when the Winkhub first boots over the serial connection, one of the first items on the screen is the CPU information.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;CPU:   Freescale i.MX28 rev1.2 at 454 MHz&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I wasn&amp;rsquo;t sure what this CPU&amp;rsquo;s architecture was, but after a quick search I figured out that it uses an ARM Processor. That gave me some hope that it was possible to compile Go for this platform.&lt;/p&gt;
+
+&lt;p&gt;I tried compiling a simple &amp;ldquo;hello world&amp;rdquo; program with the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm go build .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then copied the binary to the Winkhub and tried running it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
+runtime: this CPU has no floating point hardware, so it cannot run
+this GOARM=6 binary. Recompile using GOARM=5.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So I tried again with this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;No luck again!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
+Illegal Instruction
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I did a bit of searching and came across this &lt;a href=&#34;https://github.com/golang/go/issues/9795&#34;&gt;issue&lt;/a&gt;. This post made me think I ran the correct compile steps. I attemped this a few more times and then I had a thought to try the Go 1.5RC. I upgraded to the RC build and then tried the previous build command again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
+Hello World
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Boom! I was in business. So in the end the instructions are pretty simple:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make sure to use Go 1.5.&lt;/li&gt;
+&lt;li&gt;Set the GOOS to linux&lt;/li&gt;
+&lt;li&gt;Architecture to arm&lt;/li&gt;
+&lt;li&gt;Use ARMv5 since the Winkhub does not have floating point support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub&amp;rsquo;s web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.&lt;/p&gt;
+
+&lt;h2 id=&#34;gopherwink-https-github-com-icecreammatt-gopherwink-setup-instructions:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;&lt;a href=&#34;https://github.com/icecreammatt/gopherwink&#34;&gt;GopherWink&lt;/a&gt; setup instructions&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;#screenshots&#34;&gt;screenshots here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;building-from-source-requirements:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Building from source requirements&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1/&#34;&gt;Rooted Winkhub&lt;/a&gt; with SSH access&lt;/li&gt;
+&lt;li&gt;Go 1.5&lt;/li&gt;
+&lt;li&gt;NodeJS&lt;/li&gt;
+&lt;li&gt;ReactJS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;install-from-source:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Install from source&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export WINK_IP_ADDRESS=X.X.X.X&lt;/code&gt; (replace the x&amp;rsquo;s with the Wink IP)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone https://github.com/icecreammatt/gopherwink&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git submodule init &amp;amp;&amp;amp; git submodule update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd frontend &amp;amp;&amp;amp; npm install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make deploy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Visit &lt;code&gt;http://WINK_IP_ADDRESS/index.html&lt;/code&gt; to access the controls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;install-release-manually:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Install release manually&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download the release from &lt;a href=&#34;https://github.com/icecreammatt/gopherwink/releases&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the zip file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export WINK_IP_ADDRESS=X.X.X.X&lt;/code&gt; (replace the x&amp;rsquo;s with the Wink IP)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp gopherwink root@$WINK_IP_ADDRESS:/root/gopherwink&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp S63gopherwink root@$WINK_IP_ADDRESS:/etc/init.d/S63gopherwink&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp index.html root@$WINK_IP_ADDRESS:/var/www&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh root@$WINK_IP_ADDRESS &amp;quot;mkdir /var/www/assets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp main.js root@$WINK_IP_ADDRESS:/var/www/assets/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh root@$WINK_IP_ADDRESS &amp;quot;/etc/init.d/S63gopherwink start&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Visit &lt;code&gt;http://WINK_IP_ADDRESS/index.html&lt;/code&gt; to access the controls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-notes:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Usage notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New devices for now need to be connected using &lt;code&gt;aprontest&lt;/code&gt; or the WinkApp&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;bugs:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Bugs&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;File bugs &lt;a href=&#34;https://github.com/icecreammatt/gopherwink/issues&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;future-plans:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Future Plans&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improved UI to add and remove lights&lt;/li&gt;
+&lt;li&gt;Improved UI to rename devices&lt;/li&gt;
+&lt;li&gt;Add Proper support for GoControl Door Window Sensors&lt;/li&gt;
+&lt;li&gt;Sleep timer to keep light on for late nights&lt;/li&gt;
+&lt;li&gt;Snooze timer to turn on light after x minutes&lt;/li&gt;
+&lt;li&gt;Automatic brightness based on the time of day&lt;/li&gt;
+&lt;li&gt;TLS Authentication for API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;GPLv3&lt;/p&gt;
+
+&lt;p&gt;This is the last part of a series of posts related to hacking the Winkhub&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;Part I - Hacking the Winkhub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2&#34;&gt;Part II - Troubleshooting Winkhub issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part III - Cross compiling Go for Winkhub&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-href-id-resources-resources-a:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Cross compilation with Go 1.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/GoArm&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;GoArm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://unix.stackexchange.com/questions/59018/create-and-control-start-up-scripts-in-busybox&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Create and control start up scripts in BusyBox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;div id=&#34;screenshots&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;screenshots:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Screenshots&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-28/Lights.PNG&#34; alt=&#34;Lights&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-28/LED.PNG&#34; alt=&#34;Lights&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting Winkhub issues</title>
+      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-2/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-2/</guid>
+      <description>
+
+&lt;p&gt;This post picks up where &lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;part 1&lt;/a&gt; left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.&lt;/p&gt;
+
+&lt;p&gt;By following the instructions &lt;a href=&#34;http://www.rootwink.com/viewtopic.php?f=6&amp;amp;t=4&#34;&gt;here&lt;/a&gt; (See step #5 specifically) I was able to preserve root access on the device. However, I still had issues with my device booting because when I restarted, it was stuck in a loop:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Starting lighttpd: OK
++ echo &#39;Launch upgrade script&#39;
+Launch upgrade script
++ /root/platform/run_upgrade.sh
++ FILE=/tmp/isalive
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This loop may have occurred because I did not delete the upgrade script as suggested in the instructions. I was a bit afraid of bricking the device. To fix this, I rebooted again using the NAND hack I started with at the beginning, and then I modified the upgrade script in &lt;code&gt;/root/platform/run_upgarde.sh&lt;/code&gt; by commenting out all the details and adding a &lt;code&gt;/bin/bash&lt;/code&gt; at the bottom. While this worked and got me a shell after restarting, the aprond was not starting on its own. I suspect this is because the aprond is initialized after the upgrade script runs. Keep in mind at this point I have still never connected it to the internet using the iOS app.&lt;/p&gt;
+
+&lt;p&gt;I did some digging and figured out how to connect to the wifi. I added my SSID and WPA key.&lt;/p&gt;
+
+&lt;p&gt;Add a wifi key to &lt;code&gt;/database/wpa_supplicant.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ # cat /database/wpa_supplicant.conf
+ctrl_interface=/var/run/wpa_supplicant
+update_config=1
+ap_scan=1
+fast_reauth=1
+bgscan=&amp;quot;&amp;quot;
+
+network={
+    priority=2
+    scan_ssid=1
+    ssid=&amp;quot;NETWORK_SSID_GOES_HERE&amp;quot;
+    psk=&amp;quot;XXX_PASSWORD_HERE_XXX&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: The wifi password cannot be too long or contain spaces. (I suspect it cannot contain spaces) It took me a few reboots to figure this out. I happened to catch it complaining about the password in the output during the boot sequence.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Run this to start the wireless: &lt;code&gt;/ # ./etc/init.d/S41wireless start&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I finally got my wifi connected but the boot sequence was still stuck on this loop:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I was starting to get a bit desparate because I was not able to get any of the services to start. After being stuck in this boot state, I decided to run the upgrade script to see if that might fix anything. I&amp;rsquo;m not sure what firmware version I was running. After it finished rebooting, I was able to access the shell without having to do the NAND glitch. At this point, it was pretty late so I&amp;rsquo;m a bit fuzzy if there are any other details I&amp;rsquo;m missing.&lt;/p&gt;
+
+&lt;p&gt;I tested adding a light using the &lt;code&gt;aprontest&lt;/code&gt; tool as mentioned in the forums I had been reading.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/ # aprontest -h&lt;/code&gt; Help&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/ # aprontest -a -r zigbee&lt;/code&gt; Connect new device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/ # aprontest -l&lt;/code&gt; List all the connected devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/ # aprontest -u -m1 -t1 -vOFF&lt;/code&gt; Turn light off&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/ # aprontest -u -m1 -t1 -vON&lt;/code&gt; Turn light on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;There was much rejoicing at 3:30 in the morning. Luckily it was Saturday so I could sleep in.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Before I went to bed I still wanted to see if I could set this up to be able to turn the lights on and off with curl. I found the web folder in &lt;code&gt;/var/www&lt;/code&gt;. I created a few simple scripts to test turning the lights on and off from the command line.&lt;/p&gt;
+
+&lt;div id=&#34;php&#34;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;on.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+	echo &amp;quot;Hello Light On&amp;quot;;
+	exec(&#39;aprontest -u -m1 -t1 -vON&#39;);
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;off.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+	echo &amp;quot;Hello Light Off&amp;quot;;
+	exec(&#39;aprontest -u -m1 -t1 -vOFF&#39;);
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Great Success!&lt;br /&gt;
+I could now turn the lights on and off by running &lt;code&gt;curl http://192.168.1.11/on.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;brightness.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    if(isset($_GET[&#39;value&#39;])) {
+        $value = $_GET[&#39;value&#39;];
+        //if(ctype_digit($value) {
+            echo &amp;quot;Setting brightness to &amp;quot; . $value;
+            $cmd = &amp;quot;aprontest -u -m1 -t2 -v $value&amp;quot;;
+            exec($cmd);
+        //} else {
+            //echo &#39;Expected integer&#39;
+        //}
+    }
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The brightness could be adjusted by running &lt;code&gt;curl http://192.168.1.11/brightness.php?value=150&lt;/code&gt; Can you see the bug(s) I left in &lt;code&gt;brightness.php&lt;/code&gt; where you can easily run any code as root by adjusting the value parameter? I&amp;rsquo;ll leave this to an exercise for the reader. :)&lt;/p&gt;
+
+&lt;p&gt;As you can see in my commented-out bits of &lt;code&gt;brightness.php&lt;/code&gt;, I prefer not to write PHP code. Especially at 4:00 in the morning. It wasn&amp;rsquo;t until the next day I noticed the hole I left in the code by skipping the check for digits. I was really hoping that I could run some Go binaries on this device at this point&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;Part I - Hacking the Winkhub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part II - Troubleshooting Wink issues&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-3&#34;&gt;Part III - Cross compiling Go for Winkhub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-href-id-resources-resources-a:f35e328e4392e8faa2f45e7dcf8dd39f&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wink-hub-root/demystified/wiki/Connecting-to-wifi-manually&#34; content=&#34;nofollow&#34;&gt;Connecting to wifi manually&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rootwink.com/viewtopic.php?t=12#p15&#34; content=&#34;nofollow&#34;&gt;Attaching Devices to Rooted Winkhub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hacking the Winkhub</title>
+      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-1/</link>
+      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-1/</guid>
+      <description>
+
+&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently I became interested in controlling my lights automatically. I wanted to implement a timer that could flip the lights on and off during certain hours of the day, and to create a snooze button that disables the lights from shutting off when I still needed them on after the shut-off hour. I&amp;rsquo;m currently using one of those cheap hardware outlet timers.&lt;/p&gt;
+
+&lt;p&gt;I came across the Winkhub while browsing the light section in HomeDepot. I did a quick search to see which of these &amp;ldquo;Smart&amp;rdquo; devices could easily be rooted because I did not want the controls routed through a third party service. I also thought this would be a fun challenge to try hacking on some hardware. Sadly, the PHP hack I had read about was no longer in the firmware of the Winkhub I purchased. That led me to a crash course in hacking this thing with the UART connection and learning how to cross compile Go so I could run my own programs on the device.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve listed all the resources I used at the &lt;a href=&#34;#Resources&#34;&gt;bottom.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;shopping-list:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Shopping list&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/Wink-PWHUB-WH17-Connected-Home-Hub/dp/B00PV6GAI4/&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Winkhub&lt;/a&gt;&lt;/strong&gt;  &lt;em&gt;I picked mine up at a HomeDepot and paid $50. I should have bought it online since they have a deal that combines 2 light bulbs and a hub for the same price.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/GE-Wireless-Connected-60-Watt-Equivalent/dp/B00NOL16K0/&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;GE Link Light bulb&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;At least one light to test with&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B00HSX3CXE&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;FT232RL FTDI USB to TTL Serial Adapter&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;This adapter has a jumper to to switch between 3.3v and 5v. The Winkhub uses 3.3v&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B009GXEF8A&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Female and Male Wiring Harnesses&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;I bought this mainly because I needed the wires. I&amp;rsquo;m not sure how to safely use that USB to Serial TTL adapter with the jumper.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Twist tie or a short wire&lt;/strong&gt; &lt;em&gt;I just used one I found in the kitchen off some groceries&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Some LEGO bricks&lt;/strong&gt; to build a stand for convenience&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hex torx screwdriver&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multimeter&lt;/strong&gt; &lt;em&gt;optional&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; &lt;em&gt;(Mac &amp;amp; Windows should work too)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I should note that some of the stuff I am doing with the wires is probably questionable.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Do this at your own risk!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t really done any hardware hacking in the past like this, and hardly know what I am doing. I figured this out by watching a bunch of youtube &lt;a href=&#34;#Resources&#34;&gt;videos&lt;/a&gt; and reading some blog posts on how to use a multimeter and basic usage of a UART connector.&lt;/p&gt;
+
+&lt;h2 id=&#34;device-teardown:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Device Teardown&lt;/h2&gt;
+
+&lt;p&gt;I did not connect my hub to the wireless router before doing any of these steps in fear of the firmware updating to block me out.&lt;/p&gt;
+
+&lt;p&gt;Fresh out of the box open the Winkhub by removing the 4 screws on the back with a Hex torx screwdriver.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/00.jpg&#34; alt=&#34;Back side of device&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/01.jpg&#34; alt=&#34;Screw&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pull the circuit board out and mount it on a stand. I used one made out of LEGO bricks.
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/06.jpg&#34; alt=&#34;Full Board&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/05.jpg&#34; alt=&#34;LEGO Stand&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Place jumper on the &lt;strong&gt;3.3v&lt;/strong&gt; and center pin
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/02.jpg&#34; alt=&#34;Serial Adapter Jumper&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point the Winkhub should still not be plugged into power. Attach wires to the GND (Ground), TX (Transmit), &amp;amp; (RX) Receive. Note that you will want to on UART side connect the TX to the RX connection and the RX to the TX connection. The ground connects to ground in both and the power is left empty.&lt;/p&gt;
+
+&lt;p&gt;Place the wires into the UART connection on the hub.
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/07.jpg&#34; alt=&#34;UART Empty&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/08.jpg&#34; alt=&#34;UART Attached&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/12.jpg&#34; alt=&#34;Board on stand&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I held my wires into place with the help of some LEGO bricks. I&amp;rsquo;ve seen other people solder on adapters. I found no issues with plugging my wires in without soldering them.&lt;/p&gt;
+
+&lt;p&gt;Plug-in the USB cable for the serial adapter if it isn&amp;rsquo;t already.&lt;/p&gt;
+
+&lt;h2 id=&#34;things-i-wish-i-knew-ahead-of-time:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Things I wish I knew ahead of time:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;minicom can record logs to a file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reboot -f&lt;/code&gt; is how you reboot the Winkhub. Nothing seems to happen without the &lt;code&gt;-f&lt;/code&gt; flag&lt;/li&gt;
+&lt;li&gt;The Winkhub does not seem to like spaces in the wifi passwords&lt;/li&gt;
+&lt;li&gt;Running &lt;code&gt;ping&lt;/code&gt; inside minicom will disable reading any input and I can only get out of it by rebooting the Winkhub. I&amp;rsquo;m sure there must be some better way to kill it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;setup-the-serial-connection:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Setup the serial connection&lt;/h2&gt;
+
+&lt;p&gt;I used minicom to communicate with the serial adapter.&lt;/p&gt;
+
+&lt;p&gt;Raspbian: &lt;code&gt;sudo apt-get install minicom&lt;/code&gt;&lt;br /&gt;
+OSX: &lt;code&gt;brew install minicom&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ minicom -s&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Serial port setup&lt;/li&gt;
+&lt;li&gt;Press A to update the serial device to &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; (I did this from a Raspberry Pi so it may be different on another machine.)&lt;/li&gt;
+&lt;li&gt;Set Hardware Flow Control to &lt;code&gt;No&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Press enter to save the settings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Minicom can be configured to capture logs to a file using &lt;code&gt;ctrl + A, Z&lt;/code&gt; then press &lt;code&gt;L&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;    +-----------------------------------------------------------------------+
+    | A -    Serial Device      : /dev/ttyUSB0                              |
+    | B - Lockfile Location     : /var/lock                                 |
+    | C -   Callin Program      :                                           |
+    | D -  Callout Program      :                                           |
+    | E -    Bps/Par/Bits       : 115200 8N1                                |
+    | F - Hardware Flow Control : No                                        |
+    | G - Software Flow Control : No                                        |
+    |                                                                       |
+    |    Change which setting?                                              |
+    +-----------------------------------------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save setup as default&lt;/li&gt;
+&lt;li&gt;Exit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You should see a screen like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Welcome to minicom 2.6.1
+
+OPTIONS: I18n
+Compiled on Apr 28 2012, 19:24:31.
+Port /dev/ttyUSB0
+
+Press CTRL-A Z for help on special keys
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;power-up:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Power up&lt;/h2&gt;
+
+&lt;p&gt;Open &lt;a href=&#34;https://www.youtube.com/watch?v=78qx7QMqW-I&#34;&gt;Dissolved Girl&lt;/a&gt; in the background for this next part.&lt;/p&gt;
+
+&lt;p&gt;At this point you should be able to plug the Winkhub into the wall. I used a surge protector so I could easily turn the Winkhub on and off. This is very useful later when it comes time to short the pin.&lt;/p&gt;
+
+&lt;p&gt;This is the output I recorded after powering mine on the first time:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: The CPU at the top is a Freescale i.MX28 at 454MHz. I used this information later to find out that it is possible to compile Go for this platform. (ARMv5)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;LLC
+
+U-Boot 2014.01-14400-gda781c6-dirty (Apr 30 2014 - 22:35:38)                    
+                                                                                
+CPU:   Freescale i.MX28 rev1.2 at 454 MHz                                       
+BOOT:  NAND, 3V3                                                                
+DRAM:  64 MiB                                                                   
+NAND:  128 MiB                                                                  
+In:    serial                                                                   
+Out:   serial                                                                   
+Err:   serial                                                                   
+Net:   FEC0 [PRIME]                                                             
+Hit any key to stop autoboot:  0                                                
+UBI: attaching mtd1 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    126976 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: VID header offset:          2048 (aligned 2048)
+UBI: data offset:                4096
+UBI: attached mtd1 to ubi0
+UBI: MTD device name:            &amp;quot;mtd=3&amp;quot;
+UBI: MTD device size:            8 MiB
+UBI: number of good PEBs:        64
+UBI: number of bad PEBs:         0
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    4096
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     1
+UBI: available PEBs:             6
+UBI: total number of reserved PEBs: 58
+UBI: number of PEBs reserved for bad PEB handling: 2
+UBI: max/mean erase counter: 2/1
+UBIFS: recovery needed
+UBIFS: recovery deferred
+UBIFS: mounted UBI device 0, volume 0, name &amp;quot;database&amp;quot;
+UBIFS: mounted read-only
+UBIFS: file system size:   5459968 bytes (5332 KiB, 5 MiB, 43 LEBs)
+UBIFS: journal size:       1015809 bytes (992 KiB, 0 MiB, 6 LEBs)
+UBIFS: media format:       w4/r0 (latest is w4/r0)
+UBIFS: default compressor: LZO
+UBIFS: reserved for root:  269835 bytes (263 KiB)
+Loading file &#39;DO_UPDATE&#39; to addr 0x42000000 with size 1 (0x00000001)...
+Done
+Total of 1 word(s) were the same
+
+NAND read: device 0 offset 0x2b00000, size 0x400000
+ 4194304 bytes read: OK
+## Booting kernel from Legacy Image at 42000000 ...
+   Image Name:   Linux-2.6.35.3-flex-dvt
+   Created:      2014-04-30   3:15:35 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1928460 Bytes = 1.8 MiB
+   Load Address: 40008000
+   Entry Point:  40008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+
+Starting kernel ...
+
+[...] Trimmed
+
++ pidof udhcpd
++ udhcpd -S /etc/udhcpd.conf
++ hciconfig hci0 up
++ bluetoothd
++ hciconfig hci0 leadv
++ sleep 2
++ touch /tmp/ap_mode
++ exit 0
+Starting lighttpd: OK
+Starting Zigbee...Starting lutron-core...[ OK ]
+Starting aprond...Got Z-Wave version: Z-Wave 3.79
+[ZWAVE OK]
+i: [1139.1] main() (Main|apron.c:51): APRON Home Automation Gateway version 1.2.0+localhost.localdomain-
+Starting Wink...Starting monit...hub[1145]: NOTICE: (hub.c:342) hub-dev started up by User: 0
+hub[1145]: INFO: (ConfigHandler.c:98) Reading Config from: /root/config/hub.conf
+Starting monit daemon
+hub[1145]: INFO: (hub.c:385) Waiting for /database/token
+hub[1145]: WARNING: (hub.c:416) No Token Found
+hub[1145]: DEBUG: (AuthenticationUtil.c:28) Destroying Oauth
+hub[1145]: DEBUG: (AuthenticationUtil.c:36) Done freeing oauth
+Setting non-canonical mode
+Startup complete.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;power-off-connect-uart:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Power off &amp;amp; connect UART&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/04.jpg&#34; alt=&#34;Twistie tie&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is where things become a little questionable. It was late when I did this and I realized that I forgot to order a wire that is needed to short the NAND chip by connecting a pin 29 to the ground. I scrounged through my house and realized I probably had some twistie ties. I wasn&amp;rsquo;t sure if they would be enough to conduct a signal so I tested it by stripping the paper off of the wire ends and connecting one end of a wire to a battery and the other to a tip on my multi meter. Once I saw that it had continuity, I figured it would work. I wrapped the twisty tie around the edge of the ground pin going into the UART connector on the circuit board and left the other end loose.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/03.jpg&#34; alt=&#34;Twistie tie wrap&#34; /&gt;
+&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/09.jpg&#34; alt=&#34;Twistie on ground&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Careful not to touch excess wire to RX &amp;amp; TX pins.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/10.jpg&#34; alt=&#34;NAND pin to short&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Pin 29 should be connected to ground 1 second after power is turned on.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/11.jpg&#34; alt=&#34;Larger view&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It took me many failed attempts to figure out that I needed to connect the wire to the ground at about 1 second after turning on the power or as soon as the LED light turns on. I had trouble finding information on how soon to connect the pin to the ground. I&amp;rsquo;ve listed the bad output at the &lt;a href=&#34;#FailedAttempts&#34;&gt;bottom&lt;/a&gt; for reference.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;L���BO�� 4194304 bytes read: OK
+Wrong Image Format for bootm command
+ERROR: can&#39;t get kernel image!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Success! At this point you should stop touching pin 29 to the ground.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;=&amp;gt; help
+?       - alias for &#39;help&#39;
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run &#39;bootcmd&#39;
+bootd   - boot default, i.e., run &#39;bootcmd&#39;
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+chpart  - change active partition
+clocks  - display clocks
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+date    - get/set/reset date &amp;amp; time
+dcache  - enable or disable data cache
+dhcp    - boot image via network using DHCP/TFTP protocol
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+exit    - exit script
+false   - do nothing, unsuccessfully
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fdt     - flattened device tree utility commands
+go      - start application at address &#39;addr&#39;
+gpio    - input/set/clear/toggle gpio pins
+help    - print command description/usage
+icache  - enable or disable instruction cache
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+itest   - return true/false on integer compare
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+md      - memory display
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mtdparts- define flash/nand partitions
+mw      - memory write (fill)
+nand    - NAND sub-system
+nboot   - boot from NAND device
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+true    - do nothing, successfully
+ubi     - ubi commands
+ubifsload- load file from an UBIFS filesystem
+ubifsls - list files in a directory
+ubifsmount- mount UBIFS volume
+ubifsumount- unmount UBIFS volume
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run &lt;code&gt;printenv&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;=&amp;gt; printenv
+app_boot=run appboot_args &amp;amp;&amp;amp; nand read ${loadaddr} app-kernel 0x00400000 &amp;amp;&amp;amp; bootm ${loadaddr}
+app_boot_bad=run updater_args; setenv bootargs ${bootargs} badapp; nand read ${loadaddr} updater-kernel 0x00300000; bootm ${lo}
+appboot_args=setenv bootargs &#39;noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=5 root=ubi0:rootfs rw gpmi&#39;;
+baudrate=115200
+bd_addr=XXXXXXXXXXXX
+boot_app=run app_boot || run app_boot_bad
+boot_getflag=mtdparts default &amp;amp;&amp;amp; ubi part database &amp;amp;&amp;amp; ubifsmount ubi0:database &amp;amp;&amp;amp; mw 42000000 0 8 &amp;amp;&amp;amp; ubifsload 42000000 DO_UPDc
+boot_logic=mw 42000004 30; if cmp 42000000 42000004 1; then run boot_app; else run boot_updater; fi;
+boot_updater=run updater_boot || run updater_boot_bad
+bootargs=noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=5 root=ubi0:rootfs rw gpmi badupdater
+bootcmd=mtdparts default; run boot_getflag || echo Falling back to updater...; run boot_updater
+bootdelay=0
+bootfile=uImage
+ethact=FEC0
+ethaddr=XX:XX:XX:XX:XX:XX
+ethprime=FEC0
+loadaddr=0x42000000
+mtddevname=u-boot
+mtddevnum=0
+mtdids=nand0=gpmi-nand
+mtdparts=mtdparts=gpmi-nand:3m(u-boot),4m(updater-kernel),28m(updater-rootfs),8m(database),8m(app-kernel),-(app-rootfs)
+partition=nand0,0
+serialno=XXXXXXXXXXXXX
+stderr=serial
+stdin=serial
+stdout=serial
+updater_args=setenv bootargs &#39;noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=2 root=ubi0:rootfs rw gpmi&#39;;
+updater_boot=run updater_args &amp;amp;&amp;amp; nand read ${loadaddr} updater-kernel 0x00300000 &amp;amp;&amp;amp; bootm ${loadaddr}
+updater_boot_bad=run appboot_args; setenv bootargs ${bootargs} badupdater; nand read ${loadaddr} app-kernel 0x00400000; bootm }
+ver=U-Boot 2014.01-14400-gda781c6-dirty (Apr 30 2014 - 22:35:38)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Update the bootargs so it gives shell access.&lt;br /&gt;
+&lt;code&gt;=&amp;gt; setenv bootargs &#39;noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=5 root=ubi0:rootfs rw gpmi init=/bin/sh&#39;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Start the boot process.&lt;br /&gt;
+&lt;code&gt;=&amp;gt; nand read ${loadaddr} app-kernel 0x00400000 &amp;amp;&amp;amp; bootm ${loadaddr}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy the music while you wait for it to boot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ # ls
+bin               lib               opt               tmp
+database          lib32             proc              usr
+database_default  linuxrc           root              var
+dev               media             run
+etc               mfgtests          sbin
+home              mnt               sys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This &lt;a href=&#34;http://www.rootwink.com/viewtopic.php?t=67#p295&#34;&gt;post&lt;/a&gt; contains the rest of the steps to retain root access, enable ssh, and enable serial access without having to short the NAND chip. Be very sure to read every detail. For example, some people in that thread had issues because they forgot to run &lt;code&gt;mount -a&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Part I - Hacking the Winkhub&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2&#34;&gt;Part II - Troubleshooting Winkhub issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-3&#34;&gt;Part III - Cross compiling Go for Winkhub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-href-id-resources-resources-a:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter&#34; content=&#34;nofollow&#34;&gt;How to Use a Multimeter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tlLhIvpi_5k&#34; content=&#34;nofollow&#34;&gt;Winkhub Teardown and Debug&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://arahuman.blogspot.com/2014/12/wink-hub-shell-access-through-uart.html&#34; content=&#34;nofollow&#34;&gt;Winkhub Shell access through UART&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.tldp.org/HOWTO/Remote-Serial-Console-HOWTO/modem-minicom.html&#34; content=&#34;nofollow&#34;&gt;Using Minicom to give commands to a modem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rootwink.com/viewtopic.php?t=67#p295&#34; content=&#34;nofollow&#34;&gt;Rooting ANY firmware level&amp;hellip; the hard way&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rootwink.com/viewtopic.php?f=6&amp;t=4#p5&#34; content=&#34;nofollow&#34;&gt;Howto update to 01.01 (Step #5)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.exploitee.rs/index.php/Wink_Hub%E2%80%8B%E2%80%8B&#34; content=&#34;nofollow&#34;&gt;Exploitee.rs Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-href-id-failedattempts-bad-output-a:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;FailedAttempts&#34;&gt;Bad Output&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;If you see this in your logs you connected the wire too late:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Starting Zigbee...Starting lutron-core...[ OK ]
+Starting aprond...UBIFS error (pid 1126): ubifs_read_node: bad node type (28 but expected 2)
+UBIFS error (pid 1126): ubifs_read_node: bad node at LEB 62:83784
+/etc/init.d/S61apron: line 25: zwavetest+˻ali�W���WH��T)�*�Y.minicom-logs-first.txt�ZY�LL&amp;amp;NJ��ubifs_read_node: bad node type (155 but expected )
+UBI error: wear_leveling_worker: error 4 while reading VID header from PEB 193
+UBIFS error (pid 1138): ubifs_read_node: bad node at LEB 191:72768
+UBI error: ubi_io_write: error -5 while writing 2048 bytes to PEB 7:126976, written 0 bytes
+UBI error: wear_leveling_worker: error 4 while moving PEB 193 (LEB -1:-2082455728) to PEB 236
+              ��RԼ-Y6
+UBIFS error (pid 959): ubifs_read_node: bad node type (76 but expected 0)
+���Y��or: ubi_thread: ubi_bgt0d: work failed with error code -5
+UBI warning: ubi_io_read_vid_hdr: bad magic number at PEB 7: 1c7f79e2 instead of 55424921
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 189:1984
+UBIFS error (pid 959): ubifs_iget: failed to read inode 1698, error -22
+UBI: run torture test for PEB 26
+nand_erase_nand: attempt to erase a bad block at page 0x00004c80
+UBI warning: ubi_ro_mode: switch to read-only mode
+UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S70wink&#39;, error -22
+UBIFS warning (pid 959): ubifs_ro_mode: switched to read-only mode, error -22
+nand_erase_nand: attempt to erase a bad block at page 0x00004c80
+UBIFS error (pid 1052): ubifs_wbuf_write_nolock: cannot write 3529 bytes to LEB 15:122880, error -5
+�M���ɹ����B��������J������}ɽ}������ݥэ������������z����j����*�ɽɁj�R��UBIFS error (pid 959): ubifs_read_node: bad node t     )
+nand_erase_nand: attempt to erase a bad block at page 0x00004c80
+UBI error: do_sync_erase: cannot erase PEB 26, error -5
+UBIFS error (pid 1052): do_writepage: cannot write page 0 of inode 168, error -5
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:120952
+UBIFS error (pid 959): ubifs_iget: failed to read inode 1687, error -22
+UBI error: erase_worker: failed to erase PEB 26, error -5
+UBIFS error (pid 1052): make_reservation: cannot reserve 160 bytes in jhead 1, error -30
+UBIFS error (pid 1052): ubifs_write_inode: can&#39;t write inode 169, error -30
+UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S80monit&#39;, error -22
+UBI: reserve more 1 PEBs
+UBI: mark PEB 26 as bad
+UBI error: ubi_io_mark_bad: read-only mode
+UBIFS error (pid 1052): make_reservation: cannot reserve 160 bytes in jhead 1, error -30
+UBI error: do_work: work failed with error code -30
+UBI error: ubi_thread: ubi_bgt1d: work failed with error code -30
+�GS error (pid 1052): ubifs_write_inode: can&#39;t write inode 170, error -30
+UBIFS error (pid 959): ubifs_read_node: bad node type (91 but expected 2)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 169:41648
+UBIFS error (pid 1052): make_reservation: cannot reserve 160 bytes in jhead 1, error -30
+��.minicom-logs-first.txt�ZY�L�M�J��ubifs_write_inode: can&#39;t write inode 167, error -30
+UBIFS error (pid 959): ubifs_read_node: bad node type (0 but expected 9)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 191:125184
+/etc/init.d/rcS: line 29: devmem: Invalid argument
+UBIFS error (pid 1052): make_reservation: cannot reserve 3645 bytes in jhead 2, error -30
+UBIFS error (pid 1052): do_writepage: cannot write page 1 of inode 168, error -30
+UBIFS error (pid 1052): make_reservation: cannot reserve 3174 bytes in jhead 2, error -30
+UBIFS error (pid 1052): do_writepage: cannot write page 1 of inode 169, error -30
+UBIFS error (pid 1052): make_reservation: cannot reserve 3774 bytes in jhead 2, error -30
+UBIFS error (pid 1052): do_writepage: cannot write page 1 of inode 170, error -30
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or this&amp;hellip; Also too late:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UBIFS error (pid 959): ubifs_iget: failed to read inode 1698, error -22
+UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S70wink&#39;, error -22
+UBIFS error (pid 959): ubifs_read_node: bad node type (217 but expected 0)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:120952
+UBIFS error (pid 959): ubifs_iget: failed to read inode 1687, error -22
+UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S80monit&#39;, error -22
+UBIFS error (pid 959): ubifs_read_node: bad node type (220 but expected 2)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 169:41648
+UBIFS error (pid 959): ubifs_read_node: bad node type (61 but expected 9)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 191:125184
+UBIFS error (pid 959): ubifs_read_node: bad node type (62 but expected 1)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:8424
+UBIFS error (pid 959): do_readpage: cannot read page 143 of inode 1647, error -22
+UBIFS error (pid 959): ubifs_read_node: bad node type (15 but expected 1)
+UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:8424
+UBIFS error (pid 959): do_readpage: cannot read page 143 of inode 1647, error -22
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It is also too late if you have seen this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Starting lighttpd: OK
++ echo &#39;Launch upgrade script&#39;
+Launch upgrade script
++ /root/platform/run_upgrade.sh
++ FILE=/tmp/isalive
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
++ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setup CoreOS with iptables on DigitalOcean</title>
+      <link>https://mattcarrier.com/post/core-os-iptables/</link>
+      <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/post/core-os-iptables/</guid>
+      <description>
+
+&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;
+
+&lt;h2 id=&#34;prepare-cloud-config:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Prepare cloud-config&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It is important to leave in the #cloud-config comment at the top.&lt;br /&gt;
+reboot-strategy is set to off to prevent random restarts for updates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;#cloud-config
+
+coreos:
+  update:
+    reboot-strategy: off
+  units:
+    - name: iptables-restore.service
+      enable: true
+      command: start
+write_files:
+  - path: /var/lib/iptables/rules-save
+    permissions: 0644
+    owner: &#39;root:root&#39;
+    content: |
+      *filter
+      :INPUT DROP [0:0]
+      :FORWARD DROP [0:0]
+      :OUTPUT ACCEPT [0:0]
+      -A INPUT -i lo -j ACCEPT
+      -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+      -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+      -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+      -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+      -A INPUT -p icmp -m icmp --icmp-type 0 -j ACCEPT
+      -A INPUT -p icmp -m icmp --icmp-type 3 -j ACCEPT
+      -A INPUT -p icmp -m icmp --icmp-type 11 -j ACCEPT
+      COMMIT
+      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;droplet-settings:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Droplet Settings&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Change region and size as needed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Droplet Hostname&lt;/li&gt;
+&lt;li&gt;Select Size&lt;/li&gt;
+&lt;li&gt;Select Region&lt;/li&gt;
+&lt;li&gt;Available Settings
+
+&lt;ul&gt;
+&lt;li&gt;User Data
+
+&lt;ul&gt;
+&lt;li&gt;Copy data from &lt;code&gt;cloud-config&lt;/code&gt; above into the user data box.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;  Be sure to include a newline character after the last line in the cloud config&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Select the CoreOS Image&lt;/li&gt;
+&lt;li&gt;Add SSH Keys&lt;/li&gt;
+&lt;li&gt;Create Droplet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;ssh-into-server:fadcffb6635abadf6f076ec975a3b075&#34;&gt;SSH into Server&lt;/h2&gt;
+
+&lt;p&gt;Connect to the server using the IP that displayed after creating the droplet. &lt;code&gt;ssh core@IP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Confirm iptable rules have applied&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;core@core ~ $ sudo iptables -nvL
+Chain INPUT (policy DROP 16 packets, 922 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+    0     0 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
+ 2475   12M ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+    1    64 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443
+    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0            icmptype 0
+    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0            icmptype 3
+    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0            icmptype 11
+
+Chain FORWARD (policy DROP 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+    0     0 DOCKER     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0
+    0     0 ACCEPT     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+    0     0 ACCEPT     all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0
+    0     0 ACCEPT     all  --  docker0 docker0  0.0.0.0/0            0.0.0.0/0
+
+Chain OUTPUT (policy ACCEPT 1095 packets, 73391 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain DOCKER (1 references)
+ pkts bytes target     prot opt in     out     source               destination
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;docker-port-binding:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Docker port binding&lt;/h2&gt;
+
+&lt;p&gt;When running Docker containers, be sure to bind them to &lt;code&gt;0.0.0.0&lt;/code&gt; to be accessible outside the firewall. If the intent is for the container to only be accessible internally, then be sure when specifying ports with the &lt;code&gt;-p&lt;/code&gt; flag that &lt;code&gt;127.0.0.1:PORT:PORT&lt;/code&gt; is used. Leaving off the &lt;code&gt;127.0.0.1&lt;/code&gt; defaults to &lt;code&gt;0.0.0.0&lt;/code&gt; making the container publicly available.&lt;/p&gt;
+
+&lt;h2 id=&#34;systemd:fadcffb6635abadf6f076ec975a3b075&#34;&gt;systemd&lt;/h2&gt;
+
+&lt;h3 id=&#34;unit-file:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Unit File&lt;/h3&gt;
+
+&lt;p&gt;Create a systemd unit file to make the container start when the server reboots or when a container crashes. The systemd unit file contains the information needed to start the Docker container.&lt;/p&gt;
+
+&lt;p&gt;Add the unit file here: &lt;code&gt;/etc/systemd/system&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Sample systemd unit file for a simple IP &lt;a href=&#34;https://github.com/icecreammatt/lookup&#34;&gt;lookup service&lt;/a&gt;
+&lt;code&gt;/etc/systemd/system/lookup.service&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Lookup
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker kill lookup
+ExecStartPre=-/usr/bin/docker rm lookup
+ExecStartPre=/usr/bin/docker pull icecreammatt/lookup
+ExecStart=/usr/bin/docker run -p 0.0.0.0:80:5000 --name lookup icecreammatt/lookup
+ExecStop=/usr/bin/docker stop lookup
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Some notes about the unit file:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ExecStartPre=-&lt;/code&gt; The &lt;code&gt;-&lt;/code&gt; right before the &lt;code&gt;/usr&lt;/code&gt; means that this step is optional&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p 0.0.0.0:80:5000&lt;/code&gt; Map port &lt;code&gt;5000&lt;/code&gt; of the container to port &lt;code&gt;80&lt;/code&gt; on the host and bind to &lt;code&gt;0.0.0.0&lt;/code&gt;. Use &lt;code&gt;127.0.0.1&lt;/code&gt; to make this container non publicly accessible.&lt;/li&gt;
+&lt;li&gt;Do not use the &lt;code&gt;-d&lt;/code&gt; flag with Docker when using a systemd unit file. Doing so will not allow systemd to track the running status properly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;systemd-commands:fadcffb6635abadf6f076ec975a3b075&#34;&gt;systemd commands&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After creating the unit file start the container: &lt;code&gt;systemctl start lookup.service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start on system boot: &lt;code&gt;systemctl enable lookup.service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Stop from starting on reboot: &lt;code&gt;systemctl disable lookup.service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Stop the container: &lt;code&gt;systemctl stop lookup.service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When making changes to the systemd unit file run &lt;code&gt;systemctl daemon-reload&lt;/code&gt; to update systemd&lt;/li&gt;
+&lt;li&gt;The status of the container can be checked with &lt;code&gt;systemctl status lookup.service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;journalctl&lt;/code&gt; can be used to view system logs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;cloud-config-continued:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Cloud-config continued&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Optionally systemd services can be added to the cloud-config removing the need to login to the server. The following adjustments cause the server to initialize with the lookup container after boot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#cloud-config
+
+coreos:
+  update:
+    reboot-strategy: off
+  units:
+    - name: iptables-restore.service
+      enable: true
+      command: start
+    - name: lookup.service
+      enabled: true
+      command: start
+write_files:
+  - path: /var/lib/iptables/rules-save
+    permissions: 0644
+    owner: &#39;root:root&#39;
+    content: |
+      *filter
+      :INPUT DROP [0:0]
+      :FORWARD DROP [0:0]
+      :OUTPUT ACCEPT [0:0]
+      -A INPUT -i lo -j ACCEPT
+      -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+      -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+      -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+      -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+      -A INPUT -p icmp -m icmp --icmp-type 0 -j ACCEPT
+      -A INPUT -p icmp -m icmp --icmp-type 3 -j ACCEPT
+      -A INPUT -p icmp -m icmp --icmp-type 11 -j ACCEPT
+      COMMIT
+  - path: /etc/systemd/system/lookup.service
+    permissions: 0644
+    owner: &#39;root:root&#39;
+    content: |
+        [Unit]
+        Description=Lookup
+        After=docker.service
+        Requires=docker.service
+
+        [Service]
+        TimeoutStartSec=0
+        Restart=always
+        ExecStartPre=-/usr/bin/docker kill lookup
+        ExecStartPre=-/usr/bin/docker rm lookup
+        ExecStartPre=/usr/bin/docker pull icecreammatt/lookup
+        ExecStart=/usr/bin/docker run -p 0.0.0.0:80:5000 --name lookup icecreammatt/lookup
+        ExecStop=/usr/bin/docker stop lookup
+
+        [Install]
+        WantedBy=multi-user.target
+        
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;dockerhub-authentication:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Dockerhub Authentication&lt;/h2&gt;
+
+&lt;p&gt;Add the two blocks below to allow pulling from a private Docker repository. Replace the &lt;code&gt;XXXXXXXXX&lt;/code&gt; below with the Dockerhub password from &lt;code&gt;~/.dockercfg&lt;/code&gt;. This file is generated after logging into Dockerhub.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  - path: /home/core/.dockercfg
+    owner: &#39;core:core&#39;
+    permissions: 0644
+    content: | 
+        {
+            &amp;quot;https://index.docker.io/v1/&amp;quot;: {
+                &amp;quot;auth&amp;quot;: &amp;quot;XXXXXXXXXXXX&amp;quot;,
+                &amp;quot;email&amp;quot;: &amp;quot;dockerhub@email&amp;quot;
+            }
+        }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add &lt;code&gt;User=core&lt;/code&gt; to run the task as the core user&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Service]
+User=core
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;other-resources:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Other resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://fedoraproject.org/wiki/How_to_edit_iptables_rules&#34; target=&#34;_blank&#34;&gt;How to edit iptables rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jimmycuadra.com/posts/securing-coreos-with-iptables&#34; target=&#34;_blank&#34;&gt;Securing CoreOS with iptables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.robhar.com/securing-coreos/&#34; target=&#34;_blank&#34;&gt;CoreOS Iptables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://coreos.com/docs/launching-containers/building/registry-authentication/&#34; target=&#34;_blank&#34;&gt;Using Authentication for a Registry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux web services Part I</title>
+      <link>https://mattcarrier.com/linux-web-services-part-i/</link>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattcarrier.com/linux-web-services-part-i/</guid>
+      <description>
+
+&lt;p&gt;This is an introduction to a series of talks about setting up Linux servers. I&amp;rsquo;m going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using &lt;a href=&#34;http://cygwin.com&#34;&gt;cygwin&lt;/a&gt; on Windows.&lt;/p&gt;
+
+&lt;p&gt;Resources for this talk are available here &lt;a href=&#34;https://github.com/icecreammatt/server-setup&#34;&gt;https://github.com/icecreammatt/server-setup&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;table-of-contents:5b5a247b327cc995afacd6590afee57f&#34;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Public Private Key Creation&lt;/li&gt;
+&lt;li&gt;Instance Creation (DigitalOcean)&lt;/li&gt;
+&lt;li&gt;SSH Connection&lt;/li&gt;
+&lt;li&gt;Lockdown&lt;/li&gt;
+&lt;li&gt;Update &amp;amp; Upgrade&lt;/li&gt;
+&lt;li&gt;Software Installation&lt;/li&gt;
+&lt;li&gt;Configuration &amp;amp; Debugging&lt;/li&gt;
+&lt;li&gt;Shell Scripting&lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;Gotchas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;prerequisites:5b5a247b327cc995afacd6590afee57f&#34;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OSX Terminal or &lt;a href=&#34;http://cygwin.com&#34;&gt;Cygwin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com&#34;&gt;DigitalOcean&lt;/a&gt; hosting account or access to a fresh Ubuntu 14.04 install&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;public-private-keys:5b5a247b327cc995afacd6590afee57f&#34;&gt;Public Private Keys&lt;/h2&gt;
+
+&lt;p&gt;To securely connect to a server we must not rely on passwords. So instead we use public/private key authentication. Using the same public keys that git uses for SSH we can also login to remote servers we configure to accept our key.&lt;/p&gt;
+
+&lt;h3 id=&#34;key-generation:5b5a247b327cc995afacd6590afee57f&#34;&gt;Key Generation&lt;/h3&gt;
+
+&lt;p&gt;Before generating a key check to see if you don&amp;rsquo;t already have one.&lt;br /&gt;
+If the output looks like below you can just use the existing public key to connect to the new server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls ~/.ssh
+id_rsa      id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Otherwise generate a new public private key pair.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh-keygen -t rsa -C &amp;quot;name@example.com&amp;quot;
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/matt/.ssh/id_rsa): id_rsa_example
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa_example.
+Your public key has been saved in id_rsa_example.pub.
+The key fingerprint is:
+e5:03:12:9c:40:7e:f3:f9:39:4c:1f:0b:07:04:7f:bd name@example.com
+The key&#39;s randomart image is:
++--[ RSA 2048]----+
+|   .oo.....      |
+|   .  o. o   .   |
+|    . + . + . .  |
+|     . + = o   . |
+|        S = o E  |
+|         + * o   |
+|          = o    |
+|           .     |
+|                 |
++-----------------+
+$ ls
+id_rsa_example     id_rsa_example.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The command below is specific to OSX and will not work in Cygwin&lt;br /&gt;
+Copy the contents of the public key to the clipboard&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT!&lt;/strong&gt; Be sure to copy the file that ends in &amp;ldquo;.pub&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ pbcopy &amp;lt; id_rsa_example.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If using cygwin navigate to &lt;code&gt;C:\cygwin\home\username\.ssh\&lt;/code&gt;&lt;br /&gt;
+Open &lt;code&gt;id_rsa_example.pub&lt;/code&gt; in a text editor to copy the contents&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat id_rsa_example.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ5+oxpMrW0sV8/AUial3hxGVJK/UFsURmjGWg0liN9CGwNrnwGufDyG/SBpbRdFk8jwxLXQgiyTjbrNKlhhK0AWFTeajPsoXHE1jycEu4/G1oaewQ+se7055qsN3RIFLkpYj0VSsy/fjaZH5BPk+NtFQOc7yO7Nqs+x7nORsoLVyie2YhQSzzFBM23RMFmnf6qdrdARKwm98J8tpUqkILzCas9NG679fPxHMHGw/b2QPLr0I3LblE4c1IcIXIQPTniEm5lMjWkw7Ggf4AEg1PbWLcb5MvUwGuo8k6+ZsS1tYh name@example.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;uploading-keys:5b5a247b327cc995afacd6590afee57f&#34;&gt;Uploading Keys&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Login to DigitalOcean&lt;/li&gt;
+&lt;li&gt;On the DigitalOcean dashboard select SSH Keys&lt;/li&gt;
+&lt;li&gt;Add SSH Key&lt;/li&gt;
+&lt;li&gt;Enter a name for it and paste the contents into the body.&lt;/li&gt;
+&lt;li&gt;Create SSH Key&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instance-creation-create-droplet:5b5a247b327cc995afacd6590afee57f&#34;&gt;Instance Creation (Create Droplet)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;DigitalOcean calls each server instance a &amp;ldquo;droplet&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2014-07-11/permanence.png&#34; alt=&#34;xkcd.com/910&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Click Create Droplet&lt;/li&gt;
+&lt;li&gt;Enter a hostname for your server&lt;/li&gt;
+&lt;li&gt;Select a size (I recommend 512MB RAM for starting)&lt;/li&gt;
+&lt;li&gt;Select Region&lt;/li&gt;
+&lt;li&gt;Select Image Ubuntu 14.04 x64 (LTS)&lt;/li&gt;
+&lt;li&gt;Add your key, which was uploaded earlier&lt;/li&gt;
+&lt;li&gt;Create Droplet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;ssh-connection:5b5a247b327cc995afacd6590afee57f&#34;&gt;SSH Connection&lt;/h2&gt;
+
+&lt;p&gt;Once the loading bar has completed and we have an IP address we are ready to connect to the server.&lt;/p&gt;
+
+&lt;p&gt;We can connect to the server using the &lt;code&gt;ssh&lt;/code&gt; command. Our public key has been automatically added to the server from the DigitalOcean control panel so our private key will work as the &amp;ldquo;password&amp;rdquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh root@107.170.203.120
+The authenticity of host &#39;107.170.203.120 (107.170.203.120)&#39; can&#39;t be established.
+RSA key fingerprint is 5b:13:e0:0e:d9:44:5a:1a:49:b5:12:0e:3c:d4:0d:8d.
+Are you sure you want to continue connecting (yes/no)?yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After connecting you should see this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Warning: Permanently added &#39;107.170.203.120&#39; (RSA) to the list of known hosts.
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Jul 11 01:06:53 EDT 2014
+
+  System load:  0.0               Processes:           71
+  Usage of /:   6.1% of 19.56GB   Users logged in:     0
+  Memory usage: 9%                IP address for eth0: 107.170.203.120
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+root@setup-demo:~#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;lockdown:5b5a247b327cc995afacd6590afee57f&#34;&gt;Lockdown&lt;/h2&gt;
+
+&lt;p&gt;We are now logged into the server, which right now is almost wide open to the Internet. It is time to lock it down with the following steps:&lt;/p&gt;
+
+&lt;h3 id=&#34;user-account-creation:5b5a247b327cc995afacd6590afee57f&#34;&gt;User account creation&lt;/h3&gt;
+
+&lt;p&gt;Create a sudo user account&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;username=YOUR_NAME_HERE
+addgroup admin
+adduser $username
+usermod -a -G admin $username
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Full output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  root@setup-demo:~# username=matt
+  root@setup-demo:~# addgroup admin
+  Adding group `admin&#39; (GID 1000) ...
+  Done.
+  root@setup-demo:~# adduser $username
+  Adding user `matt&#39; ...
+  Adding new group `matt&#39; (1001) ...
+  Adding new user `matt&#39; (1000) with group `matt&#39; ...
+  Creating home directory `/home/matt&#39; ...
+  Copying files from `/etc/skel&#39; ...
+  Enter new UNIX password:
+  Retype new UNIX password:
+  passwd: password updated successfully
+  Changing the user information for matt
+  Enter the new value, or press ENTER for the default
+  	Full Name []: Matt Carrier
+  	Room Number []:
+  	Work Phone []:
+  	Home Phone []:
+  	Other []:
+  Is the information correct? [Y/n]
+  root@setup-demo:~# usermod -a -G admin $username
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy over SSH public key to new account and set permissions to the owner&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p /home/$username/.ssh/
+cp ~/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
+chmod -R 750 /home/$username
+chown -R $username:$username /home/$username/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ssh-server-lockdown:5b5a247b327cc995afacd6590afee57f&#34;&gt;SSH Server lockdown&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Disable password authentication&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo &amp;quot;PasswordAuthentication no&amp;quot; &amp;gt;&amp;gt; /etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Disable root login&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;sed -i &#39;s/PermitRootLogin without-password/PermitRootLogin no/g&#39; /etc/ssh/sshd_config
+sed -i &#39;s/PermitRootLogin yes/PermitRootLogin no/g&#39; /etc/ssh/sshd_config
+sed -i &#39;s/PasswordAuthentication yes/PasswordAuthentication no/g&#39; /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Only allow login from selected users&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;AllowUsers $username&amp;quot; &amp;gt;&amp;gt; /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Restart ssh server&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;service ssh restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;firewall-fail2ban:5b5a247b327cc995afacd6590afee57f&#34;&gt;Firewall &amp;amp; fail2ban&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Setup ufw (Ubuntu Firewall)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    # ufw (Ubuntu Firewall)
+    ufw default deny incoming
+    ufw default allow outgoing
+
+    # Open SSH
+    ufw allow ssh
+
+    # Open web ports
+    ufw allow 443/tcp
+    ufw allow 80/tcp
+
+    # Enable firewall and fail2ban
+    ufw --force enable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Setup fail2ban&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;apt-get install -y fail2ban&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Confirm status&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    root@setup-demo:~# ufw status
+    Status: active
+
+    To                         Action      From
+    --                         ------      ----
+    22                         ALLOW       Anywhere
+    443/tcp                    ALLOW       Anywhere
+    80/tcp                     ALLOW       Anywhere
+    22 (v6)                    ALLOW       Anywhere (v6)
+    443/tcp (v6)               ALLOW       Anywhere (v6)
+    80/tcp (v6)                ALLOW       Anywhere (v6)
+
+    root@setup-demo:~# service fail2ban status
+     * Status of authentication failure monitor
+     *  fail2ban is running
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ensure you can connect from a &lt;strong&gt;new terminal window&lt;/strong&gt; before disconnecting&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    $ ssh YOUR_USERNAME@SERVER_IP
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;updating-upgrading:5b5a247b327cc995afacd6590afee57f&#34;&gt;Updating &amp;amp; Upgrading&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set the time zone to your choice&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: I had to run &lt;code&gt;$ tzconfig&lt;/code&gt; before the above command would work for me.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    $ dpkg-reconfigure tzdata
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Update server to latest software&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;apt-get update&lt;/code&gt; will fetch all the latest updates.&lt;br /&gt;
+&lt;code&gt;apt-get upgrade&lt;/code&gt; will apply updates.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    $ apt-get update &amp;amp;&amp;amp; apt-get upgrade -y
+    ...
+    # Make sure you are able to reconnect from a new window before this step
+    $ shutdown -r now
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;software-installation:5b5a247b327cc995afacd6590afee57f&#34;&gt;Software Installation&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2014-07-11/sandwich.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Basic utilities to install&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install -y htop zsh tree git vim nginx nodejs make npm cmake python-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;htop - processor monitor&lt;/li&gt;
+&lt;li&gt;tree - tree view directories&lt;/li&gt;
+&lt;li&gt;git - the stupid content tracker&lt;/li&gt;
+&lt;li&gt;vim - text editor&lt;/li&gt;
+&lt;li&gt;nginx - web server / reverse proxy&lt;/li&gt;
+&lt;li&gt;make - build tools&lt;/li&gt;
+&lt;li&gt;cmake - more build tools&lt;/li&gt;
+&lt;li&gt;python-dev - even more building tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;configuration-debugging:5b5a247b327cc995afacd6590afee57f&#34;&gt;Configuration &amp;amp; Debugging&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;nginx - &lt;code&gt;sudo vim /etc/nginx/sites-enabled/default&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;sudo service nginx restart&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ssh - &lt;code&gt;sudo vim /etc/ssh/sshd_config&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;sudo service ssh restart&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;logs&lt;code&gt;/var/log&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;sudo tail -f /var/log/nginx/access.log&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;shell-scripting:5b5a247b327cc995afacd6590afee57f&#34;&gt;Shell Scripting&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# This is a comment
+echo &amp;quot;Hello World&amp;quot;
+
+# make script executable
+chmod a+x hello.sh
+
+# execute script
+./hello.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;git-remote-repository:5b5a247b327cc995afacd6590afee57f&#34;&gt;Git remote repository&lt;/h2&gt;
+
+&lt;p&gt;On the remote machine&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir ~/web-project-name.git
+$ git init --bare ~/web-project-name.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From local machine&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/projects/web-project
+$ git remote add web-hostname YOUR_USERNAME@SERVER_IP:web-project-name.git
+$ git push web-hostname master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Githooks
+
+&lt;ul&gt;
+&lt;li&gt;post-update for deployment&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Challenge: Setup the git post-update hook to deploy website&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;gotchas:5b5a247b327cc995afacd6590afee57f&#34;&gt;Gotchas&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ctrl + z by accident?
+
+&lt;ul&gt;
+&lt;li&gt;fg to foreground the application&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;nodejs-with-nginx:5b5a247b327cc995afacd6590afee57f&#34;&gt;NodeJS with Nginx&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add a site config to &lt;code&gt;/etc/nginx/sites-available/site.conf&lt;/code&gt;.
+&lt;script src=&#34;https://gist.github.com/icecreammatt/b9252556400e08513c61.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;Soft link &lt;code&gt;ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/&lt;/code&gt; to enable the site.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo service nginx reload&lt;/code&gt; to apply the changes.&lt;/li&gt;
+&lt;li&gt;Change the port number from &lt;code&gt;3000&lt;/code&gt; to whatever your node app is running on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;next-time:5b5a247b327cc995afacd6590afee57f&#34;&gt;Next time&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Automation
+
+&lt;ul&gt;
+&lt;li&gt;Ansible&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;PaaS&lt;/li&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;li&gt;Dokku&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;future-talk-ideas:5b5a247b327cc995afacd6590afee57f&#34;&gt;Future talk ideas&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Nginx Setup with NodeJS&lt;/li&gt;
+&lt;li&gt;DNS&lt;/li&gt;
+&lt;li&gt;Monitoring&lt;/li&gt;
+&lt;li&gt;Automation deep dive&lt;/li&gt;
+&lt;li&gt;AWS
+
+&lt;ul&gt;
+&lt;li&gt;Basics&lt;/li&gt;
+&lt;li&gt;Security Groups&lt;/li&gt;
+&lt;li&gt;EC2&lt;/li&gt;
+&lt;li&gt;Load Balancing&lt;/li&gt;
+&lt;li&gt;etc&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Continuous Integration&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
