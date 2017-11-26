@@ -66,7 +66,7 @@ if sys.executable != INTERP:
 sys.path.append(os.getcwd())
 
 from flask import Flask
-application = Flask(__name__)
+`application = Flask(__name__)`
 
 @application.route(&#039;/&#039;)
 def index():
