@@ -17,7 +17,7 @@ const config = {
 
     kit: {
         adapter: adapter(),
-        // trailingSlash: 'always' // comment out for live reloading
+        // trailingSlash: 'always' // for static hosting, comment out for live reloading to work
     }
 };
 
