@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<div class="article-list">
+  {{ range $index, $page := .Paginator.Pages }}
+    {{ if ne $index 0 }}
+    <hr/>
+    {{ end }}
+    {{ if ne $page.Title "Matt Carrier - Resume" }}
+      {{ .Render "li" }}
+    {{ end }}
+  {{ end }}
+</div>
+{{ partial "pagination.html" .Paginator }}
+{{ partial "footer.html" . }}
+

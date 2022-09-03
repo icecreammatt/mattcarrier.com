@@ -1,0 +1,38 @@
+
+<aside>
+    <div class="row top-buffer">
+
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Recent Posts</h2>
+                </div>
+                <div class="list-group">
+                    {{range first 6 .Site.Pages}}
+                      {{ if ne .Title "Matt Carrier - Resume" }}
+                        <a href="{{.RelPermalink}}" class="list-group-item">{{ .Title }}</a>
+                      {{ end }} 
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Tags</h2>
+                </div>
+                <div class="list-group">
+                    {{ $baseurl := .Site.BaseURL }}
+                    {{ range $name, $value := .Site.Taxonomies.tags }}
+                    <a href="{{ $baseurl }}tags/{{ $name | urlize }}" class="list-group-item">
+                        <span class="badge">{{ .Count }}</span>
+                        {{ $name }}
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>

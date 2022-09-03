@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archives on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/archive/</link>
+    <description>Recent content in Archives on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2015</copyright>
+    <lastBuildDate>Sun, 05 Feb 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.mattcarrier.com/archive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SoundWall Kinect</title>
+      <link>https://www.mattcarrier.com/archive/soundwall-kinect/</link>
+      <pubDate>Sun, 05 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/soundwall-kinect/</guid>
+      <description>&lt;p&gt;SoundWall is an open source digital drum machine which can be controlled using the Xbox Kinect SDK for Windows using hand motions and voice commands.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Darwin lobby update</title>
+      <link>https://www.mattcarrier.com/archive/2010-01-30-darwin-lobby-update/</link>
+      <pubDate>Sat, 30 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2010-01-30-darwin-lobby-update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSU Map Progress</title>
+      <link>https://www.mattcarrier.com/archive/2010-01-20-ssu-map-progress/</link>
+      <pubDate>Wed, 20 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2010-01-20-ssu-map-progress/</guid>
+      <description>Darwin Lobby Chairs</description>
+    </item>
+    
+    <item>
+      <title>3D Maze</title>
+      <link>https://www.mattcarrier.com/archive/2009-12-17-3d-maze/</link>
+      <pubDate>Thu, 17 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-12-17-3d-maze/</guid>
+      <description>This was part of an assignment for my CS215 class. It involved coding a maze that uses recursion to randomly generate the maze. For extra credit I went nuts and added DirectX support so I could have the whole thing drawn in 3D.
+&amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra applied to 3D Graphics</title>
+      <link>https://www.mattcarrier.com/archive/2009-12-08-linear-algebra-applied-to-3d-graphics/</link>
+      <pubDate>Tue, 08 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-12-08-linear-algebra-applied-to-3d-graphics/</guid>
+      <description>I made this video as part of a presentation I gave for extra credit in my linear algebra class. It is just showing how matrices are applied in computer graphics.</description>
+    </item>
+    
+    <item>
+      <title>Monster for my Maze Project</title>
+      <link>https://www.mattcarrier.com/archive/2009-12-05-monster-for-my-maze-project/</link>
+      <pubDate>Sat, 05 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-12-05-monster-for-my-maze-project/</guid>
+      <description>After some play testing, friends told me they couldn&amp;rsquo;t tell which was the player and which was the monster, so I decided to make this to clear up any confusion.</description>
+    </item>
+    
+    <item>
+      <title>Sonoma State Map Preview</title>
+      <link>https://www.mattcarrier.com/archive/2009-09-07-sonoma-state-map-preview/</link>
+      <pubDate>Mon, 07 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-09-07-sonoma-state-map-preview/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>IT Helpdesk map screens</title>
+      <link>https://www.mattcarrier.com/archive/2009-01-19-it-helpdesk-map-screens/</link>
+      <pubDate>Mon, 19 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-01-19-it-helpdesk-map-screens/</guid>
+      <description>Here are some screen shots from the map I was working on while on my winter break this year.</description>
+    </item>
+    
+    <item>
+      <title>Shotgun</title>
+      <link>https://www.mattcarrier.com/archive/2008-08-15-shotgun/</link>
+      <pubDate>Fri, 15 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-08-15-shotgun/</guid>
+      <description>This is a weapon for the mod I am making.
+Polys: 850 | Verts: 902</description>
+    </item>
+    
+    <item>
+      <title>Colt 45</title>
+      <link>https://www.mattcarrier.com/archive/2008-06-05-colt-45/</link>
+      <pubDate>Thu, 05 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-06-05-colt-45/</guid>
+      <description>I am modeling this for a Half-Life 2 mod I am making.
+Polys: 1359 (The in game version, which is this one here with faces removed from the other side is 912 polys.) | The texture isn&amp;rsquo;t done yet.</description>
+    </item>
+    
+    <item>
+      <title>1940 Ford WIP</title>
+      <link>https://www.mattcarrier.com/archive/2008-05-24-1940-ford-wip/</link>
+      <pubDate>Sat, 24 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-05-24-1940-ford-wip/</guid>
+      <description>This is a truck that I am making for my mod. I still have much to do with it.</description>
+    </item>
+    
+    <item>
+      <title>LG KG300 Cell Phone</title>
+      <link>https://www.mattcarrier.com/archive/2008-05-18-lg-kg300-cell-phone/</link>
+      <pubDate>Sun, 18 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-05-18-lg-kg300-cell-phone/</guid>
+      <description>This is a speed model I did to see what I could do in an hour.
+Polys: 86 | Verts: 80</description>
+    </item>
+    
+    <item>
+      <title>Saw</title>
+      <link>https://www.mattcarrier.com/archive/2008-04-20-saw/</link>
+      <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-04-20-saw/</guid>
+      <description>This is a prop for the mod I am making.</description>
+    </item>
+    
+    <item>
+      <title>Shovel</title>
+      <link>https://www.mattcarrier.com/archive/2008-04-20-shovel/</link>
+      <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-04-20-shovel/</guid>
+      <description>This is a prop for the mod I am making.
+Polys: 309</description>
+    </item>
+    
+    <item>
+      <title>ATST Matchmove</title>
+      <link>https://www.mattcarrier.com/archive/2008-04-14-atst-matchmove/</link>
+      <pubDate>Mon, 14 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-04-14-atst-matchmove/</guid>
+      <description>Messing around with match moving and an old animation I made.</description>
+    </item>
+    
+    <item>
+      <title>Various Rocks</title>
+      <link>https://www.mattcarrier.com/archive/2007-12-02-various-rocks/</link>
+      <pubDate>Sun, 02 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-12-02-various-rocks/</guid>
+      <description>These are some rocks I made at different scales for my mod.</description>
+    </item>
+    
+    <item>
+      <title>Head of Constantine</title>
+      <link>https://www.mattcarrier.com/archive/2007-11-29-head-of-constantine/</link>
+      <pubDate>Thu, 29 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-11-29-head-of-constantine/</guid>
+      <description>I modeled this for an extra credit assignment for one of my art history classes. I didn&amp;rsquo;t have enough time to finish the model before the due date though. Eventually I want to learn how to use zbrush and add more detail to it.</description>
+    </item>
+    
+    <item>
+      <title>Earth Shader Test</title>
+      <link>https://www.mattcarrier.com/archive/2007-11-22-earth-shader-test/</link>
+      <pubDate>Thu, 22 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-11-22-earth-shader-test/</guid>
+      <description>This is a shader I was working on for the planet earth for a solar system model I was making.</description>
+    </item>
+    
+    <item>
+      <title>Face Model</title>
+      <link>https://www.mattcarrier.com/archive/2007-10-22-face-model/</link>
+      <pubDate>Mon, 22 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-10-22-face-model/</guid>
+      <description>This is second attempt at a face model, This one is a work in progress for a mod I am working on.
+Polys: 1382 | Verts: 1248</description>
+    </item>
+    
+    <item>
+      <title>Shark</title>
+      <link>https://www.mattcarrier.com/archive/2007-09-03-shark/</link>
+      <pubDate>Mon, 03 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-09-03-shark/</guid>
+      <description>This was a quick rough model I did to have something to test a caustics simulation.</description>
+    </item>
+    
+    <item>
+      <title>Self Portrait</title>
+      <link>https://www.mattcarrier.com/archive/2007-04-12-self-portrait/</link>
+      <pubDate>Thu, 12 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-04-12-self-portrait/</guid>
+      <description>This is my attempt at a face model.</description>
+    </item>
+    
+    <item>
+      <title>Mushroom Cloud</title>
+      <link>https://www.mattcarrier.com/archive/2007-02-25-mushroom-cloud/</link>
+      <pubDate>Sun, 25 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-02-25-mushroom-cloud/</guid>
+      <description>Nuclear Explosion</description>
+    </item>
+    
+    <item>
+      <title>Sink</title>
+      <link>https://www.mattcarrier.com/archive/2007-02-24-sink/</link>
+      <pubDate>Sat, 24 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-02-24-sink/</guid>
+      <description>Bathroom Sink&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Space Skidster</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-20-space-skidster/</link>
+      <pubDate>Sat, 20 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-20-space-skidster/</guid>
+      <description>This was a model I sketched out and will hopefully come back to and finish.</description>
+    </item>
+    
+    <item>
+      <title>Lighsaber</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-14-lighsaber/</link>
+      <pubDate>Sun, 14 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-14-lighsaber/</guid>
+      <description>An elegant weapon for a more civilized age.</description>
+    </item>
+    
+    <item>
+      <title>Virtual High School</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school/</link>
+      <pubDate>Sun, 07 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school/</guid>
+      <description>The virtual high school or Windsor High school map was a project I did in my senior year for school. (2005) My goal was to create the whole school in a 3d environment which could be explored in the Half-Life 2 game engine. I figured the project would take between 80 and 100 hours. It ended up taking over 200 hours. This was a great learning experience for me. While it did end up taking me so long to do it, I enjoyed almost every minute of it.</description>
+    </item>
+    
+    <item>
+      <title>Virtual High School Install Guide</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school-install-guide/</link>
+      <pubDate>Sun, 07 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school-install-guide/</guid>
+      <description>First you need Steam. http://www.steampowered.com Then you need to either buy a copy of Half-Life 2 or The Orange Box to run the mod. This can be picked up retail for between 20 and 50 dollars. It can also be purchased directly from steam.
+To install copy the &amp;ldquo;Virtual High School&amp;rdquo; folder (copy the folder that is in the same folder as the readme.txt file. Don&amp;rsquo;t copy the dated folder.) to your SourceMods folder in your steam directory.</description>
+    </item>
+    
+    <item>
+      <title>Custom computer chassis concept</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-04-custom-computer-chassis-concept/</link>
+      <pubDate>Thu, 04 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-04-custom-computer-chassis-concept/</guid>
+      <description>This was a model I had to create for work. I had to change the color schemes and decals so our customer at my job could have a good visualization of what they were going to get.</description>
+    </item>
+    
+    <item>
+      <title>Glasses</title>
+      <link>https://www.mattcarrier.com/archive/2006-11-12-glasses/</link>
+      <pubDate>Sun, 12 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2006-11-12-glasses/</guid>
+      <description>An up close of the glasses from the table render.</description>
+    </item>
+    
+    <item>
+      <title>Table</title>
+      <link>https://www.mattcarrier.com/archive/2006-11-12-table/</link>
+      <pubDate>Sun, 12 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2006-11-12-table/</guid>
+      <description>This was a simulation I did to test out HDR.</description>
+    </item>
+    
+    <item>
+      <title>Pumpkin</title>
+      <link>https://www.mattcarrier.com/archive/2005-10-22-pumpkin/</link>
+      <pubDate>Sat, 22 Oct 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2005-10-22-pumpkin/</guid>
+      <description>Happy Halloween!</description>
+    </item>
+    
+    <item>
+      <title>Windsor High School Tour</title>
+      <link>https://www.mattcarrier.com/archive/2005-05-28-windsor-high-school-tour/</link>
+      <pubDate>Sat, 28 May 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2005-05-28-windsor-high-school-tour/</guid>
+      <description>The virtual high school or Windsor High school map was a project I did in my senior year for school. (2005) My goal was to create the whole school in a 3d environment which could be explored in the Half-Life 2 game engine.
+This is Windsor High School in Sonoma County California.</description>
+    </item>
+    
+    <item>
+      <title>Windsor High School - Screens</title>
+      <link>https://www.mattcarrier.com/archive/2005-05-27-windsor-high-school-screens/</link>
+      <pubDate>Fri, 27 May 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2005-05-27-windsor-high-school-screens/</guid>
+      <description>I did this as my senior project in high school.</description>
+    </item>
+    
+    <item>
+      <title>dm_lightsabers</title>
+      <link>https://www.mattcarrier.com/archive/2004-12-23-dm_lightsabers/</link>
+      <pubDate>Thu, 23 Dec 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2004-12-23-dm_lightsabers/</guid>
+      <description>I made this map because I found out a funny way to make a lightsabers. This is still a beta and has a few glitches but please give me your input on what you think of the map, and any ideas to go with it. I hope you enjoy this map. I know my friends and I did.
+Download dm_lightsabers (ic_lightsabersBETA3)</description>
+    </item>
+    
+    <item>
+      <title>fy_glassworld</title>
+      <link>https://www.mattcarrier.com/archive/2004-05-20-fy_glassworld/</link>
+      <pubDate>Thu, 20 May 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2004-05-20-fy_glassworld/</guid>
+      <description>This is a map made after one of my favorite Counter-Strike 1.6 maps fy_iceworld. The only difference is I added a little twist to the map for a little more crazy. DANGER ALL GLASS CAN EVENTUALLY BE BROKEN! (Except for the Outer 6 Walls)
+Download fy_glassworld (for Counter-Strike 1.6)</description>
+    </item>
+    
+  </channel>
+</rss>

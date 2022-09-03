@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/post/</link>
+    <description>Recent content in Posts on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2015</copyright>
+    <lastBuildDate>Mon, 31 Aug 2015 23:07:40 -0700</lastBuildDate>
+    
+	<atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Matt Carrier - Resume</title>
+      <link>https://www.mattcarrier.com/post/resume/</link>
+      <pubDate>Mon, 31 Aug 2015 23:07:40 -0700</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/resume/</guid>
+      <description>Education Sonoma State University: Rohnert Park, CA
+ Double Major:  B.S. Computer Science
+ B.A. Art Studio
+   Work Experience Vertigo Software:
+Software Engineer II
+August 2013 – Present
+Consulted with clients/product owners about feature design, implementation, bug fixes, certification, &amp;amp; deployment. Implemented development processes which allow for repeatable application deployment. Documented product features, issues, API’s, &amp;amp; configuration parameters.
+ DevOps - Screambox.com (Setup development &amp;amp; deployment processes utilizing Docker &amp;amp; Amazon AWS) Setup development processes where code that runs locally is identical to what runs in production Designed, documented &amp;amp; mocked REST API endpoints for an IaaS, PaaS, &amp;amp; SaaS, for an online marketplace to be used by a web hosting/cloud services provider Led project to document an undocumented web site project inherited from another company.</description>
+    </item>
+    
+    <item>
+      <title>Cross compiling Go for Winkhub</title>
+      <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
+      <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
+      <description>&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br /&gt;
+&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting Winkhub issues</title>
+      <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</guid>
+      <description>&lt;p&gt;This post picks up where &lt;a href=&#34;https://www.mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;part 1&lt;/a&gt; left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hacking the Winkhub</title>
+      <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</link>
+      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</guid>
+      <description>&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup CoreOS with iptables on DigitalOcean</title>
+      <link>https://www.mattcarrier.com/post/core-os-iptables/</link>
+      <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/core-os-iptables/</guid>
+      <description>&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to enable 5.1 surround sound in VLC on OSX over HDMI</title>
+      <link>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</link>
+      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</guid>
+      <description>&lt;p&gt;I recently connected my MacBookPro to my audio receiver over HDMI to play a movie with VLC and try out the Steam in home streaming. I noticed that the audio was not coming out of all my speakers.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

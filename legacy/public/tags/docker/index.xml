@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/tags/docker/</link>
+    <description>Recent content in Docker on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2015</copyright>
+    <lastBuildDate>Mon, 11 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.mattcarrier.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup CoreOS with iptables on DigitalOcean</title>
+      <link>https://www.mattcarrier.com/post/core-os-iptables/</link>
+      <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/core-os-iptables/</guid>
+      <description>&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
