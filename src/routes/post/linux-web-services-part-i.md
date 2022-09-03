@@ -1,28 +1,31 @@
 ---
 title: Linux web services Part I
 date: 2014-07-11
-tags: 
-    - "linux"
+tags:
+  - 'linux'
 ---
+
 This is an introduction to a series of talks about setting up Linux servers. I'm going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using [cygwin](http://cygwin.com) on Windows.
 
 Resources for this talk are available here [https://github.com/icecreammatt/server-setup](https://github.com/icecreammatt/server-setup)
 
 ## Table of Contents
-* Public Private Key Creation
-* Instance Creation (DigitalOcean)
-* SSH Connection
-* Lockdown
-* Update & Upgrade
-* Software Installation
-* Configuration & Debugging
-* Shell Scripting
-* Git
-* Gotchas
+
+- Public Private Key Creation
+- Instance Creation (DigitalOcean)
+- SSH Connection
+- Lockdown
+- Update & Upgrade
+- Software Installation
+- Configuration & Debugging
+- Shell Scripting
+- Git
+- Gotchas
 
 ## Prerequisites
-* OSX Terminal or [Cygwin](http://cygwin.com)
-* [DigitalOcean](https://www.digitalocean.com) hosting account or access to a fresh Ubuntu 14.04 install
+
+- OSX Terminal or [Cygwin](http://cygwin.com)
+- [DigitalOcean](https://www.digitalocean.com) hosting account or access to a fresh Ubuntu 14.04 install
 
 ## Public Private Keys
 
@@ -67,12 +70,14 @@ id_rsa_example     id_rsa_example.pub
 ```
 
 > The command below is specific to OSX and will not work in Cygwin  
-Copy the contents of the public key to the clipboard
+> Copy the contents of the public key to the clipboard
 
 **IMPORTANT!** Be sure to copy the file that ends in ".pub"
+
 ```bash
 $ pbcopy < id_rsa_example.pub
 ```
+
 > If using cygwin navigate to `C:\cygwin\home\username\.ssh\`  
 > Open `id_rsa_example.pub` in a text editor to copy the contents
 
@@ -97,11 +102,11 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ
 
 1. Click Create Droplet
 2. Enter a hostname for your server
-4. Select a size (I recommend 512MB RAM for starting)
-5. Select Region
-6. Select Image Ubuntu 14.04 x64 (LTS)
-7. Add your key, which was uploaded earlier
-8. Create Droplet
+3. Select a size (I recommend 512MB RAM for starting)
+4. Select Region
+5. Select Image Ubuntu 14.04 x64 (LTS)
+6. Add your key, which was uploaded earlier
+7. Create Droplet
 
 ## SSH Connection
 
@@ -192,7 +197,7 @@ chown -R $username:$username /home/$username/
 
 2. Disable password authentication
 
-    `echo "PasswordAuthentication no" >> /etc/ssh/sshd_config`
+   `echo "PasswordAuthentication no" >> /etc/ssh/sshd_config`
 
 3. Disable root login
 
@@ -238,7 +243,6 @@ service ssh restart
 
 `apt-get install -y fail2ban`
 
-
 8. Confirm status
 
 ```bash
@@ -269,7 +273,7 @@ service ssh restart
 
 1. Set the time zone to your choice
 
-    > NOTE: I had to run `$ tzconfig` before the above command would work for me.
+   > NOTE: I had to run `$ tzconfig` before the above command would work for me.
 
 ```bash
     $ dpkg-reconfigure tzdata
@@ -277,8 +281,8 @@ service ssh restart
 
 2. Update server to latest software
 
-    > `apt-get update` will fetch all the latest updates.  
-    > `apt-get upgrade` will apply updates.
+   > `apt-get update` will fetch all the latest updates.  
+   > `apt-get upgrade` will apply updates.
 
 ```bash
     $ apt-get update && apt-get upgrade -y
@@ -289,7 +293,7 @@ service ssh restart
 
 ## Software Installation
 
-![](/images/2014-07-11/sandwich.png)
+![xkcd sudo make me sandwich](/images/2014-07-11/sandwich.png)
 
 Basic utilities to install
 
@@ -297,24 +301,25 @@ Basic utilities to install
 sudo apt-get install -y htop zsh tree git vim nginx nodejs make npm cmake python-dev
 ```
 
-* htop - processor monitor
-* tree - tree view directories
-* git - the stupid content tracker
-* vim - text editor
-* nginx - web server / reverse proxy
-* make - build tools
-* cmake - more build tools
-* python-dev - even more building tools
+- htop - processor monitor
+- tree - tree view directories
+- git - the stupid content tracker
+- vim - text editor
+- nginx - web server / reverse proxy
+- make - build tools
+- cmake - more build tools
+- python-dev - even more building tools
 
 ## Configuration & Debugging
-* nginx - `sudo vim /etc/nginx/sites-enabled/default`  
-    `sudo service nginx restart`
 
-* ssh - `sudo vim /etc/ssh/sshd_config`  
-    `sudo service ssh restart`
+- nginx - `sudo vim /etc/nginx/sites-enabled/default`  
+   `sudo service nginx restart`
 
-* logs`/var/log`  
-    `sudo tail -f /var/log/nginx/access.log`
+- ssh - `sudo vim /etc/ssh/sshd_config`  
+   `sudo service ssh restart`
+
+- logs`/var/log`  
+   `sudo tail -f /var/log/nginx/access.log`
 
 ## Shell Scripting
 
@@ -334,53 +339,56 @@ chmod a+x hello.sh
 ## Git remote repository
 
 On the remote machine
+
 ```bash
 $ mkdir ~/web-project-name.git
 $ git init --bare ~/web-project-name.git
 ```
 
 From local machine
+
 ```bash
 $ cd ~/projects/web-project
 $ git remote add web-hostname YOUR_USERNAME@SERVER_IP:web-project-name.git
 $ git push web-hostname master
 ```
 
-* Githooks
-    * post-update for deployment
+- Githooks
+  - post-update for deployment
 
 > Challenge: Setup the git post-update hook to deploy website
 
 ## Gotchas
 
-* ctrl + z by accident?
-    * fg to foreground the application
+- ctrl + z by accident?
+  - fg to foreground the application
 
 ## NodeJS with Nginx
 
-* Add a site config to `/etc/nginx/sites-available/site.conf`. 
+- Add a site config to `/etc/nginx/sites-available/site.conf`.
     <script src="https://gist.github.com/icecreammatt/b9252556400e08513c61.js"></script>
-* Soft link `ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/` to enable the site.
-* `sudo service nginx reload` to apply the changes.
-* Change the port number from `3000` to whatever your node app is running on.
+- Soft link `ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/` to enable the site.
+- `sudo service nginx reload` to apply the changes.
+- Change the port number from `3000` to whatever your node app is running on.
 
 ## Next time
-* Automation
-    * Ansible
-* PaaS
-* Docker
-* Dokku
+
+- Automation
+  - Ansible
+- PaaS
+- Docker
+- Dokku
 
 ## Future talk ideas
-* Nginx Setup with NodeJS
-* DNS
-* Monitoring
-* Automation deep dive
-* AWS
-    * Basics
-    * Security Groups
-    * EC2
-    * Load Balancing
-    * etc...
-* Continuous Integration
 
+- Nginx Setup with NodeJS
+- DNS
+- Monitoring
+- Automation deep dive
+- AWS
+  - Basics
+  - Security Groups
+  - EC2
+  - Load Balancing
+  - etc...
+- Continuous Integration
