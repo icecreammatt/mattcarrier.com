@@ -1,7 +1,7 @@
 ---
 date: '2015-08-31T23:07:40-07:00'
 title: 'Matt Carrier - Resume'
-#aliases: ['/resume']
+aliases: ['/resume']
 ---
 
 <!--more-->

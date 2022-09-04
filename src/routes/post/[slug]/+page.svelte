@@ -8,3 +8,12 @@
 	<p>Published: {date}</p>
 	<Content />
 </article>
+
+<style>
+	article {
+		background-color: rgba(228, 228, 228, 0.912);
+	}
+	Content {
+		border: 5px solid green;
+	}
+</style>

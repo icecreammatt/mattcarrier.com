@@ -1,40 +1,42 @@
-<header>
-	<a href="/">Home</a>
-
+<footer>
+	<h5>Copyright 2022</h5>
 	<nav>
 		<ul>
-			<li>
-				<a href="/post">Blog</a>
-			</li>
-			<li>
-				<a href="/post/resume">Resume</a>
-			</li>
+			<li>Github</li>
+			<li>Linkedin</li>
+			<li>Stackoverflow</li>
+			<li>Twitter</li>
 		</ul>
 	</nav>
-</header>
+</footer>
 
 <style>
-	header {
-		padding: 2rem;
+	footer {
+		/* padding: 1rem; */
 		background: lightskyblue;
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: row;
 		justify-content: space-between;
+	}
+
+	nav {
+		align-items: center;
 	}
 
 	ul {
 		margin: 0;
 		list-style-type: none;
+		list-style: disc;
 		display: flex;
 		gap: 1rem;
+		background-color: green;
 	}
 
 	a {
 		text-decoration: none;
 		color: inherit;
-		padding: 0.5rem;
 	}
-
 	a:hover {
 		background-color: red;
 	}
