@@ -11,33 +11,34 @@
 </footer>
 
 <style>
+	/* h5 {
+		margin-left: 2rem;
+	} */
+
 	footer {
 		/* padding: 1rem; */
 		background: lightskyblue;
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
 		justify-content: space-between;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	nav {
+		display: flex;
 		align-items: center;
+		/* background-color: red; */
 	}
 
 	ul {
-		margin: 0;
-		list-style-type: none;
-		list-style: disc;
 		display: flex;
-		gap: 1rem;
-		background-color: green;
+		justify-content: space-around;
+		list-style-type: none;
+		gap: 2rem;
 	}
 
-	a {
+	/* a {
 		text-decoration: none;
 		color: inherit;
-	}
-	a:hover {
-		background-color: red;
-	}
+	} */
 </style>
