@@ -30,3 +30,12 @@ export const fetchMarkdownPosts = async (): Promise<Array<MarkdownPosts>> => {
 
     return allPosts.filter(post => !!post)
 }
+
+export const fetchFeaturedMarkdownPosts = async () => {
+    const allPosts = await fetchMarkdownPosts();
+    return allPosts.filter(post => {
+        if (post.meta.tags) {
+            return post.meta.tags.find((value) => value === 'featured');
+        }
+    });
+}
