@@ -1,4 +1,14 @@
-export const fetchMarkdownPosts = async () => {
+export interface Meta {
+    title: string;
+    date: string;
+    aliases: string;
+    tags: Array<string>;
+}
+export interface MarkdownPosts {
+    meta: Meta;
+    path: string;
+}
+export const fetchMarkdownPosts = async (): Promise<Array<MarkdownPosts>> => {
     const allPostFiles = import.meta.glob('/src/routes/post/*.md');
     const iterablePostFiles = Object.entries(allPostFiles);
 
