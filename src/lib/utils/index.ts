@@ -8,8 +8,16 @@ export interface MarkdownPosts {
     meta: Meta;
     path: string;
 }
-export const fetchMarkdownPosts = async (): Promise<Array<MarkdownPosts>> => {
-    const allPostFiles = import.meta.glob('/src/routes/post/*.md');
+
+export const fetchMarkdownPosts = async (postType: string): Promise<Array<MarkdownPosts>> => {
+
+    let allPostFiles;
+    if (postType === 'post') {
+        allPostFiles = import.meta.glob('/src/routes/post/*.md');
+        // } else if (postType === 'archive') {
+        //     allPostFiles = import.meta.glob('/src/routes/archive/*.markdown');
+    }
+    // const allPostFiles = import.meta.glob('/src/routes/post/*.md');
     const iterablePostFiles = Object.entries(allPostFiles);
 
     const allPosts = await Promise.all(
