@@ -16,7 +16,7 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-	count: 12,
+	count: 30,
 	color: 'red'
 };
 

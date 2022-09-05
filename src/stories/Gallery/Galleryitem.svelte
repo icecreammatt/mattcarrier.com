@@ -1,9 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-
 	export let expanded = false;
-	let opacity = '0%';
-
 	export let index = 0;
 
 	function onClick() {
@@ -23,9 +20,7 @@
 <div on:click={onClick} class={expanded ? 'item expanded' : 'item collapsed'}>
 	<img alt=" " width="100px" height="100px" src="" />
 	<span>Index: {index + 1}</span>
-	<p class={expanded ? 'expanded' : 'hidden'}>
-		Expanded Description {expanded} with a lot of filler text
-	</p>
+	<p class={expanded ? 'expanded' : 'hidden'}>TEST</p>
 </div>
 
 <!-- </div> -->
@@ -41,6 +36,8 @@
 		display: block;
 		/* width: 100px;
 		height: 100px; */
+		width: 100px;
+		height: 100px;
 		cursor: default;
 		background-color: rgb(173, 173, 173);
 		outline: 1px solid red;
