@@ -4,7 +4,8 @@ export default {
 	title: 'Gallery/GalleryItem',
 	component: GalleryItem,
 	argTypes: {
-		expanded: Boolean,
+		expanded: false,
+		width: 100,
 		onClick: { action: 'onClick' }
 	}
 };
@@ -19,5 +20,7 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-	expanded: false
+	expanded: false,
+	width: 100,
+	image: 'http://localhost:5173/images/2015-08-24/05.jpg'
 };

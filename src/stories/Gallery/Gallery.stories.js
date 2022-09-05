@@ -4,8 +4,9 @@ export default {
 	title: 'Gallery/Gallery',
 	component: Gallery,
 	argTypes: {
-		count: 12,
-		color: 'red'
+		columns: 2,
+		width: 100,
+		content: []
 	}
 };
 
@@ -16,12 +17,18 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-	count: 30,
-	color: 'red'
+	columns: 5,
+	width: 100,
+	content: [...Array(30)].map(() => {
+		return { meta: { expanded: false, title: 'title', description: 'desc', image: '' } };
+	})
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-	count: 2,
-	color: 'red'
+	columns: 5,
+	width: 100,
+	content: [...Array(5)].map(() => {
+		return { meta: { expanded: false, title: 'title', description: 'desc', image: '' } };
+	})
 };
