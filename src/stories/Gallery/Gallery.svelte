@@ -2,21 +2,39 @@
 	import GalleryItem from './GalleryItem.svelte';
 
 	export let count;
+	export let content = [];
+	let image = '';
+	export const columns = 5;
+
 	const projects = Array();
-	for (let i = 0; i < count; i++) {
-		projects.push({ expanded: false });
+
+	if (content.length) {
+		const posts = content;
+		if (posts) {
+			for (let i = 0; i < 10; i++) {
+				posts.forEach(({ meta }) => {
+					// const { meta } = post;
+					const { image, title } = meta;
+					projects.push({ expanded: false, title, description: title, image });
+				});
+			}
+		}
+	} else {
+		for (let i = 0; i < count; i++) {
+			projects.push({ expanded: false, title: 'title', description: 'desc', image: '' });
+		}
 	}
+
 	let previous = -1;
 	let expanded = false;
 
 	let descriptionPosition = 0;
 	let descriptionContent = '';
-	// let height = '0px';
-	export const columns = 5;
 
 	const handleToggle = (state) => {
 		const { detail } = state;
-		const { index, expanded: expand, collapse } = detail;
+		const { index, expanded: expand, title, image: img, collapse } = detail;
+		image = img;
 
 		projects.forEach((item) => {
 			item.toggle = false;
@@ -25,32 +43,49 @@
 		if (previous >= 0) {
 			projects[previous].expanded = false;
 		}
+
+		// if animating this open close be sure to only do it
+		// when the row changes instead of all of them otherwise
+		// it looks strange when going from items in same row
+		// expanded = false;
+
+		// setTimeout(() => {
 		previous = index;
 		projects[index].expanded = expand;
 		expanded = expand;
 
-		descriptionContent = `Index ${index + 1} This is the fillter`;
+		descriptionContent = `${index + 1}: ${title}`;
 
 		const rem = index % columns;
 		descriptionPosition = index + columns - rem;
+		// }, 410);
 	};
 </script>
 
 <div>
 	<ul>
-		{#each projects as project, index}
-			<!-- {#if index % 4 == 0 && index != 0}<div style="width: 400px; height: 100px">Desc</div>{/if} -->
+		{#each projects as { expanded, image, title, description }, index}
 			<li style="order: {index + 1}">
-				<GalleryItem {index} expanded={project.expanded} on:toggle={handleToggle} />
+				<GalleryItem {index} {image} {title} {description} {expanded} on:toggle={handleToggle} />
 			</li>
 		{/each}
-		<li class="desc {expanded ? 'expanded' : 'collapsed'}" style="order: {descriptionPosition};">
-			<div><h3>{descriptionContent}</h3></div>
+		<li
+			class="desc {expanded ? 'expanded' : 'collapsed'}"
+			style="background-image: url('{image}'); order: {descriptionPosition};"
+		>
+			<div>
+				<h3>{descriptionContent}</h3>
+				<!-- replace image here with CSS background image from sprite sheet -->
+				<!-- <img alt=" " width="300px" max-height="100px" src={image} /> -->
+			</div>
 		</li>
 	</ul>
 </div>
 
 <style>
+	img {
+		min-height: 300px;
+	}
 	div {
 		display: flex;
 		max-width: 500px;
@@ -69,21 +104,34 @@
 		/* padding: 0.2rem; */
 	}
 	li.desc {
+		overflow: hidden;
 		display: flex;
-		/* order: 4; */
-		outline: 1px solid red;
 		width: 500px;
-		height: 100px;
-		background-color: red;
+		height: 300px;
+		/* background-color: red; */
 		transition: order 3s;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: white;
+		text-shadow: 2px 2px rgba(40, 40, 40, 0.466);
+		/* outline: 1px solid black; */
+
+		margin-top: 1px;
+		margin-bottom: -1px;
+		margin-left: -1px;
+		margin-right: -1px;
+
+		border-bottom: 1px solid black;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
 	}
 	li.desc.expanded {
 		height: 300px;
-		transition: height 0.1s ease-in-out;
+		transition: height 0.2s ease-in-out;
 	}
 
 	li.desc.collapsed {
 		height: 0px;
-		transition: height 0.1s ease-in-out;
+		transition: height 0.2s ease-in-out;
 	}
 </style>
