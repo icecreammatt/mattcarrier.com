@@ -1,3 +1,16 @@
+# Local Dev
+
+```bash
+# terminal 1
+nix-shell
+npm run storybook
+
+# terminal 2
+nix-shell
+npm run dev
+
+```
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
