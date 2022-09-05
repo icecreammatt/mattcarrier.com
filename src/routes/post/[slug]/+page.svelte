@@ -15,7 +15,4 @@
 		margin: 1rem;
 		padding: 1rem;
 	}
-	Content {
-		border: 5px solid green;
-	}
 </style>
