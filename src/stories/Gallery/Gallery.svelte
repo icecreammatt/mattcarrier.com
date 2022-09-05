@@ -83,12 +83,8 @@
 </div>
 
 <style>
-	img {
-		min-height: 300px;
-	}
 	div {
 		display: flex;
-		max-width: 500px;
 	}
 	ul {
 		display: flex;
@@ -101,20 +97,14 @@
 		display: flex;
 		margin: 0px;
 		padding: 0px;
-		/* padding: 0.2rem; */
 	}
 	li.desc {
 		overflow: hidden;
 		display: flex;
-		width: 500px;
-		height: 300px;
-		/* background-color: red; */
-		transition: order 3s;
 		background-size: cover;
 		background-repeat: no-repeat;
 		color: white;
 		text-shadow: 2px 2px rgba(40, 40, 40, 0.466);
-		/* outline: 1px solid black; */
 
 		margin-top: 1px;
 		margin-bottom: -1px;
@@ -133,5 +123,6 @@
 	li.desc.collapsed {
 		height: 0px;
 		transition: height 0.2s ease-in-out;
+		border-bottom: 0px solid black;
 	}
 </style>
