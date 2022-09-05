@@ -4,6 +4,11 @@
 	const { featured } = data;
 </script>
 
-<h1>Matt Carrier</h1>
-<p>Blurb about me</p>
-<Gallery count={10} content={featured} />
+<article>
+	<h1>Matt Carrier</h1>
+	<p>Blurb about me</p>
+	<Gallery content={featured} {columns} {width} />
+</article>
+
+<style>
+</style>
