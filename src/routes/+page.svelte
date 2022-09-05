@@ -1,6 +1,8 @@
 <script>
 	import Gallery from '../stories/Gallery/Gallery.svelte';
 	export let data;
+	let columns = 3;
+	let width = 150;
 	const { featured } = data;
 </script>
 
