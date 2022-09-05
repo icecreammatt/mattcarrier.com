@@ -40,7 +40,7 @@ export const fetchMarkdownPosts = async (postType: string): Promise<Array<Markdo
 }
 
 export const fetchFeaturedMarkdownPosts = async () => {
-    const allPosts = await fetchMarkdownPosts();
+    const allPosts = await fetchMarkdownPosts('post');
     return allPosts.filter(post => {
         if (post.meta.tags) {
             return post.meta.tags.find((value) => value === 'featured');
