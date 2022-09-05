@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Gallery from '../stories/Gallery/Gallery.svelte';
+	export let data;
+	const { featured } = data;
+</script>
+
+<h1>Matt Carrier</h1>
+<p>Blurb about me</p>
+<Gallery count={10} content={featured} />
