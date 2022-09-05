@@ -1,12 +1,15 @@
 ---
 title: Troubleshooting Winkhub issues
 date: 2015-08-26
+image: '/images/2015-08-24/05.jpg'
 tags:
-    - "Winkhub"
-    - "linux"
+  - 'Winkhub'
+  - 'linux'
+  - 'featured'
 ---
 
 This post picks up where [part 1](/post/hacking-the-winkhub-part-1) left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.
+
 <!--more-->
 
 By following the instructions [here](http://www.rootwink.com/viewtopic.php?f=6&t=4) (See step #5 specifically) I was able to preserve root access on the device. However, I still had issues with my device booting because when I restarted, it was stuck in a loop:
@@ -52,7 +55,7 @@ network={
 }
 ```
 
-> NOTE: The wifi password cannot be too long or contain spaces. (I suspect it cannot contain spaces) It took me a few reboots to figure this out. I happened to catch it complaining about the password in the output during the boot sequence. 
+> NOTE: The wifi password cannot be too long or contain spaces. (I suspect it cannot contain spaces) It took me a few reboots to figure this out. I happened to catch it complaining about the password in the output during the boot sequence.
 
 Run this to start the wireless: `/ # ./etc/init.d/S41wireless start`
 
@@ -69,11 +72,11 @@ I was starting to get a bit desparate because I was not able to get any of the s
 
 I tested adding a light using the `aprontest` tool as mentioned in the forums I had been reading.
 
-* `/ # aprontest -h` Help
-* `/ # aprontest -a -r zigbee` Connect new device
-* `/ # aprontest -l` List all the connected devices
-* `/ # aprontest -u -m1 -t1 -vOFF` Turn light off 
-* `/ # aprontest -u -m1 -t1 -vON` Turn light on
+- `/ # aprontest -h` Help
+- `/ # aprontest -a -r zigbee` Connect new device
+- `/ # aprontest -l` List all the connected devices
+- `/ # aprontest -u -m1 -t1 -vOFF` Turn light off
+- `/ # aprontest -u -m1 -t1 -vON` Turn light on
 
 _There was much rejoicing at 3:30 in the morning. Luckily it was Saturday so I could sleep in._
 
@@ -81,7 +84,8 @@ Before I went to bed I still wanted to see if I could set this up to be able to 
 
 <div id="php"></div>
 
-__on.php__
+**on.php**
+
 ```
 <?php
 	echo "Hello Light On";
@@ -89,17 +93,20 @@ __on.php__
 ?>
 ```
 
-__off.php__
+**off.php**
+
 ```
 <?php
 	echo "Hello Light Off";
 	exec('aprontest -u -m1 -t1 -vOFF');
 ?>
 ```
-Great Success!   
+
+Great Success!  
 I could now turn the lights on and off by running `curl http://192.168.1.11/on.php`
 
-__brightness.php__
+**brightness.php**
+
 ```
 <?php
     if(isset($_GET['value'])) {
@@ -119,10 +126,11 @@ The brightness could be adjusted by running `curl http://192.168.1.11/brightness
 
 As you can see in my commented-out bits of `brightness.php`, I prefer not to write PHP code. Especially at 4:00 in the morning. It wasn't until the next day I noticed the hole I left in the code by skipping the check for digits. I was really hoping that I could run some Go binaries on this device at this point...
 
-* [Part I - Hacking the Winkhub](/post/hacking-the-winkhub-part-1)
-* Part II - Troubleshooting Wink issues
-* [Part III - Cross compiling Go for Winkhub](/post/hacking-the-winkhub-part-3)
+- [Part I - Hacking the Winkhub](/post/hacking-the-winkhub-part-1)
+- Part II - Troubleshooting Wink issues
+- [Part III - Cross compiling Go for Winkhub](/post/hacking-the-winkhub-part-3)
 
 ## <a href="#" id="Resources">Resources</a>
-* <a href="https://github.com/wink-hub-root/demystified/wiki/Connecting-to-wifi-manually" content="nofollow">Connecting to wifi manually</a>
-* <a href="http://rootwink.com/viewtopic.php?t=12#p15" content="nofollow">Attaching Devices to Rooted Winkhub</a>
+
+- <a href="https://github.com/wink-hub-root/demystified/wiki/Connecting-to-wifi-manually" content="nofollow">Connecting to wifi manually</a>
+- <a href="http://rootwink.com/viewtopic.php?t=12#p15" content="nofollow">Attaching Devices to Rooted Winkhub</a>

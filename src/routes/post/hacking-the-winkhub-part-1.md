@@ -1,13 +1,17 @@
 ---
 title: Hacking the Winkhub
 date: 2015-08-25
+image: '/images/2015-08-24/00.jpg'
 tags:
-    - "Winkhub"
-    - "linux"
+  - 'Winkhub'
+  - 'linux'
+  - 'featured'
 ---
+
 How I liberated my Winkhub from the Cloud
 
 _TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone._
+
 <!--more-->
 
 Recently I became interested in controlling my lights automatically. I wanted to implement a timer that could flip the lights on and off during certain hours of the day, and to create a snooze button that disables the lights from shutting off when I still needed them on after the shut-off hour. I'm currently using one of those cheap hardware outlet timers.
@@ -18,19 +22,19 @@ I've listed all the resources I used at the [bottom.](#Resources)
 
 ## Shopping list
 
-* __<a href="http://www.amazon.com/Wink-PWHUB-WH17-Connected-Home-Hub/dp/B00PV6GAI4/" content="nofollow" target="_blank">Winkhub</a>__  _I picked mine up at a HomeDepot and paid $50. I should have bought it online since they have a deal that combines 2 light bulbs and a hub for the same price._
-* __<a href="http://www.amazon.com/GE-Wireless-Connected-60-Watt-Equivalent/dp/B00NOL16K0/" content="nofollow" target="_blank">GE Link Light bulb</a>__ _At least one light to test with_
-* __<a href="http://www.amazon.com/gp/product/B00HSX3CXE" content="nofollow" target="_blank">FT232RL FTDI USB to TTL Serial Adapter</a>__ _This adapter has a jumper to to switch between 3.3v and 5v. The Winkhub uses 3.3v_
-* __<a href="http://www.amazon.com/gp/product/B009GXEF8A" content="nofollow" target="_blank">Female and Male Wiring Harnesses</a>__ _I bought this mainly because I needed the wires. I'm not sure how to safely use that USB to Serial TTL adapter with the jumper._
-* __Twist tie or a short wire__ _I just used one I found in the kitchen off some groceries_
-* __Some LEGO bricks__ to build a stand for convenience
-* __Hex torx screwdriver__
-* __Multimeter__ _optional_
-* __Linux__ _(Mac & Windows should work too)_
+- **<a href="http://www.amazon.com/Wink-PWHUB-WH17-Connected-Home-Hub/dp/B00PV6GAI4/" content="nofollow" target="_blank">Winkhub</a>** _I picked mine up at a HomeDepot and paid $50. I should have bought it online since they have a deal that combines 2 light bulbs and a hub for the same price._
+- **<a href="http://www.amazon.com/GE-Wireless-Connected-60-Watt-Equivalent/dp/B00NOL16K0/" content="nofollow" target="_blank">GE Link Light bulb</a>** _At least one light to test with_
+- **<a href="http://www.amazon.com/gp/product/B00HSX3CXE" content="nofollow" target="_blank">FT232RL FTDI USB to TTL Serial Adapter</a>** _This adapter has a jumper to to switch between 3.3v and 5v. The Winkhub uses 3.3v_
+- **<a href="http://www.amazon.com/gp/product/B009GXEF8A" content="nofollow" target="_blank">Female and Male Wiring Harnesses</a>** _I bought this mainly because I needed the wires. I'm not sure how to safely use that USB to Serial TTL adapter with the jumper._
+- **Twist tie or a short wire** _I just used one I found in the kitchen off some groceries_
+- **Some LEGO bricks** to build a stand for convenience
+- **Hex torx screwdriver**
+- **Multimeter** _optional_
+- **Linux** _(Mac & Windows should work too)_
 
-I should note that some of the stuff I am doing with the wires is probably questionable.   
+I should note that some of the stuff I am doing with the wires is probably questionable.
 
-> __Do this at your own risk!__
+> **Do this at your own risk!**
 
 I haven't really done any hardware hacking in the past like this, and hardly know what I am doing. I figured this out by watching a bunch of youtube [videos](#Resources) and reading some blog posts on how to use a multimeter and basic usage of a UART connector.
 
@@ -47,7 +51,7 @@ Pull the circuit board out and mount it on a stand. I used one made out of LEGO 
 ![Full Board](/images/2015-08-24/06.jpg)
 ![LEGO Stand](/images/2015-08-24/05.jpg)
 
-Place jumper on the __3.3v__ and center pin
+Place jumper on the **3.3v** and center pin
 ![Serial Adapter Jumper](/images/2015-08-24/02.jpg)
 
 At this point the Winkhub should still not be plugged into power. Attach wires to the GND (Ground), TX (Transmit), & (RX) Receive. Note that you will want to on UART side connect the TX to the RX connection and the RX to the TX connection. The ground connects to ground in both and the power is left empty.
@@ -63,12 +67,13 @@ Plug-in the USB cable for the serial adapter if it isn't already.
 
 ## Things I wish I knew ahead of time:
 
-* minicom can record logs to a file
-* `reboot -f` is how you reboot the Winkhub. Nothing seems to happen without the `-f` flag
-* The Winkhub does not seem to like spaces in the wifi passwords
-* Running `ping` inside minicom will disable reading any input and I can only get out of it by rebooting the Winkhub. I'm sure there must be some better way to kill it.
+- minicom can record logs to a file
+- `reboot -f` is how you reboot the Winkhub. Nothing seems to happen without the `-f` flag
+- The Winkhub does not seem to like spaces in the wifi passwords
+- Running `ping` inside minicom will disable reading any input and I can only get out of it by rebooting the Winkhub. I'm sure there must be some better way to kill it.
 
 ## Setup the serial connection
+
 I used minicom to communicate with the serial adapter.
 
 Raspbian: `sudo apt-get install minicom`  
@@ -76,10 +81,10 @@ OSX: `brew install minicom`
 
 `$ minicom -s`
 
-* Go to Serial port setup
-* Press A to update the serial device to `/dev/ttyUSB0` (I did this from a Raspberry Pi so it may be different on another machine.)
-* Set Hardware Flow Control to `No`
-* Press enter to save the settings
+- Go to Serial port setup
+- Press A to update the serial device to `/dev/ttyUSB0` (I did this from a Raspberry Pi so it may be different on another machine.)
+- Set Hardware Flow Control to `No`
+- Press enter to save the settings
 
 > NOTE: Minicom can be configured to capture logs to a file using `ctrl + A, Z` then press `L`
 
@@ -97,8 +102,8 @@ OSX: `brew install minicom`
     +-----------------------------------------------------------------------+
 ```
 
-* Save setup as default
-* Exit
+- Save setup as default
+- Exit
 
 You should see a screen like this:
 
@@ -126,17 +131,17 @@ This is the output I recorded after powering mine on the first time:
 ```
 LLC
 
-U-Boot 2014.01-14400-gda781c6-dirty (Apr 30 2014 - 22:35:38)                    
-                                                                                
-CPU:   Freescale i.MX28 rev1.2 at 454 MHz                                       
-BOOT:  NAND, 3V3                                                                
-DRAM:  64 MiB                                                                   
-NAND:  128 MiB                                                                  
-In:    serial                                                                   
-Out:   serial                                                                   
-Err:   serial                                                                   
-Net:   FEC0 [PRIME]                                                             
-Hit any key to stop autoboot:  0                                                
+U-Boot 2014.01-14400-gda781c6-dirty (Apr 30 2014 - 22:35:38)
+
+CPU:   Freescale i.MX28 rev1.2 at 454 MHz
+BOOT:  NAND, 3V3
+DRAM:  64 MiB
+NAND:  128 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Net:   FEC0 [PRIME]
+Hit any key to stop autoboot:  0
 UBI: attaching mtd1 to ubi0
 UBI: physical eraseblock size:   131072 bytes (128 KiB)
 UBI: logical eraseblock size:    126976 bytes
@@ -229,12 +234,12 @@ This is where things become a little questionable. It was late when I did this a
 
 It took me many failed attempts to figure out that I needed to connect the wire to the ground at about 1 second after turning on the power or as soon as the LED light turns on. I had trouble finding information on how soon to connect the pin to the ground. I've listed the bad output at the [bottom](#FailedAttempts) for reference.
 
-
 ```
 L���BO�� 4194304 bytes read: OK
 Wrong Image Format for bootm command
 ERROR: can't get kernel image!
 ```
+
 Success! At this point you should stop touching pin 29 to the ground.
 
 ```
@@ -365,21 +370,24 @@ home              mnt               sys
 
 This [post](http://www.rootwink.com/viewtopic.php?t=67#p295) contains the rest of the steps to retain root access, enable ssh, and enable serial access without having to short the NAND chip. Be very sure to read every detail. For example, some people in that thread had issues because they forgot to run `mount -a`.
 
-* Part I - Hacking the Winkhub
-* [Part II - Troubleshooting Winkhub issues](/post/hacking-the-winkhub-part-2)
-* [Part III - Cross compiling Go for Winkhub](/post/hacking-the-winkhub-part-3)
+- Part I - Hacking the Winkhub
+- [Part II - Troubleshooting Winkhub issues](/post/hacking-the-winkhub-part-2)
+- [Part III - Cross compiling Go for Winkhub](/post/hacking-the-winkhub-part-3)
 
 ## <a href="#" id="Resources">Resources</a>
-* <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter" content="nofollow">How to Use a Multimeter</a>
-* <a href="https://www.youtube.com/watch?v=tlLhIvpi_5k" content="nofollow">Winkhub Teardown and Debug</a>
-* <a href="http://arahuman.blogspot.com/2014/12/wink-hub-shell-access-through-uart.html" content="nofollow">Winkhub Shell access through UART</a>
-* <a href="http://www.tldp.org/HOWTO/Remote-Serial-Console-HOWTO/modem-minicom.html" content="nofollow">Using Minicom to give commands to a modem</a>
-* <a href="http://www.rootwink.com/viewtopic.php?t=67#p295" content="nofollow">Rooting ANY firmware level... the hard way</a>
-* <a href="http://www.rootwink.com/viewtopic.php?f=6&t=4#p5" content="nofollow">Howto update to 01.01 (Step #5)</a>
-* <a href="https://www.exploitee.rs/index.php/Wink_Hub%E2%80%8B%E2%80%8B" content="nofollow">Exploitee.rs Wiki</a>
+
+- <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter" content="nofollow">How to Use a Multimeter</a>
+- <a href="https://www.youtube.com/watch?v=tlLhIvpi_5k" content="nofollow">Winkhub Teardown and Debug</a>
+- <a href="http://arahuman.blogspot.com/2014/12/wink-hub-shell-access-through-uart.html" content="nofollow">Winkhub Shell access through UART</a>
+- <a href="http://www.tldp.org/HOWTO/Remote-Serial-Console-HOWTO/modem-minicom.html" content="nofollow">Using Minicom to give commands to a modem</a>
+- <a href="http://www.rootwink.com/viewtopic.php?t=67#p295" content="nofollow">Rooting ANY firmware level... the hard way</a>
+- <a href="http://www.rootwink.com/viewtopic.php?f=6&t=4#p5" content="nofollow">Howto update to 01.01 (Step #5)</a>
+- <a href="https://www.exploitee.rs/index.php/Wink_Hub%E2%80%8B%E2%80%8B" content="nofollow">Exploitee.rs Wiki</a>
 
 ## <a href="#" id="FailedAttempts">Bad Output</a>
+
 If you see this in your logs you connected the wire too late:
+
 ```
 Starting Zigbee...Starting lutron-core...[ OK ]
 Starting aprond...UBIFS error (pid 1126): ubifs_read_node: bad node type (28 but expected 2)
@@ -475,5 +483,3 @@ Launch upgrade script
 + sleep 1
 + '[' '!' -e /tmp/isalive ']'
 ```
-
-
