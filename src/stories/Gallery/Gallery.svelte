@@ -1,29 +1,18 @@
 <script>
 	import GalleryItem from './GalleryItem.svelte';
 
-	export let count;
 	export let content = [];
+	export let columns = 5;
+
 	let image = '';
-	export const columns = 5;
+	export let width = 100;
 
 	const projects = Array();
 
-	if (content.length) {
-		const posts = content;
-		if (posts) {
-			for (let i = 0; i < 10; i++) {
-				posts.forEach(({ meta }) => {
-					// const { meta } = post;
-					const { image, title } = meta;
-					projects.push({ expanded: false, title, description: title, image });
-				});
-			}
-		}
-	} else {
-		for (let i = 0; i < count; i++) {
-			projects.push({ expanded: false, title: 'title', description: 'desc', image: '' });
-		}
-	}
+	content.forEach(({ meta }) => {
+		const { image, title } = meta;
+		projects.push({ expanded: false, title, description: title, image });
+	});
 
 	let previous = -1;
 	let expanded = false;
@@ -62,16 +51,25 @@
 	};
 </script>
 
-<div>
+<div style="min-width: {width * columns}px; max-width: {width * columns}px">
 	<ul>
 		{#each projects as { expanded, image, title, description }, index}
 			<li style="order: {index + 1}">
-				<GalleryItem {index} {image} {title} {description} {expanded} on:toggle={handleToggle} />
+				<GalleryItem
+					{width}
+					{index}
+					{image}
+					{title}
+					{description}
+					{expanded}
+					on:toggle={handleToggle}
+				/>
 			</li>
 		{/each}
 		<li
 			class="desc {expanded ? 'expanded' : 'collapsed'}"
-			style="background-image: url('{image}'); order: {descriptionPosition};"
+			style="background-image: url('{image}'); order: {descriptionPosition}; width: {width *
+				columns}px; max-width: {width * columns}px;"
 		>
 			<div>
 				<h3>{descriptionContent}</h3>
