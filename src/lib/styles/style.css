@@ -10,12 +10,6 @@ html, body {
     font-family: sans-serif;
   }
   
-main {
-    padding: 1rem;
-    margin: 2rem auto;
-    max-width: 40rem;
-}
-
 Footer {
     border: 2px solid green;
 }
