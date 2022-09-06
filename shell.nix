@@ -1,12 +1,17 @@
-# eslint
-# node 18
 # git
-# fish
+# eslint
 # aws-cli
 
 with (import <nixpkgs> {});
-mkShell {
-    buildInputs = [
-        nodejs-18_x
-    ];
+
+stdenv.mkDerivation rec {
+  name = "node-environment";
+  buildInputs = [
+      nodejs-18_x
+      fish
+  ];
+  shellHook = ''
+    echo "Using node: ${nodejs-18_x.version}"
+    fish
+  '';
 }
