@@ -71,4 +71,3 @@ Example:
 ```shell
 $ hugo server -t vienna -w -D
 ```
-
