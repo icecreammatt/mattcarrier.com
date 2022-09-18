@@ -3,13 +3,10 @@
 } */
 
 /* style.css */
-html, body {
-    margin: 0;
-    background: #eee;
-    color: #333;
-    font-family: sans-serif;
-  }
-  
-Footer {
-    border: 2px solid green;
+html,
+body {
+	margin: 0;
+	background: #eee;
+	color: #333;
+	font-family: sans-serif;
 }
