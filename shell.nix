@@ -4,8 +4,15 @@
 
 with (import <nixpkgs> {});
 
-stdenv.mkDerivation rec {
+    #exec ${pkgs.nginx}/bin/nginx -c ${./nginx.conf} "$@"
+    #exec ${pkgs.nginx}/bin/nginx -p ./.svelte-kit/output/prerendered/pages "$@"
+
+    #cp ${./.svelte-kit/output/prerendered/pages} $out/usr/share/nginx/html/
+    # cp ${./.svelte-kit/output/prerendered/pages} $out/${pkgs.nginx}/html
 let
+  nginx-with-config = pkgs.writeScriptBin "nginx" ''
+    exec ${pkgs.nginx}/bin/nginx "$@"
+  '';
 
   install = pkgs.writeScriptBin "nodeinstall" ''
     exec ${pkgs.nodejs-18_x}/bin/npm install
@@ -26,6 +33,7 @@ in mkShell {
       nodePackages.prettier
       install
       build
+      nginx-with-config
       nodePackages.svelte-language-server
   ];
 
