@@ -1,7 +1,8 @@
 ---
 title: Sink
 date: 2007-02-24
-tags: 
-    - "archive"
+tags:
+  - 'archive'
 ---
+
 Bathroom Sink...<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_zdYMSK7YuAA/Sarf5COrvGI/AAAAAAAAFFw/zucpl5DxnWQ/s1600-h/sink_web_full.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 225px;" src="http://4.bp.blogspot.com/_zdYMSK7YuAA/Sarf5COrvGI/AAAAAAAAFFw/zucpl5DxnWQ/s400/sink_web_full.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308301281753545826" /></a>

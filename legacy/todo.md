@@ -1,9 +1,10 @@
 ## Tasks
+
 [x] Consider hiding social links from banner
 [x] Play with Color Scheme
 [x] Switch blue to something else (Maybe green to match banner)
 [x] Hide older posts
-[x] Adjust footer Avatar placement 
+[x] Adjust footer Avatar placement
 [x] Refine bio to something shorter
 [x] Fix Favicon
 [x] Setup Google Analytics

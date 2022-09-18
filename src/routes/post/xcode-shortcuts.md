@@ -1,18 +1,21 @@
 ---
 title: Xcode shortcuts & settings
 date: 2013-02-06
-tags: 
-    - "xcode"
-    - "ios"
-    - "osx"
+tags:
+  - 'xcode'
+  - 'ios'
+  - 'osx'
 ---
+
 Here are some hot keys and preferences that make life in Xcode much better.
+
 <!--more-->
 <h2>Open quickly</h2>
 <a href="/images/2013-02-06/quick-open.jpg"><img class="wp-image-225 alignright" alt="quick-open" src="/images/2013-02-06/quick-open.jpg" width="342" height="251" /></a> Search through files, classes, and method names.
 <kbd>Command</kbd> <kbd>Shift</kbd> <kbd>O</kbd>
 
 Use <kbd>option</kbd> <kbd>enter</kbd> to open document in the right pane, this will also split the view if the assistant view isn't already open. To return to single view mode use <kbd>Command</kbd> <kbd>Enter</kbd>
+
 <h2>Split screen (Assistant Editor)</h2>
 <ul>
     <li>Switch to the assistant editor by pressing <kbd>Command</kbd> <kbd>Option</kbd> <kbd>Enter</kbd></li>
@@ -23,6 +26,7 @@ Use <kbd>option</kbd> <kbd>enter</kbd> to open document in the right pane, this
 This settings allows for the active editor window selected to be the one changed when selecting documents from the list view or using open quickly.
 
 <a href="/images/2013-02-06/Active-View.jpg"><img class="alignnone  wp-image-217" alt="General Settings" src="/images/2013-02-06/Active-View-1024x644.jpg" width="625" height="393" /></a>
+
 <h2>Debug Tab</h2>
 Ever get annoyed when breakpoint switches away from the currently viewed file?
 To stop this from happening setup a debug tab in the behavior settings.
@@ -32,6 +36,7 @@ To stop this from happening setup a debug tab in the behavior settings.
 This last setting is a personal preference. I don't like the console visible when I'm coding. This setting will auto hide the console after stopping the simulator.
 
 <a href="/images/2013-02-06/behaviors_3.jpg"><img class="alignnone  wp-image-220" alt="behaviors-3" src="/images/2013-02-06/behaviors_3.jpg" /></a>
+
 <h2>Web like navigation</h2>
 Command click on method names and class names to quickly navigate to implementations.
 Double click to open in a separate window. Swipe on a touch pad to go forward and back. Hold down on the back button to view the navigation history.
@@ -45,6 +50,7 @@ Select Next Tab: <kbd>Control</kbd> <kbd>Tab</kbd>
 Select Previous Tab:  <kbd>Control</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd>
 
 <a href="/images/2013-02-06/tab-settings.jpg"><img class="alignnone  wp-image-228" alt="tab-settings" src="/images/2013-02-06/tab-settings.jpg" /></a>
+
 <h2>More keys worth knowing</h2>
 <ul>
     <li><kbd>Control</kbd> <kbd>Command</kbd> <kbd>Up</kbd> Switch between header and implementation</li>

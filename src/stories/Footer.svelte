@@ -12,8 +12,8 @@
 
 <style>
 	/* h5 {
-		margin-left: 2rem;
-	} */
+        margin-left: 2rem;
+    } */
 
 	footer {
 		/* padding: 1rem; */
@@ -38,7 +38,7 @@
 	}
 
 	/* a {
-		text-decoration: none;
-		color: inherit;
-	} */
+        text-decoration: none;
+        color: inherit;
+    } */
 </style>

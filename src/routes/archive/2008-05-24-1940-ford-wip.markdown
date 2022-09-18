@@ -1,7 +1,8 @@
 ---
 title: 1940 Ford WIP
 date: 2008-05-24
-tags: 
-    - "archive"
+tags:
+  - 'archive'
 ---
+
 This is a truck that I am making for my mod. I still have much to do with it. <br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_zdYMSK7YuAA/SarcjsUDPnI/AAAAAAAAFEI/vfoKU-x2eI4/s1600-h/1940-Ford_web_full.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 225px;" src="http://2.bp.blogspot.com/_zdYMSK7YuAA/SarcjsUDPnI/AAAAAAAAFEI/vfoKU-x2eI4/s400/1940-Ford_web_full.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308297616558341746" /></a>

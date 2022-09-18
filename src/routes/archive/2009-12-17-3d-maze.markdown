@@ -1,9 +1,10 @@
 ---
 title: 3D Maze
 date: 2009-12-17
-tags: 
-    - "archive"
+tags:
+  - 'archive'
 ---
+
 <a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_zdYMSK7YuAA/Syrw5mqwi3I/AAAAAAAAFS0/kFw2cnpLnsA/s1600-h/Mazes.JPG"><img id="BLOGGER_PHOTO_ID_5416406374289542002" style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 400px; height: 215px;" src="http://3.bp.blogspot.com/_zdYMSK7YuAA/Syrw5mqwi3I/AAAAAAAAFS0/kFw2cnpLnsA/s400/Mazes.JPG" alt="" border="0" /></a>This was part of an assignment for my CS215 class. It involved coding a maze that uses recursion to randomly generate the maze. For extra credit I went nuts and added DirectX support so I could have the whole thing drawn in 3D.
 
 &nbsp;

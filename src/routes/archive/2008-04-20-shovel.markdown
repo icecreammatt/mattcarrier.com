@@ -1,7 +1,8 @@
 ---
 title: Shovel
 date: 2008-04-20
-tags: 
-    - "archive"
+tags:
+  - 'archive'
 ---
+
 This is a prop for the mod I am making.<br />Polys: 309<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_zdYMSK7YuAA/SareSymnl4I/AAAAAAAAFFA/WzN1IJBnIaA/s1600-h/shovel_web_full.jpg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 400px; height: 225px;" src="http://3.bp.blogspot.com/_zdYMSK7YuAA/SareSymnl4I/AAAAAAAAFFA/WzN1IJBnIaA/s400/shovel_web_full.jpg" border="0" alt="" id="BLOGGER_PHOTO_ID_5308299525212313474" /></a>

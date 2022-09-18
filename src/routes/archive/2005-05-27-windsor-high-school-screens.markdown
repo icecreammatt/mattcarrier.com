@@ -1,9 +1,10 @@
 ---
 title: Windsor High School - Screens
 date: 2005-05-27
-tags: 
-    - "archive"
+tags:
+  - 'archive'
 ---
+
 I did this as my senior project in high school. <a href="http://www.virtualhighschool.net/">
 </a>
 

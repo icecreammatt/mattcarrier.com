@@ -2,13 +2,15 @@
 title: Setup CoreOS with iptables on DigitalOcean
 date: 2015-05-11
 tags:
-    - "coreos"
-    - "systemd"
-    - "iptables"
-    - "Docker"
-    - "linux"
+  - 'coreos'
+  - 'systemd'
+  - 'iptables'
+  - 'Docker'
+  - 'linux'
 ---
+
 This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.
+
 <!--more-->
 
 ## Prepare cloud-config
@@ -44,7 +46,7 @@ write_files:
       -A INPUT -p icmp -m icmp --icmp-type 3 -j ACCEPT
       -A INPUT -p icmp -m icmp --icmp-type 11 -j ACCEPT
       COMMIT
-      
+
 ```
 
 ### Droplet Settings
@@ -55,9 +57,9 @@ write_files:
 2. Select Size
 3. Select Region
 4. Available Settings
-    * User Data
-        * Copy data from `cloud-config` above into the user data box.
-        * __IMPORTANT:__  Be sure to include a newline character after the last line in the cloud config
+   - User Data
+     - Copy data from `cloud-config` above into the user data box.
+     - **IMPORTANT:** Be sure to include a newline character after the last line in the cloud config
 5. Select the CoreOS Image
 6. Add SSH Keys
 7. Create Droplet
@@ -66,7 +68,7 @@ write_files:
 
 Connect to the server using the IP that displayed after creating the droplet. `ssh core@IP`
 
-Confirm iptable rules have applied 
+Confirm iptable rules have applied
 
 ```
 core@core ~ $ sudo iptables -nvL
@@ -109,6 +111,7 @@ Add the unit file here: `/etc/systemd/system`
 
 Sample systemd unit file for a simple IP [lookup service](https://github.com/icecreammatt/lookup)
 `/etc/systemd/system/lookup.service`
+
 ```
 [Unit]
 Description=Lookup
@@ -127,21 +130,22 @@ ExecStop=/usr/bin/docker stop lookup
 [Install]
 WantedBy=multi-user.target
 ```
+
 Some notes about the unit file:
 
-* `ExecStartPre=-` The `-` right before the `/usr` means that this step is optional
-* `-p 0.0.0.0:80:5000` Map port `5000` of the container to port `80` on the host and bind to `0.0.0.0`. Use `127.0.0.1` to make this container non publicly accessible.
-* Do not use the `-d` flag with Docker when using a systemd unit file. Doing so will not allow systemd to track the running status properly.
+- `ExecStartPre=-` The `-` right before the `/usr` means that this step is optional
+- `-p 0.0.0.0:80:5000` Map port `5000` of the container to port `80` on the host and bind to `0.0.0.0`. Use `127.0.0.1` to make this container non publicly accessible.
+- Do not use the `-d` flag with Docker when using a systemd unit file. Doing so will not allow systemd to track the running status properly.
 
 ### systemd commands
 
-* After creating the unit file start the container: `systemctl start lookup.service`
-* Start on system boot: `systemctl enable lookup.service`
-* Stop from starting on reboot: `systemctl disable lookup.service`
-* Stop the container: `systemctl stop lookup.service`
-* When making changes to the systemd unit file run `systemctl daemon-reload` to update systemd
-* The status of the container can be checked with `systemctl status lookup.service`
-* `journalctl` can be used to view system logs
+- After creating the unit file start the container: `systemctl start lookup.service`
+- Start on system boot: `systemctl enable lookup.service`
+- Stop from starting on reboot: `systemctl disable lookup.service`
+- Stop the container: `systemctl stop lookup.service`
+- When making changes to the systemd unit file run `systemctl daemon-reload` to update systemd
+- The status of the container can be checked with `systemctl status lookup.service`
+- `journalctl` can be used to view system logs
 
 ## Cloud-config continued...
 
@@ -198,7 +202,7 @@ write_files:
 
         [Install]
         WantedBy=multi-user.target
-        
+
 ```
 
 ## Dockerhub Authentication
@@ -209,7 +213,7 @@ Add the two blocks below to allow pulling from a private Docker repository. Repl
   - path: /home/core/.dockercfg
     owner: 'core:core'
     permissions: 0644
-    content: | 
+    content: |
         {
             "https://index.docker.io/v1/": {
                 "auth": "XXXXXXXXXXXX",
@@ -229,7 +233,7 @@ User=core
 
 ## Other resources
 
-* <a href="https://fedoraproject.org/wiki/How_to_edit_iptables_rules" target="_blank">How to edit iptables rules</a>
-* <a href="http://www.jimmycuadra.com/posts/securing-coreos-with-iptables" target="_blank">Securing CoreOS with iptables</a>
-* <a href="http://www.robhar.com/securing-coreos/" target="_blank">CoreOS Iptables</a>
-* <a href="https://coreos.com/docs/launching-containers/building/registry-authentication/" target="_blank">Using Authentication for a Registry</a>
+- <a href="https://fedoraproject.org/wiki/How_to_edit_iptables_rules" target="_blank">How to edit iptables rules</a>
+- <a href="http://www.jimmycuadra.com/posts/securing-coreos-with-iptables" target="_blank">Securing CoreOS with iptables</a>
+- <a href="http://www.robhar.com/securing-coreos/" target="_blank">CoreOS Iptables</a>
+- <a href="https://coreos.com/docs/launching-containers/building/registry-authentication/" target="_blank">Using Authentication for a Registry</a>

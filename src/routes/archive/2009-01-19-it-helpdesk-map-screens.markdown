@@ -1,7 +1,8 @@
 ---
 title: IT Helpdesk map screens
 date: 2009-01-19
-tags: 
-    - "archive"
+tags:
+  - 'archive'
 ---
+
 Here are some screen shots from the map I was working on while on my winter break this year.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_zdYMSK7YuAA/SapkD5PmUWI/AAAAAAAAFDs/xRTnHKFtJFI/s1600-h/helpdesk100009.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 400px; height: 250px;" src="http://2.bp.blogspot.com/_zdYMSK7YuAA/SapkD5PmUWI/AAAAAAAAFDs/xRTnHKFtJFI/s400/helpdesk100009.jpg" alt="" id="BLOGGER_PHOTO_ID_5308165128878182754" border="0" /></a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zdYMSK7YuAA/SapkDqaOhuI/AAAAAAAAFDk/S5UG_BILikc/s1600-h/helpdesk100005.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 400px; height: 250px;" src="http://1.bp.blogspot.com/_zdYMSK7YuAA/SapkDqaOhuI/AAAAAAAAFDk/S5UG_BILikc/s400/helpdesk100005.jpg" alt="" id="BLOGGER_PHOTO_ID_5308165124896229090" border="0" /></a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zdYMSK7YuAA/SapkDbgrKDI/AAAAAAAAFDc/6EMyN6PWQsU/s1600-h/helpdesk100001.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 400px; height: 250px;" src="http://1.bp.blogspot.com/_zdYMSK7YuAA/SapkDbgrKDI/AAAAAAAAFDc/6EMyN6PWQsU/s400/helpdesk100001.jpg" alt="" id="BLOGGER_PHOTO_ID_5308165120896739378" border="0" /></a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_zdYMSK7YuAA/SapkDFQ90qI/AAAAAAAAFDU/VssUO6NDmlg/s1600-h/helpdesk100000.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 400px; height: 250px;" src="http://2.bp.blogspot.com/_zdYMSK7YuAA/SapkDFQ90qI/AAAAAAAAFDU/VssUO6NDmlg/s400/helpdesk100000.jpg" alt="" id="BLOGGER_PHOTO_ID_5308165114925273762" border="0" /></a>
