@@ -11,6 +11,7 @@ stdenv.mkDerivation rec {
       fish
       nodePackages.eslint
       nodePackages.prettier
+      nodePackages.svelte-language-server
   ];
   shellHook = ''
     echo "Using node: ${nodejs-18_x.version}"
