@@ -15,11 +15,15 @@
 
 <style>
 	header {
-		padding: 2rem;
+		padding: 1rem;
 		background: lightskyblue;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 
 	ul {
