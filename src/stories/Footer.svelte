@@ -1,7 +1,7 @@
 <footer>
-	<h5>Copyright 2022</h5>
 	<nav>
 		<ul>
+			<li>Copyright 2022</li>
 			<li>Github</li>
 			<li>Linkedin</li>
 			<li>Stackoverflow</li>
@@ -17,11 +17,12 @@
 
 	footer {
 		/* padding: 1rem; */
-		background: lightskyblue;
+		background: #c8c8c8;
 		display: flex;
 		justify-content: space-between;
 		padding-left: 2rem;
 		padding-right: 2rem;
+		align-self: flex-end;
 	}
 
 	nav {

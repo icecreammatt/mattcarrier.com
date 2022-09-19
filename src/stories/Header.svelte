@@ -16,14 +16,11 @@
 <style>
 	header {
 		padding: 1rem;
-		background: lightskyblue;
+		background: #c8c8c8;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
+		border-bottom: 1px solid #c8c8c8;
 	}
 
 	ul {
@@ -34,12 +31,14 @@
 	}
 
 	a {
+		display: flex;
+		padding: 0.5rem;
 		text-decoration: none;
 		color: inherit;
-		padding: 0.5rem;
 	}
 
-	a:hover {
-		background-color: red;
-	}
+	/* a:hover { */
+	/* background-color: red; */
+	/* font-weight: bold; */
+	/* } */
 </style>

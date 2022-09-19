@@ -16,6 +16,7 @@
 		min-width: 450px;
 		align-content: center;
 		justify-content: center;
+		margin-top: 4rem;
 		padding-bottom: 2rem;
 		padding-top: 2rem;
 	}
