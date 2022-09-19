@@ -26,6 +26,7 @@ in mkShell {
       install
       build
       nodePackages.svelte-language-server
+      nodePackages.typescript-language-server
   ];
 
   shellHook = ''
