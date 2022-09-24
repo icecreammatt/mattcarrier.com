@@ -1,14 +1,9 @@
 <header>
 	<a href="/">Home</a>
-
 	<nav>
 		<ul>
-			<li>
-				<a href="/post">Blog</a>
-			</li>
-			<li>
-				<a href="/post/resume">Resume</a>
-			</li>
+			<li><a href="/post">Blog</a></li>
+			<li><a href="/resume">Resume</a></li>
 		</ul>
 	</nav>
 </header>
