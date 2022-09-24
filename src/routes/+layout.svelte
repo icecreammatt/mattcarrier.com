@@ -16,8 +16,11 @@
 		min-width: 450px;
 		align-content: center;
 		justify-content: center;
-		margin-top: 4rem;
-		padding-bottom: 2rem;
-		padding-top: 2rem;
 	}
+	/* Footer { */
+	/*     display: flex; */
+	/*     align-content: end; */
+	/*     justify-content: end; */
+	/*     flex-direction: row; */
+	/* } */
 </style>
