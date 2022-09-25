@@ -10,3 +10,11 @@ body {
 	color: #333;
 	font-family: sans-serif;
 }
+
+pre {
+	overflow: scroll;
+	background-color: #dedede;
+	padding: 1rem;
+	border-radius: 0.3rem;
+	outline: 0.05rem solid black;
+}
