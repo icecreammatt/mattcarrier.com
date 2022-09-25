@@ -13,9 +13,10 @@
 <style>
 	main {
 		display: flex;
-		min-width: 450px;
+		/* min-width: 450px; */
 		align-content: center;
 		justify-content: center;
+		background-color: #dfbe9f;
 	}
 	/* Footer { */
 	/*     display: flex; */
