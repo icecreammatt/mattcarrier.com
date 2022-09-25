@@ -17,13 +17,10 @@
 
 <style>
 	footer {
-		background: #c8c8c8;
 		display: flex;
-		/* background-color: green; */
 	}
 
 	nav {
-		background-color: red;
 		flex-grow: 1;
 		/* align-items: center; */
 		display: flex;
