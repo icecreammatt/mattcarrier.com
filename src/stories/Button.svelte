@@ -1,6 +1,6 @@
 <script>
-	export let label;
-	export let url;
+	export let label = '';
+	export let url = '';
 	export let targetBlank = true;
 </script>
 
