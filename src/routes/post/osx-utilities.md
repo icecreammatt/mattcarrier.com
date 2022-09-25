@@ -28,5 +28,5 @@ This is a simple app that lets you monitor which graphics device is currently in
 <h3>Quick image sharing: <a href="https://github.com/zbuc/imgurBar">ImgurBar</a></h3>
 The simple image sharer.
 I am a big fan of <a href="http://imgur.com">Imgur</a> and a quick way to share images with people is by using this app. Simply drag your image to the tray icon (the black dot) and it will handle the upload as well as copying a link to the image to your clipboard.
-
+<br />
 <a href="/images/2013-01-27/Imgur.png"><img class="alignnone size-full wp-image-203" alt="Imgur" src="/images/2013-01-27/Imgur.png" width="309" height="234" /></a>
