@@ -122,9 +122,7 @@ sys.path.append(os.getcwd())
 sys.path.append(&#039;myappname&#039;)
 from myappname.app import app as application</pre>
 
-```
-
-<em><strong>Note:</strong> Make sure if you copy this to tab os.excl... since it will copy as spaces and cause a runtime error.</em>
+_**Note:** Make sure if you copy this to tab os.excl... since it will copy as spaces and cause a runtime error._
 
 Restart Flask
 
@@ -134,4 +132,3 @@ I am by no means an expert at Python or Flask, I just like to code in it during 
 <ul>
 	<li><a href="http://wiki.dreamhost.com/Flask">http://wiki.dreamhost.com/Flask</a></li>
 </ul>
-```
