@@ -14,12 +14,20 @@ body {
 	align-items: center;
 }
 
+img {
+	max-width: 46rem;
+}
+
 @media only screen and (max-width: 50rem) {
 	html,
 	body {
 		/* background-color: #4e7bb2; */
 		align-items: left;
 		justify-content: left;
+	}
+
+	img {
+		max-width: 26rem;
 	}
 }
 
