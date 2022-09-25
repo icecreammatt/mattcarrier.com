@@ -71,8 +71,8 @@
 		/* flex-wrap: wrap; */
 		/* justify-content: space-between; */
 		background-image: url('../../images/banner.jpeg');
-		box-shadow: 0px -30px 20px 20px rgba(223, 190, 159, 1) inset;
-		min-height: 230px;
+		box-shadow: 0px -30px 15px 20px rgba(223, 190, 159, 1) inset;
+		min-height: 240px;
 	}
 
 	@media only screen and (max-width: 50rem) {
@@ -85,8 +85,8 @@
 			justify-content: space-around;
 			background-image: url('../../images/banner.jpeg');
 			overflow: hidden;
-			box-shadow: 0px -30px 20px 20px rgba(223, 190, 159, 1) inset;
-			min-height: 130px;
+			box-shadow: 0px -30px 15px 20px rgba(223, 190, 159, 1) inset;
+			min-height: 260px;
 		}
 	}
 
