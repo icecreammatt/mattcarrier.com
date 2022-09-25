@@ -1,8 +1,10 @@
 <script>
 	export let data;
+
+	//Published {post.meta.date}
 </script>
 
-<h1>Blog</h1>
+<h1>Posts</h1>
 
 <ul>
 	{#each data.posts as post}
@@ -12,7 +14,6 @@
 					{post.meta.title}
 				</a>
 			</h2>
-			Published {post.meta.date}
 		</li>
 	{/each}
 </ul>
