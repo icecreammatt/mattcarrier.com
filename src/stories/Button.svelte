@@ -2,10 +2,12 @@
 	export let label = '';
 	export let url = '';
 	export let targetBlank = true;
+	export let color = 'white';
+	export let background = 'black';
 </script>
 
 <div>
-	<a href={url} target={targetBlank ? '_blank' : ''}>{label}</a>
+    <a href={url} target={targetBlank ? '_blank' : ''} style="color: {color}; background-color: {background};">{label}</a>
 </div>
 
 <style>

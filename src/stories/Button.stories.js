@@ -9,7 +9,9 @@ export default {
 		//     backgroundColor: { control: 'color' },
 		label: { control: 'text' },
 		url: { control: 'text' },
-		targetBlank: { control: 'boolean' }
+		targetBlank: { control: 'boolean' },
+		color: { control: 'text' },
+		background: { control: 'text' }
 		//     onClick: { action: 'onClick' },
 		//     primary: { control: 'boolean' },
 		//     size: {
@@ -34,6 +36,8 @@ Primary.args = {
 	// primary: true,
 	label: 'Button',
 	url: '',
+	color: 'black',
+	background: 'white',
 	targetBlank: true
 };
 
