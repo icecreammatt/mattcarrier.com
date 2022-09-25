@@ -3,7 +3,7 @@ import { redirect } from '@sveltejs/kit';
 // export const prerender = true; // comment out for live reloading
 
 export function load({ params }) {
-    if ( params.slug === 'resume' ) {
-        throw redirect(302, '/resume');
-    }
+	if (params.slug === 'resume') {
+		throw redirect(302, '/resume');
+	}
 }

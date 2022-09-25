@@ -1,51 +1,55 @@
 <script>
-import Button from './Button.svelte';
-
+	import Button from './Button.svelte';
 </script>
 
 <footer>
 	<nav>
 		<ul>
-            <li><span>Copyright 2022</li>
-            <li><Button label="Github" url="https://www.github.com/icecreammatt/" /></li>
-            <li><Button label="Linkedin" url="https://www.linkedin.com/in/carriermatt/" /></li>
-            <li><Button label="Stack Overflow" url="https://stackoverflow.com/users/873559/matt-carrier" /></li>
+			<li><span>Copyright 2022</span></li>
+			<li><Button label="Github" url="https://www.github.com/icecreammatt/" /></li>
+			<li><Button label="Linkedin" url="https://www.linkedin.com/in/carriermatt/" /></li>
+			<li>
+				<Button label="Stack Overflow" url="https://stackoverflow.com/users/873559/matt-carrier" />
+			</li>
 		</ul>
 	</nav>
 </footer>
 
 <style>
 	footer {
-		align-self: flex-end;
 		background: #c8c8c8;
 		display: flex;
-        background-color: green;
+		/* background-color: green; */
 	}
 
 	nav {
-		align-items: center;
-		align-self: flex-end;
 		background-color: red;
+		flex-grow: 1;
+		/* align-items: center; */
 		display: flex;
-        justify-content: center;
+		justify-content: center;
 	}
 
 	ul {
+		background-color: yellow;
 		display: flex;
-		justify-content: space-around;
+		flex-grow: 1;
 		list-style-type: none;
+		justify-content: flex-end;
+		justify-content: space-around;
 	}
 
-    /* li { */
-    /*     align-items: flex-end; */
-    /*     justify-content: center; */
-    /* } */
+	li {
+		background-color: green;
+		display: flex;
+		/* flex-grow: 1; */
+		justify-content: flex-end;
+	}
 
-    li:first-child {
-		padding-left: 1.0rem;
-		padding-right: 1.0rem;
-        display: flex;
-        padding: 0.5rem;
-    }
-
+	li:first-child {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		display: flex;
+		padding: 0.5rem;
+	}
 </style>

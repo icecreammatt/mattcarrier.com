@@ -34,7 +34,7 @@ Primary.args = {
 	// primary: true,
 	label: 'Button',
 	url: '',
-    targetBlank: true
+	targetBlank: true
 };
 
 // export const Secondary = Template.bind({});
