@@ -7,7 +7,11 @@
 </script>
 
 <div>
-    <a href={url} target={targetBlank ? '_blank' : ''} style="color: {color}; background-color: {background};">{label}</a>
+	<a
+		href={url}
+		target={targetBlank ? '_blank' : ''}
+		style="color: {color}; background-color: {background};">{label}</a
+	>
 </div>
 
 <style>
