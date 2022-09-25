@@ -7,25 +7,87 @@
 </script>
 
 <header>
-	<Button label="Home" url="/" color="#000" background="rgba(255,255,255, 0.5)" />
 	<nav>
+		<Button
+			targetBlank={false}
+			label="Home"
+			url="/"
+			color="#000"
+			background="rgba(255,255,255, 0.5)"
+		/>
 		<ul>
-			<li><Button label="Blog" url="/post" color="#000" background="rgba(255,255,255, 0.5)" /></li>
 			<li>
-				<Button label="Resume" url="/resume" color="#000" background="rgba(255,255,255, 0.5)" />
+				<Button
+					targetBlank={false}
+					label="Blog"
+					url="/post"
+					color="#000"
+					background="rgba(255,255,255, 0.5)"
+				/>
+			</li>
+			<li>
+				<Button
+					targetBlank={false}
+					label="Resume"
+					url="/resume"
+					color="#000"
+					background="rgba(255,255,255, 0.5)"
+				/>
 			</li>
 		</ul>
 	</nav>
 </header>
 
 <style>
-	header {
+	nav {
+		max-width: 50rem;
+		min-width: 50rem;
 		display: flex;
-		flex-wrap: wrap;
+		align-items: center;
+		align-content: center;
 		justify-content: space-between;
+		outline: 1px solid red;
+	}
+
+	@media only screen and (max-width: 50rem) {
+		nav {
+			max-width: 20rem;
+			min-width: 20rem;
+			display: flex;
+			align-items: left;
+			align-content: left;
+			justify-content: space-around;
+			outline: 1px solid yellow;
+		}
+	}
+
+	header {
+		min-width: 1999px;
+		max-width: 1999px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		justify-content: space-around;
+		/* flex-wrap: wrap; */
+		/* justify-content: space-between; */
 		background-image: url('../../images/banner.jpeg');
-		box-shadow: 0px -30px 20px -10px rgba(223, 190, 159, 1) inset;
+		box-shadow: 0px -30px 20px 20px rgba(223, 190, 159, 1) inset;
 		min-height: 230px;
+	}
+
+	@media only screen and (max-width: 50rem) {
+		header {
+			min-width: 600px;
+			max-width: 800px;
+			display: flex;
+			justify-content: left;
+			align-content: left;
+			justify-content: space-around;
+			background-image: url('../../images/banner.jpeg');
+			overflow: hidden;
+			box-shadow: 0px -30px 20px 20px rgba(223, 190, 159, 1) inset;
+			min-height: 130px;
+		}
 	}
 
 	ul {
