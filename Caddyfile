@@ -1,0 +1,11 @@
+localhost {
+	reverse_proxy :5173
+}
+
+mattcarrier.localhost {
+	reverse_proxy :5173
+}
+
+storybook.localhost {
+	reverse_proxy :6006
+}
