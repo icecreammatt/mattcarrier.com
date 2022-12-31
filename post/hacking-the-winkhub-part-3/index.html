@@ -6,7 +6,7 @@
   <meta property="og:title" content=" Cross compiling Go for Winkhub &middot;  Matt Carrier" />
   
   <meta property="og:site_name" content="Matt Carrier" />
-  <meta property="og:url" content="https://mattcarrier.com/post/hacking-the-winkhub-part-3/" />
+  <meta property="og:url" content="https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/" />
   
   
   <meta property="og:type" content="article" />
@@ -25,10 +25,10 @@
      Cross compiling Go for Winkhub &middot;  Matt Carrier
   </title>
 
-  <link rel="stylesheet" href="https://mattcarrier.com/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/main.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/github.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/main.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/github.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
@@ -51,12 +51,11 @@
   <meta name="msapplication-config" content="/icon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  
 </head>
 <body>
     <header class="global-header"  style="background-image:url( /images/bg.jpg )">
     <section class="header-text">
-      <h1><a href="https://mattcarrier.com/">Matt Carrier</a></h1>
+      <h1><a href="https://www.mattcarrier.com/">Matt Carrier</a></h1>
       
       <div class="tag-line">
         Bits &amp; Pixels
@@ -78,6 +77,9 @@
   </a>
   
   
+  
+  
+  
   <a href="https://stackoverflow.com/users/873559" target="_blank">
     <i class="fa fa-stack-overflow"></i>
   </a>
@@ -96,11 +98,10 @@
 </div>
 
       
-      <a href="https://mattcarrier.com/" class="btn-header btn-back hidden-xs">
+      <a href="https://www.mattcarrier.com/" class="btn-header btn-back hidden-xs">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
-      
       
     </section>
   </header>
@@ -111,97 +112,66 @@
   <header>
     <h1 class="text-primary">Cross compiling Go for Winkhub</h1>
     <div class="post-meta clearfix">
+    
       <div class="post-date pull-left">
         Posted on
         <time datetime="2015-08-28T00:00:00Z">
           Aug 28, 2015
         </time>
       </div>
+    
       <div class="pull-right">
         
-        <span class="post-tag small"><a href="https://mattcarrier.com//tags/winkhub">#Winkhub</a></span>
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/winkhub">#Winkhub</a></span>
         
-        <span class="post-tag small"><a href="https://mattcarrier.com//tags/linux">#linux</a></span>
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/linux">#linux</a></span>
         
-        <span class="post-tag small"><a href="https://mattcarrier.com//tags/go">#Go</a></span>
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/go">#Go</a></span>
         
       </div>
     </div>
   </header>
   <section>
-    
-
-<p>How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.</p>
-
-<p><em>TL;DR; Be sure to compile with Go 1.5 with the following settings:<br />
+    <p>How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.</p>
+<p><em>TL;DR; Be sure to compile with Go 1.5 with the following settings:<br>
 <code>GOOS=linux GOARCH=arm GOARM=5 go build .</code></em></p>
-
 <hr />
-
 <p>After seeing that the Winkhub uses <a href="/post/hacking-the-winkhub-part-2#php">PHP</a> for its server-side scripting, I decided to see if I could run Go on it instead. That way I could avoid writing new code in PHP and get a bit more practice at Go. I had noticed when the Winkhub first boots over the serial connection, one of the first items on the screen is the CPU information.</p>
-
 <p><code>CPU:   Freescale i.MX28 rev1.2 at 454 MHz</code></p>
-
 <p>I wasn&rsquo;t sure what this CPU&rsquo;s architecture was, but after a quick search I figured out that it uses an ARM Processor. That gave me some hope that it was possible to compile Go for this platform.</p>
-
 <p>I tried compiling a simple &ldquo;hello world&rdquo; program with the following command:</p>
-
-<pre><code>GOOS=linux GOARCH=arm go build .
-</code></pre>
-
-<p>I then copied the binary to the Winkhub and tried running it.</p>
-
-<pre><code>[root@flex-dvt ~]# ./helloworld
+<pre tabindex="0"><code>GOOS=linux GOARCH=arm go build .
+</code></pre><p>I then copied the binary to the Winkhub and tried running it.</p>
+<pre tabindex="0"><code>[root@flex-dvt ~]# ./helloworld
 runtime: this CPU has no floating point hardware, so it cannot run
 this GOARM=6 binary. Recompile using GOARM=5.
-</code></pre>
-
-<p>So I tried again with this:</p>
-
-<pre><code>GOOS=linux GOARCH=arm GOARM=5 go build .
-</code></pre>
-
-<p>No luck again!</p>
-
-<pre><code>[root@flex-dvt ~]# ./helloworld
+</code></pre><p>So I tried again with this:</p>
+<pre tabindex="0"><code>GOOS=linux GOARCH=arm GOARM=5 go build .
+</code></pre><p>No luck again!</p>
+<pre tabindex="0"><code>[root@flex-dvt ~]# ./helloworld
 Illegal Instruction
-</code></pre>
-
-<p>I did a bit of searching and came across this <a href="https://github.com/golang/go/issues/9795">issue</a>. This post made me think I ran the correct compile steps. I attemped this a few more times and then I had a thought to try the Go 1.5RC. I upgraded to the RC build and then tried the previous build command again.</p>
-
-<pre><code>[root@flex-dvt ~]# ./helloworld
+</code></pre><p>I did a bit of searching and came across this <a href="https://github.com/golang/go/issues/9795">issue</a>. This post made me think I ran the correct compile steps. I attemped this a few more times and then I had a thought to try the Go 1.5RC. I upgraded to the RC build and then tried the previous build command again.</p>
+<pre tabindex="0"><code>[root@flex-dvt ~]# ./helloworld
 Hello World
-</code></pre>
-
-<p>Boom! I was in business. So in the end the instructions are pretty simple:</p>
-
+</code></pre><p>Boom! I was in business. So in the end the instructions are pretty simple:</p>
 <ul>
 <li>Make sure to use Go 1.5.</li>
 <li>Set the GOOS to linux</li>
 <li>Architecture to arm</li>
 <li>Use ARMv5 since the Winkhub does not have floating point support</li>
 </ul>
-
-<pre><code>GOOS=linux GOARCH=arm GOARM=5 go build .
-</code></pre>
-
-<p>I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub&rsquo;s web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.</p>
-
-<h2 id="gopherwink-https-github-com-icecreammatt-gopherwink-setup-instructions:bcb23b53ecde2b047eb33e6badc31c6c"><a href="https://github.com/icecreammatt/gopherwink">GopherWink</a> setup instructions</h2>
-
+<pre tabindex="0"><code>GOOS=linux GOARCH=arm GOARM=5 go build .
+</code></pre><p>I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub&rsquo;s web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.</p>
+<h2 id="gopherwinkhttpsgithubcomicecreammattgopherwink-setup-instructions"><a href="https://github.com/icecreammatt/gopherwink">GopherWink</a> setup instructions</h2>
 <p><a href="#screenshots">screenshots here</a></p>
-
-<h3 id="building-from-source-requirements:bcb23b53ecde2b047eb33e6badc31c6c">Building from source requirements</h3>
-
+<h3 id="building-from-source-requirements">Building from source requirements</h3>
 <ul>
 <li><a href="/post/hacking-the-winkhub-part-1/">Rooted Winkhub</a> with SSH access</li>
 <li>Go 1.5</li>
 <li>NodeJS</li>
 <li>ReactJS</li>
 </ul>
-
-<h3 id="install-from-source:bcb23b53ecde2b047eb33e6badc31c6c">Install from source</h3>
-
+<h3 id="install-from-source">Install from source</h3>
 <ul>
 <li><code>export WINK_IP_ADDRESS=X.X.X.X</code> (replace the x&rsquo;s with the Wink IP)</li>
 <li><code>git clone https://github.com/icecreammatt/gopherwink</code></li>
@@ -213,9 +183,7 @@ Hello World
 <li><code>make install</code></li>
 <li>Visit <code>http://WINK_IP_ADDRESS/index.html</code> to access the controls.</li>
 </ul>
-
-<h3 id="install-release-manually:bcb23b53ecde2b047eb33e6badc31c6c">Install release manually</h3>
-
+<h3 id="install-release-manually">Install release manually</h3>
 <ul>
 <li>Download the release from <a href="https://github.com/icecreammatt/gopherwink/releases">here</a></li>
 <li>Extract the zip file</li>
@@ -228,21 +196,15 @@ Hello World
 <li><code>ssh root@$WINK_IP_ADDRESS &quot;/etc/init.d/S63gopherwink start&quot;</code></li>
 <li>Visit <code>http://WINK_IP_ADDRESS/index.html</code> to access the controls.</li>
 </ul>
-
-<h2 id="usage-notes:bcb23b53ecde2b047eb33e6badc31c6c">Usage notes</h2>
-
+<h2 id="usage-notes">Usage notes</h2>
 <ul>
 <li>New devices for now need to be connected using <code>aprontest</code> or the WinkApp</li>
 </ul>
-
-<h2 id="bugs:bcb23b53ecde2b047eb33e6badc31c6c">Bugs</h2>
-
+<h2 id="bugs">Bugs</h2>
 <ul>
 <li>File bugs <a href="https://github.com/icecreammatt/gopherwink/issues">here</a></li>
 </ul>
-
-<h2 id="future-plans:bcb23b53ecde2b047eb33e6badc31c6c">Future Plans</h2>
-
+<h2 id="future-plans">Future Plans</h2>
 <ul>
 <li>Improved UI to add and remove lights</li>
 <li>Improved UI to rename devices</li>
@@ -252,36 +214,28 @@ Hello World
 <li>Automatic brightness based on the time of day</li>
 <li>TLS Authentication for API</li>
 </ul>
-
-<h2 id="license:bcb23b53ecde2b047eb33e6badc31c6c">License</h2>
-
+<h2 id="license">License</h2>
 <p>GPLv3</p>
-
 <p>This is the last part of a series of posts related to hacking the Winkhub</p>
-
 <ul>
 <li><a href="/post/hacking-the-winkhub-part-1">Part I - Hacking the Winkhub</a></li>
 <li><a href="/post/hacking-the-winkhub-part-2">Part II - Troubleshooting Winkhub issues</a></li>
 <li>Part III - Cross compiling Go for Winkhub</li>
 </ul>
-
-<h2 id="a-href-id-resources-resources-a:bcb23b53ecde2b047eb33e6badc31c6c"><a href="#" id="Resources">Resources</a></h2>
-
+<h2 id="a-href-idresourcesresourcesa"><a href="#" id="Resources">Resources</a></h2>
 <ul>
 <li><a href="http://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5" content="nofollow" target="_blank">Cross compilation with Go 1.5</a></li>
 <li><a href="https://github.com/golang/go/wiki/GoArm" content="nofollow" target="_blank">GoArm</a></li>
 <li><a href="http://unix.stackexchange.com/questions/59018/create-and-control-start-up-scripts-in-busybox" content="nofollow" target="_blank">Create and control start up scripts in BusyBox</a></li>
 </ul>
-
-<p><div id="screenshots"></div></p>
-
-<h2 id="screenshots:bcb23b53ecde2b047eb33e6badc31c6c">Screenshots</h2>
-
-<p><img src="/images/2015-08-28/Lights.PNG" alt="Lights" />
-<img src="/images/2015-08-28/LED.PNG" alt="Lights" /></p>
-
+<div id="screenshots"></div>
+## Screenshots
+![Lights](/images/2015-08-28/Lights.PNG)
+![Lights](/images/2015-08-28/LED.PNG)
   </section>
   <footer>
+    
+    
     
     <section class="author-info row">
       <div class="author-avatar col-md-2 col-sm-2 col-xs-12">
@@ -301,10 +255,10 @@ Hello World
     </section>
     <ul class="pager">
       
-      <li class="previous"><a href="https://mattcarrier.com/post/hacking-the-winkhub-part-2/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous"><a href="https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/"><span aria-hidden="true">&larr;</span>Older</a></li>
       
       
-      <li class="next"><a href="https://mattcarrier.com/post/resume/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next"><a href="https://www.mattcarrier.com/post/resume/">Newer<span aria-hidden="true">&rarr;</span></a></li>
       
     </ul>
   </footer>
@@ -353,7 +307,7 @@ Hello World
                         
                           <a href="/tools-and-plugins-for-osx/" class="list-group-item">Tools and Plugins for OSX</a>
                          
-                      
+                       
                   </div>
               </div>
           </div>
@@ -368,77 +322,77 @@ Hello World
                 <div class="list-group">
                     
                     
-                    <a href="https://mattcarrier.com//tags/archive" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/archive" class="list-group-item">
                         <span class="badge">35</span>
                         archive
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/coreos" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/coreos" class="list-group-item">
                         <span class="badge">1</span>
                         coreos
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/docker" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/docker" class="list-group-item">
                         <span class="badge">1</span>
                         docker
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/entertainment" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/entertainment" class="list-group-item">
                         <span class="badge">1</span>
                         entertainment
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/go" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/go" class="list-group-item">
                         <span class="badge">1</span>
                         go
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/ios" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/ios" class="list-group-item">
                         <span class="badge">2</span>
                         ios
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/iptables" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/iptables" class="list-group-item">
                         <span class="badge">1</span>
                         iptables
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/javascript" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/javascript" class="list-group-item">
                         <span class="badge">1</span>
                         javascript
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/linux" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/linux" class="list-group-item">
                         <span class="badge">5</span>
                         linux
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/osx" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/osx" class="list-group-item">
                         <span class="badge">4</span>
                         osx
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/python" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/python" class="list-group-item">
                         <span class="badge">1</span>
                         python
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/systemd" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/systemd" class="list-group-item">
                         <span class="badge">1</span>
                         systemd
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/vertigo" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/vertigo" class="list-group-item">
                         <span class="badge">2</span>
                         vertigo
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/winkhub" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/winkhub" class="list-group-item">
                         <span class="badge">3</span>
                         winkhub
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/xcode" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/xcode" class="list-group-item">
                         <span class="badge">2</span>
                         xcode
                     </a>
@@ -472,6 +426,9 @@ Hello World
   </a>
   
   
+  
+  
+  
   <a href="https://stackoverflow.com/users/873559" target="_blank">
     <i class="fa fa-stack-overflow"></i>
   </a>
@@ -491,7 +448,7 @@ Hello World
 
   </footer>
 
-  <script src="https://mattcarrier.com/js/highlight.pack.js"></script>
+  <script src="https://www.mattcarrier.com/js/highlight.pack.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>

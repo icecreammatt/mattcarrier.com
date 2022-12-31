@@ -6,7 +6,7 @@
   <meta property="og:title" content=" Linux web services Part I &middot;  Matt Carrier" />
   
   <meta property="og:site_name" content="Matt Carrier" />
-  <meta property="og:url" content="https://mattcarrier.com/linux-web-services-part-i/" />
+  <meta property="og:url" content="https://www.mattcarrier.com/linux-web-services-part-i/" />
   
   
   <meta property="og:type" content="article" />
@@ -21,10 +21,10 @@
      Linux web services Part I &middot;  Matt Carrier
   </title>
 
-  <link rel="stylesheet" href="https://mattcarrier.com/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/main.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/github.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/main.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/github.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
@@ -47,12 +47,11 @@
   <meta name="msapplication-config" content="/icon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  
 </head>
 <body>
     <header class="global-header"  style="background-image:url( /images/bg.jpg )">
     <section class="header-text">
-      <h1><a href="https://mattcarrier.com/">Matt Carrier</a></h1>
+      <h1><a href="https://www.mattcarrier.com/">Matt Carrier</a></h1>
       
       <div class="tag-line">
         Bits &amp; Pixels
@@ -74,6 +73,9 @@
   </a>
   
   
+  
+  
+  
   <a href="https://stackoverflow.com/users/873559" target="_blank">
     <i class="fa fa-stack-overflow"></i>
   </a>
@@ -92,11 +94,10 @@
 </div>
 
       
-      <a href="https://mattcarrier.com/" class="btn-header btn-back hidden-xs">
+      <a href="https://www.mattcarrier.com/" class="btn-header btn-back hidden-xs">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
-      
       
     </section>
   </header>
@@ -107,28 +108,25 @@
   <header>
     <h1 class="text-primary">Linux web services Part I</h1>
     <div class="post-meta clearfix">
+    
       <div class="post-date pull-left">
         Posted on
         <time datetime="2014-07-11T00:00:00Z">
           Jul 11, 2014
         </time>
       </div>
+    
       <div class="pull-right">
         
-        <span class="post-tag small"><a href="https://mattcarrier.com//tags/linux">#linux</a></span>
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/linux">#linux</a></span>
         
       </div>
     </div>
   </header>
   <section>
-    
-
-<p>This is an introduction to a series of talks about setting up Linux servers. I&rsquo;m going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using <a href="http://cygwin.com">cygwin</a> on Windows.</p>
-
+    <p>This is an introduction to a series of talks about setting up Linux servers. I&rsquo;m going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using <a href="http://cygwin.com">cygwin</a> on Windows.</p>
 <p>Resources for this talk are available here <a href="https://github.com/icecreammatt/server-setup">https://github.com/icecreammatt/server-setup</a></p>
-
-<h2 id="table-of-contents:5b5a247b327cc995afacd6590afee57f">Table of Contents</h2>
-
+<h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li>Public Private Key Creation</li>
 <li>Instance Creation (DigitalOcean)</li>
@@ -141,75 +139,55 @@
 <li>Git</li>
 <li>Gotchas</li>
 </ul>
-
-<h2 id="prerequisites:5b5a247b327cc995afacd6590afee57f">Prerequisites</h2>
-
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>OSX Terminal or <a href="http://cygwin.com">Cygwin</a></li>
 <li><a href="https://www.digitalocean.com">DigitalOcean</a> hosting account or access to a fresh Ubuntu 14.04 install</li>
 </ul>
-
-<h2 id="public-private-keys:5b5a247b327cc995afacd6590afee57f">Public Private Keys</h2>
-
+<h2 id="public-private-keys">Public Private Keys</h2>
 <p>To securely connect to a server we must not rely on passwords. So instead we use public/private key authentication. Using the same public keys that git uses for SSH we can also login to remote servers we configure to accept our key.</p>
-
-<h3 id="key-generation:5b5a247b327cc995afacd6590afee57f">Key Generation</h3>
-
-<p>Before generating a key check to see if you don&rsquo;t already have one.<br />
+<h3 id="key-generation">Key Generation</h3>
+<p>Before generating a key check to see if you don&rsquo;t already have one.<br>
 If the output looks like below you can just use the existing public key to connect to the new server.</p>
-
-<pre><code class="language-bash">$ ls ~/.ssh
-id_rsa      id_rsa.pub
-</code></pre>
-
-<p>Otherwise generate a new public private key pair.</p>
-
-<pre><code class="language-bash">$ ssh-keygen -t rsa -C &quot;name@example.com&quot;
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/matt/.ssh/id_rsa): id_rsa_example
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in id_rsa_example.
-Your public key has been saved in id_rsa_example.pub.
-The key fingerprint is:
-e5:03:12:9c:40:7e:f3:f9:39:4c:1f:0b:07:04:7f:bd name@example.com
-The key's randomart image is:
-+--[ RSA 2048]----+
-|   .oo.....      |
-|   .  o. o   .   |
-|    . + . + . .  |
-|     . + = o   . |
-|        S = o E  |
-|         + * o   |
-|          = o    |
-|           .     |
-|                 |
-+-----------------+
-$ ls
-id_rsa_example     id_rsa_example.pub
-</code></pre>
-
-<blockquote>
-<p>The command below is specific to OSX and will not work in Cygwin<br />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls ~/.ssh
+</span></span><span style="display:flex;"><span>id_rsa      id_rsa.pub
+</span></span></code></pre></div><p>Otherwise generate a new public private key pair.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;name@example.com&#34;</span>
+</span></span><span style="display:flex;"><span>Generating public/private rsa key pair.
+</span></span><span style="display:flex;"><span>Enter file in which to save the key <span style="color:#f92672">(</span>/Users/matt/.ssh/id_rsa<span style="color:#f92672">)</span>: id_rsa_example
+</span></span><span style="display:flex;"><span>Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>Enter same passphrase again:
+</span></span><span style="display:flex;"><span>Your identification has been saved in id_rsa_example.
+</span></span><span style="display:flex;"><span>Your public key has been saved in id_rsa_example.pub.
+</span></span><span style="display:flex;"><span>The key fingerprint is:
+</span></span><span style="display:flex;"><span>e5:03:12:9c:40:7e:f3:f9:39:4c:1f:0b:07:04:7f:bd name@example.com
+</span></span><span style="display:flex;"><span>The key<span style="color:#960050;background-color:#1e0010">&#39;</span>s randomart image is:
+</span></span><span style="display:flex;"><span>+--<span style="color:#f92672">[</span> RSA 2048<span style="color:#f92672">]</span>----+
+</span></span><span style="display:flex;"><span>|   .oo.....      |
+</span></span><span style="display:flex;"><span>|   .  o. o   .   |
+</span></span><span style="display:flex;"><span>|    . + . + . .  |
+</span></span><span style="display:flex;"><span>|     . + <span style="color:#f92672">=</span> o   . |
+</span></span><span style="display:flex;"><span>|        S <span style="color:#f92672">=</span> o E  |
+</span></span><span style="display:flex;"><span>|         + * o   |
+</span></span><span style="display:flex;"><span>|          <span style="color:#f92672">=</span> o    |
+</span></span><span style="display:flex;"><span>|           .     |
+</span></span><span style="display:flex;"><span>|                 |
+</span></span><span style="display:flex;"><span>+-----------------+
+</span></span><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>id_rsa_example     id_rsa_example.pub
+</span></span></code></pre></div><blockquote>
+<p>The command below is specific to OSX and will not work in Cygwin<br>
 Copy the contents of the public key to the clipboard</p>
 </blockquote>
-
 <p><strong>IMPORTANT!</strong> Be sure to copy the file that ends in &ldquo;.pub&rdquo;</p>
-
-<pre><code class="language-bash">$ pbcopy &lt; id_rsa_example.pub
-</code></pre>
-
-<blockquote>
-<p>If using cygwin navigate to <code>C:\cygwin\home\username\.ssh\</code><br />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pbcopy &lt; id_rsa_example.pub
+</span></span></code></pre></div><blockquote>
+<p>If using cygwin navigate to <code>C:\cygwin\home\username\.ssh\</code><br>
 Open <code>id_rsa_example.pub</code> in a text editor to copy the contents</p>
 </blockquote>
-
-<pre><code>$ cat id_rsa_example.pub
+<pre tabindex="0"><code>$ cat id_rsa_example.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ5+oxpMrW0sV8/AUial3hxGVJK/UFsURmjGWg0liN9CGwNrnwGufDyG/SBpbRdFk8jwxLXQgiyTjbrNKlhhK0AWFTeajPsoXHE1jycEu4/G1oaewQ+se7055qsN3RIFLkpYj0VSsy/fjaZH5BPk+NtFQOc7yO7Nqs+x7nORsoLVyie2YhQSzzFBM23RMFmnf6qdrdARKwm98J8tpUqkILzCas9NG679fPxHMHGw/b2QPLr0I3LblE4c1IcIXIQPTniEm5lMjWkw7Ggf4AEg1PbWLcb5MvUwGuo8k6+ZsS1tYh name@example.com
-</code></pre>
-
-<h3 id="uploading-keys:5b5a247b327cc995afacd6590afee57f">Uploading Keys</h3>
-
+</code></pre><h3 id="uploading-keys">Uploading Keys</h3>
 <ol>
 <li>Login to DigitalOcean</li>
 <li>On the DigitalOcean dashboard select SSH Keys</li>
@@ -217,15 +195,11 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ
 <li>Enter a name for it and paste the contents into the body.</li>
 <li>Create SSH Key</li>
 </ol>
-
-<h2 id="instance-creation-create-droplet:5b5a247b327cc995afacd6590afee57f">Instance Creation (Create Droplet)</h2>
-
+<h2 id="instance-creation-create-droplet">Instance Creation (Create Droplet)</h2>
 <blockquote>
 <p>DigitalOcean calls each server instance a &ldquo;droplet&rdquo;</p>
 </blockquote>
-
-<p><img src="/images/2014-07-11/permanence.png" alt="xkcd.com/910" /></p>
-
+<p><img src="/images/2014-07-11/permanence.png" alt="xkcd.com/910"></p>
 <ol>
 <li>Click Create Droplet</li>
 <li>Enter a hostname for your server</li>
@@ -235,209 +209,158 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ
 <li>Add your key, which was uploaded earlier</li>
 <li>Create Droplet</li>
 </ol>
-
-<h2 id="ssh-connection:5b5a247b327cc995afacd6590afee57f">SSH Connection</h2>
-
+<h2 id="ssh-connection">SSH Connection</h2>
 <p>Once the loading bar has completed and we have an IP address we are ready to connect to the server.</p>
-
 <p>We can connect to the server using the <code>ssh</code> command. Our public key has been automatically added to the server from the DigitalOcean control panel so our private key will work as the &ldquo;password&rdquo;.</p>
-
-<pre><code class="language-bash">$ ssh root@107.170.203.120
-The authenticity of host '107.170.203.120 (107.170.203.120)' can't be established.
-RSA key fingerprint is 5b:13:e0:0e:d9:44:5a:1a:49:b5:12:0e:3c:d4:0d:8d.
-Are you sure you want to continue connecting (yes/no)?yes
-</code></pre>
-
-<p>After connecting you should see this.</p>
-
-<pre><code class="language-bash">Warning: Permanently added '107.170.203.120' (RSA) to the list of known hosts.
-Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com/
-
-  System information as of Fri Jul 11 01:06:53 EDT 2014
-
-  System load:  0.0               Processes:           71
-  Usage of /:   6.1% of 19.56GB   Users logged in:     0
-  Memory usage: 9%                IP address for eth0: 107.170.203.120
-  Swap usage:   0%
-
-  Graph this data and manage this system at:
-    https://landscape.canonical.com/
-
-root@setup-demo:~#
-</code></pre>
-
-<h2 id="lockdown:5b5a247b327cc995afacd6590afee57f">Lockdown</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh root@107.170.203.120
+</span></span><span style="display:flex;"><span>The authenticity of host <span style="color:#e6db74">&#39;107.170.203.120 (107.170.203.120)&#39;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t be established.
+</span></span><span style="display:flex;"><span>RSA key fingerprint is 5b:13:e0:0e:d9:44:5a:1a:49:b5:12:0e:3c:d4:0d:8d.
+</span></span><span style="display:flex;"><span>Are you sure you want to <span style="color:#66d9ef">continue</span> connecting <span style="color:#f92672">(</span>yes/no<span style="color:#f92672">)</span>?yes
+</span></span></code></pre></div><p>After connecting you should see this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Warning: Permanently added <span style="color:#e6db74">&#39;107.170.203.120&#39;</span> <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span> to the list of known hosts.
+</span></span><span style="display:flex;"><span>Welcome to Ubuntu 14.04 LTS <span style="color:#f92672">(</span>GNU/Linux 3.13.0-24-generic x86_64<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> * Documentation:  https://help.ubuntu.com/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  System information as of Fri Jul <span style="color:#ae81ff">11</span> 01:06:53 EDT <span style="color:#ae81ff">2014</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  System load:  0.0               Processes:           <span style="color:#ae81ff">71</span>
+</span></span><span style="display:flex;"><span>  Usage of /:   6.1% of 19.56GB   Users logged in:     <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  Memory usage: 9%                IP address <span style="color:#66d9ef">for</span> eth0: 107.170.203.120
+</span></span><span style="display:flex;"><span>  Swap usage:   0%
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Graph this data and manage this system at:
+</span></span><span style="display:flex;"><span>    https://landscape.canonical.com/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@setup-demo:~#
+</span></span></code></pre></div><h2 id="lockdown">Lockdown</h2>
 <p>We are now logged into the server, which right now is almost wide open to the Internet. It is time to lock it down with the following steps:</p>
-
-<h3 id="user-account-creation:5b5a247b327cc995afacd6590afee57f">User account creation</h3>
-
+<h3 id="user-account-creation">User account creation</h3>
 <p>Create a sudo user account</p>
-
-<pre><code class="language-bash">username=YOUR_NAME_HERE
-addgroup admin
-adduser $username
-usermod -a -G admin $username
-</code></pre>
-
-<p>Full output</p>
-
-<pre><code class="language-bash">  root@setup-demo:~# username=matt
-  root@setup-demo:~# addgroup admin
-  Adding group `admin' (GID 1000) ...
-  Done.
-  root@setup-demo:~# adduser $username
-  Adding user `matt' ...
-  Adding new group `matt' (1001) ...
-  Adding new user `matt' (1000) with group `matt' ...
-  Creating home directory `/home/matt' ...
-  Copying files from `/etc/skel' ...
-  Enter new UNIX password:
-  Retype new UNIX password:
-  passwd: password updated successfully
-  Changing the user information for matt
-  Enter the new value, or press ENTER for the default
-  	Full Name []: Matt Carrier
-  	Room Number []:
-  	Work Phone []:
-  	Home Phone []:
-  	Other []:
-  Is the information correct? [Y/n]
-  root@setup-demo:~# usermod -a -G admin $username
-</code></pre>
-
-<p>Copy over SSH public key to new account and set permissions to the owner</p>
-
-<pre><code class="language-bash">mkdir -p /home/$username/.ssh/
-cp ~/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
-chmod -R 750 /home/$username
-chown -R $username:$username /home/$username/
-</code></pre>
-
-<h3 id="ssh-server-lockdown:5b5a247b327cc995afacd6590afee57f">SSH Server lockdown</h3>
-
-<ol>
-<li><p>Disable password authentication</p>
-
-<p><code>echo &quot;PasswordAuthentication no&quot; &gt;&gt; /etc/ssh/sshd_config</code></p></li>
-
-<li><p>Disable root login</p></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>username<span style="color:#f92672">=</span>YOUR_NAME_HERE
+</span></span><span style="display:flex;"><span>addgroup admin
+</span></span><span style="display:flex;"><span>adduser $username
+</span></span><span style="display:flex;"><span>usermod -a -G admin $username
+</span></span></code></pre></div><p>Full output</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  root@setup-demo:~# username<span style="color:#f92672">=</span>matt
+</span></span><span style="display:flex;"><span>  root@setup-demo:~# addgroup admin
+</span></span><span style="display:flex;"><span>  Adding group <span style="color:#e6db74">`</span>admin<span style="color:#e6db74">&#39; (GID 1000) ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Done.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  root@setup-demo:~# adduser $username
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Adding user `matt&#39;</span> ...
+</span></span><span style="display:flex;"><span>  Adding new group <span style="color:#e6db74">`</span>matt<span style="color:#e6db74">&#39; (1001) ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Adding new user `matt&#39;</span> <span style="color:#f92672">(</span>1000<span style="color:#f92672">)</span> with group <span style="color:#e6db74">`</span>matt<span style="color:#e6db74">&#39; ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Creating home directory `/home/matt&#39;</span> ...
+</span></span><span style="display:flex;"><span>  Copying files from <span style="color:#e6db74">`</span>/etc/skel<span style="color:#960050;background-color:#1e0010">&#39;</span> ...
+</span></span><span style="display:flex;"><span>  Enter new UNIX password:
+</span></span><span style="display:flex;"><span>  Retype new UNIX password:
+</span></span><span style="display:flex;"><span>  passwd: password updated successfully
+</span></span><span style="display:flex;"><span>  Changing the user information <span style="color:#66d9ef">for</span> matt
+</span></span><span style="display:flex;"><span>  Enter the new value, or press ENTER <span style="color:#66d9ef">for</span> the default
+</span></span><span style="display:flex;"><span>  	Full Name <span style="color:#f92672">[]</span>: Matt Carrier
+</span></span><span style="display:flex;"><span>  	Room Number <span style="color:#f92672">[]</span>:
+</span></span><span style="display:flex;"><span>  	Work Phone <span style="color:#f92672">[]</span>:
+</span></span><span style="display:flex;"><span>  	Home Phone <span style="color:#f92672">[]</span>:
+</span></span><span style="display:flex;"><span>  	Other <span style="color:#f92672">[]</span>:
+</span></span><span style="display:flex;"><span>  Is the information correct? <span style="color:#f92672">[</span>Y/n<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  root@setup-demo:~# usermod -a -G admin $username
+</span></span></code></pre></div><p>Copy over SSH public key to new account and set permissions to the owner</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p /home/$username/.ssh/
+</span></span><span style="display:flex;"><span>cp ~/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
+</span></span><span style="display:flex;"><span>chmod -R <span style="color:#ae81ff">750</span> /home/$username
+</span></span><span style="display:flex;"><span>chown -R $username:$username /home/$username/
+</span></span></code></pre></div><h3 id="ssh-server-lockdown">SSH Server lockdown</h3>
+<ol start="2">
+<li>
+<p>Disable password authentication</p>
+<p><code>echo &quot;PasswordAuthentication no&quot; &gt;&gt; /etc/ssh/sshd_config</code></p>
+</li>
+<li>
+<p>Disable root login</p>
+</li>
 </ol>
-
-<pre><code>sed -i 's/PermitRootLogin without-password/PermitRootLogin no/g' /etc/ssh/sshd_config
-sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
-sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
-</code></pre>
-
-<ol>
+<pre tabindex="0"><code>sed -i &#39;s/PermitRootLogin without-password/PermitRootLogin no/g&#39; /etc/ssh/sshd_config
+sed -i &#39;s/PermitRootLogin yes/PermitRootLogin no/g&#39; /etc/ssh/sshd_config
+sed -i &#39;s/PasswordAuthentication yes/PasswordAuthentication no/g&#39; /etc/ssh/sshd_config
+</code></pre><ol start="4">
 <li>Only allow login from selected users</li>
 </ol>
-
-<pre><code class="language-bash">echo &quot;AllowUsers $username&quot; &gt;&gt; /etc/ssh/sshd_config
-</code></pre>
-
-<ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;AllowUsers </span>$username<span style="color:#e6db74">&#34;</span> &gt;&gt; /etc/ssh/sshd_config
+</span></span></code></pre></div><ol start="5">
 <li>Restart ssh server</li>
 </ol>
-
-<pre><code class="language-bash">service ssh restart
-</code></pre>
-
-<h3 id="firewall-fail2ban:5b5a247b327cc995afacd6590afee57f">Firewall &amp; fail2ban</h3>
-
-<ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>service ssh restart
+</span></span></code></pre></div><h3 id="firewall--fail2ban">Firewall &amp; fail2ban</h3>
+<ol start="5">
 <li>Setup ufw (Ubuntu Firewall)</li>
 </ol>
-
-<pre><code class="language-bash">    # ufw (Ubuntu Firewall)
-    ufw default deny incoming
-    ufw default allow outgoing
-
-    # Open SSH
-    ufw allow ssh
-
-    # Open web ports
-    ufw allow 443/tcp
-    ufw allow 80/tcp
-
-    # Enable firewall and fail2ban
-    ufw --force enable
-</code></pre>
-
-<ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#75715e"># ufw (Ubuntu Firewall)</span>
+</span></span><span style="display:flex;"><span>    ufw default deny incoming
+</span></span><span style="display:flex;"><span>    ufw default allow outgoing
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Open SSH</span>
+</span></span><span style="display:flex;"><span>    ufw allow ssh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Open web ports</span>
+</span></span><span style="display:flex;"><span>    ufw allow 443/tcp
+</span></span><span style="display:flex;"><span>    ufw allow 80/tcp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Enable firewall and fail2ban</span>
+</span></span><span style="display:flex;"><span>    ufw --force enable
+</span></span></code></pre></div><ol start="6">
 <li>Setup fail2ban</li>
 </ol>
-
 <p><code>apt-get install -y fail2ban</code></p>
-
-<ol>
+<ol start="8">
 <li>Confirm status</li>
 </ol>
-
-<pre><code class="language-bash">    root@setup-demo:~# ufw status
-    Status: active
-
-    To                         Action      From
-    --                         ------      ----
-    22                         ALLOW       Anywhere
-    443/tcp                    ALLOW       Anywhere
-    80/tcp                     ALLOW       Anywhere
-    22 (v6)                    ALLOW       Anywhere (v6)
-    443/tcp (v6)               ALLOW       Anywhere (v6)
-    80/tcp (v6)                ALLOW       Anywhere (v6)
-
-    root@setup-demo:~# service fail2ban status
-     * Status of authentication failure monitor
-     *  fail2ban is running
-</code></pre>
-
-<ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    root@setup-demo:~# ufw status
+</span></span><span style="display:flex;"><span>    Status: active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    To                         Action      From
+</span></span><span style="display:flex;"><span>    --                         ------      ----
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">22</span>                         ALLOW       Anywhere
+</span></span><span style="display:flex;"><span>    443/tcp                    ALLOW       Anywhere
+</span></span><span style="display:flex;"><span>    80/tcp                     ALLOW       Anywhere
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">22</span> <span style="color:#f92672">(</span>v6<span style="color:#f92672">)</span>                    ALLOW       Anywhere <span style="color:#f92672">(</span>v6<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    443/tcp <span style="color:#f92672">(</span>v6<span style="color:#f92672">)</span>               ALLOW       Anywhere <span style="color:#f92672">(</span>v6<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    80/tcp <span style="color:#f92672">(</span>v6<span style="color:#f92672">)</span>                ALLOW       Anywhere <span style="color:#f92672">(</span>v6<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    root@setup-demo:~# service fail2ban status
+</span></span><span style="display:flex;"><span>     * Status of authentication failure monitor
+</span></span><span style="display:flex;"><span>     *  fail2ban is running
+</span></span></code></pre></div><ol start="7">
 <li>Ensure you can connect from a <strong>new terminal window</strong> before disconnecting</li>
 </ol>
-
-<pre><code class="language-bash">    $ ssh YOUR_USERNAME@SERVER_IP
-</code></pre>
-
-<h2 id="updating-upgrading:5b5a247b327cc995afacd6590afee57f">Updating &amp; Upgrading</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ ssh YOUR_USERNAME@SERVER_IP
+</span></span></code></pre></div><h2 id="updating--upgrading">Updating &amp; Upgrading</h2>
 <ol>
-<li><p>Set the time zone to your choice</p>
-
+<li>
+<p>Set the time zone to your choice</p>
 <blockquote>
 <p>NOTE: I had to run <code>$ tzconfig</code> before the above command would work for me.</p>
-</blockquote></li>
+</blockquote>
+</li>
 </ol>
-
-<pre><code class="language-bash">    $ dpkg-reconfigure tzdata
-</code></pre>
-
-<ol>
-<li><p>Update server to latest software</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ dpkg-reconfigure tzdata
+</span></span></code></pre></div><ol start="2">
+<li>
+<p>Update server to latest software</p>
 <blockquote>
-<p><code>apt-get update</code> will fetch all the latest updates.<br />
+<p><code>apt-get update</code> will fetch all the latest updates.<br>
 <code>apt-get upgrade</code> will apply updates.</p>
-</blockquote></li>
+</blockquote>
+</li>
 </ol>
-
-<pre><code class="language-bash">    $ apt-get update &amp;&amp; apt-get upgrade -y
-    ...
-    # Make sure you are able to reconnect from a new window before this step
-    $ shutdown -r now
-</code></pre>
-
-<h2 id="software-installation:5b5a247b327cc995afacd6590afee57f">Software Installation</h2>
-
-<p><img src="/images/2014-07-11/sandwich.png" alt="" /></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get upgrade -y
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Make sure you are able to reconnect from a new window before this step</span>
+</span></span><span style="display:flex;"><span>    $ shutdown -r now
+</span></span></code></pre></div><h2 id="software-installation">Software Installation</h2>
+<p><img src="/images/2014-07-11/sandwich.png" alt=""></p>
 <p>Basic utilities to install</p>
-
-<pre><code class="language-bash">sudo apt-get install -y htop zsh tree git vim nginx nodejs make npm cmake python-dev
-</code></pre>
-
-<ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install -y htop zsh tree git vim nginx nodejs make npm cmake python-dev
+</span></span></code></pre></div><ul>
 <li>htop - processor monitor</li>
 <li>tree - tree view directories</li>
 <li>git - the stupid content tracker</li>
@@ -447,115 +370,100 @@ sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_
 <li>cmake - more build tools</li>
 <li>python-dev - even more building tools</li>
 </ul>
-
-<h2 id="configuration-debugging:5b5a247b327cc995afacd6590afee57f">Configuration &amp; Debugging</h2>
-
+<h2 id="configuration--debugging">Configuration &amp; Debugging</h2>
 <ul>
-<li><p>nginx - <code>sudo vim /etc/nginx/sites-enabled/default</code><br />
-<code>sudo service nginx restart</code></p></li>
-
-<li><p>ssh - <code>sudo vim /etc/ssh/sshd_config</code><br />
-<code>sudo service ssh restart</code></p></li>
-
-<li><p>logs<code>/var/log</code><br />
-<code>sudo tail -f /var/log/nginx/access.log</code></p></li>
+<li>
+<p>nginx - <code>sudo vim /etc/nginx/sites-enabled/default</code><br>
+<code>sudo service nginx restart</code></p>
+</li>
+<li>
+<p>ssh - <code>sudo vim /etc/ssh/sshd_config</code><br>
+<code>sudo service ssh restart</code></p>
+</li>
+<li>
+<p>logs<code>/var/log</code><br>
+<code>sudo tail -f /var/log/nginx/access.log</code></p>
+</li>
 </ul>
-
-<h2 id="shell-scripting:5b5a247b327cc995afacd6590afee57f">Shell Scripting</h2>
-
-<pre><code class="language-bash">#!/bin/bash
-
-# This is a comment
-echo &quot;Hello World&quot;
-
-# make script executable
-chmod a+x hello.sh
-
-# execute script
-./hello.sh
-</code></pre>
-
-<h2 id="git-remote-repository:5b5a247b327cc995afacd6590afee57f">Git remote repository</h2>
-
+<h2 id="shell-scripting">Shell Scripting</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This is a comment</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># make script executable</span>
+</span></span><span style="display:flex;"><span>chmod a+x hello.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># execute script</span>
+</span></span><span style="display:flex;"><span>./hello.sh
+</span></span></code></pre></div><h2 id="git-remote-repository">Git remote repository</h2>
 <p>On the remote machine</p>
-
-<pre><code class="language-bash">$ mkdir ~/web-project-name.git
-$ git init --bare ~/web-project-name.git
-</code></pre>
-
-<p>From local machine</p>
-
-<pre><code class="language-bash">$ cd ~/projects/web-project
-$ git remote add web-hostname YOUR_USERNAME@SERVER_IP:web-project-name.git
-$ git push web-hostname master
-</code></pre>
-
-<ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir ~/web-project-name.git
+</span></span><span style="display:flex;"><span>$ git init --bare ~/web-project-name.git
+</span></span></code></pre></div><p>From local machine</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd ~/projects/web-project
+</span></span><span style="display:flex;"><span>$ git remote add web-hostname YOUR_USERNAME@SERVER_IP:web-project-name.git
+</span></span><span style="display:flex;"><span>$ git push web-hostname master
+</span></span></code></pre></div><ul>
 <li>Githooks
-
 <ul>
 <li>post-update for deployment</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <blockquote>
 <p>Challenge: Setup the git post-update hook to deploy website</p>
 </blockquote>
-
-<h2 id="gotchas:5b5a247b327cc995afacd6590afee57f">Gotchas</h2>
-
+<h2 id="gotchas">Gotchas</h2>
 <ul>
 <li>ctrl + z by accident?
-
 <ul>
 <li>fg to foreground the application</li>
-</ul></li>
 </ul>
-
-<h2 id="nodejs-with-nginx:5b5a247b327cc995afacd6590afee57f">NodeJS with Nginx</h2>
-
+</li>
+</ul>
+<h2 id="nodejs-with-nginx">NodeJS with Nginx</h2>
 <ul>
 <li>Add a site config to <code>/etc/nginx/sites-available/site.conf</code>.
-<script src="https://gist.github.com/icecreammatt/b9252556400e08513c61.js"></script></li>
+  <script src="https://gist.github.com/icecreammatt/b9252556400e08513c61.js"></script>
+</li>
 <li>Soft link <code>ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/</code> to enable the site.</li>
 <li><code>sudo service nginx reload</code> to apply the changes.</li>
 <li>Change the port number from <code>3000</code> to whatever your node app is running on.</li>
 </ul>
-
-<h2 id="next-time:5b5a247b327cc995afacd6590afee57f">Next time</h2>
-
+<h2 id="next-time">Next time</h2>
 <ul>
 <li>Automation
-
 <ul>
 <li>Ansible</li>
-</ul></li>
+</ul>
+</li>
 <li>PaaS</li>
 <li>Docker</li>
 <li>Dokku</li>
 </ul>
-
-<h2 id="future-talk-ideas:5b5a247b327cc995afacd6590afee57f">Future talk ideas</h2>
-
+<h2 id="future-talk-ideas">Future talk ideas</h2>
 <ul>
 <li>Nginx Setup with NodeJS</li>
 <li>DNS</li>
 <li>Monitoring</li>
 <li>Automation deep dive</li>
 <li>AWS
-
 <ul>
 <li>Basics</li>
 <li>Security Groups</li>
 <li>EC2</li>
 <li>Load Balancing</li>
 <li>etc&hellip;</li>
-</ul></li>
+</ul>
+</li>
 <li>Continuous Integration</li>
 </ul>
 
   </section>
   <footer>
+    
+    
     
     <section class="author-info row">
       <div class="author-avatar col-md-2 col-sm-2 col-xs-12">
@@ -575,10 +483,10 @@ $ git push web-hostname master
     </section>
     <ul class="pager">
       
-      <li class="previous"><a href="https://mattcarrier.com/tools-and-plugins-for-osx/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous"><a href="https://www.mattcarrier.com/tools-and-plugins-for-osx/"><span aria-hidden="true">&larr;</span>Older</a></li>
       
       
-      <li class="next"><a href="https://mattcarrier.com/post/enable-surround-sound-hdmi-osx/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next"><a href="https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/">Newer<span aria-hidden="true">&rarr;</span></a></li>
       
     </ul>
   </footer>
@@ -627,7 +535,7 @@ $ git push web-hostname master
                         
                           <a href="/tools-and-plugins-for-osx/" class="list-group-item">Tools and Plugins for OSX</a>
                          
-                      
+                       
                   </div>
               </div>
           </div>
@@ -642,77 +550,77 @@ $ git push web-hostname master
                 <div class="list-group">
                     
                     
-                    <a href="https://mattcarrier.com//tags/archive" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/archive" class="list-group-item">
                         <span class="badge">35</span>
                         archive
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/coreos" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/coreos" class="list-group-item">
                         <span class="badge">1</span>
                         coreos
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/docker" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/docker" class="list-group-item">
                         <span class="badge">1</span>
                         docker
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/entertainment" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/entertainment" class="list-group-item">
                         <span class="badge">1</span>
                         entertainment
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/go" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/go" class="list-group-item">
                         <span class="badge">1</span>
                         go
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/ios" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/ios" class="list-group-item">
                         <span class="badge">2</span>
                         ios
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/iptables" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/iptables" class="list-group-item">
                         <span class="badge">1</span>
                         iptables
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/javascript" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/javascript" class="list-group-item">
                         <span class="badge">1</span>
                         javascript
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/linux" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/linux" class="list-group-item">
                         <span class="badge">5</span>
                         linux
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/osx" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/osx" class="list-group-item">
                         <span class="badge">4</span>
                         osx
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/python" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/python" class="list-group-item">
                         <span class="badge">1</span>
                         python
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/systemd" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/systemd" class="list-group-item">
                         <span class="badge">1</span>
                         systemd
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/vertigo" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/vertigo" class="list-group-item">
                         <span class="badge">2</span>
                         vertigo
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/winkhub" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/winkhub" class="list-group-item">
                         <span class="badge">3</span>
                         winkhub
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/xcode" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/xcode" class="list-group-item">
                         <span class="badge">2</span>
                         xcode
                     </a>
@@ -746,6 +654,9 @@ $ git push web-hostname master
   </a>
   
   
+  
+  
+  
   <a href="https://stackoverflow.com/users/873559" target="_blank">
     <i class="fa fa-stack-overflow"></i>
   </a>
@@ -765,7 +676,7 @@ $ git push web-hostname master
 
   </footer>
 
-  <script src="https://mattcarrier.com/js/highlight.pack.js"></script>
+  <script src="https://www.mattcarrier.com/js/highlight.pack.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>

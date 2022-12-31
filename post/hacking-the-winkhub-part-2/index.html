@@ -6,7 +6,7 @@
   <meta property="og:title" content=" Troubleshooting Winkhub issues &middot;  Matt Carrier" />
   
   <meta property="og:site_name" content="Matt Carrier" />
-  <meta property="og:url" content="https://mattcarrier.com/post/hacking-the-winkhub-part-2/" />
+  <meta property="og:url" content="https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/" />
   
   
   <meta property="og:type" content="article" />
@@ -23,10 +23,10 @@
      Troubleshooting Winkhub issues &middot;  Matt Carrier
   </title>
 
-  <link rel="stylesheet" href="https://mattcarrier.com/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/main.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://mattcarrier.com/css/github.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/main.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://www.mattcarrier.com/css/github.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
@@ -49,12 +49,11 @@
   <meta name="msapplication-config" content="/icon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  
 </head>
 <body>
     <header class="global-header"  style="background-image:url( /images/bg.jpg )">
     <section class="header-text">
-      <h1><a href="https://mattcarrier.com/">Matt Carrier</a></h1>
+      <h1><a href="https://www.mattcarrier.com/">Matt Carrier</a></h1>
       
       <div class="tag-line">
         Bits &amp; Pixels
@@ -76,6 +75,9 @@
   </a>
   
   
+  
+  
+  
   <a href="https://stackoverflow.com/users/873559" target="_blank">
     <i class="fa fa-stack-overflow"></i>
   </a>
@@ -94,11 +96,10 @@
 </div>
 
       
-      <a href="https://mattcarrier.com/" class="btn-header btn-back hidden-xs">
+      <a href="https://www.mattcarrier.com/" class="btn-header btn-back hidden-xs">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
-      
       
     </section>
   </header>
@@ -109,85 +110,69 @@
   <header>
     <h1 class="text-primary">Troubleshooting Winkhub issues</h1>
     <div class="post-meta clearfix">
+    
       <div class="post-date pull-left">
         Posted on
         <time datetime="2015-08-26T00:00:00Z">
           Aug 26, 2015
         </time>
       </div>
+    
       <div class="pull-right">
         
-        <span class="post-tag small"><a href="https://mattcarrier.com//tags/winkhub">#Winkhub</a></span>
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/winkhub">#Winkhub</a></span>
         
-        <span class="post-tag small"><a href="https://mattcarrier.com//tags/linux">#linux</a></span>
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/linux">#linux</a></span>
         
       </div>
     </div>
   </header>
   <section>
-    
-
-<p>This post picks up where <a href="/post/hacking-the-winkhub-part-1">part 1</a> left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.</p>
-
+    <p>This post picks up where <a href="/post/hacking-the-winkhub-part-1">part 1</a> left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.</p>
 <p>By following the instructions <a href="http://www.rootwink.com/viewtopic.php?f=6&amp;t=4">here</a> (See step #5 specifically) I was able to preserve root access on the device. However, I still had issues with my device booting because when I restarted, it was stuck in a loop:</p>
-
-<pre><code>Starting lighttpd: OK
-+ echo 'Launch upgrade script'
+<pre tabindex="0"><code>Starting lighttpd: OK
++ echo &#39;Launch upgrade script&#39;
 Launch upgrade script
 + /root/platform/run_upgrade.sh
 + FILE=/tmp/isalive
-+ '[' '!' -e /tmp/isalive ']'
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
 + sleep 1
-+ '[' '!' -e /tmp/isalive ']'
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
 + sleep 1
-+ '[' '!' -e /tmp/isalive ']'
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
 + sleep 1
-+ '[' '!' -e /tmp/isalive ']'
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
 + sleep 1
-+ '[' '!' -e /tmp/isalive ']'
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
 + sleep 1
-+ '[' '!' -e /tmp/isalive ']'
-</code></pre>
-
-<p>This loop may have occurred because I did not delete the upgrade script as suggested in the instructions. I was a bit afraid of bricking the device. To fix this, I rebooted again using the NAND hack I started with at the beginning, and then I modified the upgrade script in <code>/root/platform/run_upgarde.sh</code> by commenting out all the details and adding a <code>/bin/bash</code> at the bottom. While this worked and got me a shell after restarting, the aprond was not starting on its own. I suspect this is because the aprond is initialized after the upgrade script runs. Keep in mind at this point I have still never connected it to the internet using the iOS app.</p>
-
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
+</code></pre><p>This loop may have occurred because I did not delete the upgrade script as suggested in the instructions. I was a bit afraid of bricking the device. To fix this, I rebooted again using the NAND hack I started with at the beginning, and then I modified the upgrade script in <code>/root/platform/run_upgarde.sh</code> by commenting out all the details and adding a <code>/bin/bash</code> at the bottom. While this worked and got me a shell after restarting, the aprond was not starting on its own. I suspect this is because the aprond is initialized after the upgrade script runs. Keep in mind at this point I have still never connected it to the internet using the iOS app.</p>
 <p>I did some digging and figured out how to connect to the wifi. I added my SSID and WPA key.</p>
-
 <p>Add a wifi key to <code>/database/wpa_supplicant.conf</code></p>
-
-<pre><code>/ # cat /database/wpa_supplicant.conf
+<pre tabindex="0"><code>/ # cat /database/wpa_supplicant.conf
 ctrl_interface=/var/run/wpa_supplicant
 update_config=1
 ap_scan=1
 fast_reauth=1
-bgscan=&quot;&quot;
+bgscan=&#34;&#34;
 
 network={
     priority=2
     scan_ssid=1
-    ssid=&quot;NETWORK_SSID_GOES_HERE&quot;
-    psk=&quot;XXX_PASSWORD_HERE_XXX&quot;
+    ssid=&#34;NETWORK_SSID_GOES_HERE&#34;
+    psk=&#34;XXX_PASSWORD_HERE_XXX&#34;
 }
-</code></pre>
-
-<blockquote>
+</code></pre><blockquote>
 <p>NOTE: The wifi password cannot be too long or contain spaces. (I suspect it cannot contain spaces) It took me a few reboots to figure this out. I happened to catch it complaining about the password in the output during the boot sequence.</p>
 </blockquote>
-
 <p>Run this to start the wireless: <code>/ # ./etc/init.d/S41wireless start</code></p>
-
 <p>I finally got my wifi connected but the boot sequence was still stuck on this loop:</p>
-
-<pre><code>+ sleep 1
-+ '[' '!' -e /tmp/isalive ']'
+<pre tabindex="0"><code>+ sleep 1
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
 + sleep 1
-+ '[' '!' -e /tmp/isalive ']'
-</code></pre>
-
-<p>I was starting to get a bit desparate because I was not able to get any of the services to start. After being stuck in this boot state, I decided to run the upgrade script to see if that might fix anything. I&rsquo;m not sure what firmware version I was running. After it finished rebooting, I was able to access the shell without having to do the NAND glitch. At this point, it was pretty late so I&rsquo;m a bit fuzzy if there are any other details I&rsquo;m missing.</p>
-
++ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
+</code></pre><p>I was starting to get a bit desparate because I was not able to get any of the services to start. After being stuck in this boot state, I decided to run the upgrade script to see if that might fix anything. I&rsquo;m not sure what firmware version I was running. After it finished rebooting, I was able to access the shell without having to do the NAND glitch. At this point, it was pretty late so I&rsquo;m a bit fuzzy if there are any other details I&rsquo;m missing.</p>
 <p>I tested adding a light using the <code>aprontest</code> tool as mentioned in the forums I had been reading.</p>
-
 <ul>
 <li><code>/ # aprontest -h</code> Help</li>
 <li><code>/ # aprontest -a -r zigbee</code> Connect new device</li>
@@ -195,67 +180,50 @@ network={
 <li><code>/ # aprontest -u -m1 -t1 -vOFF</code> Turn light off</li>
 <li><code>/ # aprontest -u -m1 -t1 -vON</code> Turn light on</li>
 </ul>
-
 <p><em>There was much rejoicing at 3:30 in the morning. Luckily it was Saturday so I could sleep in.</em></p>
-
 <p>Before I went to bed I still wanted to see if I could set this up to be able to turn the lights on and off with curl. I found the web folder in <code>/var/www</code>. I created a few simple scripts to test turning the lights on and off from the command line.</p>
-
 <div id="php"></div>
-
 <p><strong>on.php</strong></p>
-
-<pre><code>&lt;?php
-	echo &quot;Hello Light On&quot;;
-	exec('aprontest -u -m1 -t1 -vON');
+<pre tabindex="0"><code>&lt;?php
+	echo &#34;Hello Light On&#34;;
+	exec(&#39;aprontest -u -m1 -t1 -vON&#39;);
 ?&gt;
-</code></pre>
-
-<p><strong>off.php</strong></p>
-
-<pre><code>&lt;?php
-	echo &quot;Hello Light Off&quot;;
-	exec('aprontest -u -m1 -t1 -vOFF');
+</code></pre><p><strong>off.php</strong></p>
+<pre tabindex="0"><code>&lt;?php
+	echo &#34;Hello Light Off&#34;;
+	exec(&#39;aprontest -u -m1 -t1 -vOFF&#39;);
 ?&gt;
-</code></pre>
-
-<p>Great Success!<br />
+</code></pre><p>Great Success!<br>
 I could now turn the lights on and off by running <code>curl http://192.168.1.11/on.php</code></p>
-
 <p><strong>brightness.php</strong></p>
-
-<pre><code>&lt;?php
-    if(isset($_GET['value'])) {
-        $value = $_GET['value'];
+<pre tabindex="0"><code>&lt;?php
+    if(isset($_GET[&#39;value&#39;])) {
+        $value = $_GET[&#39;value&#39;];
         //if(ctype_digit($value) {
-            echo &quot;Setting brightness to &quot; . $value;
-            $cmd = &quot;aprontest -u -m1 -t2 -v $value&quot;;
+            echo &#34;Setting brightness to &#34; . $value;
+            $cmd = &#34;aprontest -u -m1 -t2 -v $value&#34;;
             exec($cmd);
         //} else {
-            //echo 'Expected integer'
+            //echo &#39;Expected integer&#39;
         //}
     }
 ?&gt;
-</code></pre>
-
-<p>The brightness could be adjusted by running <code>curl http://192.168.1.11/brightness.php?value=150</code> Can you see the bug(s) I left in <code>brightness.php</code> where you can easily run any code as root by adjusting the value parameter? I&rsquo;ll leave this to an exercise for the reader. :)</p>
-
+</code></pre><p>The brightness could be adjusted by running <code>curl http://192.168.1.11/brightness.php?value=150</code> Can you see the bug(s) I left in <code>brightness.php</code> where you can easily run any code as root by adjusting the value parameter? I&rsquo;ll leave this to an exercise for the reader. :)</p>
 <p>As you can see in my commented-out bits of <code>brightness.php</code>, I prefer not to write PHP code. Especially at 4:00 in the morning. It wasn&rsquo;t until the next day I noticed the hole I left in the code by skipping the check for digits. I was really hoping that I could run some Go binaries on this device at this point&hellip;</p>
-
 <ul>
 <li><a href="/post/hacking-the-winkhub-part-1">Part I - Hacking the Winkhub</a></li>
 <li>Part II - Troubleshooting Wink issues</li>
 <li><a href="/post/hacking-the-winkhub-part-3">Part III - Cross compiling Go for Winkhub</a></li>
 </ul>
-
-<h2 id="a-href-id-resources-resources-a:f35e328e4392e8faa2f45e7dcf8dd39f"><a href="#" id="Resources">Resources</a></h2>
-
+<h2 id="a-href-idresourcesresourcesa"><a href="#" id="Resources">Resources</a></h2>
 <ul>
 <li><a href="https://github.com/wink-hub-root/demystified/wiki/Connecting-to-wifi-manually" content="nofollow">Connecting to wifi manually</a></li>
 <li><a href="http://rootwink.com/viewtopic.php?t=12#p15" content="nofollow">Attaching Devices to Rooted Winkhub</a></li>
 </ul>
-
   </section>
   <footer>
+    
+    
     
     <section class="author-info row">
       <div class="author-avatar col-md-2 col-sm-2 col-xs-12">
@@ -275,10 +243,10 @@ I could now turn the lights on and off by running <code>curl http://192.168.1.11
     </section>
     <ul class="pager">
       
-      <li class="previous"><a href="https://mattcarrier.com/post/hacking-the-winkhub-part-1/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous"><a href="https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/"><span aria-hidden="true">&larr;</span>Older</a></li>
       
       
-      <li class="next"><a href="https://mattcarrier.com/post/hacking-the-winkhub-part-3/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next"><a href="https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/">Newer<span aria-hidden="true">&rarr;</span></a></li>
       
     </ul>
   </footer>
@@ -327,7 +295,7 @@ I could now turn the lights on and off by running <code>curl http://192.168.1.11
                         
                           <a href="/tools-and-plugins-for-osx/" class="list-group-item">Tools and Plugins for OSX</a>
                          
-                      
+                       
                   </div>
               </div>
           </div>
@@ -342,77 +310,77 @@ I could now turn the lights on and off by running <code>curl http://192.168.1.11
                 <div class="list-group">
                     
                     
-                    <a href="https://mattcarrier.com//tags/archive" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/archive" class="list-group-item">
                         <span class="badge">35</span>
                         archive
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/coreos" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/coreos" class="list-group-item">
                         <span class="badge">1</span>
                         coreos
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/docker" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/docker" class="list-group-item">
                         <span class="badge">1</span>
                         docker
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/entertainment" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/entertainment" class="list-group-item">
                         <span class="badge">1</span>
                         entertainment
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/go" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/go" class="list-group-item">
                         <span class="badge">1</span>
                         go
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/ios" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/ios" class="list-group-item">
                         <span class="badge">2</span>
                         ios
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/iptables" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/iptables" class="list-group-item">
                         <span class="badge">1</span>
                         iptables
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/javascript" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/javascript" class="list-group-item">
                         <span class="badge">1</span>
                         javascript
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/linux" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/linux" class="list-group-item">
                         <span class="badge">5</span>
                         linux
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/osx" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/osx" class="list-group-item">
                         <span class="badge">4</span>
                         osx
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/python" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/python" class="list-group-item">
                         <span class="badge">1</span>
                         python
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/systemd" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/systemd" class="list-group-item">
                         <span class="badge">1</span>
                         systemd
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/vertigo" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/vertigo" class="list-group-item">
                         <span class="badge">2</span>
                         vertigo
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/winkhub" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/winkhub" class="list-group-item">
                         <span class="badge">3</span>
                         winkhub
                     </a>
                     
-                    <a href="https://mattcarrier.com//tags/xcode" class="list-group-item">
+                    <a href="https://www.mattcarrier.com/tags/xcode" class="list-group-item">
                         <span class="badge">2</span>
                         xcode
                     </a>
@@ -446,6 +414,9 @@ I could now turn the lights on and off by running <code>curl http://192.168.1.11
   </a>
   
   
+  
+  
+  
   <a href="https://stackoverflow.com/users/873559" target="_blank">
     <i class="fa fa-stack-overflow"></i>
   </a>
@@ -465,7 +436,7 @@ I could now turn the lights on and off by running <code>curl http://192.168.1.11
 
   </footer>
 
-  <script src="https://mattcarrier.com/js/highlight.pack.js"></script>
+  <script src="https://www.mattcarrier.com/js/highlight.pack.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>

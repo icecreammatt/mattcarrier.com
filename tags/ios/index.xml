@@ -1,144 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ios on Matt Carrier</title>
-    <link>https://mattcarrier.com/tags/ios/</link>
-    <description>Recent content in Ios on Matt Carrier</description>
+    <title>ios on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/tags/ios/</link>
+    <description>Recent content in ios on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2015</copyright>
-    <lastBuildDate>Tue, 30 Apr 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mattcarrier.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 30 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tools and Plugins for OSX</title>
-      <link>https://mattcarrier.com/tools-and-plugins-for-osx/</link>
+      <link>https://www.mattcarrier.com/tools-and-plugins-for-osx/</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/tools-and-plugins-for-osx/</guid>
-      <description>&lt;p&gt;Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed… 
-
-&lt;br /&gt;These are most of the main tools and plugins I use for development.&lt;/p&gt;
-
-&lt;h3&gt;Programs&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.iterm2.com/#/section/home&#34;&gt;iTerm2&lt;/a&gt; - Terminal with nice split screen support and better fullscreen options&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sublimetext.com&#34;&gt;SublimeText&lt;/a&gt; - Cross platform text editor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sourcetreeapp.com&#34;&gt;SourceTree&lt;/a&gt; - Visual Git client&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://brettterpstra.com/projects/nvalt/&#34;&gt;nvAlt&lt;/a&gt; - Quick note taking and searching&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mouapp.com&#34;&gt;MouApp&lt;/a&gt; - Markdown Editor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;join.me&#34;&gt;join.me&lt;/a&gt; - Screen sharing&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://grandperspectiv.sourceforge.net&#34;&gt;GrandPerspective&lt;/a&gt; - Not quite as nice as WindirStat but pretty close and the price is right.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.charlesproxy.com&#34;&gt;Charles&lt;/a&gt; - Proxy app much like Fiddler but for Mac&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;OSX Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://spectacleapp.com&#34;&gt;Spectacle&lt;/a&gt; - Window manager that works great and is free.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://manytricks.com/moom/&#34;&gt;Moom&lt;/a&gt; - Another really good Window manager for OSX that lets you do things like save and window positions to hot keys. (60/40 splits or whatever you want)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh&#34;&gt;Oh-my-zsh&lt;/a&gt; - Auto completion and plugins for terminal.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/downloads/index.action&#34;&gt;Network Link Conditioner&lt;/a&gt; (Search Hardware IO Tools for Xcode) Test different network conditions by throttling bandwidth.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;SublimeText 2 Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wbond.net/sublime_packages/package_control&#34;&gt;Package Control&lt;/a&gt; - The simplest way to install sublime plugins&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/SublimeText/Tag&#34;&gt;Tag&lt;/a&gt; - Great plugin for indenting and pretty printing compressed XML&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/dzhibas/SublimePrettyJson&#34;&gt;Pretty JSON&lt;/a&gt; - Make JSON look pretty too&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alek-sys/sublimetext_indentxml&#34;&gt;Indent XML&lt;/a&gt; - I used to use this one a lot, but recently started using Tag more.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/kemayo/sublime-text-2-git&#34;&gt;Git&lt;/a&gt; - Sometimes its nice to be able to run quick git commands in Sublime&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/facelessuser/BracketHighlighter&#34;&gt;BracketHighlighter&lt;/a&gt; - Provides nice bracket highlighting&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jnordberg/color-pick&#34;&gt;Colorpick&lt;/a&gt; - For quick in app color picking&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Kronuz/SublimeCodeIntel&#34;&gt;SublimeCodeIntel&lt;/a&gt; - Code intelligence&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jpvanhal/sublime-jinja2&#34;&gt;sublime-jinja2&lt;/a&gt; - Jinja2 template support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Xcode Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/JugglerShu/XVim&#34;&gt;XVim&lt;/a&gt; - Vim bindings for Xcode.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/omz/MiniXcode&#34;&gt;Mini Xcode&lt;/a&gt; - Minimize the main toolbar but keep access to the scheme selector&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Chrome Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb&#34;&gt;Vimium&lt;/a&gt; - Vim bindings for Chrome&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc&#34;&gt;JSONView&lt;/a&gt; - Pretty print for JSON&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/xv-%E2%80%94-xml-viewer/eeocglpgjdpaefaedpblffpeebgmgddk&#34;&gt;XV - XML Viewer&lt;/a&gt; - Pretty print for XML&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/idhfcdbheobinplaamokffboaccidbal&#34;&gt;Resolution test&lt;/a&gt; - Quick way to snap the browser to common resolutions&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/dnfpcpfijpdhabaoieccoclghgplmpbd&#34;&gt;CSS Reloader&lt;/a&gt; - Reload the stylesheet without reloading the whole page.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://www.mattcarrier.com/tools-and-plugins-for-osx/</guid>
+      <description>&lt;p&gt;Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed…</description>
     </item>
     
     <item>
       <title>Xcode shortcuts &amp; settings</title>
-      <link>https://mattcarrier.com/xcode-shortcuts/</link>
+      <link>https://www.mattcarrier.com/xcode-shortcuts/</link>
       <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/xcode-shortcuts/</guid>
-      <description>&lt;p&gt;Here are some hot keys and preferences that make life in Xcode much better.&lt;/p&gt;
-
-&lt;p&gt;&lt;h2&gt;Open quickly&lt;/h2&gt;
-&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/quick-open.jpg&#34;&gt;&lt;img class=&#34;wp-image-225 alignright&#34; alt=&#34;quick-open&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/quick-open.jpg&#34; width=&#34;342&#34; height=&#34;251&#34; /&gt;&lt;/a&gt; Search through files, classes, and method names.
-&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;O&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;Use &lt;kbd&gt;option&lt;/kbd&gt; &lt;kbd&gt;enter&lt;/kbd&gt; to open document in the right pane, this will also split the view if the assistant view isn&amp;rsquo;t already open. To return to single view mode use &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;
-&lt;h2&gt;Split screen (Assistant Editor)&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;Switch to the assistant editor by pressing &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Option&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
-    &lt;li&gt;Return to a single screen using &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
-    &lt;li&gt;Open the diff view &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Option&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Open files in active view&lt;/h2&gt;
-This settings allows for the active editor window selected to be the one changed when selecting documents from the list view or using open quickly.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/Active-View.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-217&#34; alt=&#34;General Settings&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/Active-View-1024x644.jpg&#34; width=&#34;625&#34; height=&#34;393&#34; /&gt;&lt;/a&gt;
-&lt;h2&gt;Debug Tab&lt;/h2&gt;
-Ever get annoyed when breakpoint switches away from the currently viewed file?
-To stop this from happening setup a debug tab in the behavior settings.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_1.jpg&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-256&#34; alt=&#34;behaviors_1&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_1-1024x747.jpg&#34; width=&#34;625&#34; height=&#34;455&#34; /&gt;&lt;/a&gt;&lt;img class=&#34;alignnone  wp-image-219&#34; alt=&#34;behaviors-2&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_2.jpg&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This last setting is a personal preference. I don&amp;rsquo;t like the console visible when I&amp;rsquo;m coding. This setting will auto hide the console after stopping the simulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_3.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-220&#34; alt=&#34;behaviors-3&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_3.jpg&#34; /&gt;&lt;/a&gt;
-&lt;h2&gt;Web like navigation&lt;/h2&gt;
-Command click on method names and class names to quickly navigate to implementations.
-Double click to open in a separate window. Swipe on a touch pad to go forward and back. Hold down on the back button to view the navigation history.&lt;/p&gt;
-
-&lt;p&gt;Press &lt;kbd&gt;option&lt;/kbd&gt; instead of &lt;kbd&gt;command&lt;/kbd&gt; to read inline documentation of classes and methods.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/inline-documentation.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-227&#34; alt=&#34;inline-documentation&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/inline-documentation-1024x463.jpg&#34; width=&#34;500&#34; height=&#34;226&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Use custom key bindings to quickly switch tabs.
-Select Next Tab: &lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Tab&lt;/kbd&gt;
-Select Previous Tab:  &lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;Tab&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/tab-settings.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-228&#34; alt=&#34;tab-settings&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/tab-settings.jpg&#34; /&gt;&lt;/a&gt;
-&lt;h2&gt;More keys worth knowing&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Up&lt;/kbd&gt; Switch between header and implementation&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;L&lt;/kbd&gt; Jump to line number&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;R&lt;/kbd&gt; Run simulator&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;B&lt;/kbd&gt; Build&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;K&lt;/kbd&gt; Clean solution&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Y&lt;/kbd&gt; Continue debugging&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;Y&lt;/kbd&gt; Hide and show debug console&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;(1 - 7)&lt;/kbd&gt; Show different navigator tabs, hide with &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;0&lt;/kbd&gt;
-    &lt;em&gt;&lt;em&gt;Press &lt;kbd&gt;option&lt;/kbd&gt; to do the same with utilities on the right&lt;/em&gt;&lt;/em&gt;Download a cheat sheet of hotkeys &lt;a title=&#34;here&#34; href=&#34;http://cocoasamurai.blogspot.com/2011/03/xcode-4-keyboard-shortcuts-now.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Regain vertical space, Hide the toolbar&lt;/h2&gt;
-So now that you have instantly memorized all these hot keys you want to hide the toolbar but still be able to set the active scheme. To do this grab the plugin for the mini Xcode target selection on &lt;a href=&#34;https://github.com/omz/MiniXcode&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/mini-xcode.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-226&#34; alt=&#34;mini-xcode&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/mini-xcode-1024x335.jpg&#34; width=&#34;625&#34; height=&#34;204&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Thanks to Matthew Strickland &lt;a href=&#34;https://twitter.com/strickland&#34;&gt;@strickland&lt;/a&gt; for letting me know about this plugin.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/xcode-shortcuts/</guid>
+      <description>&lt;p&gt;Here are some hot keys and preferences that make life in Xcode much better.&lt;/p&gt;</description>
     </item>
     
   </channel>

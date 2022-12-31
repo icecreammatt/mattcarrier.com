@@ -1,31 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Entertainment on Matt Carrier</title>
-    <link>https://mattcarrier.com/tags/entertainment/</link>
-    <description>Recent content in Entertainment on Matt Carrier</description>
+    <title>entertainment on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/tags/entertainment/</link>
+    <description>Recent content in entertainment on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2015</copyright>
-    <lastBuildDate>Wed, 08 Apr 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mattcarrier.com/tags/entertainment/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 08 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/entertainment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to enable 5.1 surround sound in VLC on OSX over HDMI</title>
-      <link>https://mattcarrier.com/post/enable-surround-sound-hdmi-osx/</link>
+      <link>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</link>
       <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/post/enable-surround-sound-hdmi-osx/</guid>
-      <description>&lt;p&gt;I recently connected my MacBookPro to my audio receiver over HDMI to play a movie with VLC and try out the Steam in home streaming. I noticed that the audio was not coming out of all my speakers.&lt;/p&gt;
-
-&lt;p&gt;To fix this open the Audio MIDI App and switch output to 5.1.&lt;br /&gt;
-&lt;code&gt;Applications &amp;gt; Utilities &amp;gt; Audio MIDI Setup&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;While the screenshots show the source as my Samsung TV it is actually playing the audio through my Sony receiver. Making this change allowed me to watch movies with VLC in 5.1. If the option for 5.1 is grayed out try setting the input on the receiver to be the laptops HDMI and toggling the power. This happened to me when I switched inputs after having the laptop already connected.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-04-08/audio-devices.png&#34; alt=&#34;Audio MIDI Setup&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-04-08/audio-devices-configure-speakers.png&#34; alt=&#34;Audio MIDI Setup&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</guid>
+      <description>&lt;p&gt;I recently connected my MacBookPro to my audio receiver over HDMI to play a movie with VLC and try out the Steam in home streaming. I noticed that the audio was not coming out of all my speakers.&lt;/p&gt;</description>
     </item>
     
   </channel>

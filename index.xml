@@ -1,1952 +1,446 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matt Carrier</title>
-    <link>https://mattcarrier.com/</link>
+    <link>https://www.mattcarrier.com/</link>
     <description>Recent content on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2015</copyright>
-    <lastBuildDate>Mon, 31 Aug 2015 23:07:40 -0700</lastBuildDate>
-    <atom:link href="https://mattcarrier.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 31 Aug 2015 23:07:40 -0700</lastBuildDate><atom:link href="https://www.mattcarrier.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Matt Carrier - Resume</title>
-      <link>https://mattcarrier.com/post/resume/</link>
+      <link>https://www.mattcarrier.com/post/resume/</link>
       <pubDate>Mon, 31 Aug 2015 23:07:40 -0700</pubDate>
       
-      <guid>https://mattcarrier.com/post/resume/</guid>
-      <description>
-
-&lt;h2 id=&#34;education:c59a67a3c7bc5faa453847420267045e&#34;&gt;Education&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Sonoma State University:&lt;/strong&gt; Rohnert Park, CA&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Double Major:
-
-&lt;ul&gt;
-&lt;li&gt;B.S. Computer Science&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;B.A. Art Studio&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;work-experience:c59a67a3c7bc5faa453847420267045e&#34;&gt;Work Experience&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Vertigo Software:&lt;/strong&gt;&lt;br /&gt;
-Software Engineer II&lt;br /&gt;
-&lt;em&gt;August 2013 – Present&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Consulted with clients/product owners about feature design, implementation, bug fixes, certification, &amp;amp; deployment. Implemented development processes which allow for repeatable application deployment. Documented product features, issues, API’s, &amp;amp; configuration parameters.&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;DevOps - Screambox.com (Setup development &amp;amp; deployment processes utilizing Docker &amp;amp; Amazon AWS)&lt;/li&gt;
-&lt;li&gt;Setup development processes where code that runs locally is identical to what runs in production&lt;/li&gt;
-&lt;li&gt;Designed, documented &amp;amp; mocked REST API endpoints for an IaaS, PaaS, &amp;amp; SaaS, for an online marketplace to be used by a web hosting/cloud services provider&lt;/li&gt;
-&lt;li&gt;Led project to document an undocumented web site project inherited from another company. This included recommendations to reduce page loading speeds by over 50% and listed steps to setup new development machines &amp;amp; developers to do work on the website.&lt;/li&gt;
-&lt;li&gt;Implemented pre-roll ads &amp;amp; analytics on NBC LiveExtra iOS for SuperBowl 2015&lt;/li&gt;
-&lt;li&gt;Developed build systems with gulp to make up for deficiencies in closed development platforms&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Software Engineer&lt;br /&gt;
-&lt;em&gt;June 2012 – July 2013&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Developed HTML5 PDF Webviewer using the PDFTron library for a large self publishing magazine site&lt;/li&gt;
-&lt;li&gt;Implemented push notifications with the use of UrbanAirship for Golf Channel Mobile (iOS)&lt;/li&gt;
-&lt;li&gt;Implemented Google Analytics &amp;amp; Facebook OpenGraph integration (Likes &amp;amp; Commenting) for a large self publishing magazine site&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Intern Software Engineer&lt;br /&gt;
-&lt;em&gt;June 2011 – May 2012&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Interned while finishing up bachelor degrees at Sonoma State. Integrated Disqus comments for Golf Channel Mobile &amp;amp; Implemented real-time alerts for the Superbowl in NBC SportsTalk.&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Learned JavaScript, Ajax, HTML5 Canvas, how to work with JSON &amp;amp; XML web services&lt;/li&gt;
-&lt;li&gt;GravityBox, a HTML5 physics tech demo utilizing JavaScript with Canvas &amp;amp; Box2DJS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Sonoma State University:&lt;/strong&gt;&lt;br /&gt;
-Adjunct Faculty (Unix Instructor)&lt;br /&gt;
-&lt;em&gt;August 2013 – May 2014&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Instructed evening section of Fall 2013 &amp;amp; Spring 2014 Introduction to Unix class. These classes included a quiz followed by a short lecture with an accompanying lab assignment.&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Command line basics &amp;amp; introduction to a git based workflow using Github&lt;/li&gt;
-&lt;li&gt;Covered how to setup and lockdown a VPS using DigitalOcean and Amazon AWS&lt;/li&gt;
-&lt;li&gt;Basic debugging of C++ using GDB and introduction to Makefiles&lt;/li&gt;
-&lt;li&gt;Taught basic usage of Vim &amp;amp; Emacs&lt;/li&gt;
-&lt;li&gt;Created weekly quizzes and the midterms&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tech Support&lt;br /&gt;
-&lt;em&gt;August 2008 – August 2011&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Experience communicating with faculty &amp;amp; students to troubleshoot and resolve software and hardware issues with PC’s and Laptops&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Responsible for imaging &amp;amp; updating system software for seven campus-wide Mac &amp;amp; PC labs&lt;/li&gt;
-&lt;li&gt;Wrote scripts &amp;amp; documentation for application configuration and deployment&lt;/li&gt;
-&lt;li&gt;Managed inventory for faculty computers &amp;amp; rebuilt machines as needed to resolve issues&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Immecor Corporation:&lt;/strong&gt;&lt;br /&gt;
-Computer Technician&lt;br /&gt;
-&lt;em&gt;August 2006 – January 2008&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Assembled and configured enterprise class servers&lt;/li&gt;
-&lt;li&gt;Wrote documentation used by other employees to assemble numerous machines.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;language-tools-experience:c59a67a3c7bc5faa453847420267045e&#34;&gt;Language &amp;amp; Tools Experience&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Programming languages: JavaScript, Objective-C, Bash, Python, Go&lt;/li&gt;
-&lt;li&gt;Tools: Git, gulp, Docker, Vagrant, Vim, Nginx, Node.js, Browserify, systemd&lt;/li&gt;
-&lt;li&gt;Visual: HTML5, CSS3, Xcode Interface Builder, Photoshop&lt;/li&gt;
-&lt;li&gt;Cloud Providers: Amazon AWS, DigitalOcean, CloudFlare, UrbanAirship&lt;/li&gt;
-&lt;li&gt;Frameworks: Express, Cocoa Touch, AngularJS, Flask, WinJS, ASP.Net MVC&lt;/li&gt;
-&lt;li&gt;Development Platforms: Linux (Ubuntu, CoreOS, CentOS), iOS AppleTV, Windows, Xbox-One, webOS&lt;/li&gt;
-&lt;li&gt;Database: MySQL, Redis, SQLAlchemy&lt;/li&gt;
-&lt;li&gt;Development Methodologies: Agile/Scrum&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/resume/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Cross compiling Go for Winkhub</title>
-      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
+      <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
       <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
-      <description>
-
-&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br /&gt;
-&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;After seeing that the Winkhub uses &lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2#php&#34;&gt;PHP&lt;/a&gt; for its server-side scripting, I decided to see if I could run Go on it instead. That way I could avoid writing new code in PHP and get a bit more practice at Go. I had noticed when the Winkhub first boots over the serial connection, one of the first items on the screen is the CPU information.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;CPU:   Freescale i.MX28 rev1.2 at 454 MHz&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I wasn&amp;rsquo;t sure what this CPU&amp;rsquo;s architecture was, but after a quick search I figured out that it uses an ARM Processor. That gave me some hope that it was possible to compile Go for this platform.&lt;/p&gt;
-
-&lt;p&gt;I tried compiling a simple &amp;ldquo;hello world&amp;rdquo; program with the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm go build .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I then copied the binary to the Winkhub and tried running it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
-runtime: this CPU has no floating point hardware, so it cannot run
-this GOARM=6 binary. Recompile using GOARM=5.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So I tried again with this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;No luck again!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
-Illegal Instruction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I did a bit of searching and came across this &lt;a href=&#34;https://github.com/golang/go/issues/9795&#34;&gt;issue&lt;/a&gt;. This post made me think I ran the correct compile steps. I attemped this a few more times and then I had a thought to try the Go 1.5RC. I upgraded to the RC build and then tried the previous build command again.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[root@flex-dvt ~]# ./helloworld
-Hello World
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Boom! I was in business. So in the end the instructions are pretty simple:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Make sure to use Go 1.5.&lt;/li&gt;
-&lt;li&gt;Set the GOOS to linux&lt;/li&gt;
-&lt;li&gt;Architecture to arm&lt;/li&gt;
-&lt;li&gt;Use ARMv5 since the Winkhub does not have floating point support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I came up with a simple web service that allowed me to turn the lights on/off and adjust brightness. It is pretty basic right now, but I plan on adding other features such as a sleep timer and a time-of-day-based lighting schedule. I also plan to add support for door sensors that can trigger push notifications to my phone. The web service is broken into two parts. A server written in Go that runs on the Winkhub and a static client side JavaScript app which is served up from the Winkhub&amp;rsquo;s web server. This can be ran along side the existing built in PHP scripts if you wish to continue to use the existing scripts on there.&lt;/p&gt;
-
-&lt;h2 id=&#34;gopherwink-https-github-com-icecreammatt-gopherwink-setup-instructions:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;&lt;a href=&#34;https://github.com/icecreammatt/gopherwink&#34;&gt;GopherWink&lt;/a&gt; setup instructions&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;#screenshots&#34;&gt;screenshots here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;building-from-source-requirements:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Building from source requirements&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1/&#34;&gt;Rooted Winkhub&lt;/a&gt; with SSH access&lt;/li&gt;
-&lt;li&gt;Go 1.5&lt;/li&gt;
-&lt;li&gt;NodeJS&lt;/li&gt;
-&lt;li&gt;ReactJS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;install-from-source:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Install from source&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;export WINK_IP_ADDRESS=X.X.X.X&lt;/code&gt; (replace the x&amp;rsquo;s with the Wink IP)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git clone https://github.com/icecreammatt/gopherwink&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git submodule init &amp;amp;&amp;amp; git submodule update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd frontend &amp;amp;&amp;amp; npm install&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make deploy&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make build&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make install&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Visit &lt;code&gt;http://WINK_IP_ADDRESS/index.html&lt;/code&gt; to access the controls.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;install-release-manually:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Install release manually&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Download the release from &lt;a href=&#34;https://github.com/icecreammatt/gopherwink/releases&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Extract the zip file&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;export WINK_IP_ADDRESS=X.X.X.X&lt;/code&gt; (replace the x&amp;rsquo;s with the Wink IP)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scp gopherwink root@$WINK_IP_ADDRESS:/root/gopherwink&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scp S63gopherwink root@$WINK_IP_ADDRESS:/etc/init.d/S63gopherwink&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scp index.html root@$WINK_IP_ADDRESS:/var/www&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh root@$WINK_IP_ADDRESS &amp;quot;mkdir /var/www/assets&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scp main.js root@$WINK_IP_ADDRESS:/var/www/assets/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh root@$WINK_IP_ADDRESS &amp;quot;/etc/init.d/S63gopherwink start&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Visit &lt;code&gt;http://WINK_IP_ADDRESS/index.html&lt;/code&gt; to access the controls.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;usage-notes:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Usage notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;New devices for now need to be connected using &lt;code&gt;aprontest&lt;/code&gt; or the WinkApp&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;bugs:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Bugs&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;File bugs &lt;a href=&#34;https://github.com/icecreammatt/gopherwink/issues&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;future-plans:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Future Plans&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Improved UI to add and remove lights&lt;/li&gt;
-&lt;li&gt;Improved UI to rename devices&lt;/li&gt;
-&lt;li&gt;Add Proper support for GoControl Door Window Sensors&lt;/li&gt;
-&lt;li&gt;Sleep timer to keep light on for late nights&lt;/li&gt;
-&lt;li&gt;Snooze timer to turn on light after x minutes&lt;/li&gt;
-&lt;li&gt;Automatic brightness based on the time of day&lt;/li&gt;
-&lt;li&gt;TLS Authentication for API&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;license:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;GPLv3&lt;/p&gt;
-
-&lt;p&gt;This is the last part of a series of posts related to hacking the Winkhub&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;Part I - Hacking the Winkhub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2&#34;&gt;Part II - Troubleshooting Winkhub issues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part III - Cross compiling Go for Winkhub&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;a-href-id-resources-resources-a:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Cross compilation with Go 1.5&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/GoArm&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;GoArm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://unix.stackexchange.com/questions/59018/create-and-control-start-up-scripts-in-busybox&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Create and control start up scripts in BusyBox&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;div id=&#34;screenshots&#34;&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;screenshots:bcb23b53ecde2b047eb33e6badc31c6c&#34;&gt;Screenshots&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-28/Lights.PNG&#34; alt=&#34;Lights&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-28/LED.PNG&#34; alt=&#34;Lights&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
+      <description>&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br&gt;
+&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Troubleshooting Winkhub issues</title>
-      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-2/</link>
+      <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</link>
       <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-2/</guid>
-      <description>
-
-&lt;p&gt;This post picks up where &lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;part 1&lt;/a&gt; left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.&lt;/p&gt;
-
-&lt;p&gt;By following the instructions &lt;a href=&#34;http://www.rootwink.com/viewtopic.php?f=6&amp;amp;t=4&#34;&gt;here&lt;/a&gt; (See step #5 specifically) I was able to preserve root access on the device. However, I still had issues with my device booting because when I restarted, it was stuck in a loop:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Starting lighttpd: OK
-+ echo &#39;Launch upgrade script&#39;
-Launch upgrade script
-+ /root/platform/run_upgrade.sh
-+ FILE=/tmp/isalive
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This loop may have occurred because I did not delete the upgrade script as suggested in the instructions. I was a bit afraid of bricking the device. To fix this, I rebooted again using the NAND hack I started with at the beginning, and then I modified the upgrade script in &lt;code&gt;/root/platform/run_upgarde.sh&lt;/code&gt; by commenting out all the details and adding a &lt;code&gt;/bin/bash&lt;/code&gt; at the bottom. While this worked and got me a shell after restarting, the aprond was not starting on its own. I suspect this is because the aprond is initialized after the upgrade script runs. Keep in mind at this point I have still never connected it to the internet using the iOS app.&lt;/p&gt;
-
-&lt;p&gt;I did some digging and figured out how to connect to the wifi. I added my SSID and WPA key.&lt;/p&gt;
-
-&lt;p&gt;Add a wifi key to &lt;code&gt;/database/wpa_supplicant.conf&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/ # cat /database/wpa_supplicant.conf
-ctrl_interface=/var/run/wpa_supplicant
-update_config=1
-ap_scan=1
-fast_reauth=1
-bgscan=&amp;quot;&amp;quot;
-
-network={
-    priority=2
-    scan_ssid=1
-    ssid=&amp;quot;NETWORK_SSID_GOES_HERE&amp;quot;
-    psk=&amp;quot;XXX_PASSWORD_HERE_XXX&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: The wifi password cannot be too long or contain spaces. (I suspect it cannot contain spaces) It took me a few reboots to figure this out. I happened to catch it complaining about the password in the output during the boot sequence.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Run this to start the wireless: &lt;code&gt;/ # ./etc/init.d/S41wireless start&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I finally got my wifi connected but the boot sequence was still stuck on this loop:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I was starting to get a bit desparate because I was not able to get any of the services to start. After being stuck in this boot state, I decided to run the upgrade script to see if that might fix anything. I&amp;rsquo;m not sure what firmware version I was running. After it finished rebooting, I was able to access the shell without having to do the NAND glitch. At this point, it was pretty late so I&amp;rsquo;m a bit fuzzy if there are any other details I&amp;rsquo;m missing.&lt;/p&gt;
-
-&lt;p&gt;I tested adding a light using the &lt;code&gt;aprontest&lt;/code&gt; tool as mentioned in the forums I had been reading.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;/ # aprontest -h&lt;/code&gt; Help&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/ # aprontest -a -r zigbee&lt;/code&gt; Connect new device&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/ # aprontest -l&lt;/code&gt; List all the connected devices&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/ # aprontest -u -m1 -t1 -vOFF&lt;/code&gt; Turn light off&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/ # aprontest -u -m1 -t1 -vON&lt;/code&gt; Turn light on&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;There was much rejoicing at 3:30 in the morning. Luckily it was Saturday so I could sleep in.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Before I went to bed I still wanted to see if I could set this up to be able to turn the lights on and off with curl. I found the web folder in &lt;code&gt;/var/www&lt;/code&gt;. I created a few simple scripts to test turning the lights on and off from the command line.&lt;/p&gt;
-
-&lt;div id=&#34;php&#34;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;on.php&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-	echo &amp;quot;Hello Light On&amp;quot;;
-	exec(&#39;aprontest -u -m1 -t1 -vON&#39;);
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;off.php&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-	echo &amp;quot;Hello Light Off&amp;quot;;
-	exec(&#39;aprontest -u -m1 -t1 -vOFF&#39;);
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Great Success!&lt;br /&gt;
-I could now turn the lights on and off by running &lt;code&gt;curl http://192.168.1.11/on.php&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;brightness.php&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-    if(isset($_GET[&#39;value&#39;])) {
-        $value = $_GET[&#39;value&#39;];
-        //if(ctype_digit($value) {
-            echo &amp;quot;Setting brightness to &amp;quot; . $value;
-            $cmd = &amp;quot;aprontest -u -m1 -t2 -v $value&amp;quot;;
-            exec($cmd);
-        //} else {
-            //echo &#39;Expected integer&#39;
-        //}
-    }
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The brightness could be adjusted by running &lt;code&gt;curl http://192.168.1.11/brightness.php?value=150&lt;/code&gt; Can you see the bug(s) I left in &lt;code&gt;brightness.php&lt;/code&gt; where you can easily run any code as root by adjusting the value parameter? I&amp;rsquo;ll leave this to an exercise for the reader. :)&lt;/p&gt;
-
-&lt;p&gt;As you can see in my commented-out bits of &lt;code&gt;brightness.php&lt;/code&gt;, I prefer not to write PHP code. Especially at 4:00 in the morning. It wasn&amp;rsquo;t until the next day I noticed the hole I left in the code by skipping the check for digits. I was really hoping that I could run some Go binaries on this device at this point&amp;hellip;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;Part I - Hacking the Winkhub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part II - Troubleshooting Wink issues&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-3&#34;&gt;Part III - Cross compiling Go for Winkhub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;a-href-id-resources-resources-a:f35e328e4392e8faa2f45e7dcf8dd39f&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/wink-hub-root/demystified/wiki/Connecting-to-wifi-manually&#34; content=&#34;nofollow&#34;&gt;Connecting to wifi manually&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://rootwink.com/viewtopic.php?t=12#p15&#34; content=&#34;nofollow&#34;&gt;Attaching Devices to Rooted Winkhub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</guid>
+      <description>&lt;p&gt;This post picks up where &lt;a href=&#34;https://www.mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;part 1&lt;/a&gt; left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hacking the Winkhub</title>
-      <link>https://mattcarrier.com/post/hacking-the-winkhub-part-1/</link>
+      <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</link>
       <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/post/hacking-the-winkhub-part-1/</guid>
-      <description>
-
-&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Recently I became interested in controlling my lights automatically. I wanted to implement a timer that could flip the lights on and off during certain hours of the day, and to create a snooze button that disables the lights from shutting off when I still needed them on after the shut-off hour. I&amp;rsquo;m currently using one of those cheap hardware outlet timers.&lt;/p&gt;
-
-&lt;p&gt;I came across the Winkhub while browsing the light section in HomeDepot. I did a quick search to see which of these &amp;ldquo;Smart&amp;rdquo; devices could easily be rooted because I did not want the controls routed through a third party service. I also thought this would be a fun challenge to try hacking on some hardware. Sadly, the PHP hack I had read about was no longer in the firmware of the Winkhub I purchased. That led me to a crash course in hacking this thing with the UART connection and learning how to cross compile Go so I could run my own programs on the device.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve listed all the resources I used at the &lt;a href=&#34;#Resources&#34;&gt;bottom.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;shopping-list:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Shopping list&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/Wink-PWHUB-WH17-Connected-Home-Hub/dp/B00PV6GAI4/&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Winkhub&lt;/a&gt;&lt;/strong&gt;  &lt;em&gt;I picked mine up at a HomeDepot and paid $50. I should have bought it online since they have a deal that combines 2 light bulbs and a hub for the same price.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/GE-Wireless-Connected-60-Watt-Equivalent/dp/B00NOL16K0/&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;GE Link Light bulb&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;At least one light to test with&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B00HSX3CXE&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;FT232RL FTDI USB to TTL Serial Adapter&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;This adapter has a jumper to to switch between 3.3v and 5v. The Winkhub uses 3.3v&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B009GXEF8A&#34; content=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;Female and Male Wiring Harnesses&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;I bought this mainly because I needed the wires. I&amp;rsquo;m not sure how to safely use that USB to Serial TTL adapter with the jumper.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Twist tie or a short wire&lt;/strong&gt; &lt;em&gt;I just used one I found in the kitchen off some groceries&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Some LEGO bricks&lt;/strong&gt; to build a stand for convenience&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hex torx screwdriver&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multimeter&lt;/strong&gt; &lt;em&gt;optional&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; &lt;em&gt;(Mac &amp;amp; Windows should work too)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I should note that some of the stuff I am doing with the wires is probably questionable.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Do this at your own risk!&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I haven&amp;rsquo;t really done any hardware hacking in the past like this, and hardly know what I am doing. I figured this out by watching a bunch of youtube &lt;a href=&#34;#Resources&#34;&gt;videos&lt;/a&gt; and reading some blog posts on how to use a multimeter and basic usage of a UART connector.&lt;/p&gt;
-
-&lt;h2 id=&#34;device-teardown:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Device Teardown&lt;/h2&gt;
-
-&lt;p&gt;I did not connect my hub to the wireless router before doing any of these steps in fear of the firmware updating to block me out.&lt;/p&gt;
-
-&lt;p&gt;Fresh out of the box open the Winkhub by removing the 4 screws on the back with a Hex torx screwdriver.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/00.jpg&#34; alt=&#34;Back side of device&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/01.jpg&#34; alt=&#34;Screw&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pull the circuit board out and mount it on a stand. I used one made out of LEGO bricks.
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/06.jpg&#34; alt=&#34;Full Board&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/05.jpg&#34; alt=&#34;LEGO Stand&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Place jumper on the &lt;strong&gt;3.3v&lt;/strong&gt; and center pin
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/02.jpg&#34; alt=&#34;Serial Adapter Jumper&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;At this point the Winkhub should still not be plugged into power. Attach wires to the GND (Ground), TX (Transmit), &amp;amp; (RX) Receive. Note that you will want to on UART side connect the TX to the RX connection and the RX to the TX connection. The ground connects to ground in both and the power is left empty.&lt;/p&gt;
-
-&lt;p&gt;Place the wires into the UART connection on the hub.
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/07.jpg&#34; alt=&#34;UART Empty&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/08.jpg&#34; alt=&#34;UART Attached&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/12.jpg&#34; alt=&#34;Board on stand&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I held my wires into place with the help of some LEGO bricks. I&amp;rsquo;ve seen other people solder on adapters. I found no issues with plugging my wires in without soldering them.&lt;/p&gt;
-
-&lt;p&gt;Plug-in the USB cable for the serial adapter if it isn&amp;rsquo;t already.&lt;/p&gt;
-
-&lt;h2 id=&#34;things-i-wish-i-knew-ahead-of-time:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Things I wish I knew ahead of time:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;minicom can record logs to a file&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;reboot -f&lt;/code&gt; is how you reboot the Winkhub. Nothing seems to happen without the &lt;code&gt;-f&lt;/code&gt; flag&lt;/li&gt;
-&lt;li&gt;The Winkhub does not seem to like spaces in the wifi passwords&lt;/li&gt;
-&lt;li&gt;Running &lt;code&gt;ping&lt;/code&gt; inside minicom will disable reading any input and I can only get out of it by rebooting the Winkhub. I&amp;rsquo;m sure there must be some better way to kill it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;setup-the-serial-connection:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Setup the serial connection&lt;/h2&gt;
-
-&lt;p&gt;I used minicom to communicate with the serial adapter.&lt;/p&gt;
-
-&lt;p&gt;Raspbian: &lt;code&gt;sudo apt-get install minicom&lt;/code&gt;&lt;br /&gt;
-OSX: &lt;code&gt;brew install minicom&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$ minicom -s&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go to Serial port setup&lt;/li&gt;
-&lt;li&gt;Press A to update the serial device to &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; (I did this from a Raspberry Pi so it may be different on another machine.)&lt;/li&gt;
-&lt;li&gt;Set Hardware Flow Control to &lt;code&gt;No&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Press enter to save the settings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: Minicom can be configured to capture logs to a file using &lt;code&gt;ctrl + A, Z&lt;/code&gt; then press &lt;code&gt;L&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;    +-----------------------------------------------------------------------+
-    | A -    Serial Device      : /dev/ttyUSB0                              |
-    | B - Lockfile Location     : /var/lock                                 |
-    | C -   Callin Program      :                                           |
-    | D -  Callout Program      :                                           |
-    | E -    Bps/Par/Bits       : 115200 8N1                                |
-    | F - Hardware Flow Control : No                                        |
-    | G - Software Flow Control : No                                        |
-    |                                                                       |
-    |    Change which setting?                                              |
-    +-----------------------------------------------------------------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Save setup as default&lt;/li&gt;
-&lt;li&gt;Exit&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You should see a screen like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Welcome to minicom 2.6.1
-
-OPTIONS: I18n
-Compiled on Apr 28 2012, 19:24:31.
-Port /dev/ttyUSB0
-
-Press CTRL-A Z for help on special keys
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;power-up:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Power up&lt;/h2&gt;
-
-&lt;p&gt;Open &lt;a href=&#34;https://www.youtube.com/watch?v=78qx7QMqW-I&#34;&gt;Dissolved Girl&lt;/a&gt; in the background for this next part.&lt;/p&gt;
-
-&lt;p&gt;At this point you should be able to plug the Winkhub into the wall. I used a surge protector so I could easily turn the Winkhub on and off. This is very useful later when it comes time to short the pin.&lt;/p&gt;
-
-&lt;p&gt;This is the output I recorded after powering mine on the first time:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Note: The CPU at the top is a Freescale i.MX28 at 454MHz. I used this information later to find out that it is possible to compile Go for this platform. (ARMv5)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;LLC
-
-U-Boot 2014.01-14400-gda781c6-dirty (Apr 30 2014 - 22:35:38)                    
-                                                                                
-CPU:   Freescale i.MX28 rev1.2 at 454 MHz                                       
-BOOT:  NAND, 3V3                                                                
-DRAM:  64 MiB                                                                   
-NAND:  128 MiB                                                                  
-In:    serial                                                                   
-Out:   serial                                                                   
-Err:   serial                                                                   
-Net:   FEC0 [PRIME]                                                             
-Hit any key to stop autoboot:  0                                                
-UBI: attaching mtd1 to ubi0
-UBI: physical eraseblock size:   131072 bytes (128 KiB)
-UBI: logical eraseblock size:    126976 bytes
-UBI: smallest flash I/O unit:    2048
-UBI: VID header offset:          2048 (aligned 2048)
-UBI: data offset:                4096
-UBI: attached mtd1 to ubi0
-UBI: MTD device name:            &amp;quot;mtd=3&amp;quot;
-UBI: MTD device size:            8 MiB
-UBI: number of good PEBs:        64
-UBI: number of bad PEBs:         0
-UBI: max. allowed volumes:       128
-UBI: wear-leveling threshold:    4096
-UBI: number of internal volumes: 1
-UBI: number of user volumes:     1
-UBI: available PEBs:             6
-UBI: total number of reserved PEBs: 58
-UBI: number of PEBs reserved for bad PEB handling: 2
-UBI: max/mean erase counter: 2/1
-UBIFS: recovery needed
-UBIFS: recovery deferred
-UBIFS: mounted UBI device 0, volume 0, name &amp;quot;database&amp;quot;
-UBIFS: mounted read-only
-UBIFS: file system size:   5459968 bytes (5332 KiB, 5 MiB, 43 LEBs)
-UBIFS: journal size:       1015809 bytes (992 KiB, 0 MiB, 6 LEBs)
-UBIFS: media format:       w4/r0 (latest is w4/r0)
-UBIFS: default compressor: LZO
-UBIFS: reserved for root:  269835 bytes (263 KiB)
-Loading file &#39;DO_UPDATE&#39; to addr 0x42000000 with size 1 (0x00000001)...
-Done
-Total of 1 word(s) were the same
-
-NAND read: device 0 offset 0x2b00000, size 0x400000
- 4194304 bytes read: OK
-## Booting kernel from Legacy Image at 42000000 ...
-   Image Name:   Linux-2.6.35.3-flex-dvt
-   Created:      2014-04-30   3:15:35 UTC
-   Image Type:   ARM Linux Kernel Image (uncompressed)
-   Data Size:    1928460 Bytes = 1.8 MiB
-   Load Address: 40008000
-   Entry Point:  40008000
-   Verifying Checksum ... OK
-   Loading Kernel Image ... OK
-
-Starting kernel ...
-
-[...] Trimmed
-
-+ pidof udhcpd
-+ udhcpd -S /etc/udhcpd.conf
-+ hciconfig hci0 up
-+ bluetoothd
-+ hciconfig hci0 leadv
-+ sleep 2
-+ touch /tmp/ap_mode
-+ exit 0
-Starting lighttpd: OK
-Starting Zigbee...Starting lutron-core...[ OK ]
-Starting aprond...Got Z-Wave version: Z-Wave 3.79
-[ZWAVE OK]
-i: [1139.1] main() (Main|apron.c:51): APRON Home Automation Gateway version 1.2.0+localhost.localdomain-
-Starting Wink...Starting monit...hub[1145]: NOTICE: (hub.c:342) hub-dev started up by User: 0
-hub[1145]: INFO: (ConfigHandler.c:98) Reading Config from: /root/config/hub.conf
-Starting monit daemon
-hub[1145]: INFO: (hub.c:385) Waiting for /database/token
-hub[1145]: WARNING: (hub.c:416) No Token Found
-hub[1145]: DEBUG: (AuthenticationUtil.c:28) Destroying Oauth
-hub[1145]: DEBUG: (AuthenticationUtil.c:36) Done freeing oauth
-Setting non-canonical mode
-Startup complete.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;power-off-connect-uart:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;Power off &amp;amp; connect UART&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/04.jpg&#34; alt=&#34;Twistie tie&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is where things become a little questionable. It was late when I did this and I realized that I forgot to order a wire that is needed to short the NAND chip by connecting a pin 29 to the ground. I scrounged through my house and realized I probably had some twistie ties. I wasn&amp;rsquo;t sure if they would be enough to conduct a signal so I tested it by stripping the paper off of the wire ends and connecting one end of a wire to a battery and the other to a tip on my multi meter. Once I saw that it had continuity, I figured it would work. I wrapped the twisty tie around the edge of the ground pin going into the UART connector on the circuit board and left the other end loose.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/03.jpg&#34; alt=&#34;Twistie tie wrap&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/09.jpg&#34; alt=&#34;Twistie on ground&#34; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Careful not to touch excess wire to RX &amp;amp; TX pins.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/10.jpg&#34; alt=&#34;NAND pin to short&#34; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Pin 29 should be connected to ground 1 second after power is turned on.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-08-24/11.jpg&#34; alt=&#34;Larger view&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It took me many failed attempts to figure out that I needed to connect the wire to the ground at about 1 second after turning on the power or as soon as the LED light turns on. I had trouble finding information on how soon to connect the pin to the ground. I&amp;rsquo;ve listed the bad output at the &lt;a href=&#34;#FailedAttempts&#34;&gt;bottom&lt;/a&gt; for reference.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;L���BO�� 4194304 bytes read: OK
-Wrong Image Format for bootm command
-ERROR: can&#39;t get kernel image!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Success! At this point you should stop touching pin 29 to the ground.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;=&amp;gt; help
-?       - alias for &#39;help&#39;
-base    - print or set address offset
-bdinfo  - print Board Info structure
-boot    - boot default, i.e., run &#39;bootcmd&#39;
-bootd   - boot default, i.e., run &#39;bootcmd&#39;
-bootm   - boot application image from memory
-bootp   - boot image via network using BOOTP/TFTP protocol
-bootz   - boot Linux zImage image from memory
-chpart  - change active partition
-clocks  - display clocks
-cmp     - memory compare
-coninfo - print console devices and information
-cp      - memory copy
-crc32   - checksum calculation
-date    - get/set/reset date &amp;amp; time
-dcache  - enable or disable data cache
-dhcp    - boot image via network using DHCP/TFTP protocol
-echo    - echo args to console
-editenv - edit environment variable
-env     - environment handling commands
-exit    - exit script
-false   - do nothing, unsuccessfully
-fatinfo - print information about filesystem
-fatload - load binary file from a dos filesystem
-fatls   - list files in a directory (default /)
-fdt     - flattened device tree utility commands
-go      - start application at address &#39;addr&#39;
-gpio    - input/set/clear/toggle gpio pins
-help    - print command description/usage
-icache  - enable or disable instruction cache
-iminfo  - print header information for application image
-imxtract- extract a part of a multi-image
-itest   - return true/false on integer compare
-loadb   - load binary file over serial line (kermit mode)
-loads   - load S-Record file over serial line
-loadx   - load binary file over serial line (xmodem mode)
-loady   - load binary file over serial line (ymodem mode)
-loop    - infinite loop on address range
-md      - memory display
-mii     - MII utility commands
-mm      - memory modify (auto-incrementing address)
-mtdparts- define flash/nand partitions
-mw      - memory write (fill)
-nand    - NAND sub-system
-nboot   - boot from NAND device
-nfs     - boot image via network using NFS protocol
-nm      - memory modify (constant address)
-ping    - send ICMP ECHO_REQUEST to network host
-printenv- print environment variables
-reset   - Perform RESET of the CPU
-run     - run commands in an environment variable
-saveenv - save environment variables to persistent storage
-setenv  - set environment variables
-setexpr - set environment variable as the result of eval expression
-showvar - print local hushshell variables
-sleep   - delay execution for some time
-source  - run script from memory
-test    - minimal test like /bin/sh
-tftpboot- boot image via network using TFTP protocol
-true    - do nothing, successfully
-ubi     - ubi commands
-ubifsload- load file from an UBIFS filesystem
-ubifsls - list files in a directory
-ubifsmount- mount UBIFS volume
-ubifsumount- unmount UBIFS volume
-usb     - USB sub-system
-usbboot - boot from USB device
-version - print monitor, compiler and linker version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run &lt;code&gt;printenv&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;=&amp;gt; printenv
-app_boot=run appboot_args &amp;amp;&amp;amp; nand read ${loadaddr} app-kernel 0x00400000 &amp;amp;&amp;amp; bootm ${loadaddr}
-app_boot_bad=run updater_args; setenv bootargs ${bootargs} badapp; nand read ${loadaddr} updater-kernel 0x00300000; bootm ${lo}
-appboot_args=setenv bootargs &#39;noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=5 root=ubi0:rootfs rw gpmi&#39;;
-baudrate=115200
-bd_addr=XXXXXXXXXXXX
-boot_app=run app_boot || run app_boot_bad
-boot_getflag=mtdparts default &amp;amp;&amp;amp; ubi part database &amp;amp;&amp;amp; ubifsmount ubi0:database &amp;amp;&amp;amp; mw 42000000 0 8 &amp;amp;&amp;amp; ubifsload 42000000 DO_UPDc
-boot_logic=mw 42000004 30; if cmp 42000000 42000004 1; then run boot_app; else run boot_updater; fi;
-boot_updater=run updater_boot || run updater_boot_bad
-bootargs=noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=5 root=ubi0:rootfs rw gpmi badupdater
-bootcmd=mtdparts default; run boot_getflag || echo Falling back to updater...; run boot_updater
-bootdelay=0
-bootfile=uImage
-ethact=FEC0
-ethaddr=XX:XX:XX:XX:XX:XX
-ethprime=FEC0
-loadaddr=0x42000000
-mtddevname=u-boot
-mtddevnum=0
-mtdids=nand0=gpmi-nand
-mtdparts=mtdparts=gpmi-nand:3m(u-boot),4m(updater-kernel),28m(updater-rootfs),8m(database),8m(app-kernel),-(app-rootfs)
-partition=nand0,0
-serialno=XXXXXXXXXXXXX
-stderr=serial
-stdin=serial
-stdout=serial
-updater_args=setenv bootargs &#39;noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=2 root=ubi0:rootfs rw gpmi&#39;;
-updater_boot=run updater_args &amp;amp;&amp;amp; nand read ${loadaddr} updater-kernel 0x00300000 &amp;amp;&amp;amp; bootm ${loadaddr}
-updater_boot_bad=run appboot_args; setenv bootargs ${bootargs} badupdater; nand read ${loadaddr} app-kernel 0x00400000; bootm }
-ver=U-Boot 2014.01-14400-gda781c6-dirty (Apr 30 2014 - 22:35:38)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Update the bootargs so it gives shell access.&lt;br /&gt;
-&lt;code&gt;=&amp;gt; setenv bootargs &#39;noinitrd console=ttyAM0,115200 rootfstype=ubifs ubi.mtd=5 root=ubi0:rootfs rw gpmi init=/bin/sh&#39;;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Start the boot process.&lt;br /&gt;
-&lt;code&gt;=&amp;gt; nand read ${loadaddr} app-kernel 0x00400000 &amp;amp;&amp;amp; bootm ${loadaddr}&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Enjoy the music while you wait for it to boot.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/ # ls
-bin               lib               opt               tmp
-database          lib32             proc              usr
-database_default  linuxrc           root              var
-dev               media             run
-etc               mfgtests          sbin
-home              mnt               sys
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This &lt;a href=&#34;http://www.rootwink.com/viewtopic.php?t=67#p295&#34;&gt;post&lt;/a&gt; contains the rest of the steps to retain root access, enable ssh, and enable serial access without having to short the NAND chip. Be very sure to read every detail. For example, some people in that thread had issues because they forgot to run &lt;code&gt;mount -a&lt;/code&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Part I - Hacking the Winkhub&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-2&#34;&gt;Part II - Troubleshooting Winkhub issues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mattcarrier.com/post/hacking-the-winkhub-part-3&#34;&gt;Part III - Cross compiling Go for Winkhub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;a-href-id-resources-resources-a:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;Resources&#34;&gt;Resources&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter&#34; content=&#34;nofollow&#34;&gt;How to Use a Multimeter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tlLhIvpi_5k&#34; content=&#34;nofollow&#34;&gt;Winkhub Teardown and Debug&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://arahuman.blogspot.com/2014/12/wink-hub-shell-access-through-uart.html&#34; content=&#34;nofollow&#34;&gt;Winkhub Shell access through UART&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.tldp.org/HOWTO/Remote-Serial-Console-HOWTO/modem-minicom.html&#34; content=&#34;nofollow&#34;&gt;Using Minicom to give commands to a modem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rootwink.com/viewtopic.php?t=67#p295&#34; content=&#34;nofollow&#34;&gt;Rooting ANY firmware level&amp;hellip; the hard way&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rootwink.com/viewtopic.php?f=6&amp;t=4#p5&#34; content=&#34;nofollow&#34;&gt;Howto update to 01.01 (Step #5)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.exploitee.rs/index.php/Wink_Hub%E2%80%8B%E2%80%8B&#34; content=&#34;nofollow&#34;&gt;Exploitee.rs Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;a-href-id-failedattempts-bad-output-a:2a800d9eb3ff83771159dc02c19c36ad&#34;&gt;&lt;a href=&#34;#&#34; id=&#34;FailedAttempts&#34;&gt;Bad Output&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;If you see this in your logs you connected the wire too late:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Starting Zigbee...Starting lutron-core...[ OK ]
-Starting aprond...UBIFS error (pid 1126): ubifs_read_node: bad node type (28 but expected 2)
-UBIFS error (pid 1126): ubifs_read_node: bad node at LEB 62:83784
-/etc/init.d/S61apron: line 25: zwavetest+˻ali�W���WH��T)�*�Y.minicom-logs-first.txt�ZY�LL&amp;amp;NJ��ubifs_read_node: bad node type (155 but expected )
-UBI error: wear_leveling_worker: error 4 while reading VID header from PEB 193
-UBIFS error (pid 1138): ubifs_read_node: bad node at LEB 191:72768
-UBI error: ubi_io_write: error -5 while writing 2048 bytes to PEB 7:126976, written 0 bytes
-UBI error: wear_leveling_worker: error 4 while moving PEB 193 (LEB -1:-2082455728) to PEB 236
-              ��RԼ-Y6
-UBIFS error (pid 959): ubifs_read_node: bad node type (76 but expected 0)
-���Y��or: ubi_thread: ubi_bgt0d: work failed with error code -5
-UBI warning: ubi_io_read_vid_hdr: bad magic number at PEB 7: 1c7f79e2 instead of 55424921
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 189:1984
-UBIFS error (pid 959): ubifs_iget: failed to read inode 1698, error -22
-UBI: run torture test for PEB 26
-nand_erase_nand: attempt to erase a bad block at page 0x00004c80
-UBI warning: ubi_ro_mode: switch to read-only mode
-UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S70wink&#39;, error -22
-UBIFS warning (pid 959): ubifs_ro_mode: switched to read-only mode, error -22
-nand_erase_nand: attempt to erase a bad block at page 0x00004c80
-UBIFS error (pid 1052): ubifs_wbuf_write_nolock: cannot write 3529 bytes to LEB 15:122880, error -5
-�M���ɹ����B��������J������}ɽ}������ݥэ������������z����j����*�ɽɁj�R��UBIFS error (pid 959): ubifs_read_node: bad node t     )
-nand_erase_nand: attempt to erase a bad block at page 0x00004c80
-UBI error: do_sync_erase: cannot erase PEB 26, error -5
-UBIFS error (pid 1052): do_writepage: cannot write page 0 of inode 168, error -5
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:120952
-UBIFS error (pid 959): ubifs_iget: failed to read inode 1687, error -22
-UBI error: erase_worker: failed to erase PEB 26, error -5
-UBIFS error (pid 1052): make_reservation: cannot reserve 160 bytes in jhead 1, error -30
-UBIFS error (pid 1052): ubifs_write_inode: can&#39;t write inode 169, error -30
-UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S80monit&#39;, error -22
-UBI: reserve more 1 PEBs
-UBI: mark PEB 26 as bad
-UBI error: ubi_io_mark_bad: read-only mode
-UBIFS error (pid 1052): make_reservation: cannot reserve 160 bytes in jhead 1, error -30
-UBI error: do_work: work failed with error code -30
-UBI error: ubi_thread: ubi_bgt1d: work failed with error code -30
-�GS error (pid 1052): ubifs_write_inode: can&#39;t write inode 170, error -30
-UBIFS error (pid 959): ubifs_read_node: bad node type (91 but expected 2)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 169:41648
-UBIFS error (pid 1052): make_reservation: cannot reserve 160 bytes in jhead 1, error -30
-��.minicom-logs-first.txt�ZY�L�M�J��ubifs_write_inode: can&#39;t write inode 167, error -30
-UBIFS error (pid 959): ubifs_read_node: bad node type (0 but expected 9)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 191:125184
-/etc/init.d/rcS: line 29: devmem: Invalid argument
-UBIFS error (pid 1052): make_reservation: cannot reserve 3645 bytes in jhead 2, error -30
-UBIFS error (pid 1052): do_writepage: cannot write page 1 of inode 168, error -30
-UBIFS error (pid 1052): make_reservation: cannot reserve 3174 bytes in jhead 2, error -30
-UBIFS error (pid 1052): do_writepage: cannot write page 1 of inode 169, error -30
-UBIFS error (pid 1052): make_reservation: cannot reserve 3774 bytes in jhead 2, error -30
-UBIFS error (pid 1052): do_writepage: cannot write page 1 of inode 170, error -30
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Or this&amp;hellip; Also too late:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;UBIFS error (pid 959): ubifs_iget: failed to read inode 1698, error -22
-UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S70wink&#39;, error -22
-UBIFS error (pid 959): ubifs_read_node: bad node type (217 but expected 0)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:120952
-UBIFS error (pid 959): ubifs_iget: failed to read inode 1687, error -22
-UBIFS error (pid 959): ubifs_lookup: dead directory entry &#39;S80monit&#39;, error -22
-UBIFS error (pid 959): ubifs_read_node: bad node type (220 but expected 2)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 169:41648
-UBIFS error (pid 959): ubifs_read_node: bad node type (61 but expected 9)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 191:125184
-UBIFS error (pid 959): ubifs_read_node: bad node type (62 but expected 1)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:8424
-UBIFS error (pid 959): do_readpage: cannot read page 143 of inode 1647, error -22
-UBIFS error (pid 959): ubifs_read_node: bad node type (15 but expected 1)
-UBIFS error (pid 959): ubifs_read_node: bad node at LEB 188:8424
-UBIFS error (pid 959): do_readpage: cannot read page 143 of inode 1647, error -22
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It is also too late if you have seen this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Starting lighttpd: OK
-+ echo &#39;Launch upgrade script&#39;
-Launch upgrade script
-+ /root/platform/run_upgrade.sh
-+ FILE=/tmp/isalive
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-+ sleep 1
-+ &#39;[&#39; &#39;!&#39; -e /tmp/isalive &#39;]&#39;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</guid>
+      <description>&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setup CoreOS with iptables on DigitalOcean</title>
-      <link>https://mattcarrier.com/post/core-os-iptables/</link>
+      <link>https://www.mattcarrier.com/post/core-os-iptables/</link>
       <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/post/core-os-iptables/</guid>
-      <description>
-
-&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;
-
-&lt;h2 id=&#34;prepare-cloud-config:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Prepare cloud-config&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;It is important to leave in the #cloud-config comment at the top.&lt;br /&gt;
-reboot-strategy is set to off to prevent random restarts for updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;#cloud-config
-
-coreos:
-  update:
-    reboot-strategy: off
-  units:
-    - name: iptables-restore.service
-      enable: true
-      command: start
-write_files:
-  - path: /var/lib/iptables/rules-save
-    permissions: 0644
-    owner: &#39;root:root&#39;
-    content: |
-      *filter
-      :INPUT DROP [0:0]
-      :FORWARD DROP [0:0]
-      :OUTPUT ACCEPT [0:0]
-      -A INPUT -i lo -j ACCEPT
-      -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
-      -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
-      -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-      -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-      -A INPUT -p icmp -m icmp --icmp-type 0 -j ACCEPT
-      -A INPUT -p icmp -m icmp --icmp-type 3 -j ACCEPT
-      -A INPUT -p icmp -m icmp --icmp-type 11 -j ACCEPT
-      COMMIT
-      
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;droplet-settings:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Droplet Settings&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Change region and size as needed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Droplet Hostname&lt;/li&gt;
-&lt;li&gt;Select Size&lt;/li&gt;
-&lt;li&gt;Select Region&lt;/li&gt;
-&lt;li&gt;Available Settings
-
-&lt;ul&gt;
-&lt;li&gt;User Data
-
-&lt;ul&gt;
-&lt;li&gt;Copy data from &lt;code&gt;cloud-config&lt;/code&gt; above into the user data box.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt;  Be sure to include a newline character after the last line in the cloud config&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Select the CoreOS Image&lt;/li&gt;
-&lt;li&gt;Add SSH Keys&lt;/li&gt;
-&lt;li&gt;Create Droplet&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;ssh-into-server:fadcffb6635abadf6f076ec975a3b075&#34;&gt;SSH into Server&lt;/h2&gt;
-
-&lt;p&gt;Connect to the server using the IP that displayed after creating the droplet. &lt;code&gt;ssh core@IP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Confirm iptable rules have applied&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;core@core ~ $ sudo iptables -nvL
-Chain INPUT (policy DROP 16 packets, 922 bytes)
- pkts bytes target     prot opt in     out     source               destination
-    0     0 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
- 2475   12M ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
-    1    64 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:22
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443
-    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0            icmptype 0
-    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0            icmptype 3
-    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0            icmptype 11
-
-Chain FORWARD (policy DROP 0 packets, 0 bytes)
- pkts bytes target     prot opt in     out     source               destination
-    0     0 DOCKER     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0
-    0     0 ACCEPT     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
-    0     0 ACCEPT     all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0
-    0     0 ACCEPT     all  --  docker0 docker0  0.0.0.0/0            0.0.0.0/0
-
-Chain OUTPUT (policy ACCEPT 1095 packets, 73391 bytes)
- pkts bytes target     prot opt in     out     source               destination
-
-Chain DOCKER (1 references)
- pkts bytes target     prot opt in     out     source               destination
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker-port-binding:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Docker port binding&lt;/h2&gt;
-
-&lt;p&gt;When running Docker containers, be sure to bind them to &lt;code&gt;0.0.0.0&lt;/code&gt; to be accessible outside the firewall. If the intent is for the container to only be accessible internally, then be sure when specifying ports with the &lt;code&gt;-p&lt;/code&gt; flag that &lt;code&gt;127.0.0.1:PORT:PORT&lt;/code&gt; is used. Leaving off the &lt;code&gt;127.0.0.1&lt;/code&gt; defaults to &lt;code&gt;0.0.0.0&lt;/code&gt; making the container publicly available.&lt;/p&gt;
-
-&lt;h2 id=&#34;systemd:fadcffb6635abadf6f076ec975a3b075&#34;&gt;systemd&lt;/h2&gt;
-
-&lt;h3 id=&#34;unit-file:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Unit File&lt;/h3&gt;
-
-&lt;p&gt;Create a systemd unit file to make the container start when the server reboots or when a container crashes. The systemd unit file contains the information needed to start the Docker container.&lt;/p&gt;
-
-&lt;p&gt;Add the unit file here: &lt;code&gt;/etc/systemd/system&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Sample systemd unit file for a simple IP &lt;a href=&#34;https://github.com/icecreammatt/lookup&#34;&gt;lookup service&lt;/a&gt;
-&lt;code&gt;/etc/systemd/system/lookup.service&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[Unit]
-Description=Lookup
-After=docker.service
-Requires=docker.service
-
-[Service]
-TimeoutStartSec=0
-Restart=always
-ExecStartPre=-/usr/bin/docker kill lookup
-ExecStartPre=-/usr/bin/docker rm lookup
-ExecStartPre=/usr/bin/docker pull icecreammatt/lookup
-ExecStart=/usr/bin/docker run -p 0.0.0.0:80:5000 --name lookup icecreammatt/lookup
-ExecStop=/usr/bin/docker stop lookup
-
-[Install]
-WantedBy=multi-user.target
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Some notes about the unit file:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ExecStartPre=-&lt;/code&gt; The &lt;code&gt;-&lt;/code&gt; right before the &lt;code&gt;/usr&lt;/code&gt; means that this step is optional&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-p 0.0.0.0:80:5000&lt;/code&gt; Map port &lt;code&gt;5000&lt;/code&gt; of the container to port &lt;code&gt;80&lt;/code&gt; on the host and bind to &lt;code&gt;0.0.0.0&lt;/code&gt;. Use &lt;code&gt;127.0.0.1&lt;/code&gt; to make this container non publicly accessible.&lt;/li&gt;
-&lt;li&gt;Do not use the &lt;code&gt;-d&lt;/code&gt; flag with Docker when using a systemd unit file. Doing so will not allow systemd to track the running status properly.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;systemd-commands:fadcffb6635abadf6f076ec975a3b075&#34;&gt;systemd commands&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;After creating the unit file start the container: &lt;code&gt;systemctl start lookup.service&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start on system boot: &lt;code&gt;systemctl enable lookup.service&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Stop from starting on reboot: &lt;code&gt;systemctl disable lookup.service&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Stop the container: &lt;code&gt;systemctl stop lookup.service&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;When making changes to the systemd unit file run &lt;code&gt;systemctl daemon-reload&lt;/code&gt; to update systemd&lt;/li&gt;
-&lt;li&gt;The status of the container can be checked with &lt;code&gt;systemctl status lookup.service&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;journalctl&lt;/code&gt; can be used to view system logs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;cloud-config-continued:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Cloud-config continued&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Optionally systemd services can be added to the cloud-config removing the need to login to the server. The following adjustments cause the server to initialize with the lookup container after boot.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#cloud-config
-
-coreos:
-  update:
-    reboot-strategy: off
-  units:
-    - name: iptables-restore.service
-      enable: true
-      command: start
-    - name: lookup.service
-      enabled: true
-      command: start
-write_files:
-  - path: /var/lib/iptables/rules-save
-    permissions: 0644
-    owner: &#39;root:root&#39;
-    content: |
-      *filter
-      :INPUT DROP [0:0]
-      :FORWARD DROP [0:0]
-      :OUTPUT ACCEPT [0:0]
-      -A INPUT -i lo -j ACCEPT
-      -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
-      -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
-      -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-      -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-      -A INPUT -p icmp -m icmp --icmp-type 0 -j ACCEPT
-      -A INPUT -p icmp -m icmp --icmp-type 3 -j ACCEPT
-      -A INPUT -p icmp -m icmp --icmp-type 11 -j ACCEPT
-      COMMIT
-  - path: /etc/systemd/system/lookup.service
-    permissions: 0644
-    owner: &#39;root:root&#39;
-    content: |
-        [Unit]
-        Description=Lookup
-        After=docker.service
-        Requires=docker.service
-
-        [Service]
-        TimeoutStartSec=0
-        Restart=always
-        ExecStartPre=-/usr/bin/docker kill lookup
-        ExecStartPre=-/usr/bin/docker rm lookup
-        ExecStartPre=/usr/bin/docker pull icecreammatt/lookup
-        ExecStart=/usr/bin/docker run -p 0.0.0.0:80:5000 --name lookup icecreammatt/lookup
-        ExecStop=/usr/bin/docker stop lookup
-
-        [Install]
-        WantedBy=multi-user.target
-        
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;dockerhub-authentication:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Dockerhub Authentication&lt;/h2&gt;
-
-&lt;p&gt;Add the two blocks below to allow pulling from a private Docker repository. Replace the &lt;code&gt;XXXXXXXXX&lt;/code&gt; below with the Dockerhub password from &lt;code&gt;~/.dockercfg&lt;/code&gt;. This file is generated after logging into Dockerhub.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  - path: /home/core/.dockercfg
-    owner: &#39;core:core&#39;
-    permissions: 0644
-    content: | 
-        {
-            &amp;quot;https://index.docker.io/v1/&amp;quot;: {
-                &amp;quot;auth&amp;quot;: &amp;quot;XXXXXXXXXXXX&amp;quot;,
-                &amp;quot;email&amp;quot;: &amp;quot;dockerhub@email&amp;quot;
-            }
-        }
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Add &lt;code&gt;User=core&lt;/code&gt; to run the task as the core user&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[Service]
-User=core
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;other-resources:fadcffb6635abadf6f076ec975a3b075&#34;&gt;Other resources&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://fedoraproject.org/wiki/How_to_edit_iptables_rules&#34; target=&#34;_blank&#34;&gt;How to edit iptables rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jimmycuadra.com/posts/securing-coreos-with-iptables&#34; target=&#34;_blank&#34;&gt;Securing CoreOS with iptables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.robhar.com/securing-coreos/&#34; target=&#34;_blank&#34;&gt;CoreOS Iptables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://coreos.com/docs/launching-containers/building/registry-authentication/&#34; target=&#34;_blank&#34;&gt;Using Authentication for a Registry&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/core-os-iptables/</guid>
+      <description>&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to enable 5.1 surround sound in VLC on OSX over HDMI</title>
-      <link>https://mattcarrier.com/post/enable-surround-sound-hdmi-osx/</link>
+      <link>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</link>
       <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/post/enable-surround-sound-hdmi-osx/</guid>
-      <description>&lt;p&gt;I recently connected my MacBookPro to my audio receiver over HDMI to play a movie with VLC and try out the Steam in home streaming. I noticed that the audio was not coming out of all my speakers.&lt;/p&gt;
-
-&lt;p&gt;To fix this open the Audio MIDI App and switch output to 5.1.&lt;br /&gt;
-&lt;code&gt;Applications &amp;gt; Utilities &amp;gt; Audio MIDI Setup&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;While the screenshots show the source as my Samsung TV it is actually playing the audio through my Sony receiver. Making this change allowed me to watch movies with VLC in 5.1. If the option for 5.1 is grayed out try setting the input on the receiver to be the laptops HDMI and toggling the power. This happened to me when I switched inputs after having the laptop already connected.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2015-04-08/audio-devices.png&#34; alt=&#34;Audio MIDI Setup&#34; /&gt;
-&lt;img src=&#34;https://mattcarrier.com/images/2015-04-08/audio-devices-configure-speakers.png&#34; alt=&#34;Audio MIDI Setup&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</guid>
+      <description>&lt;p&gt;I recently connected my MacBookPro to my audio receiver over HDMI to play a movie with VLC and try out the Steam in home streaming. I noticed that the audio was not coming out of all my speakers.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux web services Part I</title>
-      <link>https://mattcarrier.com/linux-web-services-part-i/</link>
+      <link>https://www.mattcarrier.com/linux-web-services-part-i/</link>
       <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/linux-web-services-part-i/</guid>
-      <description>
-
-&lt;p&gt;This is an introduction to a series of talks about setting up Linux servers. I&amp;rsquo;m going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using &lt;a href=&#34;http://cygwin.com&#34;&gt;cygwin&lt;/a&gt; on Windows.&lt;/p&gt;
-
-&lt;p&gt;Resources for this talk are available here &lt;a href=&#34;https://github.com/icecreammatt/server-setup&#34;&gt;https://github.com/icecreammatt/server-setup&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;table-of-contents:5b5a247b327cc995afacd6590afee57f&#34;&gt;Table of Contents&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Public Private Key Creation&lt;/li&gt;
-&lt;li&gt;Instance Creation (DigitalOcean)&lt;/li&gt;
-&lt;li&gt;SSH Connection&lt;/li&gt;
-&lt;li&gt;Lockdown&lt;/li&gt;
-&lt;li&gt;Update &amp;amp; Upgrade&lt;/li&gt;
-&lt;li&gt;Software Installation&lt;/li&gt;
-&lt;li&gt;Configuration &amp;amp; Debugging&lt;/li&gt;
-&lt;li&gt;Shell Scripting&lt;/li&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;li&gt;Gotchas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;prerequisites:5b5a247b327cc995afacd6590afee57f&#34;&gt;Prerequisites&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OSX Terminal or &lt;a href=&#34;http://cygwin.com&#34;&gt;Cygwin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com&#34;&gt;DigitalOcean&lt;/a&gt; hosting account or access to a fresh Ubuntu 14.04 install&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;public-private-keys:5b5a247b327cc995afacd6590afee57f&#34;&gt;Public Private Keys&lt;/h2&gt;
-
-&lt;p&gt;To securely connect to a server we must not rely on passwords. So instead we use public/private key authentication. Using the same public keys that git uses for SSH we can also login to remote servers we configure to accept our key.&lt;/p&gt;
-
-&lt;h3 id=&#34;key-generation:5b5a247b327cc995afacd6590afee57f&#34;&gt;Key Generation&lt;/h3&gt;
-
-&lt;p&gt;Before generating a key check to see if you don&amp;rsquo;t already have one.&lt;br /&gt;
-If the output looks like below you can just use the existing public key to connect to the new server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls ~/.ssh
-id_rsa      id_rsa.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Otherwise generate a new public private key pair.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh-keygen -t rsa -C &amp;quot;name@example.com&amp;quot;
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/matt/.ssh/id_rsa): id_rsa_example
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in id_rsa_example.
-Your public key has been saved in id_rsa_example.pub.
-The key fingerprint is:
-e5:03:12:9c:40:7e:f3:f9:39:4c:1f:0b:07:04:7f:bd name@example.com
-The key&#39;s randomart image is:
-+--[ RSA 2048]----+
-|   .oo.....      |
-|   .  o. o   .   |
-|    . + . + . .  |
-|     . + = o   . |
-|        S = o E  |
-|         + * o   |
-|          = o    |
-|           .     |
-|                 |
-+-----------------+
-$ ls
-id_rsa_example     id_rsa_example.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The command below is specific to OSX and will not work in Cygwin&lt;br /&gt;
-Copy the contents of the public key to the clipboard&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;IMPORTANT!&lt;/strong&gt; Be sure to copy the file that ends in &amp;ldquo;.pub&amp;rdquo;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ pbcopy &amp;lt; id_rsa_example.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If using cygwin navigate to &lt;code&gt;C:\cygwin\home\username\.ssh\&lt;/code&gt;&lt;br /&gt;
-Open &lt;code&gt;id_rsa_example.pub&lt;/code&gt; in a text editor to copy the contents&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cat id_rsa_example.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoROCEGpranbMr7Uj9Un3zPZAtYA4VgEqinTNSOnsJ5+oxpMrW0sV8/AUial3hxGVJK/UFsURmjGWg0liN9CGwNrnwGufDyG/SBpbRdFk8jwxLXQgiyTjbrNKlhhK0AWFTeajPsoXHE1jycEu4/G1oaewQ+se7055qsN3RIFLkpYj0VSsy/fjaZH5BPk+NtFQOc7yO7Nqs+x7nORsoLVyie2YhQSzzFBM23RMFmnf6qdrdARKwm98J8tpUqkILzCas9NG679fPxHMHGw/b2QPLr0I3LblE4c1IcIXIQPTniEm5lMjWkw7Ggf4AEg1PbWLcb5MvUwGuo8k6+ZsS1tYh name@example.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;uploading-keys:5b5a247b327cc995afacd6590afee57f&#34;&gt;Uploading Keys&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Login to DigitalOcean&lt;/li&gt;
-&lt;li&gt;On the DigitalOcean dashboard select SSH Keys&lt;/li&gt;
-&lt;li&gt;Add SSH Key&lt;/li&gt;
-&lt;li&gt;Enter a name for it and paste the contents into the body.&lt;/li&gt;
-&lt;li&gt;Create SSH Key&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;instance-creation-create-droplet:5b5a247b327cc995afacd6590afee57f&#34;&gt;Instance Creation (Create Droplet)&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;DigitalOcean calls each server instance a &amp;ldquo;droplet&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2014-07-11/permanence.png&#34; alt=&#34;xkcd.com/910&#34; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Click Create Droplet&lt;/li&gt;
-&lt;li&gt;Enter a hostname for your server&lt;/li&gt;
-&lt;li&gt;Select a size (I recommend 512MB RAM for starting)&lt;/li&gt;
-&lt;li&gt;Select Region&lt;/li&gt;
-&lt;li&gt;Select Image Ubuntu 14.04 x64 (LTS)&lt;/li&gt;
-&lt;li&gt;Add your key, which was uploaded earlier&lt;/li&gt;
-&lt;li&gt;Create Droplet&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;ssh-connection:5b5a247b327cc995afacd6590afee57f&#34;&gt;SSH Connection&lt;/h2&gt;
-
-&lt;p&gt;Once the loading bar has completed and we have an IP address we are ready to connect to the server.&lt;/p&gt;
-
-&lt;p&gt;We can connect to the server using the &lt;code&gt;ssh&lt;/code&gt; command. Our public key has been automatically added to the server from the DigitalOcean control panel so our private key will work as the &amp;ldquo;password&amp;rdquo;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh root@107.170.203.120
-The authenticity of host &#39;107.170.203.120 (107.170.203.120)&#39; can&#39;t be established.
-RSA key fingerprint is 5b:13:e0:0e:d9:44:5a:1a:49:b5:12:0e:3c:d4:0d:8d.
-Are you sure you want to continue connecting (yes/no)?yes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After connecting you should see this.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Warning: Permanently added &#39;107.170.203.120&#39; (RSA) to the list of known hosts.
-Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com/
-
-  System information as of Fri Jul 11 01:06:53 EDT 2014
-
-  System load:  0.0               Processes:           71
-  Usage of /:   6.1% of 19.56GB   Users logged in:     0
-  Memory usage: 9%                IP address for eth0: 107.170.203.120
-  Swap usage:   0%
-
-  Graph this data and manage this system at:
-    https://landscape.canonical.com/
-
-root@setup-demo:~#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;lockdown:5b5a247b327cc995afacd6590afee57f&#34;&gt;Lockdown&lt;/h2&gt;
-
-&lt;p&gt;We are now logged into the server, which right now is almost wide open to the Internet. It is time to lock it down with the following steps:&lt;/p&gt;
-
-&lt;h3 id=&#34;user-account-creation:5b5a247b327cc995afacd6590afee57f&#34;&gt;User account creation&lt;/h3&gt;
-
-&lt;p&gt;Create a sudo user account&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;username=YOUR_NAME_HERE
-addgroup admin
-adduser $username
-usermod -a -G admin $username
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Full output&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  root@setup-demo:~# username=matt
-  root@setup-demo:~# addgroup admin
-  Adding group `admin&#39; (GID 1000) ...
-  Done.
-  root@setup-demo:~# adduser $username
-  Adding user `matt&#39; ...
-  Adding new group `matt&#39; (1001) ...
-  Adding new user `matt&#39; (1000) with group `matt&#39; ...
-  Creating home directory `/home/matt&#39; ...
-  Copying files from `/etc/skel&#39; ...
-  Enter new UNIX password:
-  Retype new UNIX password:
-  passwd: password updated successfully
-  Changing the user information for matt
-  Enter the new value, or press ENTER for the default
-  	Full Name []: Matt Carrier
-  	Room Number []:
-  	Work Phone []:
-  	Home Phone []:
-  	Other []:
-  Is the information correct? [Y/n]
-  root@setup-demo:~# usermod -a -G admin $username
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Copy over SSH public key to new account and set permissions to the owner&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p /home/$username/.ssh/
-cp ~/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
-chmod -R 750 /home/$username
-chown -R $username:$username /home/$username/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;ssh-server-lockdown:5b5a247b327cc995afacd6590afee57f&#34;&gt;SSH Server lockdown&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Disable password authentication&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;echo &amp;quot;PasswordAuthentication no&amp;quot; &amp;gt;&amp;gt; /etc/ssh/sshd_config&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Disable root login&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;sed -i &#39;s/PermitRootLogin without-password/PermitRootLogin no/g&#39; /etc/ssh/sshd_config
-sed -i &#39;s/PermitRootLogin yes/PermitRootLogin no/g&#39; /etc/ssh/sshd_config
-sed -i &#39;s/PasswordAuthentication yes/PasswordAuthentication no/g&#39; /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Only allow login from selected users&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;AllowUsers $username&amp;quot; &amp;gt;&amp;gt; /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Restart ssh server&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;service ssh restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;firewall-fail2ban:5b5a247b327cc995afacd6590afee57f&#34;&gt;Firewall &amp;amp; fail2ban&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Setup ufw (Ubuntu Firewall)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    # ufw (Ubuntu Firewall)
-    ufw default deny incoming
-    ufw default allow outgoing
-
-    # Open SSH
-    ufw allow ssh
-
-    # Open web ports
-    ufw allow 443/tcp
-    ufw allow 80/tcp
-
-    # Enable firewall and fail2ban
-    ufw --force enable
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Setup fail2ban&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;code&gt;apt-get install -y fail2ban&lt;/code&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Confirm status&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    root@setup-demo:~# ufw status
-    Status: active
-
-    To                         Action      From
-    --                         ------      ----
-    22                         ALLOW       Anywhere
-    443/tcp                    ALLOW       Anywhere
-    80/tcp                     ALLOW       Anywhere
-    22 (v6)                    ALLOW       Anywhere (v6)
-    443/tcp (v6)               ALLOW       Anywhere (v6)
-    80/tcp (v6)                ALLOW       Anywhere (v6)
-
-    root@setup-demo:~# service fail2ban status
-     * Status of authentication failure monitor
-     *  fail2ban is running
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Ensure you can connect from a &lt;strong&gt;new terminal window&lt;/strong&gt; before disconnecting&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    $ ssh YOUR_USERNAME@SERVER_IP
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;updating-upgrading:5b5a247b327cc995afacd6590afee57f&#34;&gt;Updating &amp;amp; Upgrading&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set the time zone to your choice&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: I had to run &lt;code&gt;$ tzconfig&lt;/code&gt; before the above command would work for me.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    $ dpkg-reconfigure tzdata
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Update server to latest software&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;apt-get update&lt;/code&gt; will fetch all the latest updates.&lt;br /&gt;
-&lt;code&gt;apt-get upgrade&lt;/code&gt; will apply updates.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    $ apt-get update &amp;amp;&amp;amp; apt-get upgrade -y
-    ...
-    # Make sure you are able to reconnect from a new window before this step
-    $ shutdown -r now
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;software-installation:5b5a247b327cc995afacd6590afee57f&#34;&gt;Software Installation&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mattcarrier.com/images/2014-07-11/sandwich.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Basic utilities to install&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install -y htop zsh tree git vim nginx nodejs make npm cmake python-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;htop - processor monitor&lt;/li&gt;
-&lt;li&gt;tree - tree view directories&lt;/li&gt;
-&lt;li&gt;git - the stupid content tracker&lt;/li&gt;
-&lt;li&gt;vim - text editor&lt;/li&gt;
-&lt;li&gt;nginx - web server / reverse proxy&lt;/li&gt;
-&lt;li&gt;make - build tools&lt;/li&gt;
-&lt;li&gt;cmake - more build tools&lt;/li&gt;
-&lt;li&gt;python-dev - even more building tools&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;configuration-debugging:5b5a247b327cc995afacd6590afee57f&#34;&gt;Configuration &amp;amp; Debugging&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;nginx - &lt;code&gt;sudo vim /etc/nginx/sites-enabled/default&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;sudo service nginx restart&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;ssh - &lt;code&gt;sudo vim /etc/ssh/sshd_config&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;sudo service ssh restart&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;logs&lt;code&gt;/var/log&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;sudo tail -f /var/log/nginx/access.log&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;shell-scripting:5b5a247b327cc995afacd6590afee57f&#34;&gt;Shell Scripting&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
-
-# This is a comment
-echo &amp;quot;Hello World&amp;quot;
-
-# make script executable
-chmod a+x hello.sh
-
-# execute script
-./hello.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;git-remote-repository:5b5a247b327cc995afacd6590afee57f&#34;&gt;Git remote repository&lt;/h2&gt;
-
-&lt;p&gt;On the remote machine&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ mkdir ~/web-project-name.git
-$ git init --bare ~/web-project-name.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;From local machine&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd ~/projects/web-project
-$ git remote add web-hostname YOUR_USERNAME@SERVER_IP:web-project-name.git
-$ git push web-hostname master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Githooks
-
-&lt;ul&gt;
-&lt;li&gt;post-update for deployment&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Challenge: Setup the git post-update hook to deploy website&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;gotchas:5b5a247b327cc995afacd6590afee57f&#34;&gt;Gotchas&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ctrl + z by accident?
-
-&lt;ul&gt;
-&lt;li&gt;fg to foreground the application&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;nodejs-with-nginx:5b5a247b327cc995afacd6590afee57f&#34;&gt;NodeJS with Nginx&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Add a site config to &lt;code&gt;/etc/nginx/sites-available/site.conf&lt;/code&gt;.
-&lt;script src=&#34;https://gist.github.com/icecreammatt/b9252556400e08513c61.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;li&gt;Soft link &lt;code&gt;ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/&lt;/code&gt; to enable the site.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo service nginx reload&lt;/code&gt; to apply the changes.&lt;/li&gt;
-&lt;li&gt;Change the port number from &lt;code&gt;3000&lt;/code&gt; to whatever your node app is running on.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;next-time:5b5a247b327cc995afacd6590afee57f&#34;&gt;Next time&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Automation
-
-&lt;ul&gt;
-&lt;li&gt;Ansible&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;PaaS&lt;/li&gt;
-&lt;li&gt;Docker&lt;/li&gt;
-&lt;li&gt;Dokku&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;future-talk-ideas:5b5a247b327cc995afacd6590afee57f&#34;&gt;Future talk ideas&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Nginx Setup with NodeJS&lt;/li&gt;
-&lt;li&gt;DNS&lt;/li&gt;
-&lt;li&gt;Monitoring&lt;/li&gt;
-&lt;li&gt;Automation deep dive&lt;/li&gt;
-&lt;li&gt;AWS
-
-&lt;ul&gt;
-&lt;li&gt;Basics&lt;/li&gt;
-&lt;li&gt;Security Groups&lt;/li&gt;
-&lt;li&gt;EC2&lt;/li&gt;
-&lt;li&gt;Load Balancing&lt;/li&gt;
-&lt;li&gt;etc&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Continuous Integration&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://www.mattcarrier.com/linux-web-services-part-i/</guid>
+      <description>This is an introduction to a series of talks about setting up Linux servers. I&amp;rsquo;m going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using cygwin on Windows.</description>
     </item>
     
     <item>
       <title>Tools and Plugins for OSX</title>
-      <link>https://mattcarrier.com/tools-and-plugins-for-osx/</link>
+      <link>https://www.mattcarrier.com/tools-and-plugins-for-osx/</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/tools-and-plugins-for-osx/</guid>
-      <description>&lt;p&gt;Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed… 
-
-&lt;br /&gt;These are most of the main tools and plugins I use for development.&lt;/p&gt;
-
-&lt;h3&gt;Programs&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.iterm2.com/#/section/home&#34;&gt;iTerm2&lt;/a&gt; - Terminal with nice split screen support and better fullscreen options&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sublimetext.com&#34;&gt;SublimeText&lt;/a&gt; - Cross platform text editor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sourcetreeapp.com&#34;&gt;SourceTree&lt;/a&gt; - Visual Git client&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://brettterpstra.com/projects/nvalt/&#34;&gt;nvAlt&lt;/a&gt; - Quick note taking and searching&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mouapp.com&#34;&gt;MouApp&lt;/a&gt; - Markdown Editor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;join.me&#34;&gt;join.me&lt;/a&gt; - Screen sharing&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://grandperspectiv.sourceforge.net&#34;&gt;GrandPerspective&lt;/a&gt; - Not quite as nice as WindirStat but pretty close and the price is right.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.charlesproxy.com&#34;&gt;Charles&lt;/a&gt; - Proxy app much like Fiddler but for Mac&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;OSX Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://spectacleapp.com&#34;&gt;Spectacle&lt;/a&gt; - Window manager that works great and is free.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://manytricks.com/moom/&#34;&gt;Moom&lt;/a&gt; - Another really good Window manager for OSX that lets you do things like save and window positions to hot keys. (60/40 splits or whatever you want)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh&#34;&gt;Oh-my-zsh&lt;/a&gt; - Auto completion and plugins for terminal.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/downloads/index.action&#34;&gt;Network Link Conditioner&lt;/a&gt; (Search Hardware IO Tools for Xcode) Test different network conditions by throttling bandwidth.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;SublimeText 2 Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wbond.net/sublime_packages/package_control&#34;&gt;Package Control&lt;/a&gt; - The simplest way to install sublime plugins&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/SublimeText/Tag&#34;&gt;Tag&lt;/a&gt; - Great plugin for indenting and pretty printing compressed XML&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/dzhibas/SublimePrettyJson&#34;&gt;Pretty JSON&lt;/a&gt; - Make JSON look pretty too&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alek-sys/sublimetext_indentxml&#34;&gt;Indent XML&lt;/a&gt; - I used to use this one a lot, but recently started using Tag more.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/kemayo/sublime-text-2-git&#34;&gt;Git&lt;/a&gt; - Sometimes its nice to be able to run quick git commands in Sublime&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/facelessuser/BracketHighlighter&#34;&gt;BracketHighlighter&lt;/a&gt; - Provides nice bracket highlighting&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jnordberg/color-pick&#34;&gt;Colorpick&lt;/a&gt; - For quick in app color picking&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Kronuz/SublimeCodeIntel&#34;&gt;SublimeCodeIntel&lt;/a&gt; - Code intelligence&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jpvanhal/sublime-jinja2&#34;&gt;sublime-jinja2&lt;/a&gt; - Jinja2 template support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Xcode Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/JugglerShu/XVim&#34;&gt;XVim&lt;/a&gt; - Vim bindings for Xcode.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/omz/MiniXcode&#34;&gt;Mini Xcode&lt;/a&gt; - Minimize the main toolbar but keep access to the scheme selector&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Chrome Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb&#34;&gt;Vimium&lt;/a&gt; - Vim bindings for Chrome&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc&#34;&gt;JSONView&lt;/a&gt; - Pretty print for JSON&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/xv-%E2%80%94-xml-viewer/eeocglpgjdpaefaedpblffpeebgmgddk&#34;&gt;XV - XML Viewer&lt;/a&gt; - Pretty print for XML&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/idhfcdbheobinplaamokffboaccidbal&#34;&gt;Resolution test&lt;/a&gt; - Quick way to snap the browser to common resolutions&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/dnfpcpfijpdhabaoieccoclghgplmpbd&#34;&gt;CSS Reloader&lt;/a&gt; - Reload the stylesheet without reloading the whole page.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://www.mattcarrier.com/tools-and-plugins-for-osx/</guid>
+      <description>&lt;p&gt;Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed…</description>
     </item>
     
     <item>
       <title>Setting up and deploying Python Flask to Dreamhost</title>
-      <link>https://mattcarrier.com/flask-dreamhost-setup/</link>
+      <link>https://www.mattcarrier.com/flask-dreamhost-setup/</link>
       <pubDate>Mon, 04 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/flask-dreamhost-setup/</guid>
-      <description>&lt;p&gt;I have a few applications I have written that run on &lt;a title=&#34;Flask&#34; href=&#34;http://flask.pocoo.org&#34; target=&#34;_blank&#34;&gt;Flask&lt;/a&gt;. Every time I would go to deploy a new application I would always seem to forget one of the minor details and end up with the ugly &lt;code&gt;An error occurred importing your passenger_wsgi.py&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The following are the steps I use to deploy Flask to Dreamhost using Passenger. I haven&amp;rsquo;t tested it, but this should be roughly the same steps if you want to deploy directly to your domain instead of using a subdomain.
-&lt;h2&gt;TL;DR; (Quick Setup)&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;add a new subdomain on the dreamhost web panel&lt;/li&gt;
-    &lt;li&gt;cd myappname.domain.com&lt;/li&gt;
-    &lt;li&gt;git clone &lt;a href=&#34;https://github.com/icecreammatt/flask-passenger.git&#34;&gt;https://github.com/icecreammatt/flask-passenger.git&lt;/a&gt; .&lt;/li&gt;
-    &lt;li&gt;virtualenv .&lt;/li&gt;
-    &lt;li&gt;. bin/activate&lt;/li&gt;
-    &lt;li&gt;easy_install flask&lt;/li&gt;
-    &lt;li&gt;git submodule init&lt;/li&gt;
-    &lt;li&gt;git submodule update&lt;/li&gt;
-    &lt;li&gt;Replace &lt;code&gt;myappname.domain.com&lt;/code&gt; in passenger_wsgi.py with your folder path.&lt;/li&gt;
-    &lt;li&gt;touch tmp/restart.txt&lt;/li&gt;
-    &lt;li&gt;DONE!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Part 1 - Setup Domain&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;Go to &lt;em&gt;Manage Domains&lt;/em&gt; after logging into the Web Panel&lt;/li&gt;
-    &lt;li&gt;Add New Domain / Sub-Domain
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;Domain to host:&lt;/strong&gt; I like to use subdomains a lot of testing and the different Flask apps I run, so I tend to use &lt;code&gt;myappname.domain.com&lt;/code&gt; Obviously swap out myappname.domain.com with your own names.&lt;/li&gt;
-    &lt;li&gt;(Optional) Check remove WWW&lt;/li&gt;
-    &lt;li&gt;If you have more than one user account make sure to pick the correct one.&lt;/li&gt;
-    &lt;li&gt;Web directory should fill out automatically for you&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Passenger (Ruby/Python apps only):&lt;/strong&gt; Check this box&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;Fully host this domain!&lt;/li&gt;
-    &lt;li&gt;SSH into your web server and wait a minute or two for the myappname.domain.com folder to appear&lt;/li&gt;
-    &lt;li&gt;cd into myappname.domain.com&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Part 2 - Install Flask with Passenger&lt;/h2&gt;
-&lt;h3&gt;1. Setup a virtualenv&lt;/h3&gt;
-First we need to setup the virtual environment
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ virtualenv .
-$ ls&lt;/pre&gt;
-You should now have a directory that looks something like this:
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;bin&lt;br /&gt;
-include&lt;br /&gt;
-lib
-public&lt;/pre&gt;
-Next activate the virtual environment by using
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ . bin/activate&lt;/pre&gt;
-The command line should now show up something like this:
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;(myappname.domain.com)myappname.domain.com $&lt;/pre&gt;
-&lt;h3&gt;2. Install Flask&lt;/h3&gt;
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ easy_install flask&lt;/pre&gt;
-&lt;h3&gt;3. Setup passenger&lt;/h3&gt;
-Create a file named passenger_wsgi.py with the following:
-&lt;h4&gt;NOTE: Make sure to hand type this, as pasting the tabbed lines from the browser can translate to spaces which will evaluate incorrectly.&lt;/h4&gt;
-&lt;pre name=&#34;code&#34; class=&#34;python&#34;&gt;import sys, os
-INTERP = os.path.join(os.environ[&amp;#039;HOME&amp;#039;], &amp;#039;myappname.domain.com&amp;#039;, &amp;#039;bin&amp;#039;, &amp;#039;python&amp;#039;)
-if sys.executable != INTERP:
-    os.execl(INTERP, INTERP, *sys.argv)
-sys.path.append(os.getcwd())&lt;/p&gt;
-
-&lt;p&gt;from flask import Flask
-application = Flask(&lt;strong&gt;name&lt;/strong&gt;)&lt;/p&gt;
-
-&lt;p&gt;@application.route(&amp;#039;/&amp;#039;)
-def index():
-    return &amp;#039;Hello Passenger&amp;#039;&lt;/pre&gt;
-&lt;strong&gt;NOTE:&lt;/strong&gt; Don&amp;rsquo;t forget to change myappname.domain.com to match the setup you are using.
-&lt;h3&gt;4. Start the server&lt;/h3&gt;
-Add a folder called &lt;code&gt;tmp&lt;/code&gt; with a file named &lt;code&gt;restart.txt&lt;/code&gt;
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ mkdir tmp
-$ touch tmp/restart.txt&lt;/pre&gt;
-To restart the Flask application after making changes you need to update the restart.txt file. This can easily achieved by doing a touch tmp/restart.
-&lt;em&gt;(For my projects I add a post-receive hook into my git repo to touch the file for me).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The directory should now look something like this:
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;bin&lt;br /&gt;
-include&lt;br /&gt;
-lib&lt;br /&gt;
-passenger_wsgi.py
-public&lt;br /&gt;
-tmp&lt;/pre&gt;
-&lt;h3&gt;5. Test&lt;/h3&gt;
-At this point you should be able to hit the server address &lt;code&gt;mynameapp.domain.com&lt;/code&gt; from the browser and see &amp;lsquo;Hello passenger&amp;rsquo;
-&lt;h2&gt;Part 3 - Deploying a real app&lt;/h2&gt;
-&lt;h3&gt;1. Clone sample project from github &lt;a href=&#34;https://github.com/icecreammatt/flask-empty.git&#34;&gt;https://github.com/icecreammatt/flask-empty.git&lt;/a&gt;&lt;/h3&gt;
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ pwd
-/home/username/myappname.domain.com
-$ git clone &lt;a href=&#34;https://github.com/icecreammatt/flask-empty.git&#34;&gt;https://github.com/icecreammatt/flask-empty.git&lt;/a&gt; myappname&lt;/pre&gt;
-&lt;h3&gt;1. Adjust passenger_wsgi.py&lt;/h3&gt;
-Now that the basic stuff is in place a real application can be setup.&lt;/p&gt;
-
-&lt;p&gt;Edit &lt;code&gt;passenger_wsgi.py&lt;/code&gt; so it now contains
-&lt;pre name=&#34;code&#34; class=&#34;python&#34;&gt;import sys, os
-INTERP = os.path.join(os.environ[&amp;#039;HOME&amp;#039;], &amp;#039;myappname.domain.com&amp;#039;, &amp;#039;bin&amp;#039;, &amp;#039;python&amp;#039;)
-if sys.executable != INTERP:
-    os.execl(INTERP, INTERP, *sys.argv)
-sys.path.append(os.getcwd())&lt;/p&gt;
-
-&lt;p&gt;sys.path.append(&amp;#039;myappname&amp;#039;)
-from myappname.app import app as application&lt;/pre&gt;
-&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; Make sure if you copy this to tab os.excl&amp;hellip; since it will copy as spaces and cause a runtime error.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Restart Flask
-&lt;pre name=&#34;code&#34; class=&#34;shell&#34;&gt;$ touch tmp/restart.txt&lt;/pre&gt;
-&lt;h2&gt;Other Resources:&lt;/h2&gt;
-I am by no means an expert at Python or Flask, I just like to code in it during my free time. Feel free to correct me on my style of code. Please post any questions or comments.
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;http://wiki.dreamhost.com/Flask&#34;&gt;http://wiki.dreamhost.com/Flask&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/flask-dreamhost-setup/</guid>
+      <description>&lt;p&gt;I have a few applications I have written that run on &lt;a title=&#34;Flask&#34; href=&#34;http://flask.pocoo.org&#34; target=&#34;_blank&#34;&gt;Flask&lt;/a&gt;. Every time I would go to deploy a new application I would always seem to forget one of the minor details and end up with the ugly &lt;code&gt;An error occurred importing your passenger_wsgi.py&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Xcode shortcuts &amp; settings</title>
-      <link>https://mattcarrier.com/xcode-shortcuts/</link>
+      <link>https://www.mattcarrier.com/xcode-shortcuts/</link>
       <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/xcode-shortcuts/</guid>
-      <description>&lt;p&gt;Here are some hot keys and preferences that make life in Xcode much better.&lt;/p&gt;
-
-&lt;p&gt;&lt;h2&gt;Open quickly&lt;/h2&gt;
-&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/quick-open.jpg&#34;&gt;&lt;img class=&#34;wp-image-225 alignright&#34; alt=&#34;quick-open&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/quick-open.jpg&#34; width=&#34;342&#34; height=&#34;251&#34; /&gt;&lt;/a&gt; Search through files, classes, and method names.
-&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;O&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;Use &lt;kbd&gt;option&lt;/kbd&gt; &lt;kbd&gt;enter&lt;/kbd&gt; to open document in the right pane, this will also split the view if the assistant view isn&amp;rsquo;t already open. To return to single view mode use &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;
-&lt;h2&gt;Split screen (Assistant Editor)&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;Switch to the assistant editor by pressing &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Option&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
-    &lt;li&gt;Return to a single screen using &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
-    &lt;li&gt;Open the diff view &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Option&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Open files in active view&lt;/h2&gt;
-This settings allows for the active editor window selected to be the one changed when selecting documents from the list view or using open quickly.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/Active-View.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-217&#34; alt=&#34;General Settings&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/Active-View-1024x644.jpg&#34; width=&#34;625&#34; height=&#34;393&#34; /&gt;&lt;/a&gt;
-&lt;h2&gt;Debug Tab&lt;/h2&gt;
-Ever get annoyed when breakpoint switches away from the currently viewed file?
-To stop this from happening setup a debug tab in the behavior settings.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_1.jpg&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-256&#34; alt=&#34;behaviors_1&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_1-1024x747.jpg&#34; width=&#34;625&#34; height=&#34;455&#34; /&gt;&lt;/a&gt;&lt;img class=&#34;alignnone  wp-image-219&#34; alt=&#34;behaviors-2&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_2.jpg&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This last setting is a personal preference. I don&amp;rsquo;t like the console visible when I&amp;rsquo;m coding. This setting will auto hide the console after stopping the simulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_3.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-220&#34; alt=&#34;behaviors-3&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/behaviors_3.jpg&#34; /&gt;&lt;/a&gt;
-&lt;h2&gt;Web like navigation&lt;/h2&gt;
-Command click on method names and class names to quickly navigate to implementations.
-Double click to open in a separate window. Swipe on a touch pad to go forward and back. Hold down on the back button to view the navigation history.&lt;/p&gt;
-
-&lt;p&gt;Press &lt;kbd&gt;option&lt;/kbd&gt; instead of &lt;kbd&gt;command&lt;/kbd&gt; to read inline documentation of classes and methods.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/inline-documentation.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-227&#34; alt=&#34;inline-documentation&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/inline-documentation-1024x463.jpg&#34; width=&#34;500&#34; height=&#34;226&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Use custom key bindings to quickly switch tabs.
-Select Next Tab: &lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Tab&lt;/kbd&gt;
-Select Previous Tab:  &lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;Tab&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/tab-settings.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-228&#34; alt=&#34;tab-settings&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/tab-settings.jpg&#34; /&gt;&lt;/a&gt;
-&lt;h2&gt;More keys worth knowing&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Up&lt;/kbd&gt; Switch between header and implementation&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;L&lt;/kbd&gt; Jump to line number&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;R&lt;/kbd&gt; Run simulator&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;B&lt;/kbd&gt; Build&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;K&lt;/kbd&gt; Clean solution&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Control&lt;/kbd&gt; &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Y&lt;/kbd&gt; Continue debugging&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;Shift&lt;/kbd&gt; &lt;kbd&gt;Y&lt;/kbd&gt; Hide and show debug console&lt;/li&gt;
-    &lt;li&gt;&lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;(1 - 7)&lt;/kbd&gt; Show different navigator tabs, hide with &lt;kbd&gt;Command&lt;/kbd&gt; &lt;kbd&gt;0&lt;/kbd&gt;
-    &lt;em&gt;&lt;em&gt;Press &lt;kbd&gt;option&lt;/kbd&gt; to do the same with utilities on the right&lt;/em&gt;&lt;/em&gt;Download a cheat sheet of hotkeys &lt;a title=&#34;here&#34; href=&#34;http://cocoasamurai.blogspot.com/2011/03/xcode-4-keyboard-shortcuts-now.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Regain vertical space, Hide the toolbar&lt;/h2&gt;
-So now that you have instantly memorized all these hot keys you want to hide the toolbar but still be able to set the active scheme. To do this grab the plugin for the mini Xcode target selection on &lt;a href=&#34;https://github.com/omz/MiniXcode&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-02-06/mini-xcode.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-226&#34; alt=&#34;mini-xcode&#34; src=&#34;https://mattcarrier.com/images/2013-02-06/mini-xcode-1024x335.jpg&#34; width=&#34;625&#34; height=&#34;204&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Thanks to Matthew Strickland &lt;a href=&#34;https://twitter.com/strickland&#34;&gt;@strickland&lt;/a&gt; for letting me know about this plugin.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/xcode-shortcuts/</guid>
+      <description>&lt;p&gt;Here are some hot keys and preferences that make life in Xcode much better.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Some useful utilities for OSX</title>
-      <link>https://mattcarrier.com/osx-utilities/</link>
+      <link>https://www.mattcarrier.com/osx-utilities/</link>
       <pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/osx-utilities/</guid>
-      <description>&lt;p&gt;List of some useful open source tray tools I use daily.&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Easy window management: &lt;a href=&#34;https://github.com/eczarny/spectacle&#34;&gt;Spectacle&lt;/a&gt;&lt;/h3&gt;
-The biggest issue I have with OSX is the way window management is handled. Simple tasks such as sizing an editor and browser so both are visible between the left and right side of the screen is cumbersome, especially with a touch pad. The simple task of maximizing a window never seems to work as expected.&lt;/p&gt;
-
-&lt;p&gt;Spectacle fixes these issues by providing a bunch of hot keys which you can customize to your needs. It also has a full screen that works.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-01-27/SpectacleSettings.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-206&#34; alt=&#34;SpectacleSettings&#34; src=&#34;https://mattcarrier.com/images/2013-01-27/SpectacleSettings.png&#34; width=&#34;730&#34; height=&#34;603&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some examples are on the &lt;a href=&#34;http://spectacleapp.com&#34;&gt;homepage
-&lt;/a&gt;
-&lt;h3&gt;System fan control: &lt;a href=&#34;https://github.com/hholtmann/smcFanControl&#34;&gt;smcFanControl&lt;/a&gt;&lt;/h3&gt;
-This is a great app to keep your for MacBook nice and cool. With smcFanControl you can monitor temperatures, as well as customize the fan speed.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-01-27/smcFanControl.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-204&#34; alt=&#34;smcFanControl&#34; src=&#34;https://mattcarrier.com/images/2013-01-27/smcFanControl.png&#34; width=&#34;451&#34; height=&#34;572&#34; /&gt;&lt;/a&gt;
-&lt;h3&gt;Graphics monitoring: &lt;a href=&#34;https://github.com/codykrieger/gfxCardStatus&#34;&gt;gfxCardStatus&lt;/a&gt;&lt;/h3&gt;
-This is a simple app that lets you monitor which graphics device is currently in use. It also lets you override which card is use such as using the integrated GPU instead of the discrete to save battery life.
-&lt;h3&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-01-27/gfxCardStatus.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-207&#34; alt=&#34;gfxCardStatus&#34; src=&#34;https://mattcarrier.com/images/2013-01-27/gfxCardStatus.png&#34; width=&#34;442&#34; height=&#34;338&#34; /&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Quick image sharing: &lt;a href=&#34;https://github.com/zbuc/imgurBar&#34;&gt;ImgurBar&lt;/a&gt;&lt;/h3&gt;
-The simple image sharer.
-I am a big fan of &lt;a href=&#34;http://imgur.com&#34;&gt;Imgur&lt;/a&gt; and a quick way to share images with people is by using this app. Simply drag your image to the tray icon (the black dot) and it will handle the upload as well as copying a link to the image to your clipboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mattcarrier.com/images/2013-01-27/Imgur.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-203&#34; alt=&#34;Imgur&#34; src=&#34;https://mattcarrier.com/images/2013-01-27/Imgur.png&#34; width=&#34;309&#34; height=&#34;234&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SoundWall Kinect</title>
-      <link>https://mattcarrier.com/archive/soundwall-kinect/</link>
-      <pubDate>Sun, 05 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattcarrier.com/archive/soundwall-kinect/</guid>
-      <description>&lt;p&gt;SoundWall is an open source digital drum machine which can be controlled using the Xbox Kinect SDK for Windows using hand motions and voice commands.&lt;/p&gt;
-
-&lt;p&gt;During my summer internship at &lt;a title=&#34;Vertigo&#34; href=&#34;http://vertigo.com/&#34; target=&#34;_blank&#34;&gt;Vertigo&lt;/a&gt; I got the opportunity to program using the new Kinect for Windows SDK. I worked on the project with &lt;a title=&#34;Leslie Prince&#34; href=&#34;http://leslieprince.com/&#34; target=&#34;_blank&#34;&gt;Leslie Prince&lt;/a&gt; under the direction of Mike Moser, and Mike Hanley.&lt;/p&gt;
-
-&lt;p&gt;More information about it can be found here &lt;a href=&#34;http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/&#34;&gt;http://thewire.vertigo.com/2011/vertigo-soundwall-kinect-fun/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&#34;soundwall&#34; href=&#34;https://soundwall.codeplex.com/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;size-large wp-image-189&#34; title=&#34;SoundWall&#34; src=&#34;https://mattcarrier.com/images/2012-02-05/SoundWallPreviewPlay-1024x576.png&#34; alt=&#34;&#34; width=&#34;620&#34; height=&#34;348&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/osx-utilities/</guid>
+      <description>&lt;p&gt;List of some useful open source tray tools I use daily.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GravityBox</title>
-      <link>https://mattcarrier.com/gravitybox/</link>
+      <link>https://www.mattcarrier.com/gravitybox/</link>
       <pubDate>Sun, 05 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/gravitybox/</guid>
-      <description>&lt;p&gt;This is a little something I worked on during my internship at &lt;a title=&#34;Vertigo&#34; href=&#34;http://vertigo.com/&#34; target=&#34;_blank&#34;&gt;Vertigo&lt;/a&gt; last summer. This is all written in JavaScript. I used Box2Djs for the physics.&lt;/p&gt;
-
-&lt;iframe style=&#34;border: 1px solid black;&#34; src=&#34;http://labs.vertigo.com/GravityBox/GravityBox.htm?showInstruction=true&#34; width=&#34;560&#34; height=&#34;400&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;For more info visit here &lt;a title=&#34;here&#34; href=&#34;http://thewire.vertigo.com/2011/vertigo-gravity-box-html5-canvas-and-box2djs/&#34;&gt;&lt;a href=&#34;http://thewire.vertigo.com/2011/vertigo-gravity-box-html5-canvas-and-box2djs/&#34;&gt;http://thewire.vertigo.com/2011/vertigo-gravity-box-html5-canvas-and-box2djs/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/gravitybox/</guid>
+      <description>&lt;p&gt;This is a little something I worked on during my internship at &lt;a title=&#34;Vertigo&#34; href=&#34;http://vertigo.com/&#34; target=&#34;_blank&#34;&gt;Vertigo&lt;/a&gt; last summer. This is all written in JavaScript. I used Box2Djs for the physics.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SoundWall Kinect</title>
+      <link>https://www.mattcarrier.com/archive/soundwall-kinect/</link>
+      <pubDate>Sun, 05 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/soundwall-kinect/</guid>
+      <description>&lt;p&gt;SoundWall is an open source digital drum machine which can be controlled using the Xbox Kinect SDK for Windows using hand motions and voice commands.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Darwin lobby update</title>
-      <link>https://mattcarrier.com/archive/2010-01-30-darwin-lobby-update/</link>
+      <link>https://www.mattcarrier.com/archive/2010-01-30-darwin-lobby-update/</link>
       <pubDate>Sat, 30 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/archive/2010-01-30-darwin-lobby-update/</guid>
-      <description>&lt;p&gt;&lt;a onblur=&#34;try {parent.deselectBloggerImageGracefully();} catch(e) {}&#34; href=&#34;http://4.bp.blogspot.com/_zdYMSK7YuAA/S2SQ-wE-XHI/AAAAAAAAFTw/dex6ZxN7DE4/s1600-h/helpdesk640000.jpg&#34;&gt;&lt;img id=&#34;BLOGGER_PHOTO_ID_5432626458247715954&#34; style=&#34;float: left; margin: 0 10px 10px 0; cursor: hand; width: 400px; height: 250px;&#34; src=&#34;http://4.bp.blogspot.com/_zdYMSK7YuAA/S2SQ-wE-XHI/AAAAAAAAFTw/dex6ZxN7DE4/s400/helpdesk640000.jpg&#34; alt=&#34;&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;
-&lt;a onblur=&#34;try {parent.deselectBloggerImageGracefully();} catch(e) {}&#34; href=&#34;http://3.bp.blogspot.com/_zdYMSK7YuAA/S2SQ5tn-SII/AAAAAAAAFTo/c-b-LrKoCkI/s1600-h/helpdesk640001.jpg&#34;&gt;&lt;img id=&#34;BLOGGER_PHOTO_ID_5432626371689859202&#34; style=&#34;float: left; margin: 0 10px 10px 0; cursor: hand; width: 400px; height: 250px;&#34; src=&#34;http://3.bp.blogspot.com/_zdYMSK7YuAA/S2SQ5tn-SII/AAAAAAAAFTo/c-b-LrKoCkI/s400/helpdesk640001.jpg&#34; alt=&#34;&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/archive/2010-01-30-darwin-lobby-update/</guid>
+      <description> </description>
     </item>
     
     <item>
       <title>SSU Map Progress</title>
-      <link>https://mattcarrier.com/archive/2010-01-20-ssu-map-progress/</link>
+      <link>https://www.mattcarrier.com/archive/2010-01-20-ssu-map-progress/</link>
       <pubDate>Wed, 20 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://mattcarrier.com/archive/2010-01-20-ssu-map-progress/</guid>
-      <description>&lt;p&gt;Darwin Lobby Chairs
-&lt;a onblur=&#34;try {parent.deselectBloggerImageGracefully();} catch(e) {}&#34; href=&#34;http://1.bp.blogspot.com/_zdYMSK7YuAA/S1gOfU954SI/AAAAAAAAFTE/_VsWZuTxThU/s1600-h/chairs_preview.jpg&#34;&gt;&lt;img id=&#34;BLOGGER_PHOTO_ID_5429105282162221346&#34; style=&#34;float: left; margin: 0 10px 10px 0; cursor: hand; width: 400px; height: 225px;&#34; src=&#34;http://1.bp.blogspot.com/_zdYMSK7YuAA/S1gOfU954SI/AAAAAAAAFTE/_VsWZuTxThU/s400/chairs_preview.jpg&#34; alt=&#34;&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a onblur=&#34;try {parent.deselectBloggerImageGracefully();} catch(e) {}&#34; href=&#34;http://1.bp.blogspot.com/_zdYMSK7YuAA/S1gOVkMQvuI/AAAAAAAAFS8/eBlh55KF7Uw/s1600-h/helpdesk550007.jpg&#34;&gt;&lt;img id=&#34;BLOGGER_PHOTO_ID_5429105114450280162&#34; style=&#34;float: left; margin: 0 10px 10px 0; cursor: hand; width: 400px; height: 250px;&#34; src=&#34;http://1.bp.blogspot.com/_zdYMSK7YuAA/S1gOVkMQvuI/AAAAAAAAFS8/eBlh55KF7Uw/s400/helpdesk550007.jpg&#34; alt=&#34;&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://www.mattcarrier.com/archive/2010-01-20-ssu-map-progress/</guid>
+      <description>Darwin Lobby Chairs </description>
+    </item>
+    
+    <item>
+      <title>3D Maze</title>
+      <link>https://www.mattcarrier.com/archive/2009-12-17-3d-maze/</link>
+      <pubDate>Thu, 17 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-12-17-3d-maze/</guid>
+      <description>This was part of an assignment for my CS215 class. It involved coding a maze that uses recursion to randomly generate the maze. For extra credit I went nuts and added DirectX support so I could have the whole thing drawn in 3D.</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra applied to 3D Graphics</title>
+      <link>https://www.mattcarrier.com/archive/2009-12-08-linear-algebra-applied-to-3d-graphics/</link>
+      <pubDate>Tue, 08 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-12-08-linear-algebra-applied-to-3d-graphics/</guid>
+      <description>I made this video as part of a presentation I gave for extra credit in my linear algebra class. It is just showing how matrices are applied in computer graphics.</description>
+    </item>
+    
+    <item>
+      <title>Monster for my Maze Project</title>
+      <link>https://www.mattcarrier.com/archive/2009-12-05-monster-for-my-maze-project/</link>
+      <pubDate>Sat, 05 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-12-05-monster-for-my-maze-project/</guid>
+      <description>After some play testing, friends told me they couldn&amp;rsquo;t tell which was the player and which was the monster, so I decided to make this to clear up any confusion.</description>
+    </item>
+    
+    <item>
+      <title>Sonoma State Map Preview</title>
+      <link>https://www.mattcarrier.com/archive/2009-09-07-sonoma-state-map-preview/</link>
+      <pubDate>Mon, 07 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-09-07-sonoma-state-map-preview/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>IT Helpdesk map screens</title>
+      <link>https://www.mattcarrier.com/archive/2009-01-19-it-helpdesk-map-screens/</link>
+      <pubDate>Mon, 19 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2009-01-19-it-helpdesk-map-screens/</guid>
+      <description>Here are some screen shots from the map I was working on while on my winter break this year.</description>
+    </item>
+    
+    <item>
+      <title>Shotgun</title>
+      <link>https://www.mattcarrier.com/archive/2008-08-15-shotgun/</link>
+      <pubDate>Fri, 15 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-08-15-shotgun/</guid>
+      <description>This is a weapon for the mod I am making.
+Polys: 850 | Verts: 902 </description>
+    </item>
+    
+    <item>
+      <title>Colt 45</title>
+      <link>https://www.mattcarrier.com/archive/2008-06-05-colt-45/</link>
+      <pubDate>Thu, 05 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-06-05-colt-45/</guid>
+      <description>I am modeling this for a Half-Life 2 mod I am making.
+Polys: 1359 (The in game version, which is this one here with faces removed from the other side is 912 polys.) | The texture isn&amp;rsquo;t done yet.</description>
+    </item>
+    
+    <item>
+      <title>1940 Ford WIP</title>
+      <link>https://www.mattcarrier.com/archive/2008-05-24-1940-ford-wip/</link>
+      <pubDate>Sat, 24 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-05-24-1940-ford-wip/</guid>
+      <description>This is a truck that I am making for my mod. I still have much to do with it. </description>
+    </item>
+    
+    <item>
+      <title>LG KG300 Cell Phone</title>
+      <link>https://www.mattcarrier.com/archive/2008-05-18-lg-kg300-cell-phone/</link>
+      <pubDate>Sun, 18 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-05-18-lg-kg300-cell-phone/</guid>
+      <description>This is a speed model I did to see what I could do in an hour.
+Polys: 86 | Verts: 80</description>
+    </item>
+    
+    <item>
+      <title>Saw</title>
+      <link>https://www.mattcarrier.com/archive/2008-04-20-saw/</link>
+      <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-04-20-saw/</guid>
+      <description>This is a prop for the mod I am making.</description>
+    </item>
+    
+    <item>
+      <title>Shovel</title>
+      <link>https://www.mattcarrier.com/archive/2008-04-20-shovel/</link>
+      <pubDate>Sun, 20 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-04-20-shovel/</guid>
+      <description>This is a prop for the mod I am making.
+Polys: 309</description>
+    </item>
+    
+    <item>
+      <title>ATST Matchmove</title>
+      <link>https://www.mattcarrier.com/archive/2008-04-14-atst-matchmove/</link>
+      <pubDate>Mon, 14 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2008-04-14-atst-matchmove/</guid>
+      <description>Messing around with match moving and an old animation I made.</description>
+    </item>
+    
+    <item>
+      <title>Various Rocks</title>
+      <link>https://www.mattcarrier.com/archive/2007-12-02-various-rocks/</link>
+      <pubDate>Sun, 02 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-12-02-various-rocks/</guid>
+      <description>These are some rocks I made at different scales for my mod. </description>
+    </item>
+    
+    <item>
+      <title>Head of Constantine</title>
+      <link>https://www.mattcarrier.com/archive/2007-11-29-head-of-constantine/</link>
+      <pubDate>Thu, 29 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-11-29-head-of-constantine/</guid>
+      <description>I modeled this for an extra credit assignment for one of my art history classes. I didn&amp;rsquo;t have enough time to finish the model before the due date though. Eventually I want to learn how to use zbrush and add more detail to it.</description>
+    </item>
+    
+    <item>
+      <title>Earth Shader Test</title>
+      <link>https://www.mattcarrier.com/archive/2007-11-22-earth-shader-test/</link>
+      <pubDate>Thu, 22 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-11-22-earth-shader-test/</guid>
+      <description>This is a shader I was working on for the planet earth for a solar system model I was making.</description>
+    </item>
+    
+    <item>
+      <title>Face Model</title>
+      <link>https://www.mattcarrier.com/archive/2007-10-22-face-model/</link>
+      <pubDate>Mon, 22 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-10-22-face-model/</guid>
+      <description>This is second attempt at a face model, This one is a work in progress for a mod I am working on.
+Polys: 1382 | Verts: 1248</description>
+    </item>
+    
+    <item>
+      <title>Shark</title>
+      <link>https://www.mattcarrier.com/archive/2007-09-03-shark/</link>
+      <pubDate>Mon, 03 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-09-03-shark/</guid>
+      <description>This was a quick rough model I did to have something to test a caustics simulation.</description>
+    </item>
+    
+    <item>
+      <title>Self Portrait</title>
+      <link>https://www.mattcarrier.com/archive/2007-04-12-self-portrait/</link>
+      <pubDate>Thu, 12 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-04-12-self-portrait/</guid>
+      <description>This is my attempt at a face model. </description>
+    </item>
+    
+    <item>
+      <title>Mushroom Cloud</title>
+      <link>https://www.mattcarrier.com/archive/2007-02-25-mushroom-cloud/</link>
+      <pubDate>Sun, 25 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-02-25-mushroom-cloud/</guid>
+      <description>Nuclear Explosion </description>
+    </item>
+    
+    <item>
+      <title>Sink</title>
+      <link>https://www.mattcarrier.com/archive/2007-02-24-sink/</link>
+      <pubDate>Sat, 24 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-02-24-sink/</guid>
+      <description>Bathroom Sink&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Space Skidster</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-20-space-skidster/</link>
+      <pubDate>Sat, 20 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-20-space-skidster/</guid>
+      <description>This was a model I sketched out and will hopefully come back to and finish.</description>
+    </item>
+    
+    <item>
+      <title>Lighsaber</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-14-lighsaber/</link>
+      <pubDate>Sun, 14 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-14-lighsaber/</guid>
+      <description>An elegant weapon for a more civilized age.</description>
+    </item>
+    
+    <item>
+      <title>Virtual High School</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school/</link>
+      <pubDate>Sun, 07 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school/</guid>
+      <description>The virtual high school or Windsor High school map was a project I did in my senior year for school. (2005) My goal was to create the whole school in a 3d environment which could be explored in the Half-Life 2 game engine. I figured the project would take between 80 and 100 hours. It ended up taking over 200 hours. This was a great learning experience for me. While it did end up taking me so long to do it, I enjoyed almost every minute of it.</description>
+    </item>
+    
+    <item>
+      <title>Virtual High School Install Guide</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school-install-guide/</link>
+      <pubDate>Sun, 07 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-07-virtual-high-school-install-guide/</guid>
+      <description>First you need Steam. http://www.steampowered.com Then you need to either buy a copy of Half-Life 2 or The Orange Box to run the mod. This can be picked up retail for between 20 and 50 dollars. It can also be purchased directly from steam.
+To install copy the &amp;ldquo;Virtual High School&amp;rdquo; folder (copy the folder that is in the same folder as the readme.txt file. Don&amp;rsquo;t copy the dated folder.) to your SourceMods folder in your steam directory.</description>
+    </item>
+    
+    <item>
+      <title>Custom computer chassis concept</title>
+      <link>https://www.mattcarrier.com/archive/2007-01-04-custom-computer-chassis-concept/</link>
+      <pubDate>Thu, 04 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2007-01-04-custom-computer-chassis-concept/</guid>
+      <description>This was a model I had to create for work. I had to change the color schemes and decals so our customer at my job could have a good visualization of what they were going to get.</description>
+    </item>
+    
+    <item>
+      <title>Glasses</title>
+      <link>https://www.mattcarrier.com/archive/2006-11-12-glasses/</link>
+      <pubDate>Sun, 12 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2006-11-12-glasses/</guid>
+      <description>An up close of the glasses from the table render. </description>
+    </item>
+    
+    <item>
+      <title>Table</title>
+      <link>https://www.mattcarrier.com/archive/2006-11-12-table/</link>
+      <pubDate>Sun, 12 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2006-11-12-table/</guid>
+      <description>This was a simulation I did to test out HDR.</description>
+    </item>
+    
+    <item>
+      <title>Pumpkin</title>
+      <link>https://www.mattcarrier.com/archive/2005-10-22-pumpkin/</link>
+      <pubDate>Sat, 22 Oct 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2005-10-22-pumpkin/</guid>
+      <description>Happy Halloween!</description>
+    </item>
+    
+    <item>
+      <title>Windsor High School Tour</title>
+      <link>https://www.mattcarrier.com/archive/2005-05-28-windsor-high-school-tour/</link>
+      <pubDate>Sat, 28 May 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2005-05-28-windsor-high-school-tour/</guid>
+      <description>The virtual high school or Windsor High school map was a project I did in my senior year for school. (2005) My goal was to create the whole school in a 3d environment which could be explored in the Half-Life 2 game engine.
+This is Windsor High School in Sonoma County California.</description>
+    </item>
+    
+    <item>
+      <title>Windsor High School - Screens</title>
+      <link>https://www.mattcarrier.com/archive/2005-05-27-windsor-high-school-screens/</link>
+      <pubDate>Fri, 27 May 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2005-05-27-windsor-high-school-screens/</guid>
+      <description>I did this as my senior project in high school. </description>
+    </item>
+    
+    <item>
+      <title>dm_lightsabers</title>
+      <link>https://www.mattcarrier.com/archive/2004-12-23-dm_lightsabers/</link>
+      <pubDate>Thu, 23 Dec 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2004-12-23-dm_lightsabers/</guid>
+      <description>I made this map because I found out a funny way to make a lightsabers. This is still a beta and has a few glitches but please give me your input on what you think of the map, and any ideas to go with it. I hope you enjoy this map. I know my friends and I did.
+Download dm_lightsabers (ic_lightsabersBETA3)</description>
+    </item>
+    
+    <item>
+      <title>fy_glassworld</title>
+      <link>https://www.mattcarrier.com/archive/2004-05-20-fy_glassworld/</link>
+      <pubDate>Thu, 20 May 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/archive/2004-05-20-fy_glassworld/</guid>
+      <description>This is a map made after one of my favorite Counter-Strike 1.6 maps fy_iceworld. The only difference is I added a little twist to the map for a little more crazy. DANGER ALL GLASS CAN EVENTUALLY BE BROKEN! (Except for the Outer 6 Walls)
+Download fy_glassworld (for Counter-Strike 1.6)</description>
     </item>
     
   </channel>
