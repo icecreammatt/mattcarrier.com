@@ -6,7 +6,7 @@
     <description>Recent content in coreos on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; Copyright 2015</copyright>
+    <copyright>&amp;copy; Copyright 2023</copyright>
     <lastBuildDate>Mon, 11 May 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/coreos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup CoreOS with iptables on DigitalOcean</title>
