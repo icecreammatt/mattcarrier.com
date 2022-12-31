@@ -5,34 +5,39 @@ languageCode: "en-us"
 title: "Matt Carrier"
 Paginate: 10
 Taxonomies:
-    tag: "tags"
+  tag: "tags"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 params:
-    RecentPosts: true
-    RecentPostDisplayCount: 8
-    Tags: true
-    GoogleAnalyticsId: "UA-25927979-1"
-    ga_api_key: "UA-25927979-1"
-    FullName: "Matt Carrier"
-    AvatarImage: "images/avatar.jpg"
-    avatar: "/images/avatar.jpg"
-    ProfilePicture: "/images/avatar.jpg"
-    AuthorName: "Matt Carrier"
-    author: "Matt Carrier"
-    subtitle: "Bits & Pixels"
-    landingPageRedirectUrl: "/about/"
-    BannerImage: "http://placehold.it/500x300"
-    GooglePlus: ""
-    Facebook: ""
-    github: "icecreammatt"
-    twitter: "icecreammatt"
-    stackoverflow: "873559"
-    linkedin: "carriermatt"
-    Resume: "/resume"
-    About: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playingguitar and consuming coffee."
-    bio: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee."
-    SiteTitle: "mattcarrier.com"
-    links:
-        Home : "/"
-        Blog: "/resume/"
-        About: "/about/"
+  RecentPosts: true
+  RecentPostDisplayCount: 8
+  Tags: true
+  GoogleAnalyticsId: "UA-25927979-1"
+  ga_api_key: "UA-25927979-1"
+  FullName: "Matt Carrier"
+  AvatarImage: "images/avatar.jpg"
+  avatar: "/images/avatar.jpg"
+  ProfilePicture: "/images/avatar.jpg"
+  AuthorName: "Matt Carrier"
+  author: "Matt Carrier"
+  subtitle: "Bits & Pixels"
+  landingPageRedirectUrl: "/about/"
+  BannerImage: "http://placehold.it/500x300"
+  GooglePlus: ""
+  Facebook: ""
+  github: "icecreammatt"
+  twitter: "icecreammatt"
+  stackoverflow: "873559"
+  linkedin: "carriermatt"
+  Resume: "/resume"
+  About: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playingguitar and consuming coffee."
+  bio: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee."
+  SiteTitle: "mattcarrier.com"
+  links:
+    Home: "/"
+    Blog: "/resume/"
+    About: "/about/"
 ---
+
