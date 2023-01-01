@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Hugo `0.108.0
+- Hugo `0.108.0`
 - nix
 
 ## Local Development
