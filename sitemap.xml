@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.mattcarrier.com/</loc>
-    <lastmod>2015-08-31T23:07:40-07:00</lastmod>
+    <loc>https://www.mattcarrier.com/tags/linux/</loc>
+    <lastmod>2023-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.mattcarrier.com/post/resume/</loc>
-    <lastmod>2015-08-31T23:07:40-07:00</lastmod>
+    <loc>https://www.mattcarrier.com/</loc>
+    <lastmod>2023-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/nix/</loc>
+    <lastmod>2023-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</loc>
+    <lastmod>2023-02-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/</loc>
+    <lastmod>2023-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/</loc>
+    <lastmod>2023-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/resume/</loc>
     <lastmod>2015-08-31T23:07:40-07:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</loc>
     <lastmod>2015-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/go/</loc>
-    <lastmod>2015-08-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/linux/</loc>
-    <lastmod>2015-08-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/</loc>
     <lastmod>2015-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/winkhub/</loc>
