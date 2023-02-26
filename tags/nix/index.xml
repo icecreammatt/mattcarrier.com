@@ -14,8 +14,7 @@
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
-&lt;p&gt;I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against &lt;a href=&#34;https://en.wikipedia.org/wiki/Ncurses&#34;&gt;ncurses&lt;/a&gt; which isn&amp;rsquo;t installed out of the box on most machines. I&amp;rsquo;ve been dual booting &lt;a href=&#34;nixos.org/&#34;&gt;NixOS&lt;/a&gt; for some time now on my gaming PC and I thought it was time to start using Nix &lt;a href=&#34;https://nixos.wiki/wiki/Flakes&#34;&gt;Flakes&lt;/a&gt; with my own projects.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against &lt;a href=&#34;https://en.wikipedia.org/wiki/Ncurses&#34;&gt;ncurses&lt;/a&gt; which isn&amp;rsquo;t installed out of the box on most machines. I&amp;rsquo;ve been dual booting &lt;a href=&#34;nixos.org/&#34;&gt;NixOS&lt;/a&gt; for some time now on my gaming PC and I thought it was time to start using Nix &lt;a href=&#34;https://nixos.wiki/wiki/Flakes&#34;&gt;Flakes&lt;/a&gt; with my own projects.&lt;/p&gt;</description>
     </item>
     
   </channel>
