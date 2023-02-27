@@ -34,6 +34,11 @@
 
       packages = with pkgs; [ hugo ];
 
+      buildPhase = "
+        ln -sf ${vienna} themes/vienna
+        make build
+      ";
+
       # Setting up the environment variables you need during development.
 
       # Todo figure out why I can't use clang on Asahi but can on Darwin

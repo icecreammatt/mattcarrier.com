@@ -12,8 +12,7 @@
 
 ## Build
 
-- `nix develop` 
-- `make build`
+- `nix develop --build` 
 - This will use a pinned version of hugo (`0.106.0`) to ensure Hugo API changes do not break build as what happene between `0.54.0` and the current release.
 
 ## Release
