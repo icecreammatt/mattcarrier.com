@@ -2,7 +2,7 @@ watch:
 	hugo server --theme=vienna --buildDrafts --watch --log=true
 
 build:
-	nix-shell --pure
+	hugo --theme=vienna
 
 clean:
 	rm -rf public/*
