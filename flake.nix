@@ -24,18 +24,13 @@
     # Add the system/architecture you would like to support here. Note that not
     # all packages in the official nixpkgs support all platforms.
     "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"
-  ] (system: let 
-      pkgs = import nixpkgs { 
-        inherit system; 
-
-        overlay = [];
-  };
+  ] (system: let  pkgs = import nixpkgs { inherit system; };
   in {
 
     # This block here is used when running `nix develop`
     devShells.default = pkgs.mkShell rec {
       # Update the name to something that suites your project.
-      name = "hugo";
+      name = "website";
 
       packages = with pkgs; [ hugo ];
 
@@ -48,14 +43,12 @@
         icon = "f121";
       in ''
         export PS1="$(echo -e '\u${icon}') {\[$(tput sgr0)\]\[\033[38;5;228m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]} (${name}) \\$ \[$(tput sgr0)\]"
-        hugo version
-        make build
       '';
     };
 
     # This is used when running `nix build`
     packages.default = pkgs.stdenv.mkDerivation rec {
-      name = "hugo";
+      name = "website";
       version = "0.0.1";
 
       src = self;
