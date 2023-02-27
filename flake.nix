@@ -35,6 +35,7 @@
       packages = with pkgs; [ hugo ];
 
       buildPhase = "
+        mkdir themes
         ln -sf ${vienna} themes/vienna
         make build
       ";
@@ -61,6 +62,7 @@
       buildInputs = [ pkgs.hugo ];
 
       buildPhase = "
+        mkdir themes
         ln -sf ${vienna} themes/vienna
         make build
       ";
