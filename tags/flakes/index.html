@@ -3,17 +3,17 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Docker &middot;  Matt Carrier" />
+  <meta property="og:title" content=" flakes &middot;  Matt Carrier" />
   
   <meta property="og:site_name" content="Matt Carrier" />
-  <meta property="og:url" content="https://www.mattcarrier.com/tags/docker/" />
+  <meta property="og:url" content="https://www.mattcarrier.com/tags/flakes/" />
   
   
   <meta property="og:type" content="website" />
   
 
   <title>
-     Docker &middot;  Matt Carrier
+     flakes &middot;  Matt Carrier
   </title>
 
   <link rel="stylesheet" href="https://www.mattcarrier.com/css/bootstrap.min.css" />
@@ -89,28 +89,57 @@
   <main class="container">
 
 <section class="article-list">
-  <h1>Docker</h1>
+  <h1>flakes</h1>
   
   <hr/>
   <article>
   <header>
-    <h2><a href="https://www.mattcarrier.com/post/core-os-iptables/">Setup CoreOS with iptables on DigitalOcean</a></h2>
+    <h2><a href="https://www.mattcarrier.com/post/nix-hostname/">Nix flake hostname troubleshooting</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2015-05-11T00:00:00Z">
-          May 11, 2015
+        <time datetime="2023-03-31T00:00:00Z">
+          Mar 31, 2023
         </time>
       </div>
     </div>
   </header>
   <div>
-    <p>This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.</p>
+    <p>Have you seen this error?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>building the system configuration...
+</span></span><span style="display:flex;"><span>error: flake <span style="color:#e6db74">&#39;git+file:///Users/matt/nixfiles&#39;</span> does not provide attribute <span style="color:#e6db74">&#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&#39;</span>, <span style="color:#e6db74">&#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&#39;</span> or <span style="color:#e6db74">&#39;darwinConfigurations.Bebop.system&#39;</span>
+</span></span></code></pre></div><p>I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.</p>
   </div>
   
   <footer>
     <ul class="pager">
-      <li class="next"><a href="https://www.mattcarrier.com/post/core-os-iptables/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="https://www.mattcarrier.com/post/nix-hostname/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+  
+</article>
+
+  
+  <hr/>
+  <article>
+  <header>
+    <h2><a href="https://www.mattcarrier.com/post/nix-flake-for-build-environments/">Nix flakes for development</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2023-02-26T00:00:00Z">
+          Feb 26, 2023
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p><strong>Background:</strong> I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against <a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a> which isn&rsquo;t installed out of the box on most machines. I&rsquo;ve been dual booting <a href="nixos.org/">NixOS</a> for some time now on my gaming PC and I thought it was time to start using Nix <a href="https://nixos.wiki/wiki/Flakes">Flakes</a> with my own projects.</p>
+  </div>
+  
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="https://www.mattcarrier.com/post/nix-flake-for-build-environments/">Read more <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
   

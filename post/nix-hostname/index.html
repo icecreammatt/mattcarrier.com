@@ -3,17 +3,26 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Docker &middot;  Matt Carrier" />
+  <meta property="og:title" content=" Nix flake hostname troubleshooting &middot;  Matt Carrier" />
   
   <meta property="og:site_name" content="Matt Carrier" />
-  <meta property="og:url" content="https://www.mattcarrier.com/tags/docker/" />
+  <meta property="og:url" content="https://www.mattcarrier.com/post/nix-hostname/" />
   
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2023-03-31T00:00:00Z" />
+  
+  <meta property="og:article:tag" content="nix" />
+  
+  <meta property="og:article:tag" content="flakes" />
+  
+  <meta property="og:article:tag" content="linux" />
+  
   
 
   <title>
-     Docker &middot;  Matt Carrier
+     Nix flake hostname troubleshooting &middot;  Matt Carrier
   </title>
 
   <link rel="stylesheet" href="https://www.mattcarrier.com/css/bootstrap.min.css" />
@@ -88,36 +97,82 @@
   </header>
   <main class="container">
 
-<section class="article-list">
-  <h1>Docker</h1>
-  
-  <hr/>
-  <article>
+
+<article>
   <header>
-    <h2><a href="https://www.mattcarrier.com/post/core-os-iptables/">Setup CoreOS with iptables on DigitalOcean</a></h2>
+    <h1 class="text-primary">Nix flake hostname troubleshooting</h1>
     <div class="post-meta clearfix">
+    
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2015-05-11T00:00:00Z">
-          May 11, 2015
+        <time datetime="2023-03-31T00:00:00Z">
+          Mar 31, 2023
         </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/nix">#nix</a></span>
+        
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/flakes">#flakes</a></span>
+        
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/linux">#linux</a></span>
+        
       </div>
     </div>
   </header>
-  <div>
-    <p>This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.</p>
-  </div>
-  
+  <section>
+    <p>Have you seen this error?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>building the system configuration...
+</span></span><span style="display:flex;"><span>error: flake <span style="color:#e6db74">&#39;git+file:///Users/matt/nixfiles&#39;</span> does not provide attribute <span style="color:#e6db74">&#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&#39;</span>, <span style="color:#e6db74">&#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&#39;</span> or <span style="color:#e6db74">&#39;darwinConfigurations.Bebop.system&#39;</span>
+</span></span></code></pre></div><p>I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>Bebop <span style="color:#f92672">=</span> darwin<span style="color:#f92672">.</span>lib<span style="color:#f92672">.</span>darwinSystem {
+</span></span><span style="display:flex;"><span>  system <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aarch64-darwin&#34;</span>;
+</span></span><span style="display:flex;"><span>  specialArgs <span style="color:#f92672">=</span> { user <span style="color:#f92672">=</span> userPersonal inputs; };
+</span></span><span style="display:flex;"><span>  modules <span style="color:#f92672">=</span> [ <span style="color:#f92672">...</span> ]
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>hostname</code> or where above says <code>Bebop</code> in this section must match your laptops hostname in the network settings.
+In my case my laptop&rsquo;s hostname is normally <code>Bebop</code> but for a short time I had manually changed it to test something.
+This caused me much confusion for weeks till I made the connection that it was the cause of the error I was seeing when running
+the <code>darwin-rebuild switch</code> command.</p>
+<p>This totally makes sense to me now, but drove me crazy for over a few weeks before I figured out why my flake wouldn&rsquo;t install.
+Since there were no changes made in the git repo it wasn&rsquo;t obvious to me what had happened.</p>
+<p>Hopefully this saves someone else from confusion in the future.</p>
+  </section>
   <footer>
+    
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2 col-sm-2 col-xs-12">
+        
+        <img alt="Author Avatar" src="/images/avatar.jpg" />
+        
+      </div>
+      <div class="author-meta col-md-10 col-sm-10 col-xs-12">
+        
+        <h1 class="author-name text-primary">Matt Carrier</h1>
+        
+        
+        <div class="author-bio">I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee.</div>
+        
+      </div>
+      
+    </section>
     <ul class="pager">
-      <li class="next"><a href="https://www.mattcarrier.com/post/core-os-iptables/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      
+      <li class="previous"><a href="https://www.mattcarrier.com/post/nix-flake-for-build-environments/"><span aria-hidden="true">&larr;</span>Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer<span aria-hidden="true">&rarr;</span></a></li>
+      
     </ul>
   </footer>
-  
 </article>
 
-  
-</section>
   
 <aside>
     <div class="row top-buffer">
@@ -325,5 +380,4 @@
   
 </body>
 </html>
-
 

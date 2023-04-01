@@ -94,6 +94,35 @@
   <hr/>
   <article>
   <header>
+    <h2><a href="https://www.mattcarrier.com/post/nix-hostname/">Nix flake hostname troubleshooting</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2023-03-31T00:00:00Z">
+          Mar 31, 2023
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>Have you seen this error?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>building the system configuration...
+</span></span><span style="display:flex;"><span>error: flake <span style="color:#e6db74">&#39;git+file:///Users/matt/nixfiles&#39;</span> does not provide attribute <span style="color:#e6db74">&#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&#39;</span>, <span style="color:#e6db74">&#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&#39;</span> or <span style="color:#e6db74">&#39;darwinConfigurations.Bebop.system&#39;</span>
+</span></span></code></pre></div><p>I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.</p>
+  </div>
+  
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="https://www.mattcarrier.com/post/nix-hostname/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+  
+</article>
+
+  
+  <hr/>
+  <article>
+  <header>
     <h2><a href="https://www.mattcarrier.com/post/nix-flake-for-build-environments/">Nix flakes for development</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
@@ -292,6 +321,10 @@
                   <div class="list-group">
                       
                         
+                          <a href="/post/nix-hostname/" class="list-group-item">Nix flake hostname troubleshooting</a>
+                         
+                      
+                        
                           <a href="/post/nix-flake-for-build-environments/" class="list-group-item">Nix flakes for development</a>
                          
                       
@@ -315,10 +348,6 @@
                       
                         
                           <a href="/post/enable-surround-sound-hdmi-osx/" class="list-group-item">How to enable 5.1 surround sound in VLC on OSX over HDMI</a>
-                         
-                      
-                        
-                          <a href="/linux-web-services-part-i/" class="list-group-item">Linux web services Part I</a>
                          
                        
                   </div>
@@ -355,6 +384,11 @@
                         entertainment
                     </a>
                     
+                    <a href="https://www.mattcarrier.com/tags/flakes" class="list-group-item">
+                        <span class="badge">2</span>
+                        flakes
+                    </a>
+                    
                     <a href="https://www.mattcarrier.com/tags/go" class="list-group-item">
                         <span class="badge">1</span>
                         go
@@ -376,12 +410,12 @@
                     </a>
                     
                     <a href="https://www.mattcarrier.com/tags/linux" class="list-group-item">
-                        <span class="badge">6</span>
+                        <span class="badge">7</span>
                         linux
                     </a>
                     
                     <a href="https://www.mattcarrier.com/tags/nix" class="list-group-item">
-                        <span class="badge">1</span>
+                        <span class="badge">2</span>
                         nix
                     </a>
                     
