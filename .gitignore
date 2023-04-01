@@ -2,3 +2,4 @@ public/*
 .DS_store
 .hugo_build.lock
 public
+.direnv/
