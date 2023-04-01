@@ -3,6 +3,7 @@ title: Nix flakes for development
 date: 2023-02-26
 tags:
     - "nix"
+    - "flakes"
     - "linux"
 ---
 **Background:** I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against [ncurses](https://en.wikipedia.org/wiki/Ncurses) which isn't installed out of the box on most machines. I've been dual booting [NixOS](nixos.org/) for some time now on my gaming PC and I thought it was time to start using Nix [Flakes](https://nixos.wiki/wiki/Flakes) with my own projects.
