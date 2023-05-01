@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blender on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/tags/blender/</link>
+    <description>Recent content in blender on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023</copyright>
+    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/blender/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blender Set Frame Plugin</title>
+      <link>https://www.mattcarrier.com/post/blender-set-frame-plugin/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/blender-set-frame-plugin/</guid>
+      <description>&lt;p&gt;Blender plugin to quickly set the render Frame Range start and end property from the currently selected sequence clip.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick set frame start and end button &lt;a href=&#34;https://github.com/icecreammatt/blender-set-frame-range/&#34;&gt;Plugin Download&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

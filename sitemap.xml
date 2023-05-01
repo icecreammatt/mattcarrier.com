@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mattcarrier.com/tags/blender/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/blender-set-frame-plugin/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/python/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/video-editing/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.mattcarrier.com/tags/flakes/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/linux/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.mattcarrier.com/</loc>
-    <lastmod>2023-03-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.mattcarrier.com/tags/nix/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/nix-hostname/</loc>
-    <lastmod>2023-03-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/post/</loc>
-    <lastmod>2023-03-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</loc>
@@ -79,9 +91,6 @@
   </url><url>
     <loc>https://www.mattcarrier.com/tags/xcode/</loc>
     <lastmod>2013-04-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/python/</loc>
-    <lastmod>2013-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/flask-dreamhost-setup/</loc>
     <lastmod>2013-03-04T00:00:00+00:00</lastmod>
