@@ -122,28 +122,28 @@
     </div>
   </header>
   <section>
-    <p>Blender plugin to quickly set the render Frame Range start and end property from the currently selected sequence clip.</p>
+    <p>Blender plugin to quickly set the render frame range start and end property from the currently selected sequence clip.</p>
 <ul>
 <li>Quick set frame start and end button <a href="https://github.com/icecreammatt/blender-set-frame-range/">Plugin Download</a>.</li>
 </ul>
 <h2 id="editing-and-exporting-old-vhs-footage-in-blender">Editing and exporting old VHS footage in Blender</h2>
-<p>I&rsquo;ve been recently editing some old family movies in blender. Taking 2 hour long VHS tapes I&rsquo;ve scanned into a computer a few years ago and editing them down into smaller segments based on the clip contents.</p>
+<p>I&rsquo;ve been editing some old family movies in Blender by scanning VHS tapes into a computer and then cutting them into smaller segments based on the clip contents.</p>
 <h2 id="my-workflow">My workflow</h2>
 <ul>
-<li>Importing the video clip into the blender sequence editor.</li>
-<li>Find all the blue gaps and VHS noise in between video sections. (I&rsquo;m looking to automate placing cut markers next with OpenCV)</li>
-<li>Cutting the video into clean segments to remove noise and empty footage.</li>
-<li>Trimming out VHS noise on edges of each frame. (Cropping sides)</li>
-<li>Setting the Frame Start and End range to the current clip.</li>
-<li>Adding a timestamp and title to each segment to be used as the export title later.</li>
+<li>Import the video clip into the Blender sequence editor.</li>
+<li>Locate all of the blue gaps and VHS noise in between videos. (I&rsquo;m looking to automate placing cut markers next with OpenCV)</li>
+<li>Cut the video into clean segments to remove noise and empty footage.</li>
+<li>Trim the VHS noise from the edges of each frame. (Cropping edges)</li>
+<li>Set the frame start and end range to the current clip.</li>
+<li>Add a timestamp and title to each segment to be used as the export title.</li>
 <li>Render each section to disk.</li>
 </ul>
-<p>To render animations in Blender the Frame start and end properties must be set to tell the rendering when to start and stop. When I initially started working on this I could not easily find the currently viewed frame in Blender despite looking all over the UI after upgrading to 2.5. So I decided to make a plugin to make this easier to do. The plugin is a simple button that takes the currently selected clip and sets the Frame Range property for export to the highlighted clips start and end frame.</p>
+<p>To render animations in Blender, the frame start and end properties must be set in order to provide the rendering start and stop times. When I began working on this, I could not easily find the active frame in Blender despite looking all over the UI after upgrading to 2.5. I ended up building a browser plugin to make this process more efficient. The plugin is a button that takes the currently selected clip and sets the frame range property for export to the highlighted clips start and end frames.</p>
 <h2 id="oops">Oops!</h2>
-<p>After making that plugin and reopening Blender a week later I noticed buried in one of the menus an option that does this exact thing I was looking for&hellip; <code>Sequencer &gt; View &gt; Range &gt; Set Frame Range to Strip</code>. Also the UI was now displaying the current frame which previously was not visible. I&rsquo;m not sure why this wasn&rsquo;t visible before. I was confused why it was removed to begin with as it was in older versions of Blender. All I can figure is I removed it from the UI by accident and restarting brought it back.</p>
-<p>I can probably now bind the newly found menu option to a hotkey now that I know what the built in option is, but since I&rsquo;ve already written the plugin I wanted to share it here.</p>
+<p>A week after building the plugin, I opened Blender and noticed buried in one of their menus is an option that does the exact thing I was looking for: <code>Sequencer &gt; View &gt; Range &gt; Set Frame Range to Strip</code>. Additionally the UI was now displaying the current frame which was not previously visible. I was confused why it was removed to begin with, as it was in older versions of Blender. All I can figure is that I removed it from the UI by accident and restarting brought it back.</p>
+<p>I can bind the newly found menu option to a hotkey now that I know where the built in option is, but since I&rsquo;ve already wrote the plugin, I wanted to share it here.</p>
 <h2 id="next-steps">Next Steps</h2>
-<p>This was not a wasted effort though as it gave me a chance to familiarize myself with the Blender plugin API. It also put me on the right path to build a more advanced one that automates exporting many clips in the current scene to separate videos. I&rsquo;ll be open sourcing that plugin very soon as well.</p>
+<p>This was not a wasted effort as it gave me a chance to familiarize myself with the Blender plugin API. It also directed me to build a more advanced plugin that automates exporting many clips from a current scene into separate videos that I’ll be open sourcing soon.</p>
 <h2 id="instructions">Instructions</h2>
 <ul>
 <li>To install, visit <a href="https://github.com/icecreammatt/blender-set-frame-range/">https://github.com/icecreammatt/blender-set-frame-range/</a> and download the zip file in the repo.</li>
