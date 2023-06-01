@@ -15,9 +15,9 @@ Ever want to convert a Google Slides presentation to images without having to sa
 
 This will then convert the PDF to a series of images at 300 DPI.  
 
-<!--more-->
-
 [`fish` shell](https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241) script for quick access: `pdf-to-png ./my-pdf-file.pdf`
+
+<!--more-->
 
 ```
 function pdf-to-png
