@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>imagemagick on Matt Carrier</title>
+    <link>https://www.mattcarrier.com/tags/imagemagick/</link>
+    <description>Recent content in imagemagick on Matt Carrier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023</copyright>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/imagemagick/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Export PDFs to PNGs</title>
+      <link>https://www.mattcarrier.com/post/export-pdf-to-png/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/export-pdf-to-png/</guid>
+      <description>&lt;p&gt;Ever want to convert a Google Slides presentation to images without having to save each one manually?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Export from Google Slides to PDF. &lt;code&gt;File &amp;gt; Download &amp;gt; PDF&lt;/code&gt; This will let us download all the images at once.&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;imagemagickBig&lt;/code&gt; &lt;a href=&#34;https://search.nixos.org/packages?channel=22.11&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=imagemagickBig&#34;&gt;nix&lt;/a&gt; package or installing with instructions from &lt;a href=&#34;https://imagemagick.org/index.php&#34;&gt;here&lt;/a&gt; you can then run the following command in the CLI:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;convert -density 300 -quality 100 my-download.{pdf,png}&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

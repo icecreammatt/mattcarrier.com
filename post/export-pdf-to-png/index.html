@@ -3,17 +3,26 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" python &middot;  Matt Carrier" />
+  <meta property="og:title" content=" Export PDFs to PNGs &middot;  Matt Carrier" />
   
   <meta property="og:site_name" content="Matt Carrier" />
-  <meta property="og:url" content="https://www.mattcarrier.com/tags/python/" />
+  <meta property="og:url" content="https://www.mattcarrier.com/post/export-pdf-to-png/" />
   
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2023-05-31T00:00:00Z" />
+  
+  <meta property="og:article:tag" content="nix" />
+  
+  <meta property="og:article:tag" content="imagemagick" />
+  
+  <meta property="og:article:tag" content="fish" />
+  
   
 
   <title>
-     python &middot;  Matt Carrier
+     Export PDFs to PNGs &middot;  Matt Carrier
   </title>
 
   <link rel="stylesheet" href="https://www.mattcarrier.com/css/bootstrap.min.css" />
@@ -88,65 +97,85 @@
   </header>
   <main class="container">
 
-<section class="article-list">
-  <h1>python</h1>
-  
-  <hr/>
-  <article>
+
+<article>
   <header>
-    <h2><a href="https://www.mattcarrier.com/post/blender-set-frame-plugin/">Blender Set Frame Plugin</a></h2>
+    <h1 class="text-primary">Export PDFs to PNGs</h1>
     <div class="post-meta clearfix">
+    
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2023-04-30T00:00:00Z">
-          Apr 30, 2023
+        <time datetime="2023-05-31T00:00:00Z">
+          May 31, 2023
         </time>
+      </div>
+    
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/nix">#nix</a></span>
+        
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/imagemagick">#imagemagick</a></span>
+        
+        <span class="post-tag small"><a href="https://www.mattcarrier.com/tags/fish">#fish</a></span>
+        
       </div>
     </div>
   </header>
-  <div>
-    <p>Blender plugin to quickly set the render frame range start and end property from the currently selected sequence clip.</p>
-<ul>
-<li>Quick set frame start and end button <a href="https://github.com/icecreammatt/blender-set-frame-range/">Plugin Download</a>.</li>
-</ul>
-  </div>
-  
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="https://www.mattcarrier.com/post/blender-set-frame-plugin/">Read more <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
-  
-</article>
+  <section>
+    <p>Ever want to convert a Google Slides presentation to images without having to save each one manually?</p>
+<ol>
+<li>Export from Google Slides to PDF. <code>File &gt; Download &gt; PDF</code> This will let us download all the images at once.</li>
+<li>Using the <code>imagemagickBig</code> <a href="https://search.nixos.org/packages?channel=22.11&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=imagemagickBig">nix</a> package or installing with instructions from <a href="https://imagemagick.org/index.php">here</a> you can then run the following command in the CLI:</li>
+</ol>
+<blockquote>
+<p><code>convert -density 300 -quality 100 my-download.{pdf,png}</code></p>
+</blockquote>
+<p>This will then convert the PDF to a series of images at 300 DPI.</p>
+<p><a href="https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241"><code>fish</code> shell</a> script for quick access: <code>pdf-to-png ./my-pdf-file.pdf</code></p>
+<pre tabindex="0"><code>function pdf-to-png
+    if test (count $argv) -lt 1
+        echo &#34;pdf-to-png &lt;filename&gt;&#34;
+        return 1
+    end
 
-  
-  <hr/>
-  <article>
-  <header>
-    <h2><a href="https://www.mattcarrier.com/flask-dreamhost-setup/">Setting up and deploying Python Flask to Dreamhost</a></h2>
-    <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Posted on
-        <time datetime="2013-03-04T00:00:00Z">
-          Mar 4, 2013
-        </time>
+    set fileName (echo $argv | sed &#39;s/.pdf//&#39;)
+
+    echo convert --run &#34;convert -density 300 -quality 100 $filename.{pdf,png}&#34;
+    convert -density 300 -quality 100 $fileName.{pdf,png} &amp;&amp; ls *.png
+end
+</code></pre>
+  </section>
+  <footer>
+    
+    
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2 col-sm-2 col-xs-12">
+        
+        <img alt="Author Avatar" src="/images/avatar.jpg" />
+        
       </div>
-    </div>
-  </header>
-  <div>
-    <p>I have a few applications I have written that run on <a title="Flask" href="http://flask.pocoo.org" target="_blank">Flask</a>. Every time I would go to deploy a new application I would always seem to forget one of the minor details and end up with the ugly <code>An error occurred importing your passenger_wsgi.py</code></p>
-  </div>
-  
-  <footer>
+      <div class="author-meta col-md-10 col-sm-10 col-xs-12">
+        
+        <h1 class="author-name text-primary">Matt Carrier</h1>
+        
+        
+        <div class="author-bio">I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee.</div>
+        
+      </div>
+      
+    </section>
     <ul class="pager">
-      <li class="next"><a href="https://www.mattcarrier.com/flask-dreamhost-setup/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      
+      <li class="previous"><a href="https://www.mattcarrier.com/post/blender-set-frame-plugin/"><span aria-hidden="true">&larr;</span>Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer<span aria-hidden="true">&rarr;</span></a></li>
+      
     </ul>
   </footer>
-  
 </article>
 
-  
-</section>
   
 <aside>
     <div class="row top-buffer">
@@ -374,5 +403,4 @@
   
 </body>
 </html>
-
 

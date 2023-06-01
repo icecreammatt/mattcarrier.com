@@ -94,6 +94,40 @@
   <hr/>
   <article>
   <header>
+    <h2><a href="https://www.mattcarrier.com/post/export-pdf-to-png/">Export PDFs to PNGs</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2023-05-31T00:00:00Z">
+          May 31, 2023
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>Ever want to convert a Google Slides presentation to images without having to save each one manually?</p>
+<ol>
+<li>Export from Google Slides to PDF. <code>File &gt; Download &gt; PDF</code> This will let us download all the images at once.</li>
+<li>Using the <code>imagemagickBig</code> <a href="https://search.nixos.org/packages?channel=22.11&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=imagemagickBig">nix</a> package or installing with instructions from <a href="https://imagemagick.org/index.php">here</a> you can then run the following command in the CLI:</li>
+</ol>
+<blockquote>
+<p><code>convert -density 300 -quality 100 my-download.{pdf,png}</code></p>
+</blockquote>
+<p>This will then convert the PDF to a series of images at 300 DPI.</p>
+  </div>
+  
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="https://www.mattcarrier.com/post/export-pdf-to-png/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+  
+</article>
+
+  
+  <hr/>
+  <article>
+  <header>
     <h2><a href="https://www.mattcarrier.com/post/blender-set-frame-plugin/">Blender Set Frame Plugin</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
@@ -350,6 +384,10 @@
                   <div class="list-group">
                       
                         
+                          <a href="/post/export-pdf-to-png/" class="list-group-item">Export PDFs to PNGs</a>
+                         
+                      
+                        
                           <a href="/post/blender-set-frame-plugin/" class="list-group-item">Blender Set Frame Plugin</a>
                          
                       
@@ -373,10 +411,6 @@
                       
                         
                           <a href="/post/hacking-the-winkhub-part-1/" class="list-group-item">Hacking the Winkhub</a>
-                         
-                      
-                        
-                          <a href="/post/core-os-iptables/" class="list-group-item">Setup CoreOS with iptables on DigitalOcean</a>
                          
                        
                   </div>
@@ -418,6 +452,11 @@
                         entertainment
                     </a>
                     
+                    <a href="https://www.mattcarrier.com/tags/fish" class="list-group-item">
+                        <span class="badge">1</span>
+                        fish
+                    </a>
+                    
                     <a href="https://www.mattcarrier.com/tags/flakes" class="list-group-item">
                         <span class="badge">2</span>
                         flakes
@@ -426,6 +465,11 @@
                     <a href="https://www.mattcarrier.com/tags/go" class="list-group-item">
                         <span class="badge">1</span>
                         go
+                    </a>
+                    
+                    <a href="https://www.mattcarrier.com/tags/imagemagick" class="list-group-item">
+                        <span class="badge">1</span>
+                        imagemagick
                     </a>
                     
                     <a href="https://www.mattcarrier.com/tags/ios" class="list-group-item">
@@ -449,7 +493,7 @@
                     </a>
                     
                     <a href="https://www.mattcarrier.com/tags/nix" class="list-group-item">
-                        <span class="badge">2</span>
+                        <span class="badge">3</span>
                         nix
                     </a>
                     
