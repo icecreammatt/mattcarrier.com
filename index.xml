@@ -22,7 +22,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;convert -density 300 -quality 100 my-download.{pdf,png}&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;</description>
+&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241&#34;&gt;&lt;code&gt;fish&lt;/code&gt; shell&lt;/a&gt; script for quick access: &lt;code&gt;pdf-to-png ./my-pdf-file.pdf&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
