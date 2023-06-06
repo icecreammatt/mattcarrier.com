@@ -5,8 +5,6 @@ aliases = [ "/resume" ]
 +++
 <!--more-->
 
-tst
-
 ## Education
 **Sonoma State University:** Rohnert Park, CA  
 
