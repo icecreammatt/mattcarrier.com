@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2023</copyright>
-    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffing contents of docker containers</title>
+      <link>https://www.mattcarrier.com/post/diffing-docker-containers/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/diffing-docker-containers/</guid>
+      <description>&lt;p&gt;Recently I worked on a project where a large refactor had taken place but I wanted to ensure that there was no changes to the built output of the docker container. So while the diff in Github was quite large with many files moved around the output should remain almost identical aside from a few extra files removed.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Export PDFs to PNGs</title>
       <link>https://www.mattcarrier.com/post/export-pdf-to-png/</link>
