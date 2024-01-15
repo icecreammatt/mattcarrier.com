@@ -5,6 +5,7 @@ nix build
 git clone --branch gh-pages git@github.com:icecreammatt/mattcarrier.com public
 cp -r result/* public/
 pushd public/
+echo "www.mattcarrier.com" > CNAME
 git add .
 git commit -m "updating"
 git push
