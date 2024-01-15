@@ -3,7 +3,7 @@
 make clean
 nix build
 git clone --branch gh-pages git@github.com:icecreammatt/mattcarrier.com public
-cp -r result/* public/
+cp -r --no-preserve=mode result/* public/
 pushd public/
 echo "www.mattcarrier.com" > CNAME
 git add .
