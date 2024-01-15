@@ -1,6 +1,6 @@
 ---
 baseurl: "https://www.mattcarrier.com/"
-copyright: "&copy; Copyright 2023"
+copyright: "&copy; Copyright 2024"
 languageCode: "en-us"
 title: "Matt Carrier"
 Paginate: 10
@@ -31,7 +31,7 @@ params:
   stackoverflow: "873559"
   linkedin: "carriermatt"
   Resume: "/resume"
-  About: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playingguitar and consuming coffee."
+  About: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee."
   bio: "I am a pixel connoisseur who enjoys the finer details of a Bresenham line. When not staring at arrays of smoothly rendered pixels I enjoy playing guitar and consuming coffee."
   SiteTitle: "mattcarrier.com"
   links:
