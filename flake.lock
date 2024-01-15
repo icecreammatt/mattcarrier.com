@@ -41,11 +41,11 @@
     "vienna": {
       "flake": false,
       "locked": {
-        "lastModified": 1672455420,
-        "narHash": "sha256-SUBX8gvvNAx2Xnzct6p9SlciTPsnJtnfu1WeytMs6rs=",
+        "lastModified": 1705299101,
+        "narHash": "sha256-yT+6YBnN+MF5hCGMNph90IruLwoGQFcllYR2RSW0+hI=",
         "owner": "icecreammatt",
         "repo": "vienna",
-        "rev": "3e9f87f74161b8d373bc19158ede41dca29c758f",
+        "rev": "564a5c28a1e39b853632d1f84e39c8eed398c611",
         "type": "github"
       },
       "original": {
