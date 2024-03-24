@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mattcarrier.com/tags/flakes/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/linux/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/nix/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/poetry2nix/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/python/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/tags/toolong/</loc>
+    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/resume/</loc>
+    <lastmod>2023-08-03T23:30:00-07:00</lastmod>
+  </url><url>
     <loc>https://www.mattcarrier.com/post/diffing-docker-containers/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,22 +41,10 @@
     <loc>https://www.mattcarrier.com/tags/fish/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.mattcarrier.com/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/post/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.mattcarrier.com/post/export-pdf-to-png/</loc>
     <lastmod>2023-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/imagemagick/</loc>
-    <lastmod>2023-05-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/nix/</loc>
     <lastmod>2023-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/blender/</loc>
@@ -35,26 +53,14 @@
     <loc>https://www.mattcarrier.com/post/blender-set-frame-plugin/</loc>
     <lastmod>2023-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.mattcarrier.com/tags/python/</loc>
-    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.mattcarrier.com/tags/video-editing/</loc>
     <lastmod>2023-04-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/flakes/</loc>
-    <lastmod>2023-03-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/tags/linux/</loc>
-    <lastmod>2023-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/nix-hostname/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</loc>
     <lastmod>2023-02-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/post/resume/</loc>
-    <lastmod>2015-08-31T23:07:40-07:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</loc>
     <lastmod>2015-08-28T00:00:00+00:00</lastmod>

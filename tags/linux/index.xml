@@ -1,81 +1,69 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Matt Carrier</title>
+    <title>Linux on Matt Carrier</title>
     <link>https://www.mattcarrier.com/tags/linux/</link>
-    <description>Recent content in linux on Matt Carrier</description>
+    <description>Recent content in Linux on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; Copyright 2023</copyright>
-    <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Copyright 2024</copyright>
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mattcarrier.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Packaging python app with poetry2nix using nix flakes</title>
+      <link>https://www.mattcarrier.com/post/poetry2nix/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.mattcarrier.com/post/poetry2nix/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt; I have some backup logs that have failures I wanted to search and recently came across &lt;a href=&#34;https://github.com/Textualize/toolong&#34;&gt;toolong&lt;/a&gt; but it is not currently in nixpkgs. I figured this is a good chance to try out poetry2nix I keep reading about and went through the process of packaging this so I could use it easily with nix.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nix flake hostname troubleshooting</title>
       <link>https://www.mattcarrier.com/post/nix-hostname/</link>
       <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/post/nix-hostname/</guid>
-      <description>&lt;p&gt;Have you seen this error?&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;building the system configuration...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: flake &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git+file:///Users/matt/nixfiles&amp;#39;&lt;/span&gt; does not provide attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Have you seen this error?&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;building the system configuration...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: flake &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git+file:///Users/matt/nixfiles&amp;#39;&lt;/span&gt; does not provide attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Nix flakes for development</title>
       <link>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against &lt;a href=&#34;https://en.wikipedia.org/wiki/Ncurses&#34;&gt;ncurses&lt;/a&gt; which isn&amp;rsquo;t installed out of the box on most machines. I&amp;rsquo;ve been dual booting &lt;a href=&#34;nixos.org/&#34;&gt;NixOS&lt;/a&gt; for some time now on my gaming PC and I thought it was time to start using Nix &lt;a href=&#34;https://nixos.wiki/wiki/Flakes&#34;&gt;Flakes&lt;/a&gt; with my own projects.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Cross compiling Go for Winkhub</title>
       <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
       <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
-      <description>&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br&gt;
-&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br&gt;&#xA;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Troubleshooting Winkhub issues</title>
       <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</link>
       <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</guid>
       <description>&lt;p&gt;This post picks up where &lt;a href=&#34;https://www.mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;part 1&lt;/a&gt; left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hacking the Winkhub</title>
       <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</link>
       <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</guid>
-      <description>&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup CoreOS with iptables on DigitalOcean</title>
       <link>https://www.mattcarrier.com/post/core-os-iptables/</link>
       <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/post/core-os-iptables/</guid>
       <description>&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Linux web services Part I</title>
       <link>https://www.mattcarrier.com/linux-web-services-part-i/</link>
       <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.mattcarrier.com/linux-web-services-part-i/</guid>
       <description>This is an introduction to a series of talks about setting up Linux servers. I&amp;rsquo;m going to make the assumptions that you already have some experience at the command line whether it is Mac or Windows so I will not be explaining basic commands in order to keep these talks with in a one-hour time frame. This talk will be done with the assumption you are using a Mac, but you can also follow along using cygwin on Windows.</description>
     </item>
-    
   </channel>
 </rss>
