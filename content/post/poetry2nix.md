@@ -66,7 +66,7 @@ $ nix run
 error: unable to execute '/nix/store/m6395khh8givi8kb7a2zyrcda8dfzgka-python3.11-toolong-1.4.0/bin/toolong': No such file or directory
 ```
 
-I'm not sure how to fix this issue. I tried several different things in the flake.nix to override the binary name but none seemed to work. Running this did though. This isn't a problem when adding it as a custom input though `tl` will be apart of the system path.
+I'm not sure how to fix this issue. I tried several different things in the flake.nix to override the binary name but none seemed to work. Running this did though. This isn't a problem when adding it as a custom input though `tl` will be part of the system path.
 
 ```bash
 $ ./result/bin/tl
