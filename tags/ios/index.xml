@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ios on Matt Carrier</title>
+    <title>ios on Matt Carrier</title>
     <link>https://www.mattcarrier.com/tags/ios/</link>
-    <description>Recent content in Ios on Matt Carrier</description>
+    <description>Recent content in ios on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024</copyright>
-    <lastBuildDate>Tue, 30 Apr 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mattcarrier.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tools and Plugins for OSX</title>
       <link>https://www.mattcarrier.com/tools-and-plugins-for-osx/</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/tools-and-plugins-for-osx/</guid>
       <description>&lt;p&gt;Believe it or not I actually try to avoid plugins because they make it difficult for me to standardize my development machines, but typically some need arises and a plugin is installed…</description>
     </item>
+    
     <item>
       <title>Xcode shortcuts &amp; settings</title>
       <link>https://www.mattcarrier.com/xcode-shortcuts/</link>
       <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/xcode-shortcuts/</guid>
       <description>&lt;p&gt;Here are some hot keys and preferences that make life in Xcode much better.&lt;/p&gt;</description>
     </item>
+    
   </channel>
 </rss>

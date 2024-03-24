@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Matt Carrier</title>
+    <title>python on Matt Carrier</title>
     <link>https://www.mattcarrier.com/tags/python/</link>
-    <description>Recent content in Python on Matt Carrier</description>
+    <description>Recent content in python on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mattcarrier.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Packaging python app with poetry2nix using nix flakes</title>
       <link>https://www.mattcarrier.com/post/poetry2nix/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/poetry2nix/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt; I have some backup logs that have failures I wanted to search and recently came across &lt;a href=&#34;https://github.com/Textualize/toolong&#34;&gt;toolong&lt;/a&gt; but it is not currently in nixpkgs. I figured this is a good chance to try out poetry2nix I keep reading about and went through the process of packaging this so I could use it easily with nix.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Blender Set Frame Plugin</title>
       <link>https://www.mattcarrier.com/post/blender-set-frame-plugin/</link>
       <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/blender-set-frame-plugin/</guid>
-      <description>&lt;p&gt;Blender plugin to quickly set the render frame range start and end property from the currently selected sequence clip.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Quick set frame start and end button &lt;a href=&#34;https://github.com/icecreammatt/blender-set-frame-range/&#34;&gt;Plugin Download&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Blender plugin to quickly set the render frame range start and end property from the currently selected sequence clip.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick set frame start and end button &lt;a href=&#34;https://github.com/icecreammatt/blender-set-frame-range/&#34;&gt;Plugin Download&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
+    
     <item>
       <title>Setting up and deploying Python Flask to Dreamhost</title>
       <link>https://www.mattcarrier.com/flask-dreamhost-setup/</link>
       <pubDate>Mon, 04 Mar 2013 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/flask-dreamhost-setup/</guid>
       <description>&lt;p&gt;I have a few applications I have written that run on &lt;a title=&#34;Flask&#34; href=&#34;http://flask.pocoo.org&#34; target=&#34;_blank&#34;&gt;Flask&lt;/a&gt;. Every time I would go to deploy a new application I would always seem to forget one of the minor details and end up with the ugly &lt;code&gt;An error occurred importing your passenger_wsgi.py&lt;/code&gt;&lt;/p&gt;</description>
     </item>
+    
   </channel>
 </rss>

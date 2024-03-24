@@ -1,41 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nix on Matt Carrier</title>
+    <title>nix on Matt Carrier</title>
     <link>https://www.mattcarrier.com/tags/nix/</link>
-    <description>Recent content in Nix on Matt Carrier</description>
+    <description>Recent content in nix on Matt Carrier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mattcarrier.com/tags/nix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/tags/nix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Packaging python app with poetry2nix using nix flakes</title>
       <link>https://www.mattcarrier.com/post/poetry2nix/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/poetry2nix/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt; I have some backup logs that have failures I wanted to search and recently came across &lt;a href=&#34;https://github.com/Textualize/toolong&#34;&gt;toolong&lt;/a&gt; but it is not currently in nixpkgs. I figured this is a good chance to try out poetry2nix I keep reading about and went through the process of packaging this so I could use it easily with nix.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Export PDFs to PNGs</title>
       <link>https://www.mattcarrier.com/post/export-pdf-to-png/</link>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/export-pdf-to-png/</guid>
-      <description>&lt;p&gt;Ever want to convert a Google Slides presentation to images without having to save each one manually?&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Export from Google Slides to PDF. &lt;code&gt;File &amp;gt; Download &amp;gt; PDF&lt;/code&gt; This will let us download all the images at once.&lt;/li&gt;&#xA;&lt;li&gt;Using the &lt;code&gt;imagemagickBig&lt;/code&gt; &lt;a href=&#34;https://search.nixos.org/packages?channel=22.11&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=imagemagickBig&#34;&gt;nix&lt;/a&gt; package or installing with instructions from &lt;a href=&#34;https://imagemagick.org/index.php&#34;&gt;here&lt;/a&gt; you can then run the following command in the CLI:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;code&gt;convert -density 300 -quality 100 my-download.{pdf,png}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241&#34;&gt;&lt;code&gt;fish&lt;/code&gt; shell&lt;/a&gt; script for quick access: &lt;code&gt;pdf-to-png ./my-pdf-file.pdf&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ever want to convert a Google Slides presentation to images without having to save each one manually?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Export from Google Slides to PDF. &lt;code&gt;File &amp;gt; Download &amp;gt; PDF&lt;/code&gt; This will let us download all the images at once.&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;imagemagickBig&lt;/code&gt; &lt;a href=&#34;https://search.nixos.org/packages?channel=22.11&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=imagemagickBig&#34;&gt;nix&lt;/a&gt; package or installing with instructions from &lt;a href=&#34;https://imagemagick.org/index.php&#34;&gt;here&lt;/a&gt; you can then run the following command in the CLI:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;convert -density 300 -quality 100 my-download.{pdf,png}&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241&#34;&gt;&lt;code&gt;fish&lt;/code&gt; shell&lt;/a&gt; script for quick access: &lt;code&gt;pdf-to-png ./my-pdf-file.pdf&lt;/code&gt;&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Nix flake hostname troubleshooting</title>
       <link>https://www.mattcarrier.com/post/nix-hostname/</link>
       <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/nix-hostname/</guid>
-      <description>&lt;p&gt;Have you seen this error?&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;building the system configuration...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: flake &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git+file:///Users/matt/nixfiles&amp;#39;&lt;/span&gt; does not provide attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Have you seen this error?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;building the system configuration...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: flake &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git+file:///Users/matt/nixfiles&amp;#39;&lt;/span&gt; does not provide attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Nix flakes for development</title>
       <link>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against &lt;a href=&#34;https://en.wikipedia.org/wiki/Ncurses&#34;&gt;ncurses&lt;/a&gt; which isn&amp;rsquo;t installed out of the box on most machines. I&amp;rsquo;ve been dual booting &lt;a href=&#34;nixos.org/&#34;&gt;NixOS&lt;/a&gt; for some time now on my gaming PC and I thought it was time to start using Nix &lt;a href=&#34;https://nixos.wiki/wiki/Flakes&#34;&gt;Flakes&lt;/a&gt; with my own projects.&lt;/p&gt;</description>
     </item>
+    
   </channel>
 </rss>

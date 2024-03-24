@@ -7,91 +7,132 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Packaging python app with poetry2nix using nix flakes</title>
       <link>https://www.mattcarrier.com/post/poetry2nix/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/poetry2nix/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt; I have some backup logs that have failures I wanted to search and recently came across &lt;a href=&#34;https://github.com/Textualize/toolong&#34;&gt;toolong&lt;/a&gt; but it is not currently in nixpkgs. I figured this is a good chance to try out poetry2nix I keep reading about and went through the process of packaging this so I could use it easily with nix.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Matt Carrier - Resume</title>
       <link>https://www.mattcarrier.com/post/resume/</link>
       <pubDate>Thu, 03 Aug 2023 23:30:00 -0700</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/resume/</guid>
-      <description>Education Sonoma State University: Rohnert Park, CA&#xA;Double Major: B.S. Computer Science B.A. Art Studio Work Experience Disney Streaming Lead Software Engineer&#xA;October 2021 – Present&#xA;I&amp;rsquo;m on the Web Core Services team where I work on developing and managing the continuous integration pipeline as well as the remote config pipeline which allows deploying and creating arbitrary environments for both development and production. This custom Jenkins pipeline is used by Disney+, Star+, and other internal tooling to build, test, lint, and deploy applications to AWS ECS.</description>
+      <description></description>
     </item>
+    
     <item>
       <title>Diffing contents of docker containers</title>
       <link>https://www.mattcarrier.com/post/diffing-docker-containers/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/diffing-docker-containers/</guid>
       <description>&lt;p&gt;Recently I worked on a project where a large refactor had taken place but I wanted to ensure that there was no changes to the built output of the docker container. So while the diff in Github was quite large with many files moved around the output should remain almost identical aside from a few extra files removed.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Export PDFs to PNGs</title>
       <link>https://www.mattcarrier.com/post/export-pdf-to-png/</link>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/export-pdf-to-png/</guid>
-      <description>&lt;p&gt;Ever want to convert a Google Slides presentation to images without having to save each one manually?&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Export from Google Slides to PDF. &lt;code&gt;File &amp;gt; Download &amp;gt; PDF&lt;/code&gt; This will let us download all the images at once.&lt;/li&gt;&#xA;&lt;li&gt;Using the &lt;code&gt;imagemagickBig&lt;/code&gt; &lt;a href=&#34;https://search.nixos.org/packages?channel=22.11&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=imagemagickBig&#34;&gt;nix&lt;/a&gt; package or installing with instructions from &lt;a href=&#34;https://imagemagick.org/index.php&#34;&gt;here&lt;/a&gt; you can then run the following command in the CLI:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;code&gt;convert -density 300 -quality 100 my-download.{pdf,png}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241&#34;&gt;&lt;code&gt;fish&lt;/code&gt; shell&lt;/a&gt; script for quick access: &lt;code&gt;pdf-to-png ./my-pdf-file.pdf&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ever want to convert a Google Slides presentation to images without having to save each one manually?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Export from Google Slides to PDF. &lt;code&gt;File &amp;gt; Download &amp;gt; PDF&lt;/code&gt; This will let us download all the images at once.&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;imagemagickBig&lt;/code&gt; &lt;a href=&#34;https://search.nixos.org/packages?channel=22.11&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=relevance&amp;amp;type=packages&amp;amp;query=imagemagickBig&#34;&gt;nix&lt;/a&gt; package or installing with instructions from &lt;a href=&#34;https://imagemagick.org/index.php&#34;&gt;here&lt;/a&gt; you can then run the following command in the CLI:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;convert -density 300 -quality 100 my-download.{pdf,png}&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This will then convert the PDF to a series of images at 300 DPI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/icecreammatt/nixfiles/blob/603125869a598e631973d770915fcb0497e98b34/modules/shell/fish.nix#L229-L241&#34;&gt;&lt;code&gt;fish&lt;/code&gt; shell&lt;/a&gt; script for quick access: &lt;code&gt;pdf-to-png ./my-pdf-file.pdf&lt;/code&gt;&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Blender Set Frame Plugin</title>
       <link>https://www.mattcarrier.com/post/blender-set-frame-plugin/</link>
       <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/blender-set-frame-plugin/</guid>
-      <description>&lt;p&gt;Blender plugin to quickly set the render frame range start and end property from the currently selected sequence clip.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Quick set frame start and end button &lt;a href=&#34;https://github.com/icecreammatt/blender-set-frame-range/&#34;&gt;Plugin Download&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Blender plugin to quickly set the render frame range start and end property from the currently selected sequence clip.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick set frame start and end button &lt;a href=&#34;https://github.com/icecreammatt/blender-set-frame-range/&#34;&gt;Plugin Download&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
+    
     <item>
       <title>Nix flake hostname troubleshooting</title>
       <link>https://www.mattcarrier.com/post/nix-hostname/</link>
       <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/nix-hostname/</guid>
-      <description>&lt;p&gt;Have you seen this error?&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;building the system configuration...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: flake &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git+file:///Users/matt/nixfiles&amp;#39;&lt;/span&gt; does not provide attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Have you seen this error?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;building the system configuration...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: flake &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git+file:///Users/matt/nixfiles&amp;#39;&lt;/span&gt; does not provide attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;packages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;legacyPackages.aarch64-darwin.darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;darwinConfigurations.Bebop.system&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ran into this and it took me about a month before I realized that I had changed my hostname and that is why my nix flake was no longer building.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Nix flakes for development</title>
       <link>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/nix-flake-for-build-environments/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; I had some projects from school that I wanted to revisit and compile again, specifically a game called Worm.  This was an assignment that needed to be linked against &lt;a href=&#34;https://en.wikipedia.org/wiki/Ncurses&#34;&gt;ncurses&lt;/a&gt; which isn&amp;rsquo;t installed out of the box on most machines. I&amp;rsquo;ve been dual booting &lt;a href=&#34;nixos.org/&#34;&gt;NixOS&lt;/a&gt; for some time now on my gaming PC and I thought it was time to start using Nix &lt;a href=&#34;https://nixos.wiki/wiki/Flakes&#34;&gt;Flakes&lt;/a&gt; with my own projects.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Cross compiling Go for Winkhub</title>
       <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</link>
       <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-3/</guid>
-      <description>&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br&gt;&#xA;&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;How I cross compiled Go to run on the Winkhub and installed a custom web app to control the lights locally.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TL;DR; Be sure to compile with Go 1.5 with the following settings:&lt;br&gt;
+&lt;code&gt;GOOS=linux GOARCH=arm GOARM=5 go build .&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Troubleshooting Winkhub issues</title>
       <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</link>
       <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-2/</guid>
       <description>&lt;p&gt;This post picks up where &lt;a href=&#34;https://www.mattcarrier.com/post/hacking-the-winkhub-part-1&#34;&gt;part 1&lt;/a&gt; left off. Here is some of the troubleshooting I had to go through since following the instructions did not go smoothly for me.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Hacking the Winkhub</title>
       <link>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</link>
       <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/hacking-the-winkhub-part-1/</guid>
-      <description>&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;How I liberated my Winkhub from the Cloud&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TL;DR; I rooted my Winkhub over the UART connection and then wrote a small Go web service to allow me to turn my lights on and off from my phone.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Setup CoreOS with iptables on DigitalOcean</title>
       <link>https://www.mattcarrier.com/post/core-os-iptables/</link>
       <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/core-os-iptables/</guid>
       <description>&lt;p&gt;This post covers how to setup CoreOS with iptables on DigitalOcean. It also covers how to start a Docker container using systemd to keep the container running after crashes and reboots.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>How to enable 5.1 surround sound in VLC on OSX over HDMI</title>
       <link>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</link>
       <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://www.mattcarrier.com/post/enable-surround-sound-hdmi-osx/</guid>
       <description>&lt;p&gt;I recently connected my MacBookPro to my audio receiver over HDMI to play a movie with VLC and try out the Steam in home streaming. I noticed that the audio was not coming out of all my speakers.&lt;/p&gt;</description>
     </item>
+    
   </channel>
 </rss>
