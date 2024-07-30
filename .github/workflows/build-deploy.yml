@@ -1,0 +1,42 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main
+      - hugo-ci
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: ✨ Setup Hugo
+        env:
+          HUGO_VERSION: 0.100.1
+        run: |
+          mkdir ~/hugo
+          cd ~/hugo
+          curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" --output hugo.tar.gz
+          tar -xvzf hugo.tar.gz
+          sudo mv hugo /usr/local/bin
+
+      - name: Build Hugo site
+        run: |
+          hugo --theme=vienna --minify
+          ls -l public
+
+      # - name: Configure AWS credentials
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: us-west-2
+
+      # - name: Sync to S3
+      #   run: aws s3 sync public/ s3://your-s3-bucket-name --delete
