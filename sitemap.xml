@@ -2,22 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mattcarrier.com/</loc>
+    <lastmod>2024-09-15T23:30:00-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/resume/</loc>
+    <lastmod>2024-09-15T23:30:00-07:00</lastmod>
+  </url><url>
+    <loc>https://www.mattcarrier.com/post/</loc>
+    <lastmod>2024-09-15T23:30:00-07:00</lastmod>
+  </url><url>
     <loc>https://www.mattcarrier.com/tags/flakes/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/linux/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.mattcarrier.com/</loc>
-    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.mattcarrier.com/tags/nix/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/poetry2nix/</loc>
-    <lastmod>2024-03-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/post/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/tags/python/</loc>
@@ -28,9 +31,6 @@
   </url><url>
     <loc>https://www.mattcarrier.com/tags/toolong/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mattcarrier.com/post/resume/</loc>
-    <lastmod>2023-08-03T23:30:00-07:00</lastmod>
   </url><url>
     <loc>https://www.mattcarrier.com/post/diffing-docker-containers/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>

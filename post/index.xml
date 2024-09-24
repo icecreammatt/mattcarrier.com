@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Sep 2024 23:30:00 -0700</lastBuildDate><atom:link href="https://www.mattcarrier.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matt Carrier - Resume</title>
+      <link>https://www.mattcarrier.com/post/resume/</link>
+      <pubDate>Sun, 15 Sep 2024 23:30:00 -0700</pubDate>
+      
+      <guid>https://www.mattcarrier.com/post/resume/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Packaging python app with poetry2nix using nix flakes</title>
       <link>https://www.mattcarrier.com/post/poetry2nix/</link>
@@ -15,15 +24,6 @@
       
       <guid>https://www.mattcarrier.com/post/poetry2nix/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt; I have some backup logs that have failures I wanted to search and recently came across &lt;a href=&#34;https://github.com/Textualize/toolong&#34;&gt;toolong&lt;/a&gt; but it is not currently in nixpkgs. I figured this is a good chance to try out poetry2nix I keep reading about and went through the process of packaging this so I could use it easily with nix.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Matt Carrier - Resume</title>
-      <link>https://www.mattcarrier.com/post/resume/</link>
-      <pubDate>Thu, 03 Aug 2023 23:30:00 -0700</pubDate>
-      
-      <guid>https://www.mattcarrier.com/post/resume/</guid>
-      <description></description>
     </item>
     
     <item>
