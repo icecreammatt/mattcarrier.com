@@ -1,5 +1,5 @@
 +++
-date = "2023-08-03T23:30:00-07:00"
+date = "2024-09-15T23:30:00-07:00"
 title = "Matt Carrier - Resume"
 aliases = [ "/resume" ]
 +++
@@ -15,8 +15,11 @@ aliases = [ "/resume" ]
 ## Work Experience
 
 ### Disney Streaming  
+Principal Software Engineer  
+*September 2024 – Present*
+
 Lead Software Engineer  
-*October 2021 – Present*
+*October 2021 – September 2024*
 
 I'm on the Web Core Services team where I work on developing and managing the continuous integration pipeline as well as the remote config pipeline which allows deploying and creating arbitrary environments for both development and production. This custom Jenkins pipeline is used by Disney+, Star+, and other internal tooling to build, test, lint, and deploy applications to AWS ECS.
 
