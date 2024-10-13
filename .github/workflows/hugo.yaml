@@ -73,7 +73,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Sync to S3
-        run: aws s3 sync ./public ${{ secrets.S3_BUCKET_PATH_QA }}
+        run: aws s3 sync ./public s3://${{ secrets.S3_BUCKET_PATH_QA }}/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
